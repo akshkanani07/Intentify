@@ -1,0 +1,62 @@
+{
+  "subject": "GraphQL Federation",
+  "aliases": [
+    "graphql federation",
+    "apollo federation",
+    "subgraph",
+    "supergraph"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "gql_schema_directives",
+      "title": "Federated Directives (@key, @extends, @external)",
+      "objective": "Define entity keys and cross-subgraph schema extensions for decoupled microservice boundaries.",
+      "example": "type User @key(fields: 'id') { id: ID! email: String! }",
+      "exercise": "Define an Order subgraph schema extending the User entity with a purchases field.",
+      "prerequisites": []
+    },
+    {
+      "id": "gql_entity_resolvers",
+      "title": "__resolveReference Entity Resolution",
+      "objective": "Resolve federated entities efficiently when queried across distinct boundary subgraphs.",
+      "example": "User: { __resolveReference(ref) { return db.users.findById(ref.id); } }",
+      "exercise": "Implement an entity reference resolver in Apollo Server fetching user profiles by ID.",
+      "prerequisites": [
+        "gql_schema_directives"
+      ]
+    },
+    {
+      "id": "gql_gateway_composition",
+      "title": "Gateway Router Composition & Query Planning",
+      "objective": "Compose individual subgraphs into a unified supergraph schema with optimized query execution plans.",
+      "example": "rover supergraph compose --config ./supergraph.yaml > supergraph.graphql",
+      "exercise": "Configure an Apollo Router gateway combining Product, Inventory, and Reviews subgraphs.",
+      "prerequisites": [
+        "gql_entity_resolvers"
+      ]
+    },
+    {
+      "id": "gql_dataloaders_batching",
+      "title": "DataLoader Batching & N+1 Prevention",
+      "objective": "Eliminate redundant downstream microservice calls using request-scoped batching and caching.",
+      "example": "const userLoader = new DataLoader(keys => myBatchGetUsers(keys));",
+      "exercise": "Wrap federated database queries in a DataLoader batch function and verify query collapsing in telemetry.",
+      "prerequisites": [
+        "gql_entity_resolvers"
+      ]
+    },
+    {
+      "id": "gql_contracts_security",
+      "title": "Federated Subgraph Contracts, Authentication & RBAC",
+      "objective": "Enforce JWT authentication headers and field-level authorization directives across subgraphs.",
+      "example": "type Account @authenticated { balance: Float! @requiresScopes(scopes: [['read:balance']]) }",
+      "exercise": "Implement gateway header forwarding passing authenticated user identity contexts to all downstream subgraphs.",
+      "prerequisites": [
+        "gql_gateway_composition"
+      ]
+    }
+  ]
+}

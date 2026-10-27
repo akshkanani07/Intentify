@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.Python
+env/
+venv/
+.venv/
+pip-wheel-metadata/
+
+# Virtual environments
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node
+node_modules/
+.next/
+out/
+.turbo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ML Models (large files)
+ml-engine/models/*/model.bin
+ml-engine/models/*/pytorch_model.bin
+ml-engine/models/*/*.safetensors
+*.pt
+*.pth
+*.onnx
+
+# FastText models
+*.ftz
+*.bin
+
+# Datasets (generated)
+ml-engine/datasets/generated/
+
+# Database
+*.db
+*.sqlite3
+
+# Redis
+dump.rdb
+
+# Logs
+logs/
+*.log
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Type checking
+.mypy_cache/
+.pytype/
+
+# Distribution
+*.tar.gz
+*.whl
+
+# Python & Test hygiene
+.pytest_temp/
+scratch/

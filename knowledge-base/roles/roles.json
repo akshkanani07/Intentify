@@ -1,0 +1,4893 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-10-26",
+  "total_roles": 121,
+  "categories": [
+    "Technology",
+    "Business",
+    "Creative",
+    "Medical",
+    "Legal",
+    "Education",
+    "Finance",
+    "Science",
+    "Marketing",
+    "Engineering",
+    "Agriculture",
+    "Arts"
+  ],
+  "roles": [
+    {
+      "id": "role_wedding_01",
+      "title": "Wedding Planning Expert",
+      "category": "Hospitality & Events",
+      "aliases": [
+        "wedding planner",
+        "wedding coordinator",
+        "marriage planner",
+        "lagan planner",
+        "bridal consultant",
+        "event planner for weddings"
+      ],
+      "expertise_areas": [
+        "event timeline design",
+        "budget optimization",
+        "vendor contract negotiation",
+        "cultural ceremonies",
+        "guest logistics",
+        "design and aesthetics"
+      ],
+      "typical_intents": [
+        "plan",
+        "create",
+        "design",
+        "decide",
+        "organize"
+      ],
+      "common_domains": [
+        "event planning",
+        "hospitality",
+        "culinary",
+        "photography",
+        "interior design"
+      ],
+      "prompt_style": "empathetic, highly organized, detail-oriented, structured",
+      "keywords": [
+        "wedding",
+        "planner",
+        "ceremony",
+        "reception",
+        "venue",
+        "decor",
+        "catering",
+        "guest list",
+        "budget",
+        "lagan"
+      ]
+    },
+    {
+      "id": "role_001",
+      "title": "Software Engineer",
+      "category": "Technology",
+      "aliases": [
+        "developer",
+        "programmer",
+        "coder",
+        "software developer",
+        "SWE"
+      ],
+      "expertise_areas": [
+        "coding",
+        "system design",
+        "debugging",
+        "testing",
+        "code review"
+      ],
+      "typical_intents": [
+        "create",
+        "debug",
+        "design",
+        "improve",
+        "explain"
+      ],
+      "common_domains": [
+        "software",
+        "technology",
+        "web",
+        "mobile",
+        "cloud"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "code",
+        "api",
+        "database",
+        "frontend",
+        "backend",
+        "microservices",
+        "git"
+      ]
+    },
+    {
+      "id": "role_002",
+      "title": "Data Scientist",
+      "category": "Technology",
+      "aliases": [
+        "data analyst",
+        "ML practitioner",
+        "analytics engineer"
+      ],
+      "expertise_areas": [
+        "machine learning",
+        "statistics",
+        "data analysis",
+        "visualization",
+        "feature engineering"
+      ],
+      "typical_intents": [
+        "analyze",
+        "create",
+        "explain",
+        "research",
+        "improve"
+      ],
+      "common_domains": [
+        "AI/ML",
+        "data science",
+        "analytics",
+        "statistics"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "model",
+        "dataset",
+        "training",
+        "prediction",
+        "accuracy",
+        "feature",
+        "pipeline"
+      ]
+    },
+    {
+      "id": "role_003",
+      "title": "DevOps Engineer",
+      "category": "Technology",
+      "aliases": [
+        "site reliability engineer",
+        "SRE",
+        "infrastructure engineer",
+        "platform engineer"
+      ],
+      "expertise_areas": [
+        "CI/CD",
+        "containerization",
+        "infrastructure as code",
+        "monitoring",
+        "cloud platforms"
+      ],
+      "typical_intents": [
+        "create",
+        "improve",
+        "debug",
+        "design",
+        "plan"
+      ],
+      "common_domains": [
+        "cloud computing",
+        "infrastructure",
+        "deployment",
+        "automation"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "docker",
+        "kubernetes",
+        "pipeline",
+        "deployment",
+        "terraform",
+        "AWS",
+        "monitoring"
+      ]
+    },
+    {
+      "id": "role_004",
+      "title": "ML Engineer",
+      "category": "Technology",
+      "aliases": [
+        "machine learning engineer",
+        "AI engineer",
+        "deep learning engineer"
+      ],
+      "expertise_areas": [
+        "model training",
+        "MLOps",
+        "deep learning",
+        "model deployment",
+        "optimization"
+      ],
+      "typical_intents": [
+        "create",
+        "improve",
+        "debug",
+        "design",
+        "analyze"
+      ],
+      "common_domains": [
+        "AI/ML",
+        "deep learning",
+        "NLP",
+        "computer vision"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "neural network",
+        "training",
+        "inference",
+        "GPU",
+        "PyTorch",
+        "TensorFlow",
+        "model"
+      ]
+    },
+    {
+      "id": "role_005",
+      "title": "Security Analyst",
+      "category": "Technology",
+      "aliases": [
+        "cybersecurity analyst",
+        "infosec analyst",
+        "security engineer",
+        "SOC analyst"
+      ],
+      "expertise_areas": [
+        "threat analysis",
+        "vulnerability assessment",
+        "incident response",
+        "penetration testing",
+        "compliance"
+      ],
+      "typical_intents": [
+        "analyze",
+        "research",
+        "explain",
+        "improve",
+        "plan"
+      ],
+      "common_domains": [
+        "cybersecurity",
+        "compliance",
+        "network security",
+        "cloud security"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "vulnerability",
+        "threat",
+        "firewall",
+        "encryption",
+        "malware",
+        "audit",
+        "SIEM"
+      ]
+    },
+    {
+      "id": "role_006",
+      "title": "Frontend Developer",
+      "category": "Technology",
+      "aliases": [
+        "UI developer",
+        "web developer",
+        "client-side developer",
+        "React developer"
+      ],
+      "expertise_areas": [
+        "HTML/CSS",
+        "JavaScript",
+        "React",
+        "responsive design",
+        "accessibility"
+      ],
+      "typical_intents": [
+        "create",
+        "design",
+        "debug",
+        "improve"
+      ],
+      "common_domains": [
+        "web development",
+        "UI/UX",
+        "mobile web",
+        "progressive web apps"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "component",
+        "CSS",
+        "responsive",
+        "accessibility",
+        "state management",
+        "DOM",
+        "browser"
+      ]
+    },
+    {
+      "id": "role_007",
+      "title": "Backend Developer",
+      "category": "Technology",
+      "aliases": [
+        "server-side developer",
+        "API developer",
+        "systems programmer"
+      ],
+      "expertise_areas": [
+        "API design",
+        "database management",
+        "server architecture",
+        "authentication",
+        "caching"
+      ],
+      "typical_intents": [
+        "create",
+        "design",
+        "debug",
+        "improve",
+        "explain"
+      ],
+      "common_domains": [
+        "software development",
+        "cloud computing",
+        "microservices",
+        "databases"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "REST",
+        "GraphQL",
+        "SQL",
+        "NoSQL",
+        "server",
+        "middleware",
+        "authentication"
+      ]
+    },
+    {
+      "id": "role_008",
+      "title": "Cloud Architect",
+      "category": "Technology",
+      "aliases": [
+        "solutions architect",
+        "cloud engineer",
+        "AWS architect",
+        "Azure architect"
+      ],
+      "expertise_areas": [
+        "cloud infrastructure",
+        "distributed systems",
+        "cost optimization",
+        "security architecture",
+        "migration"
+      ],
+      "typical_intents": [
+        "design",
+        "plan",
+        "improve",
+        "analyze",
+        "compare"
+      ],
+      "common_domains": [
+        "cloud computing",
+        "infrastructure",
+        "enterprise architecture"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "serverless",
+        "load balancer",
+        "VPC",
+        "scalability"
+      ]
+    },
+    {
+      "id": "role_009",
+      "title": "Database Administrator",
+      "category": "Technology",
+      "aliases": [
+        "DBA",
+        "database engineer",
+        "data engineer"
+      ],
+      "expertise_areas": [
+        "database optimization",
+        "backup and recovery",
+        "schema design",
+        "replication",
+        "query tuning"
+      ],
+      "typical_intents": [
+        "improve",
+        "debug",
+        "design",
+        "analyze",
+        "create"
+      ],
+      "common_domains": [
+        "databases",
+        "data management",
+        "cloud computing"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "SQL",
+        "index",
+        "query",
+        "replication",
+        "backup",
+        "schema",
+        "partitioning"
+      ]
+    },
+    {
+      "id": "role_010",
+      "title": "QA Engineer",
+      "category": "Technology",
+      "aliases": [
+        "test engineer",
+        "quality analyst",
+        "SDET",
+        "automation tester"
+      ],
+      "expertise_areas": [
+        "test automation",
+        "manual testing",
+        "performance testing",
+        "test planning",
+        "bug tracking"
+      ],
+      "typical_intents": [
+        "create",
+        "analyze",
+        "improve",
+        "plan",
+        "debug"
+      ],
+      "common_domains": [
+        "software testing",
+        "quality assurance",
+        "automation"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "test case",
+        "selenium",
+        "cypress",
+        "regression",
+        "bug",
+        "coverage",
+        "automation"
+      ]
+    },
+    {
+      "id": "role_011",
+      "title": "Business Analyst",
+      "category": "Business",
+      "aliases": [
+        "BA",
+        "requirements analyst",
+        "systems analyst",
+        "business systems analyst"
+      ],
+      "expertise_areas": [
+        "requirements gathering",
+        "process modeling",
+        "stakeholder management",
+        "gap analysis",
+        "documentation"
+      ],
+      "typical_intents": [
+        "analyze",
+        "plan",
+        "create",
+        "compare",
+        "explain"
+      ],
+      "common_domains": [
+        "business analysis",
+        "project management",
+        "enterprise solutions"
+      ],
+      "prompt_style": "structured",
+      "keywords": [
+        "requirements",
+        "stakeholder",
+        "process",
+        "workflow",
+        "use case",
+        "user story",
+        "BRD"
+      ]
+    },
+    {
+      "id": "role_012",
+      "title": "Product Manager",
+      "category": "Business",
+      "aliases": [
+        "PM",
+        "product owner",
+        "product lead",
+        "product director"
+      ],
+      "expertise_areas": [
+        "product strategy",
+        "roadmapping",
+        "user research",
+        "prioritization",
+        "go-to-market"
+      ],
+      "typical_intents": [
+        "plan",
+        "analyze",
+        "decide",
+        "create",
+        "compare"
+      ],
+      "common_domains": [
+        "product management",
+        "technology",
+        "business strategy"
+      ],
+      "prompt_style": "strategic",
+      "keywords": [
+        "roadmap",
+        "MVP",
+        "feature",
+        "backlog",
+        "OKR",
+        "sprint",
+        "user persona"
+      ]
+    },
+    {
+      "id": "role_013",
+      "title": "Project Manager",
+      "category": "Business",
+      "aliases": [
+        "program manager",
+        "delivery manager",
+        "scrum master",
+        "PMP"
+      ],
+      "expertise_areas": [
+        "project planning",
+        "risk management",
+        "resource allocation",
+        "agile methodology",
+        "stakeholder communication"
+      ],
+      "typical_intents": [
+        "plan",
+        "create",
+        "analyze",
+        "improve",
+        "decide"
+      ],
+      "common_domains": [
+        "project management",
+        "agile",
+        "enterprise",
+        "operations"
+      ],
+      "prompt_style": "structured",
+      "keywords": [
+        "timeline",
+        "milestone",
+        "risk",
+        "deliverable",
+        "Gantt",
+        "sprint",
+        "resource"
+      ]
+    },
+    {
+      "id": "role_014",
+      "title": "CEO",
+      "category": "Business",
+      "aliases": [
+        "chief executive officer",
+        "founder",
+        "managing director",
+        "president"
+      ],
+      "expertise_areas": [
+        "strategic planning",
+        "leadership",
+        "fundraising",
+        "vision setting",
+        "organizational management"
+      ],
+      "typical_intents": [
+        "plan",
+        "decide",
+        "analyze",
+        "create",
+        "improve"
+      ],
+      "common_domains": [
+        "business strategy",
+        "leadership",
+        "corporate governance",
+        "startups"
+      ],
+      "prompt_style": "executive",
+      "keywords": [
+        "strategy",
+        "vision",
+        "growth",
+        "revenue",
+        "board",
+        "stakeholder",
+        "market"
+      ]
+    },
+    {
+      "id": "role_015",
+      "title": "CFO",
+      "category": "Business",
+      "aliases": [
+        "chief financial officer",
+        "finance director",
+        "VP finance"
+      ],
+      "expertise_areas": [
+        "financial planning",
+        "budgeting",
+        "financial reporting",
+        "risk management",
+        "compliance"
+      ],
+      "typical_intents": [
+        "analyze",
+        "plan",
+        "create",
+        "decide",
+        "improve"
+      ],
+      "common_domains": [
+        "finance",
+        "accounting",
+        "corporate governance",
+        "investment"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "budget",
+        "revenue",
+        "cash flow",
+        "P&L",
+        "forecast",
+        "audit",
+        "compliance"
+      ]
+    },
+    {
+      "id": "role_016",
+      "title": "CTO",
+      "category": "Business",
+      "aliases": [
+        "chief technology officer",
+        "VP engineering",
+        "head of technology"
+      ],
+      "expertise_areas": [
+        "technology strategy",
+        "team leadership",
+        "architecture decisions",
+        "tech stack selection",
+        "innovation"
+      ],
+      "typical_intents": [
+        "design",
+        "plan",
+        "decide",
+        "analyze",
+        "improve"
+      ],
+      "common_domains": [
+        "technology",
+        "software development",
+        "innovation",
+        "engineering management"
+      ],
+      "prompt_style": "strategic",
+      "keywords": [
+        "architecture",
+        "tech stack",
+        "scalability",
+        "engineering",
+        "innovation",
+        "technical debt"
+      ]
+    },
+    {
+      "id": "role_017",
+      "title": "Operations Manager",
+      "category": "Business",
+      "aliases": [
+        "ops manager",
+        "operations director",
+        "COO",
+        "head of operations"
+      ],
+      "expertise_areas": [
+        "process optimization",
+        "supply chain",
+        "logistics",
+        "vendor management",
+        "efficiency"
+      ],
+      "typical_intents": [
+        "improve",
+        "plan",
+        "analyze",
+        "create",
+        "decide"
+      ],
+      "common_domains": [
+        "operations",
+        "supply chain",
+        "logistics",
+        "manufacturing"
+      ],
+      "prompt_style": "structured",
+      "keywords": [
+        "process",
+        "efficiency",
+        "KPI",
+        "SLA",
+        "vendor",
+        "logistics",
+        "throughput"
+      ]
+    },
+    {
+      "id": "role_018",
+      "title": "HR Manager",
+      "category": "Business",
+      "aliases": [
+        "human resources manager",
+        "people manager",
+        "talent manager",
+        "HR director"
+      ],
+      "expertise_areas": [
+        "recruitment",
+        "employee relations",
+        "performance management",
+        "compensation",
+        "organizational development"
+      ],
+      "typical_intents": [
+        "create",
+        "plan",
+        "analyze",
+        "improve",
+        "decide"
+      ],
+      "common_domains": [
+        "human resources",
+        "talent management",
+        "organizational behavior"
+      ],
+      "prompt_style": "professional",
+      "keywords": [
+        "recruitment",
+        "onboarding",
+        "performance",
+        "culture",
+        "benefits",
+        "retention",
+        "policy"
+      ]
+    },
+    {
+      "id": "role_019",
+      "title": "Management Consultant",
+      "category": "Business",
+      "aliases": [
+        "strategy consultant",
+        "business consultant",
+        "advisor"
+      ],
+      "expertise_areas": [
+        "strategic analysis",
+        "organizational design",
+        "change management",
+        "market analysis",
+        "operational improvement"
+      ],
+      "typical_intents": [
+        "analyze",
+        "plan",
+        "compare",
+        "create",
+        "improve"
+      ],
+      "common_domains": [
+        "consulting",
+        "business strategy",
+        "management",
+        "organizational design"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "framework",
+        "benchmark",
+        "strategy",
+        "transformation",
+        "stakeholder",
+        "ROI",
+        "assessment"
+      ]
+    },
+    {
+      "id": "role_020",
+      "title": "Entrepreneur",
+      "category": "Business",
+      "aliases": [
+        "startup founder",
+        "business owner",
+        "solopreneur",
+        "indie maker"
+      ],
+      "expertise_areas": [
+        "business development",
+        "pitching",
+        "bootstrapping",
+        "growth hacking",
+        "product-market fit"
+      ],
+      "typical_intents": [
+        "create",
+        "plan",
+        "analyze",
+        "decide",
+        "improve"
+      ],
+      "common_domains": [
+        "startups",
+        "business strategy",
+        "innovation",
+        "venture capital"
+      ],
+      "prompt_style": "dynamic",
+      "keywords": [
+        "startup",
+        "pitch",
+        "funding",
+        "MVP",
+        "traction",
+        "pivot",
+        "market fit"
+      ]
+    },
+    {
+      "id": "role_021",
+      "title": "Graphic Designer",
+      "category": "Creative",
+      "aliases": [
+        "visual designer",
+        "digital designer",
+        "brand designer"
+      ],
+      "expertise_areas": [
+        "visual design",
+        "branding",
+        "typography",
+        "layout",
+        "color theory"
+      ],
+      "typical_intents": [
+        "create",
+        "design",
+        "improve",
+        "compare"
+      ],
+      "common_domains": [
+        "graphic design",
+        "branding",
+        "advertising",
+        "print media"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "logo",
+        "brand",
+        "typography",
+        "color palette",
+        "layout",
+        "mockup",
+        "vector"
+      ]
+    },
+    {
+      "id": "role_022",
+      "title": "Content Writer",
+      "category": "Creative",
+      "aliases": [
+        "copywriter",
+        "content creator",
+        "blogger",
+        "technical writer"
+      ],
+      "expertise_areas": [
+        "writing",
+        "SEO content",
+        "storytelling",
+        "editing",
+        "content strategy"
+      ],
+      "typical_intents": [
+        "write",
+        "create",
+        "improve",
+        "translate",
+        "explain"
+      ],
+      "common_domains": [
+        "content marketing",
+        "publishing",
+        "journalism",
+        "blogging"
+      ],
+      "prompt_style": "narrative",
+      "keywords": [
+        "article",
+        "blog",
+        "headline",
+        "copy",
+        "engagement",
+        "readability",
+        "tone"
+      ]
+    },
+    {
+      "id": "role_023",
+      "title": "UX Designer",
+      "category": "Creative",
+      "aliases": [
+        "user experience designer",
+        "interaction designer",
+        "UX researcher",
+        "product designer"
+      ],
+      "expertise_areas": [
+        "user research",
+        "wireframing",
+        "prototyping",
+        "usability testing",
+        "information architecture"
+      ],
+      "typical_intents": [
+        "design",
+        "create",
+        "analyze",
+        "improve",
+        "research"
+      ],
+      "common_domains": [
+        "UX design",
+        "product design",
+        "human-computer interaction"
+      ],
+      "prompt_style": "user-centric",
+      "keywords": [
+        "wireframe",
+        "prototype",
+        "user flow",
+        "persona",
+        "usability",
+        "heuristic",
+        "journey map"
+      ]
+    },
+    {
+      "id": "role_024",
+      "title": "Video Producer",
+      "category": "Creative",
+      "aliases": [
+        "videographer",
+        "filmmaker",
+        "video editor",
+        "content producer"
+      ],
+      "expertise_areas": [
+        "video production",
+        "editing",
+        "storyboarding",
+        "motion graphics",
+        "color grading"
+      ],
+      "typical_intents": [
+        "create",
+        "plan",
+        "design",
+        "improve"
+      ],
+      "common_domains": [
+        "video production",
+        "film",
+        "advertising",
+        "social media"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "storyboard",
+        "script",
+        "editing",
+        "shot list",
+        "transition",
+        "render",
+        "footage"
+      ]
+    },
+    {
+      "id": "role_025",
+      "title": "UI Designer",
+      "category": "Creative",
+      "aliases": [
+        "interface designer",
+        "visual UI designer",
+        "app designer"
+      ],
+      "expertise_areas": [
+        "interface design",
+        "design systems",
+        "component libraries",
+        "responsive design",
+        "accessibility"
+      ],
+      "typical_intents": [
+        "design",
+        "create",
+        "improve",
+        "compare"
+      ],
+      "common_domains": [
+        "UI design",
+        "web design",
+        "mobile design",
+        "design systems"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "component",
+        "design system",
+        "pixel",
+        "responsive",
+        "Figma",
+        "prototype",
+        "style guide"
+      ]
+    },
+    {
+      "id": "role_026",
+      "title": "Creative Director",
+      "category": "Creative",
+      "aliases": [
+        "art director",
+        "design director",
+        "head of creative"
+      ],
+      "expertise_areas": [
+        "brand strategy",
+        "creative vision",
+        "team leadership",
+        "campaign design",
+        "art direction"
+      ],
+      "typical_intents": [
+        "design",
+        "plan",
+        "create",
+        "decide",
+        "improve"
+      ],
+      "common_domains": [
+        "advertising",
+        "branding",
+        "creative agency",
+        "media"
+      ],
+      "prompt_style": "visionary",
+      "keywords": [
+        "campaign",
+        "brand",
+        "concept",
+        "creative brief",
+        "vision",
+        "aesthetic",
+        "direction"
+      ]
+    },
+    {
+      "id": "role_027",
+      "title": "Game Designer",
+      "category": "Creative",
+      "aliases": [
+        "game developer",
+        "level designer",
+        "gameplay designer"
+      ],
+      "expertise_areas": [
+        "game mechanics",
+        "level design",
+        "narrative design",
+        "balancing",
+        "player experience"
+      ],
+      "typical_intents": [
+        "create",
+        "design",
+        "improve",
+        "plan",
+        "analyze"
+      ],
+      "common_domains": [
+        "game development",
+        "interactive entertainment",
+        "VR/AR"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "mechanic",
+        "level",
+        "player",
+        "gameplay",
+        "balance",
+        "quest",
+        "progression"
+      ]
+    },
+    {
+      "id": "role_028",
+      "title": "Animator",
+      "category": "Creative",
+      "aliases": [
+        "motion designer",
+        "3D animator",
+        "2D animator"
+      ],
+      "expertise_areas": [
+        "animation principles",
+        "character animation",
+        "motion graphics",
+        "rigging",
+        "compositing"
+      ],
+      "typical_intents": [
+        "create",
+        "design",
+        "improve",
+        "explain"
+      ],
+      "common_domains": [
+        "animation",
+        "film",
+        "advertising",
+        "game development"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "keyframe",
+        "rigging",
+        "motion",
+        "timeline",
+        "easing",
+        "render",
+        "compositing"
+      ]
+    },
+    {
+      "id": "role_029",
+      "title": "Technical Writer",
+      "category": "Creative",
+      "aliases": [
+        "documentation specialist",
+        "API writer",
+        "knowledge base author"
+      ],
+      "expertise_areas": [
+        "technical documentation",
+        "API documentation",
+        "user guides",
+        "knowledge management",
+        "information architecture"
+      ],
+      "typical_intents": [
+        "write",
+        "create",
+        "explain",
+        "improve",
+        "translate"
+      ],
+      "common_domains": [
+        "software documentation",
+        "technical communication",
+        "knowledge management"
+      ],
+      "prompt_style": "precise",
+      "keywords": [
+        "documentation",
+        "API reference",
+        "user guide",
+        "tutorial",
+        "changelog",
+        "spec",
+        "README"
+      ]
+    },
+    {
+      "id": "role_030",
+      "title": "Photographer",
+      "category": "Creative",
+      "aliases": [
+        "photojournalist",
+        "commercial photographer",
+        "portrait photographer"
+      ],
+      "expertise_areas": [
+        "composition",
+        "lighting",
+        "post-processing",
+        "color correction",
+        "photo editing"
+      ],
+      "typical_intents": [
+        "create",
+        "improve",
+        "explain",
+        "compare",
+        "plan"
+      ],
+      "common_domains": [
+        "photography",
+        "media",
+        "advertising",
+        "journalism"
+      ],
+      "prompt_style": "visual",
+      "keywords": [
+        "exposure",
+        "composition",
+        "lighting",
+        "aperture",
+        "Lightroom",
+        "retouching",
+        "RAW"
+      ]
+    },
+    {
+      "id": "role_031",
+      "title": "Doctor",
+      "category": "Medical",
+      "aliases": [
+        "physician",
+        "medical doctor",
+        "MD",
+        "general practitioner",
+        "GP"
+      ],
+      "expertise_areas": [
+        "diagnosis",
+        "treatment planning",
+        "patient care",
+        "clinical assessment",
+        "medical research"
+      ],
+      "typical_intents": [
+        "analyze",
+        "explain",
+        "diagnose",
+        "plan",
+        "research"
+      ],
+      "common_domains": [
+        "healthcare",
+        "medicine",
+        "clinical practice",
+        "public health"
+      ],
+      "prompt_style": "clinical",
+      "keywords": [
+        "diagnosis",
+        "treatment",
+        "patient",
+        "symptoms",
+        "prognosis",
+        "clinical",
+        "evidence-based"
+      ]
+    },
+    {
+      "id": "role_032",
+      "title": "Surgeon",
+      "category": "Medical",
+      "aliases": [
+        "surgical specialist",
+        "operating surgeon",
+        "orthopedic surgeon"
+      ],
+      "expertise_areas": [
+        "surgical procedures",
+        "preoperative assessment",
+        "postoperative care",
+        "anatomy",
+        "surgical planning"
+      ],
+      "typical_intents": [
+        "plan",
+        "explain",
+        "analyze",
+        "create",
+        "improve"
+      ],
+      "common_domains": [
+        "surgery",
+        "healthcare",
+        "orthopedics",
+        "cardiology"
+      ],
+      "prompt_style": "clinical",
+      "keywords": [
+        "procedure",
+        "incision",
+        "anesthesia",
+        "recovery",
+        "complication",
+        "surgical technique",
+        "suture"
+      ]
+    },
+    {
+      "id": "role_033",
+      "title": "Nurse",
+      "category": "Medical",
+      "aliases": [
+        "registered nurse",
+        "RN",
+        "clinical nurse",
+        "nurse practitioner",
+        "NP"
+      ],
+      "expertise_areas": [
+        "patient care",
+        "clinical assessment",
+        "medication administration",
+        "wound care",
+        "patient education"
+      ],
+      "typical_intents": [
+        "plan",
+        "explain",
+        "create",
+        "improve",
+        "analyze"
+      ],
+      "common_domains": [
+        "nursing",
+        "healthcare",
+        "patient care",
+        "community health"
+      ],
+      "prompt_style": "clinical",
+      "keywords": [
+        "patient",
+        "vitals",
+        "medication",
+        "care plan",
+        "assessment",
+        "charting",
+        "triage"
+      ]
+    },
+    {
+      "id": "role_034",
+      "title": "Pharmacist",
+      "category": "Medical",
+      "aliases": [
+        "clinical pharmacist",
+        "pharmacy specialist",
+        "dispensing pharmacist"
+      ],
+      "expertise_areas": [
+        "pharmacology",
+        "drug interactions",
+        "medication management",
+        "compounding",
+        "patient counseling"
+      ],
+      "typical_intents": [
+        "analyze",
+        "explain",
+        "compare",
+        "research",
+        "improve"
+      ],
+      "common_domains": [
+        "pharmacy",
+        "pharmacology",
+        "healthcare",
+        "drug safety"
+      ],
+      "prompt_style": "clinical",
+      "keywords": [
+        "drug",
+        "dosage",
+        "interaction",
+        "prescription",
+        "side effect",
+        "contraindication",
+        "formulary"
+      ]
+    },
+    {
+      "id": "role_035",
+      "title": "Therapist",
+      "category": "Medical",
+      "aliases": [
+        "psychotherapist",
+        "counselor",
+        "mental health therapist",
+        "clinical psychologist"
+      ],
+      "expertise_areas": [
+        "psychotherapy",
+        "counseling",
+        "cognitive behavioral therapy",
+        "assessment",
+        "treatment planning"
+      ],
+      "typical_intents": [
+        "analyze",
+        "explain",
+        "plan",
+        "create",
+        "improve"
+      ],
+      "common_domains": [
+        "mental health",
+        "psychology",
+        "counseling",
+        "behavioral health"
+      ],
+      "prompt_style": "empathetic",
+      "keywords": [
+        "therapy",
+        "coping",
+        "behavior",
+        "cognitive",
+        "trauma",
+        "mindfulness",
+        "intervention"
+      ]
+    },
+    {
+      "id": "role_036",
+      "title": "Radiologist",
+      "category": "Medical",
+      "aliases": [
+        "diagnostic radiologist",
+        "interventional radiologist",
+        "imaging specialist"
+      ],
+      "expertise_areas": [
+        "medical imaging",
+        "image interpretation",
+        "diagnostic reporting",
+        "interventional procedures",
+        "radiation safety"
+      ],
+      "typical_intents": [
+        "analyze",
+        "explain",
+        "compare",
+        "research"
+      ],
+      "common_domains": [
+        "radiology",
+        "medical imaging",
+        "healthcare",
+        "diagnostics"
+      ],
+      "prompt_style": "clinical",
+      "keywords": [
+        "imaging",
+        "X-ray",
+        "MRI",
+        "CT scan",
+        "ultrasound",
+        "contrast",
+        "findings"
+      ]
+    },
+    {
+      "id": "role_037",
+      "title": "Dentist",
+      "category": "Medical",
+      "aliases": [
+        "dental surgeon",
+        "orthodontist",
+        "periodontist",
+        "dental practitioner"
+      ],
+      "expertise_areas": [
+        "oral health",
+        "dental procedures",
+        "preventive care",
+        "prosthodontics",
+        "oral surgery"
+      ],
+      "typical_intents": [
+        "explain",
+        "plan",
+        "analyze",
+        "create",
+        "improve"
+      ],
+      "common_domains": [
+        "dentistry",
+        "oral health",
+        "healthcare"
+      ],
+      "prompt_style": "clinical",
+      "keywords": [
+        "cavity",
+        "crown",
+        "extraction",
+        "filling",
+        "implant",
+        "hygiene",
+        "orthodontics"
+      ]
+    },
+    {
+      "id": "role_038",
+      "title": "Medical Researcher",
+      "category": "Medical",
+      "aliases": [
+        "clinical researcher",
+        "biomedical researcher",
+        "research scientist"
+      ],
+      "expertise_areas": [
+        "clinical trials",
+        "research methodology",
+        "biostatistics",
+        "literature review",
+        "grant writing"
+      ],
+      "typical_intents": [
+        "research",
+        "analyze",
+        "write",
+        "explain",
+        "create"
+      ],
+      "common_domains": [
+        "medical research",
+        "clinical trials",
+        "biomedical science",
+        "epidemiology"
+      ],
+      "prompt_style": "academic",
+      "keywords": [
+        "study",
+        "hypothesis",
+        "trial",
+        "cohort",
+        "p-value",
+        "protocol",
+        "publication"
+      ]
+    },
+    {
+      "id": "role_039",
+      "title": "Veterinarian",
+      "category": "Medical",
+      "aliases": [
+        "vet",
+        "animal doctor",
+        "veterinary surgeon"
+      ],
+      "expertise_areas": [
+        "animal health",
+        "veterinary surgery",
+        "diagnostics",
+        "preventive care",
+        "animal behavior"
+      ],
+      "typical_intents": [
+        "analyze",
+        "explain",
+        "plan",
+        "create",
+        "improve"
+      ],
+      "common_domains": [
+        "veterinary medicine",
+        "animal health",
+        "zoology"
+      ],
+      "prompt_style": "clinical",
+      "keywords": [
+        "animal",
+        "vaccination",
+        "diagnosis",
+        "surgery",
+        "nutrition",
+        "breed",
+        "treatment"
+      ]
+    },
+    {
+      "id": "role_040",
+      "title": "Physical Therapist",
+      "category": "Medical",
+      "aliases": [
+        "physiotherapist",
+        "PT",
+        "rehabilitation specialist",
+        "sports therapist"
+      ],
+      "expertise_areas": [
+        "rehabilitation",
+        "exercise prescription",
+        "manual therapy",
+        "injury assessment",
+        "mobility training"
+      ],
+      "typical_intents": [
+        "plan",
+        "create",
+        "explain",
+        "improve",
+        "analyze"
+      ],
+      "common_domains": [
+        "physical therapy",
+        "rehabilitation",
+        "sports medicine",
+        "orthopedics"
+      ],
+      "prompt_style": "clinical",
+      "keywords": [
+        "exercise",
+        "rehabilitation",
+        "mobility",
+        "strength",
+        "range of motion",
+        "modality",
+        "gait"
+      ]
+    },
+    {
+      "id": "role_041",
+      "title": "Lawyer",
+      "category": "Legal",
+      "aliases": [
+        "attorney",
+        "legal counsel",
+        "solicitor",
+        "barrister",
+        "advocate"
+      ],
+      "expertise_areas": [
+        "legal analysis",
+        "contract drafting",
+        "litigation",
+        "legal research",
+        "client counseling"
+      ],
+      "typical_intents": [
+        "analyze",
+        "create",
+        "explain",
+        "research",
+        "compare"
+      ],
+      "common_domains": [
+        "law",
+        "corporate law",
+        "litigation",
+        "intellectual property"
+      ],
+      "prompt_style": "formal",
+      "keywords": [
+        "statute",
+        "contract",
+        "clause",
+        "liability",
+        "precedent",
+        "jurisdiction",
+        "compliance"
+      ]
+    },
+    {
+      "id": "role_042",
+      "title": "Judge",
+      "category": "Legal",
+      "aliases": [
+        "magistrate",
+        "justice",
+        "adjudicator",
+        "arbitrator"
+      ],
+      "expertise_areas": [
+        "judicial reasoning",
+        "case law",
+        "constitutional law",
+        "sentencing",
+        "court procedure"
+      ],
+      "typical_intents": [
+        "analyze",
+        "decide",
+        "explain",
+        "compare"
+      ],
+      "common_domains": [
+        "judiciary",
+        "constitutional law",
+        "criminal law",
+        "civil law"
+      ],
+      "prompt_style": "formal",
+      "keywords": [
+        "ruling",
+        "verdict",
+        "precedent",
+        "statute",
+        "evidence",
+        "testimony",
+        "appeal"
+      ]
+    },
+    {
+      "id": "role_043",
+      "title": "Paralegal",
+      "category": "Legal",
+      "aliases": [
+        "legal assistant",
+        "litigation support",
+        "legal secretary"
+      ],
+      "expertise_areas": [
+        "legal research",
+        "document preparation",
+        "case management",
+        "filing",
+        "discovery"
+      ],
+      "typical_intents": [
+        "research",
+        "create",
+        "analyze",
+        "organize"
+      ],
+      "common_domains": [
+        "legal support",
+        "litigation",
+        "corporate law"
+      ],
+      "prompt_style": "formal",
+      "keywords": [
+        "brief",
+        "deposition",
+        "filing",
+        "discovery",
+        "exhibit",
+        "docket",
+        "subpoena"
+      ]
+    },
+    {
+      "id": "role_044",
+      "title": "Legal Advisor",
+      "category": "Legal",
+      "aliases": [
+        "legal consultant",
+        "in-house counsel",
+        "compliance officer",
+        "general counsel"
+      ],
+      "expertise_areas": [
+        "legal compliance",
+        "risk assessment",
+        "regulatory guidance",
+        "contract review",
+        "policy development"
+      ],
+      "typical_intents": [
+        "analyze",
+        "explain",
+        "create",
+        "plan",
+        "decide"
+      ],
+      "common_domains": [
+        "corporate law",
+        "compliance",
+        "regulatory",
+        "risk management"
+      ],
+      "prompt_style": "formal",
+      "keywords": [
+        "regulation",
+        "compliance",
+        "policy",
+        "risk",
+        "GDPR",
+        "audit",
+        "governance"
+      ]
+    },
+    {
+      "id": "role_045",
+      "title": "Patent Attorney",
+      "category": "Legal",
+      "aliases": [
+        "IP attorney",
+        "patent agent",
+        "intellectual property lawyer"
+      ],
+      "expertise_areas": [
+        "patent prosecution",
+        "IP strategy",
+        "patent drafting",
+        "prior art search",
+        "licensing"
+      ],
+      "typical_intents": [
+        "create",
+        "research",
+        "analyze",
+        "explain",
+        "compare"
+      ],
+      "common_domains": [
+        "intellectual property",
+        "patent law",
+        "technology law"
+      ],
+      "prompt_style": "formal",
+      "keywords": [
+        "patent",
+        "claim",
+        "prior art",
+        "novelty",
+        "infringement",
+        "licensing",
+        "trademark"
+      ]
+    },
+    {
+      "id": "role_046",
+      "title": "Teacher",
+      "category": "Education",
+      "aliases": [
+        "educator",
+        "instructor",
+        "school teacher",
+        "classroom teacher"
+      ],
+      "expertise_areas": [
+        "curriculum delivery",
+        "lesson planning",
+        "student assessment",
+        "classroom management",
+        "differentiated instruction"
+      ],
+      "typical_intents": [
+        "create",
+        "explain",
+        "plan",
+        "improve",
+        "design"
+      ],
+      "common_domains": [
+        "K-12 education",
+        "pedagogy",
+        "curriculum",
+        "special education"
+      ],
+      "prompt_style": "educational",
+      "keywords": [
+        "lesson plan",
+        "assessment",
+        "student",
+        "curriculum",
+        "learning objective",
+        "rubric",
+        "differentiation"
+      ]
+    },
+    {
+      "id": "role_047",
+      "title": "Professor",
+      "category": "Education",
+      "aliases": [
+        "academic",
+        "lecturer",
+        "faculty member",
+        "associate professor"
+      ],
+      "expertise_areas": [
+        "academic research",
+        "course design",
+        "thesis supervision",
+        "peer review",
+        "grant writing"
+      ],
+      "typical_intents": [
+        "research",
+        "create",
+        "explain",
+        "analyze",
+        "write"
+      ],
+      "common_domains": [
+        "higher education",
+        "academic research",
+        "scholarly publishing"
+      ],
+      "prompt_style": "academic",
+      "keywords": [
+        "syllabus",
+        "research",
+        "thesis",
+        "publication",
+        "peer review",
+        "tenure",
+        "seminar"
+      ]
+    },
+    {
+      "id": "role_048",
+      "title": "Tutor",
+      "category": "Education",
+      "aliases": [
+        "private tutor",
+        "academic tutor",
+        "online tutor",
+        "learning coach"
+      ],
+      "expertise_areas": [
+        "personalized instruction",
+        "exam preparation",
+        "concept reinforcement",
+        "study strategies",
+        "adaptive teaching"
+      ],
+      "typical_intents": [
+        "explain",
+        "create",
+        "improve",
+        "plan"
+      ],
+      "common_domains": [
+        "tutoring",
+        "test prep",
+        "academic support",
+        "e-learning"
+      ],
+      "prompt_style": "educational",
+      "keywords": [
+        "concept",
+        "practice",
+        "exam",
+        "study guide",
+        "explanation",
+        "problem solving",
+        "review"
+      ]
+    },
+    {
+      "id": "role_049",
+      "title": "Curriculum Designer",
+      "category": "Education",
+      "aliases": [
+        "instructional designer",
+        "learning designer",
+        "course developer",
+        "curriculum specialist"
+      ],
+      "expertise_areas": [
+        "curriculum development",
+        "learning outcomes",
+        "assessment design",
+        "educational technology",
+        "backward design"
+      ],
+      "typical_intents": [
+        "design",
+        "create",
+        "plan",
+        "improve",
+        "analyze"
+      ],
+      "common_domains": [
+        "education",
+        "e-learning",
+        "instructional design",
+        "corporate training"
+      ],
+      "prompt_style": "structured",
+      "keywords": [
+        "learning outcome",
+        "module",
+        "assessment",
+        "Bloom's taxonomy",
+        "competency",
+        "scaffold",
+        "rubric"
+      ]
+    },
+    {
+      "id": "role_050",
+      "title": "School Administrator",
+      "category": "Education",
+      "aliases": [
+        "principal",
+        "headmaster",
+        "dean",
+        "school director"
+      ],
+      "expertise_areas": [
+        "school management",
+        "policy implementation",
+        "staff development",
+        "budgeting",
+        "accreditation"
+      ],
+      "typical_intents": [
+        "plan",
+        "create",
+        "analyze",
+        "improve",
+        "decide"
+      ],
+      "common_domains": [
+        "education administration",
+        "school management",
+        "policy"
+      ],
+      "prompt_style": "professional",
+      "keywords": [
+        "policy",
+        "accreditation",
+        "enrollment",
+        "budget",
+        "faculty",
+        "compliance",
+        "strategic plan"
+      ]
+    },
+    {
+      "id": "role_051",
+      "title": "Accountant",
+      "category": "Finance",
+      "aliases": [
+        "CPA",
+        "chartered accountant",
+        "bookkeeper",
+        "tax accountant"
+      ],
+      "expertise_areas": [
+        "financial accounting",
+        "tax preparation",
+        "auditing",
+        "bookkeeping",
+        "financial reporting"
+      ],
+      "typical_intents": [
+        "analyze",
+        "create",
+        "explain",
+        "plan",
+        "improve"
+      ],
+      "common_domains": [
+        "accounting",
+        "taxation",
+        "auditing",
+        "financial reporting"
+      ],
+      "prompt_style": "precise",
+      "keywords": [
+        "ledger",
+        "journal entry",
+        "tax return",
+        "balance sheet",
+        "depreciation",
+        "GAAP",
+        "reconciliation"
+      ]
+    },
+    {
+      "id": "role_052",
+      "title": "Financial Analyst",
+      "category": "Finance",
+      "aliases": [
+        "equity analyst",
+        "investment analyst",
+        "credit analyst",
+        "FP&A analyst"
+      ],
+      "expertise_areas": [
+        "financial modeling",
+        "valuation",
+        "market analysis",
+        "forecasting",
+        "due diligence"
+      ],
+      "typical_intents": [
+        "analyze",
+        "compare",
+        "create",
+        "research",
+        "explain"
+      ],
+      "common_domains": [
+        "finance",
+        "investment",
+        "banking",
+        "corporate finance"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "DCF",
+        "valuation",
+        "revenue",
+        "EBITDA",
+        "ratio",
+        "forecast",
+        "benchmark"
+      ]
+    },
+    {
+      "id": "role_053",
+      "title": "Investment Banker",
+      "category": "Finance",
+      "aliases": [
+        "IB analyst",
+        "M&A advisor",
+        "capital markets analyst",
+        "deal maker"
+      ],
+      "expertise_areas": [
+        "mergers and acquisitions",
+        "capital raising",
+        "deal structuring",
+        "financial modeling",
+        "pitch books"
+      ],
+      "typical_intents": [
+        "analyze",
+        "create",
+        "plan",
+        "compare",
+        "research"
+      ],
+      "common_domains": [
+        "investment banking",
+        "M&A",
+        "capital markets",
+        "private equity"
+      ],
+      "prompt_style": "formal",
+      "keywords": [
+        "deal",
+        "valuation",
+        "pitch book",
+        "IPO",
+        "underwriting",
+        "synergy",
+        "term sheet"
+      ]
+    },
+    {
+      "id": "role_054",
+      "title": "Financial Planner",
+      "category": "Finance",
+      "aliases": [
+        "wealth advisor",
+        "financial advisor",
+        "CFP",
+        "retirement planner"
+      ],
+      "expertise_areas": [
+        "retirement planning",
+        "tax optimization",
+        "estate planning",
+        "risk management",
+        "portfolio allocation"
+      ],
+      "typical_intents": [
+        "plan",
+        "analyze",
+        "create",
+        "explain",
+        "compare"
+      ],
+      "common_domains": [
+        "personal finance",
+        "wealth management",
+        "retirement",
+        "insurance"
+      ],
+      "prompt_style": "advisory",
+      "keywords": [
+        "portfolio",
+        "retirement",
+        "401k",
+        "estate",
+        "insurance",
+        "allocation",
+        "tax-efficient"
+      ]
+    },
+    {
+      "id": "role_055",
+      "title": "Risk Manager",
+      "category": "Finance",
+      "aliases": [
+        "risk analyst",
+        "enterprise risk manager",
+        "credit risk manager"
+      ],
+      "expertise_areas": [
+        "risk assessment",
+        "mitigation strategies",
+        "regulatory compliance",
+        "stress testing",
+        "risk modeling"
+      ],
+      "typical_intents": [
+        "analyze",
+        "plan",
+        "create",
+        "improve",
+        "explain"
+      ],
+      "common_domains": [
+        "risk management",
+        "banking",
+        "insurance",
+        "compliance"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "VaR",
+        "exposure",
+        "hedging",
+        "stress test",
+        "Basel",
+        "credit risk",
+        "operational risk"
+      ]
+    },
+    {
+      "id": "role_056",
+      "title": "Auditor",
+      "category": "Finance",
+      "aliases": [
+        "internal auditor",
+        "external auditor",
+        "IT auditor",
+        "compliance auditor"
+      ],
+      "expertise_areas": [
+        "audit planning",
+        "internal controls",
+        "compliance testing",
+        "fraud detection",
+        "reporting"
+      ],
+      "typical_intents": [
+        "analyze",
+        "create",
+        "research",
+        "explain",
+        "improve"
+      ],
+      "common_domains": [
+        "auditing",
+        "compliance",
+        "corporate governance",
+        "accounting"
+      ],
+      "prompt_style": "formal",
+      "keywords": [
+        "finding",
+        "control",
+        "testing",
+        "materiality",
+        "opinion",
+        "workpaper",
+        "remediation"
+      ]
+    },
+    {
+      "id": "role_057",
+      "title": "Researcher",
+      "category": "Science",
+      "aliases": [
+        "research scientist",
+        "principal investigator",
+        "PI",
+        "research fellow"
+      ],
+      "expertise_areas": [
+        "research methodology",
+        "data analysis",
+        "academic writing",
+        "grant applications",
+        "peer review"
+      ],
+      "typical_intents": [
+        "research",
+        "analyze",
+        "write",
+        "explain",
+        "create"
+      ],
+      "common_domains": [
+        "scientific research",
+        "academic publishing",
+        "R&D"
+      ],
+      "prompt_style": "academic",
+      "keywords": [
+        "hypothesis",
+        "methodology",
+        "experiment",
+        "publication",
+        "literature review",
+        "data",
+        "findings"
+      ]
+    },
+    {
+      "id": "role_058",
+      "title": "Lab Technician",
+      "category": "Science",
+      "aliases": [
+        "laboratory technician",
+        "lab analyst",
+        "research technician",
+        "lab assistant"
+      ],
+      "expertise_areas": [
+        "laboratory procedures",
+        "sample preparation",
+        "equipment operation",
+        "quality control",
+        "data recording"
+      ],
+      "typical_intents": [
+        "create",
+        "analyze",
+        "explain",
+        "improve",
+        "plan"
+      ],
+      "common_domains": [
+        "laboratory science",
+        "quality control",
+        "clinical lab",
+        "research"
+      ],
+      "prompt_style": "procedural",
+      "keywords": [
+        "sample",
+        "protocol",
+        "calibration",
+        "reagent",
+        "assay",
+        "pipette",
+        "SOP"
+      ]
+    },
+    {
+      "id": "role_059",
+      "title": "Data Analyst",
+      "category": "Science",
+      "aliases": [
+        "business intelligence analyst",
+        "BI analyst",
+        "reporting analyst",
+        "analytics specialist"
+      ],
+      "expertise_areas": [
+        "data visualization",
+        "SQL",
+        "statistical analysis",
+        "reporting",
+        "dashboard creation"
+      ],
+      "typical_intents": [
+        "analyze",
+        "create",
+        "explain",
+        "compare",
+        "improve"
+      ],
+      "common_domains": [
+        "data analytics",
+        "business intelligence",
+        "reporting"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "dashboard",
+        "SQL",
+        "visualization",
+        "KPI",
+        "trend",
+        "metric",
+        "report"
+      ]
+    },
+    {
+      "id": "role_060",
+      "title": "Biostatistician",
+      "category": "Science",
+      "aliases": [
+        "statistical analyst",
+        "epidemiologist",
+        "clinical statistician"
+      ],
+      "expertise_areas": [
+        "statistical modeling",
+        "clinical trial design",
+        "survival analysis",
+        "epidemiology",
+        "SAS/R programming"
+      ],
+      "typical_intents": [
+        "analyze",
+        "research",
+        "create",
+        "explain",
+        "compare"
+      ],
+      "common_domains": [
+        "biostatistics",
+        "clinical research",
+        "public health",
+        "epidemiology"
+      ],
+      "prompt_style": "academic",
+      "keywords": [
+        "regression",
+        "confidence interval",
+        "sample size",
+        "power analysis",
+        "hazard ratio",
+        "p-value",
+        "meta-analysis"
+      ]
+    },
+    {
+      "id": "role_061",
+      "title": "Environmental Scientist",
+      "category": "Science",
+      "aliases": [
+        "ecologist",
+        "environmental analyst",
+        "conservation scientist"
+      ],
+      "expertise_areas": [
+        "environmental assessment",
+        "sustainability",
+        "pollution analysis",
+        "conservation",
+        "GIS"
+      ],
+      "typical_intents": [
+        "analyze",
+        "research",
+        "explain",
+        "create",
+        "plan"
+      ],
+      "common_domains": [
+        "environmental science",
+        "conservation",
+        "sustainability",
+        "ecology"
+      ],
+      "prompt_style": "scientific",
+      "keywords": [
+        "ecosystem",
+        "emissions",
+        "biodiversity",
+        "sustainability",
+        "remediation",
+        "impact",
+        "carbon"
+      ]
+    },
+    {
+      "id": "role_062",
+      "title": "Chemist",
+      "category": "Science",
+      "aliases": [
+        "analytical chemist",
+        "organic chemist",
+        "chemical researcher"
+      ],
+      "expertise_areas": [
+        "chemical analysis",
+        "synthesis",
+        "spectroscopy",
+        "formulation",
+        "material science"
+      ],
+      "typical_intents": [
+        "analyze",
+        "research",
+        "explain",
+        "create",
+        "compare"
+      ],
+      "common_domains": [
+        "chemistry",
+        "pharmaceuticals",
+        "material science",
+        "forensics"
+      ],
+      "prompt_style": "scientific",
+      "keywords": [
+        "compound",
+        "reaction",
+        "synthesis",
+        "spectrometry",
+        "concentration",
+        "catalyst",
+        "molecular"
+      ]
+    },
+    {
+      "id": "role_063",
+      "title": "Marketing Manager",
+      "category": "Marketing",
+      "aliases": [
+        "marketing director",
+        "brand manager",
+        "growth marketer",
+        "head of marketing"
+      ],
+      "expertise_areas": [
+        "marketing strategy",
+        "brand management",
+        "campaign planning",
+        "market research",
+        "budget allocation"
+      ],
+      "typical_intents": [
+        "plan",
+        "create",
+        "analyze",
+        "improve",
+        "compare"
+      ],
+      "common_domains": [
+        "marketing",
+        "brand management",
+        "advertising",
+        "market research"
+      ],
+      "prompt_style": "strategic",
+      "keywords": [
+        "campaign",
+        "brand",
+        "ROI",
+        "target audience",
+        "conversion",
+        "awareness",
+        "positioning"
+      ]
+    },
+    {
+      "id": "role_064",
+      "title": "SEO Specialist",
+      "category": "Marketing",
+      "aliases": [
+        "search engine optimizer",
+        "SEO analyst",
+        "SEO consultant",
+        "organic search specialist"
+      ],
+      "expertise_areas": [
+        "keyword research",
+        "on-page optimization",
+        "link building",
+        "technical SEO",
+        "content optimization"
+      ],
+      "typical_intents": [
+        "analyze",
+        "improve",
+        "create",
+        "research",
+        "plan"
+      ],
+      "common_domains": [
+        "SEO",
+        "digital marketing",
+        "content marketing",
+        "web analytics"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "keyword",
+        "ranking",
+        "backlink",
+        "SERP",
+        "meta tag",
+        "crawl",
+        "domain authority"
+      ]
+    },
+    {
+      "id": "role_065",
+      "title": "Social Media Manager",
+      "category": "Marketing",
+      "aliases": [
+        "community manager",
+        "social media strategist",
+        "social media coordinator"
+      ],
+      "expertise_areas": [
+        "social media strategy",
+        "content creation",
+        "community engagement",
+        "analytics",
+        "influencer marketing"
+      ],
+      "typical_intents": [
+        "create",
+        "plan",
+        "analyze",
+        "improve",
+        "design"
+      ],
+      "common_domains": [
+        "social media",
+        "digital marketing",
+        "content marketing",
+        "brand management"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "post",
+        "engagement",
+        "follower",
+        "hashtag",
+        "influencer",
+        "viral",
+        "content calendar"
+      ]
+    },
+    {
+      "id": "role_066",
+      "title": "Email Marketing Specialist",
+      "category": "Marketing",
+      "aliases": [
+        "email marketer",
+        "CRM specialist",
+        "marketing automation specialist"
+      ],
+      "expertise_areas": [
+        "email campaigns",
+        "segmentation",
+        "A/B testing",
+        "automation",
+        "deliverability"
+      ],
+      "typical_intents": [
+        "create",
+        "improve",
+        "analyze",
+        "plan",
+        "design"
+      ],
+      "common_domains": [
+        "email marketing",
+        "CRM",
+        "marketing automation",
+        "e-commerce"
+      ],
+      "prompt_style": "persuasive",
+      "keywords": [
+        "open rate",
+        "click-through",
+        "subject line",
+        "segmentation",
+        "drip",
+        "automation",
+        "unsubscribe"
+      ]
+    },
+    {
+      "id": "role_067",
+      "title": "PPC Specialist",
+      "category": "Marketing",
+      "aliases": [
+        "paid search specialist",
+        "SEM specialist",
+        "Google Ads specialist",
+        "performance marketer"
+      ],
+      "expertise_areas": [
+        "paid advertising",
+        "bid management",
+        "ad copywriting",
+        "campaign optimization",
+        "conversion tracking"
+      ],
+      "typical_intents": [
+        "create",
+        "analyze",
+        "improve",
+        "plan",
+        "compare"
+      ],
+      "common_domains": [
+        "digital advertising",
+        "search marketing",
+        "display advertising"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "CPC",
+        "CTR",
+        "quality score",
+        "ad copy",
+        "landing page",
+        "budget",
+        "ROAS"
+      ]
+    },
+    {
+      "id": "role_068",
+      "title": "Content Strategist",
+      "category": "Marketing",
+      "aliases": [
+        "content marketing manager",
+        "editorial strategist",
+        "content planner"
+      ],
+      "expertise_areas": [
+        "content planning",
+        "editorial calendar",
+        "audience analysis",
+        "content audit",
+        "distribution strategy"
+      ],
+      "typical_intents": [
+        "plan",
+        "create",
+        "analyze",
+        "improve",
+        "research"
+      ],
+      "common_domains": [
+        "content marketing",
+        "publishing",
+        "brand strategy",
+        "digital media"
+      ],
+      "prompt_style": "strategic",
+      "keywords": [
+        "content pillar",
+        "editorial",
+        "audience",
+        "funnel",
+        "evergreen",
+        "distribution",
+        "persona"
+      ]
+    },
+    {
+      "id": "role_069",
+      "title": "Market Research Analyst",
+      "category": "Marketing",
+      "aliases": [
+        "market analyst",
+        "consumer insights analyst",
+        "competitive analyst"
+      ],
+      "expertise_areas": [
+        "market analysis",
+        "consumer research",
+        "competitive intelligence",
+        "survey design",
+        "trend analysis"
+      ],
+      "typical_intents": [
+        "research",
+        "analyze",
+        "compare",
+        "create",
+        "explain"
+      ],
+      "common_domains": [
+        "market research",
+        "consumer behavior",
+        "competitive intelligence"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "survey",
+        "focus group",
+        "market share",
+        "trend",
+        "segmentation",
+        "competitor",
+        "insight"
+      ]
+    },
+    {
+      "id": "role_070",
+      "title": "Public Relations Specialist",
+      "category": "Marketing",
+      "aliases": [
+        "PR manager",
+        "communications specialist",
+        "media relations manager"
+      ],
+      "expertise_areas": [
+        "media relations",
+        "press releases",
+        "crisis communication",
+        "brand reputation",
+        "event planning"
+      ],
+      "typical_intents": [
+        "create",
+        "write",
+        "plan",
+        "improve",
+        "analyze"
+      ],
+      "common_domains": [
+        "public relations",
+        "communications",
+        "media",
+        "crisis management"
+      ],
+      "prompt_style": "professional",
+      "keywords": [
+        "press release",
+        "media pitch",
+        "crisis",
+        "spokesperson",
+        "coverage",
+        "reputation",
+        "editorial"
+      ]
+    },
+    {
+      "id": "role_071",
+      "title": "Civil Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "structural engineer",
+        "construction engineer",
+        "geotechnical engineer"
+      ],
+      "expertise_areas": [
+        "structural analysis",
+        "project management",
+        "site surveying",
+        "construction management",
+        "CAD"
+      ],
+      "typical_intents": [
+        "design",
+        "analyze",
+        "plan",
+        "create",
+        "improve"
+      ],
+      "common_domains": [
+        "civil engineering",
+        "construction",
+        "infrastructure",
+        "urban planning"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "structure",
+        "foundation",
+        "load",
+        "concrete",
+        "beam",
+        "survey",
+        "reinforcement"
+      ]
+    },
+    {
+      "id": "role_072",
+      "title": "Mechanical Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "design engineer",
+        "thermal engineer",
+        "manufacturing engineer"
+      ],
+      "expertise_areas": [
+        "mechanical design",
+        "thermodynamics",
+        "fluid mechanics",
+        "manufacturing processes",
+        "FEA"
+      ],
+      "typical_intents": [
+        "design",
+        "analyze",
+        "create",
+        "improve",
+        "explain"
+      ],
+      "common_domains": [
+        "mechanical engineering",
+        "manufacturing",
+        "automotive",
+        "aerospace"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "torque",
+        "stress",
+        "thermal",
+        "CAD",
+        "tolerance",
+        "assembly",
+        "material"
+      ]
+    },
+    {
+      "id": "role_073",
+      "title": "Electrical Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "electronics engineer",
+        "power engineer",
+        "embedded systems engineer"
+      ],
+      "expertise_areas": [
+        "circuit design",
+        "power systems",
+        "embedded systems",
+        "signal processing",
+        "PCB design"
+      ],
+      "typical_intents": [
+        "design",
+        "analyze",
+        "create",
+        "debug",
+        "improve"
+      ],
+      "common_domains": [
+        "electrical engineering",
+        "electronics",
+        "power systems",
+        "telecommunications"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "circuit",
+        "voltage",
+        "current",
+        "PCB",
+        "microcontroller",
+        "signal",
+        "amplifier"
+      ]
+    },
+    {
+      "id": "role_074",
+      "title": "Chemical Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "process engineer",
+        "petrochemical engineer",
+        "biochemical engineer"
+      ],
+      "expertise_areas": [
+        "process design",
+        "reaction engineering",
+        "separation processes",
+        "plant design",
+        "safety analysis"
+      ],
+      "typical_intents": [
+        "design",
+        "analyze",
+        "improve",
+        "create",
+        "plan"
+      ],
+      "common_domains": [
+        "chemical engineering",
+        "petrochemical",
+        "pharmaceutical manufacturing",
+        "food processing"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "reactor",
+        "distillation",
+        "heat exchanger",
+        "mass balance",
+        "P&ID",
+        "yield",
+        "catalyst"
+      ]
+    },
+    {
+      "id": "role_075",
+      "title": "Industrial Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "manufacturing engineer",
+        "process improvement engineer",
+        "lean engineer"
+      ],
+      "expertise_areas": [
+        "process optimization",
+        "lean manufacturing",
+        "ergonomics",
+        "supply chain optimization",
+        "quality engineering"
+      ],
+      "typical_intents": [
+        "improve",
+        "analyze",
+        "design",
+        "plan",
+        "create"
+      ],
+      "common_domains": [
+        "industrial engineering",
+        "manufacturing",
+        "logistics",
+        "quality management"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "lean",
+        "Six Sigma",
+        "throughput",
+        "bottleneck",
+        "kaizen",
+        "value stream",
+        "cycle time"
+      ]
+    },
+    {
+      "id": "role_076",
+      "title": "Aerospace Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "aeronautical engineer",
+        "propulsion engineer",
+        "spacecraft engineer"
+      ],
+      "expertise_areas": [
+        "aerodynamics",
+        "propulsion",
+        "avionics",
+        "structural analysis",
+        "flight mechanics"
+      ],
+      "typical_intents": [
+        "design",
+        "analyze",
+        "create",
+        "improve",
+        "research"
+      ],
+      "common_domains": [
+        "aerospace",
+        "defense",
+        "aviation",
+        "space exploration"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "aerodynamic",
+        "thrust",
+        "drag",
+        "avionics",
+        "orbit",
+        "fuselage",
+        "propellant"
+      ]
+    },
+    {
+      "id": "role_077",
+      "title": "Biomedical Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "clinical engineer",
+        "medical device engineer",
+        "tissue engineer"
+      ],
+      "expertise_areas": [
+        "medical device design",
+        "biomechanics",
+        "tissue engineering",
+        "regulatory affairs",
+        "biocompatibility"
+      ],
+      "typical_intents": [
+        "design",
+        "create",
+        "analyze",
+        "research",
+        "improve"
+      ],
+      "common_domains": [
+        "biomedical engineering",
+        "medical devices",
+        "healthcare technology"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "implant",
+        "biocompatible",
+        "FDA",
+        "prosthetic",
+        "sensor",
+        "imaging",
+        "tissue"
+      ]
+    },
+    {
+      "id": "role_078",
+      "title": "Environmental Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "water resources engineer",
+        "remediation engineer",
+        "sustainability engineer"
+      ],
+      "expertise_areas": [
+        "water treatment",
+        "waste management",
+        "environmental remediation",
+        "air quality",
+        "sustainability"
+      ],
+      "typical_intents": [
+        "design",
+        "analyze",
+        "improve",
+        "plan",
+        "create"
+      ],
+      "common_domains": [
+        "environmental engineering",
+        "water treatment",
+        "waste management",
+        "sustainability"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "treatment",
+        "effluent",
+        "remediation",
+        "emission",
+        "sustainability",
+        "compliance",
+        "watershed"
+      ]
+    },
+    {
+      "id": "role_079",
+      "title": "Robotics Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "automation engineer",
+        "controls engineer",
+        "mechatronics engineer"
+      ],
+      "expertise_areas": [
+        "robot design",
+        "control systems",
+        "computer vision",
+        "sensor integration",
+        "path planning"
+      ],
+      "typical_intents": [
+        "design",
+        "create",
+        "improve",
+        "analyze",
+        "debug"
+      ],
+      "common_domains": [
+        "robotics",
+        "automation",
+        "manufacturing",
+        "AI"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "actuator",
+        "sensor",
+        "PID",
+        "kinematics",
+        "ROS",
+        "servo",
+        "trajectory"
+      ]
+    },
+    {
+      "id": "role_080",
+      "title": "Materials Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "metallurgist",
+        "polymer engineer",
+        "composites engineer"
+      ],
+      "expertise_areas": [
+        "material selection",
+        "testing",
+        "failure analysis",
+        "composite design",
+        "corrosion engineering"
+      ],
+      "typical_intents": [
+        "analyze",
+        "compare",
+        "research",
+        "design",
+        "explain"
+      ],
+      "common_domains": [
+        "materials science",
+        "manufacturing",
+        "aerospace",
+        "construction"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "alloy",
+        "tensile",
+        "fatigue",
+        "corrosion",
+        "composite",
+        "hardness",
+        "microstructure"
+      ]
+    },
+    {
+      "id": "role_081",
+      "title": "Agronomist",
+      "category": "Agriculture",
+      "aliases": [
+        "crop scientist",
+        "soil scientist",
+        "agricultural consultant"
+      ],
+      "expertise_areas": [
+        "crop management",
+        "soil science",
+        "pest management",
+        "irrigation",
+        "sustainable agriculture"
+      ],
+      "typical_intents": [
+        "analyze",
+        "plan",
+        "improve",
+        "research",
+        "explain"
+      ],
+      "common_domains": [
+        "agriculture",
+        "crop science",
+        "soil science",
+        "agronomy"
+      ],
+      "prompt_style": "scientific",
+      "keywords": [
+        "crop",
+        "soil",
+        "yield",
+        "fertilizer",
+        "irrigation",
+        "pest",
+        "rotation"
+      ]
+    },
+    {
+      "id": "role_082",
+      "title": "Farm Manager",
+      "category": "Agriculture",
+      "aliases": [
+        "ranch manager",
+        "agricultural manager",
+        "farm operator"
+      ],
+      "expertise_areas": [
+        "farm operations",
+        "livestock management",
+        "budget management",
+        "equipment management",
+        "labor management"
+      ],
+      "typical_intents": [
+        "plan",
+        "improve",
+        "analyze",
+        "create",
+        "decide"
+      ],
+      "common_domains": [
+        "farming",
+        "livestock",
+        "agriculture business",
+        "rural management"
+      ],
+      "prompt_style": "practical",
+      "keywords": [
+        "harvest",
+        "livestock",
+        "equipment",
+        "season",
+        "budget",
+        "labor",
+        "market price"
+      ]
+    },
+    {
+      "id": "role_083",
+      "title": "Agricultural Scientist",
+      "category": "Agriculture",
+      "aliases": [
+        "agricultural researcher",
+        "plant scientist",
+        "food scientist"
+      ],
+      "expertise_areas": [
+        "plant breeding",
+        "biotechnology",
+        "food safety",
+        "agricultural research",
+        "crop genetics"
+      ],
+      "typical_intents": [
+        "research",
+        "analyze",
+        "create",
+        "explain",
+        "improve"
+      ],
+      "common_domains": [
+        "agricultural science",
+        "biotechnology",
+        "food science",
+        "genetics"
+      ],
+      "prompt_style": "academic",
+      "keywords": [
+        "genotype",
+        "phenotype",
+        "breeding",
+        "pathogen",
+        "yield trial",
+        "GMO",
+        "resistance"
+      ]
+    },
+    {
+      "id": "role_084",
+      "title": "Agricultural Engineer",
+      "category": "Agriculture",
+      "aliases": [
+        "farm engineer",
+        "irrigation engineer",
+        "agricultural machinery specialist"
+      ],
+      "expertise_areas": [
+        "farm mechanization",
+        "irrigation design",
+        "precision agriculture",
+        "post-harvest technology",
+        "renewable energy"
+      ],
+      "typical_intents": [
+        "design",
+        "improve",
+        "create",
+        "analyze",
+        "plan"
+      ],
+      "common_domains": [
+        "agricultural engineering",
+        "precision agriculture",
+        "farm technology"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "tractor",
+        "irrigation",
+        "sensor",
+        "GPS",
+        "drone",
+        "precision",
+        "mechanization"
+      ]
+    },
+    {
+      "id": "role_085",
+      "title": "Food Technologist",
+      "category": "Agriculture",
+      "aliases": [
+        "food scientist",
+        "food quality manager",
+        "product development scientist"
+      ],
+      "expertise_areas": [
+        "food processing",
+        "quality assurance",
+        "product development",
+        "food safety",
+        "sensory evaluation"
+      ],
+      "typical_intents": [
+        "create",
+        "analyze",
+        "improve",
+        "research",
+        "plan"
+      ],
+      "common_domains": [
+        "food technology",
+        "food safety",
+        "quality assurance",
+        "product development"
+      ],
+      "prompt_style": "scientific",
+      "keywords": [
+        "shelf life",
+        "HACCP",
+        "pasteurization",
+        "formulation",
+        "nutrition",
+        "sensory",
+        "packaging"
+      ]
+    },
+    {
+      "id": "role_086",
+      "title": "Musician",
+      "category": "Arts",
+      "aliases": [
+        "composer",
+        "songwriter",
+        "music producer",
+        "instrumentalist"
+      ],
+      "expertise_areas": [
+        "music composition",
+        "arrangement",
+        "music theory",
+        "performance",
+        "production"
+      ],
+      "typical_intents": [
+        "create",
+        "improve",
+        "analyze",
+        "explain",
+        "design"
+      ],
+      "common_domains": [
+        "music",
+        "performing arts",
+        "entertainment",
+        "audio production"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "melody",
+        "harmony",
+        "rhythm",
+        "chord",
+        "tempo",
+        "arrangement",
+        "mix"
+      ]
+    },
+    {
+      "id": "role_087",
+      "title": "Actor",
+      "category": "Arts",
+      "aliases": [
+        "performer",
+        "thespian",
+        "voice actor",
+        "stage actor"
+      ],
+      "expertise_areas": [
+        "acting technique",
+        "character development",
+        "script analysis",
+        "improvisation",
+        "voice work"
+      ],
+      "typical_intents": [
+        "create",
+        "improve",
+        "analyze",
+        "explain",
+        "plan"
+      ],
+      "common_domains": [
+        "theater",
+        "film",
+        "television",
+        "voice acting"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "character",
+        "monologue",
+        "audition",
+        "scene",
+        "motivation",
+        "blocking",
+        "dialogue"
+      ]
+    },
+    {
+      "id": "role_088",
+      "title": "Director",
+      "category": "Arts",
+      "aliases": [
+        "film director",
+        "theater director",
+        "stage director"
+      ],
+      "expertise_areas": [
+        "storytelling",
+        "visual composition",
+        "actor direction",
+        "production management",
+        "script interpretation"
+      ],
+      "typical_intents": [
+        "create",
+        "plan",
+        "design",
+        "improve",
+        "analyze"
+      ],
+      "common_domains": [
+        "film",
+        "theater",
+        "television",
+        "streaming"
+      ],
+      "prompt_style": "visionary",
+      "keywords": [
+        "shot",
+        "scene",
+        "narrative",
+        "blocking",
+        "casting",
+        "cinematography",
+        "edit"
+      ]
+    },
+    {
+      "id": "role_089",
+      "title": "Choreographer",
+      "category": "Arts",
+      "aliases": [
+        "dance director",
+        "movement director",
+        "dance choreographer"
+      ],
+      "expertise_areas": [
+        "dance composition",
+        "movement notation",
+        "rehearsal direction",
+        "performance design",
+        "body mechanics"
+      ],
+      "typical_intents": [
+        "create",
+        "design",
+        "plan",
+        "improve",
+        "explain"
+      ],
+      "common_domains": [
+        "dance",
+        "performing arts",
+        "theater",
+        "music videos"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "movement",
+        "routine",
+        "formation",
+        "rhythm",
+        "expression",
+        "rehearsal",
+        "ensemble"
+      ]
+    },
+    {
+      "id": "role_090",
+      "title": "Sculptor",
+      "category": "Arts",
+      "aliases": [
+        "3D artist",
+        "installation artist",
+        "ceramic artist"
+      ],
+      "expertise_areas": [
+        "sculpting techniques",
+        "material knowledge",
+        "form and composition",
+        "installation design",
+        "casting"
+      ],
+      "typical_intents": [
+        "create",
+        "design",
+        "explain",
+        "improve"
+      ],
+      "common_domains": [
+        "fine arts",
+        "sculpture",
+        "installation art",
+        "ceramics"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "clay",
+        "bronze",
+        "casting",
+        "form",
+        "texture",
+        "installation",
+        "mold"
+      ]
+    },
+    {
+      "id": "role_091",
+      "title": "Painter",
+      "category": "Arts",
+      "aliases": [
+        "fine artist",
+        "muralist",
+        "watercolorist",
+        "oil painter"
+      ],
+      "expertise_areas": [
+        "painting techniques",
+        "color theory",
+        "composition",
+        "art history",
+        "mixed media"
+      ],
+      "typical_intents": [
+        "create",
+        "explain",
+        "improve",
+        "design",
+        "analyze"
+      ],
+      "common_domains": [
+        "fine arts",
+        "painting",
+        "gallery",
+        "illustration"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "canvas",
+        "pigment",
+        "brush",
+        "palette",
+        "composition",
+        "glaze",
+        "medium"
+      ]
+    },
+    {
+      "id": "role_092",
+      "title": "Sound Engineer",
+      "category": "Arts",
+      "aliases": [
+        "audio engineer",
+        "mixing engineer",
+        "mastering engineer",
+        "recording engineer"
+      ],
+      "expertise_areas": [
+        "audio mixing",
+        "mastering",
+        "recording",
+        "sound design",
+        "live sound"
+      ],
+      "typical_intents": [
+        "create",
+        "improve",
+        "analyze",
+        "design",
+        "debug"
+      ],
+      "common_domains": [
+        "audio production",
+        "music",
+        "film",
+        "broadcasting"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "mix",
+        "EQ",
+        "compressor",
+        "reverb",
+        "gain",
+        "DAW",
+        "frequency"
+      ]
+    },
+    {
+      "id": "role_093",
+      "title": "Data Engineer",
+      "category": "Technology",
+      "aliases": [
+        "ETL developer",
+        "data pipeline engineer",
+        "big data engineer"
+      ],
+      "expertise_areas": [
+        "data pipelines",
+        "ETL",
+        "data warehousing",
+        "streaming",
+        "data modeling"
+      ],
+      "typical_intents": [
+        "create",
+        "design",
+        "improve",
+        "debug",
+        "analyze"
+      ],
+      "common_domains": [
+        "data engineering",
+        "big data",
+        "cloud computing",
+        "analytics"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "pipeline",
+        "ETL",
+        "Spark",
+        "Kafka",
+        "warehouse",
+        "schema",
+        "batch"
+      ]
+    },
+    {
+      "id": "role_094",
+      "title": "Mobile Developer",
+      "category": "Technology",
+      "aliases": [
+        "iOS developer",
+        "Android developer",
+        "React Native developer",
+        "Flutter developer"
+      ],
+      "expertise_areas": [
+        "mobile app development",
+        "UI/UX implementation",
+        "mobile performance",
+        "app store deployment",
+        "push notifications"
+      ],
+      "typical_intents": [
+        "create",
+        "design",
+        "debug",
+        "improve"
+      ],
+      "common_domains": [
+        "mobile development",
+        "iOS",
+        "Android",
+        "cross-platform"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "app",
+        "Swift",
+        "Kotlin",
+        "Flutter",
+        "widget",
+        "navigation",
+        "offline"
+      ]
+    },
+    {
+      "id": "role_095",
+      "title": "Blockchain Developer",
+      "category": "Technology",
+      "aliases": [
+        "smart contract developer",
+        "Web3 developer",
+        "Solidity developer",
+        "DeFi developer"
+      ],
+      "expertise_areas": [
+        "smart contracts",
+        "DeFi protocols",
+        "consensus mechanisms",
+        "tokenomics",
+        "security auditing"
+      ],
+      "typical_intents": [
+        "create",
+        "design",
+        "analyze",
+        "debug",
+        "explain"
+      ],
+      "common_domains": [
+        "blockchain",
+        "cryptocurrency",
+        "DeFi",
+        "Web3"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "smart contract",
+        "Solidity",
+        "gas",
+        "token",
+        "wallet",
+        "consensus",
+        "decentralized"
+      ]
+    },
+    {
+      "id": "role_096",
+      "title": "Network Engineer",
+      "category": "Technology",
+      "aliases": [
+        "network administrator",
+        "network architect",
+        "systems engineer"
+      ],
+      "expertise_areas": [
+        "network design",
+        "routing and switching",
+        "firewall configuration",
+        "VPN",
+        "network monitoring"
+      ],
+      "typical_intents": [
+        "design",
+        "debug",
+        "improve",
+        "create",
+        "analyze"
+      ],
+      "common_domains": [
+        "networking",
+        "telecommunications",
+        "cybersecurity",
+        "cloud"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "router",
+        "switch",
+        "VLAN",
+        "subnet",
+        "BGP",
+        "latency",
+        "bandwidth"
+      ]
+    },
+    {
+      "id": "role_097",
+      "title": "Supply Chain Manager",
+      "category": "Business",
+      "aliases": [
+        "logistics manager",
+        "procurement manager",
+        "supply chain analyst"
+      ],
+      "expertise_areas": [
+        "supply chain optimization",
+        "procurement",
+        "inventory management",
+        "logistics planning",
+        "vendor relations"
+      ],
+      "typical_intents": [
+        "improve",
+        "analyze",
+        "plan",
+        "create",
+        "decide"
+      ],
+      "common_domains": [
+        "supply chain",
+        "logistics",
+        "procurement",
+        "manufacturing"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "inventory",
+        "lead time",
+        "procurement",
+        "logistics",
+        "warehouse",
+        "demand planning",
+        "vendor"
+      ]
+    },
+    {
+      "id": "role_098",
+      "title": "Real Estate Agent",
+      "category": "Business",
+      "aliases": [
+        "realtor",
+        "property consultant",
+        "real estate broker",
+        "estate agent"
+      ],
+      "expertise_areas": [
+        "property valuation",
+        "market analysis",
+        "negotiation",
+        "listing management",
+        "client relations"
+      ],
+      "typical_intents": [
+        "analyze",
+        "compare",
+        "create",
+        "plan",
+        "explain"
+      ],
+      "common_domains": [
+        "real estate",
+        "property management",
+        "commercial real estate"
+      ],
+      "prompt_style": "professional",
+      "keywords": [
+        "listing",
+        "valuation",
+        "mortgage",
+        "closing",
+        "comparable",
+        "commission",
+        "MLS"
+      ]
+    },
+    {
+      "id": "role_099",
+      "title": "Architect",
+      "category": "Engineering",
+      "aliases": [
+        "building architect",
+        "design architect",
+        "landscape architect",
+        "urban planner"
+      ],
+      "expertise_areas": [
+        "architectural design",
+        "building codes",
+        "space planning",
+        "sustainable design",
+        "3D modeling"
+      ],
+      "typical_intents": [
+        "design",
+        "create",
+        "plan",
+        "improve",
+        "analyze"
+      ],
+      "common_domains": [
+        "architecture",
+        "construction",
+        "urban planning",
+        "interior design"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "blueprint",
+        "elevation",
+        "floor plan",
+        "facade",
+        "zoning",
+        "CAD",
+        "sustainability"
+      ]
+    },
+    {
+      "id": "role_100",
+      "title": "Interior Designer",
+      "category": "Creative",
+      "aliases": [
+        "interior decorator",
+        "space planner",
+        "residential designer"
+      ],
+      "expertise_areas": [
+        "space planning",
+        "color coordination",
+        "material selection",
+        "furniture layout",
+        "lighting design"
+      ],
+      "typical_intents": [
+        "design",
+        "create",
+        "improve",
+        "plan",
+        "compare"
+      ],
+      "common_domains": [
+        "interior design",
+        "architecture",
+        "hospitality",
+        "residential"
+      ],
+      "prompt_style": "creative",
+      "keywords": [
+        "layout",
+        "palette",
+        "texture",
+        "furniture",
+        "lighting",
+        "fabric",
+        "mood board"
+      ]
+    },
+    {
+      "id": "role_101",
+      "title": "Nutritionist",
+      "category": "Medical",
+      "aliases": [
+        "dietitian",
+        "registered dietitian",
+        "nutrition consultant",
+        "clinical nutritionist"
+      ],
+      "expertise_areas": [
+        "diet planning",
+        "nutritional assessment",
+        "meal planning",
+        "supplement guidance",
+        "clinical nutrition"
+      ],
+      "typical_intents": [
+        "create",
+        "plan",
+        "analyze",
+        "explain",
+        "improve"
+      ],
+      "common_domains": [
+        "nutrition",
+        "health",
+        "sports nutrition",
+        "clinical nutrition"
+      ],
+      "prompt_style": "advisory",
+      "keywords": [
+        "macronutrient",
+        "calorie",
+        "vitamin",
+        "meal plan",
+        "dietary",
+        "supplement",
+        "metabolism"
+      ]
+    },
+    {
+      "id": "role_102",
+      "title": "Sports Coach",
+      "category": "Education",
+      "aliases": [
+        "athletic trainer",
+        "fitness coach",
+        "personal trainer",
+        "strength coach"
+      ],
+      "expertise_areas": [
+        "training program design",
+        "performance analysis",
+        "injury prevention",
+        "motivation",
+        "sport psychology"
+      ],
+      "typical_intents": [
+        "create",
+        "plan",
+        "improve",
+        "analyze",
+        "explain"
+      ],
+      "common_domains": [
+        "sports",
+        "fitness",
+        "athletics",
+        "performance"
+      ],
+      "prompt_style": "motivational",
+      "keywords": [
+        "training",
+        "drill",
+        "conditioning",
+        "recovery",
+        "periodization",
+        "technique",
+        "performance"
+      ]
+    },
+    {
+      "id": "role_103",
+      "title": "Journalist",
+      "category": "Creative",
+      "aliases": [
+        "reporter",
+        "news writer",
+        "investigative journalist",
+        "correspondent"
+      ],
+      "expertise_areas": [
+        "news reporting",
+        "investigation",
+        "interviewing",
+        "fact-checking",
+        "editorial writing"
+      ],
+      "typical_intents": [
+        "write",
+        "research",
+        "analyze",
+        "explain",
+        "create"
+      ],
+      "common_domains": [
+        "journalism",
+        "media",
+        "broadcasting",
+        "digital news"
+      ],
+      "prompt_style": "narrative",
+      "keywords": [
+        "story",
+        "source",
+        "lead",
+        "headline",
+        "byline",
+        "deadline",
+        "editorial"
+      ]
+    },
+    {
+      "id": "role_104",
+      "title": "Economist",
+      "category": "Science",
+      "aliases": [
+        "economic analyst",
+        "macroeconomist",
+        "policy economist",
+        "econometrician"
+      ],
+      "expertise_areas": [
+        "economic modeling",
+        "policy analysis",
+        "forecasting",
+        "market analysis",
+        "econometrics"
+      ],
+      "typical_intents": [
+        "analyze",
+        "research",
+        "explain",
+        "compare",
+        "create"
+      ],
+      "common_domains": [
+        "economics",
+        "public policy",
+        "finance",
+        "trade"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "GDP",
+        "inflation",
+        "supply",
+        "demand",
+        "fiscal",
+        "monetary",
+        "equilibrium"
+      ]
+    },
+    {
+      "id": "role_105",
+      "title": "Psychologist",
+      "category": "Science",
+      "aliases": [
+        "clinical psychologist",
+        "research psychologist",
+        "behavioral psychologist",
+        "neuropsychologist"
+      ],
+      "expertise_areas": [
+        "psychological assessment",
+        "research design",
+        "behavioral analysis",
+        "cognitive science",
+        "statistical analysis"
+      ],
+      "typical_intents": [
+        "analyze",
+        "research",
+        "explain",
+        "create",
+        "improve"
+      ],
+      "common_domains": [
+        "psychology",
+        "behavioral science",
+        "neuroscience",
+        "mental health research"
+      ],
+      "prompt_style": "academic",
+      "keywords": [
+        "behavior",
+        "cognition",
+        "assessment",
+        "scale",
+        "experiment",
+        "variable",
+        "construct"
+      ]
+    },
+    {
+      "id": "role_106",
+      "title": "Pharmacologist",
+      "category": "Science",
+      "aliases": [
+        "drug researcher",
+        "toxicologist",
+        "clinical pharmacologist"
+      ],
+      "expertise_areas": [
+        "drug development",
+        "pharmacokinetics",
+        "pharmacodynamics",
+        "toxicology",
+        "clinical trials"
+      ],
+      "typical_intents": [
+        "research",
+        "analyze",
+        "explain",
+        "compare",
+        "create"
+      ],
+      "common_domains": [
+        "pharmacology",
+        "drug development",
+        "toxicology",
+        "clinical research"
+      ],
+      "prompt_style": "scientific",
+      "keywords": [
+        "drug",
+        "receptor",
+        "dose-response",
+        "ADME",
+        "toxicity",
+        "mechanism",
+        "bioavailability"
+      ]
+    },
+    {
+      "id": "role_107",
+      "title": "Insurance Agent",
+      "category": "Finance",
+      "aliases": [
+        "insurance broker",
+        "underwriter",
+        "claims adjuster",
+        "insurance advisor"
+      ],
+      "expertise_areas": [
+        "risk assessment",
+        "policy analysis",
+        "claims processing",
+        "underwriting",
+        "client advisory"
+      ],
+      "typical_intents": [
+        "analyze",
+        "compare",
+        "explain",
+        "create",
+        "plan"
+      ],
+      "common_domains": [
+        "insurance",
+        "risk management",
+        "actuarial",
+        "compliance"
+      ],
+      "prompt_style": "professional",
+      "keywords": [
+        "premium",
+        "deductible",
+        "coverage",
+        "claim",
+        "policy",
+        "underwriting",
+        "liability"
+      ]
+    },
+    {
+      "id": "role_108",
+      "title": "Actuary",
+      "category": "Finance",
+      "aliases": [
+        "actuarial analyst",
+        "pricing actuary",
+        "reserving actuary"
+      ],
+      "expertise_areas": [
+        "actuarial modeling",
+        "risk quantification",
+        "pricing",
+        "reserving",
+        "mortality analysis"
+      ],
+      "typical_intents": [
+        "analyze",
+        "create",
+        "research",
+        "explain",
+        "compare"
+      ],
+      "common_domains": [
+        "actuarial science",
+        "insurance",
+        "pension",
+        "risk management"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "mortality",
+        "premium",
+        "reserve",
+        "loss ratio",
+        "probability",
+        "annuity",
+        "exposure"
+      ]
+    },
+    {
+      "id": "role_109",
+      "title": "Compliance Officer",
+      "category": "Legal",
+      "aliases": [
+        "regulatory compliance manager",
+        "AML officer",
+        "ethics officer"
+      ],
+      "expertise_areas": [
+        "regulatory compliance",
+        "policy development",
+        "risk assessment",
+        "audit management",
+        "training"
+      ],
+      "typical_intents": [
+        "analyze",
+        "create",
+        "plan",
+        "improve",
+        "explain"
+      ],
+      "common_domains": [
+        "compliance",
+        "regulatory",
+        "banking",
+        "healthcare compliance"
+      ],
+      "prompt_style": "formal",
+      "keywords": [
+        "regulation",
+        "policy",
+        "audit",
+        "control",
+        "KYC",
+        "AML",
+        "whistleblower"
+      ]
+    },
+    {
+      "id": "role_110",
+      "title": "Technical Support Specialist",
+      "category": "Technology",
+      "aliases": [
+        "help desk",
+        "IT support",
+        "support engineer",
+        "customer support tech"
+      ],
+      "expertise_areas": [
+        "troubleshooting",
+        "customer service",
+        "knowledge base management",
+        "ticket management",
+        "escalation"
+      ],
+      "typical_intents": [
+        "debug",
+        "explain",
+        "create",
+        "improve"
+      ],
+      "common_domains": [
+        "IT support",
+        "customer service",
+        "technology"
+      ],
+      "prompt_style": "step-by-step",
+      "keywords": [
+        "ticket",
+        "troubleshoot",
+        "workaround",
+        "escalation",
+        "resolution",
+        "SLA",
+        "reboot"
+      ]
+    },
+    {
+      "id": "role_111",
+      "title": "Translator",
+      "category": "Creative",
+      "aliases": [
+        "interpreter",
+        "localization specialist",
+        "language specialist",
+        "linguist"
+      ],
+      "expertise_areas": [
+        "translation",
+        "localization",
+        "transcreation",
+        "terminology management",
+        "cultural adaptation"
+      ],
+      "typical_intents": [
+        "translate",
+        "improve",
+        "create",
+        "explain"
+      ],
+      "common_domains": [
+        "translation",
+        "localization",
+        "publishing",
+        "international business"
+      ],
+      "prompt_style": "precise",
+      "keywords": [
+        "source language",
+        "target language",
+        "localization",
+        "glossary",
+        "context",
+        "register",
+        "idiomatic"
+      ]
+    },
+    {
+      "id": "role_112",
+      "title": "Ethical Hacker",
+      "category": "Technology",
+      "aliases": [
+        "penetration tester",
+        "red team operator",
+        "bug bounty hunter",
+        "security researcher"
+      ],
+      "expertise_areas": [
+        "penetration testing",
+        "vulnerability research",
+        "exploit development",
+        "social engineering",
+        "reporting"
+      ],
+      "typical_intents": [
+        "analyze",
+        "research",
+        "create",
+        "explain",
+        "improve"
+      ],
+      "common_domains": [
+        "cybersecurity",
+        "penetration testing",
+        "application security"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "exploit",
+        "payload",
+        "vulnerability",
+        "recon",
+        "privilege escalation",
+        "lateral movement",
+        "report"
+      ]
+    },
+    {
+      "id": "role_113",
+      "title": "Scrum Master",
+      "category": "Business",
+      "aliases": [
+        "agile coach",
+        "agile facilitator",
+        "iteration manager"
+      ],
+      "expertise_areas": [
+        "agile methodology",
+        "sprint facilitation",
+        "team coaching",
+        "impediment removal",
+        "retrospectives"
+      ],
+      "typical_intents": [
+        "plan",
+        "improve",
+        "create",
+        "analyze",
+        "explain"
+      ],
+      "common_domains": [
+        "agile",
+        "project management",
+        "software development"
+      ],
+      "prompt_style": "facilitative",
+      "keywords": [
+        "sprint",
+        "backlog",
+        "standup",
+        "retrospective",
+        "velocity",
+        "impediment",
+        "user story"
+      ]
+    },
+    {
+      "id": "role_114",
+      "title": "Urban Planner",
+      "category": "Engineering",
+      "aliases": [
+        "city planner",
+        "town planner",
+        "regional planner",
+        "land use planner"
+      ],
+      "expertise_areas": [
+        "land use planning",
+        "zoning",
+        "transportation planning",
+        "community development",
+        "GIS"
+      ],
+      "typical_intents": [
+        "plan",
+        "design",
+        "analyze",
+        "create",
+        "research"
+      ],
+      "common_domains": [
+        "urban planning",
+        "public policy",
+        "transportation",
+        "housing"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "zoning",
+        "density",
+        "transit",
+        "mixed-use",
+        "corridor",
+        "setback",
+        "comprehensive plan"
+      ]
+    },
+    {
+      "id": "role_115",
+      "title": "Logistics Coordinator",
+      "category": "Business",
+      "aliases": [
+        "shipping coordinator",
+        "freight coordinator",
+        "transportation planner"
+      ],
+      "expertise_areas": [
+        "shipment coordination",
+        "route optimization",
+        "carrier management",
+        "customs documentation",
+        "tracking"
+      ],
+      "typical_intents": [
+        "plan",
+        "improve",
+        "create",
+        "analyze"
+      ],
+      "common_domains": [
+        "logistics",
+        "transportation",
+        "supply chain",
+        "international trade"
+      ],
+      "prompt_style": "operational",
+      "keywords": [
+        "shipment",
+        "carrier",
+        "customs",
+        "freight",
+        "tracking",
+        "route",
+        "warehouse"
+      ]
+    },
+    {
+      "id": "role_116",
+      "title": "Event Planner",
+      "category": "Business",
+      "aliases": [
+        "event coordinator",
+        "wedding planner",
+        "conference organizer",
+        "event manager"
+      ],
+      "expertise_areas": [
+        "event coordination",
+        "vendor management",
+        "budgeting",
+        "timeline management",
+        "logistics"
+      ],
+      "typical_intents": [
+        "plan",
+        "create",
+        "improve",
+        "design",
+        "decide"
+      ],
+      "common_domains": [
+        "event management",
+        "hospitality",
+        "corporate events",
+        "weddings"
+      ],
+      "prompt_style": "organized",
+      "keywords": [
+        "venue",
+        "catering",
+        "timeline",
+        "guest list",
+        "vendor",
+        "decor",
+        "run of show"
+      ]
+    },
+    {
+      "id": "role_117",
+      "title": "Policy Analyst",
+      "category": "Science",
+      "aliases": [
+        "public policy analyst",
+        "government analyst",
+        "legislative analyst",
+        "think tank researcher"
+      ],
+      "expertise_areas": [
+        "policy analysis",
+        "legislative research",
+        "impact assessment",
+        "stakeholder analysis",
+        "report writing"
+      ],
+      "typical_intents": [
+        "analyze",
+        "research",
+        "write",
+        "compare",
+        "explain"
+      ],
+      "common_domains": [
+        "public policy",
+        "government",
+        "international relations",
+        "social policy"
+      ],
+      "prompt_style": "analytical",
+      "keywords": [
+        "policy",
+        "legislation",
+        "stakeholder",
+        "impact",
+        "regulation",
+        "reform",
+        "advocacy"
+      ]
+    },
+    {
+      "id": "role_118",
+      "title": "Petroleum Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "reservoir engineer",
+        "drilling engineer",
+        "production engineer"
+      ],
+      "expertise_areas": [
+        "reservoir analysis",
+        "drilling operations",
+        "production optimization",
+        "well completion",
+        "EOR"
+      ],
+      "typical_intents": [
+        "analyze",
+        "design",
+        "improve",
+        "plan",
+        "create"
+      ],
+      "common_domains": [
+        "oil and gas",
+        "energy",
+        "petroleum engineering"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "reservoir",
+        "drilling",
+        "production",
+        "well",
+        "pressure",
+        "recovery",
+        "formation"
+      ]
+    },
+    {
+      "id": "role_119",
+      "title": "Renewable Energy Engineer",
+      "category": "Engineering",
+      "aliases": [
+        "solar engineer",
+        "wind energy engineer",
+        "clean energy specialist"
+      ],
+      "expertise_areas": [
+        "renewable energy systems",
+        "solar PV design",
+        "wind farm design",
+        "energy storage",
+        "grid integration"
+      ],
+      "typical_intents": [
+        "design",
+        "analyze",
+        "plan",
+        "create",
+        "improve"
+      ],
+      "common_domains": [
+        "renewable energy",
+        "sustainability",
+        "power systems",
+        "energy storage"
+      ],
+      "prompt_style": "technical",
+      "keywords": [
+        "solar",
+        "wind",
+        "battery",
+        "inverter",
+        "grid",
+        "capacity",
+        "generation"
+      ]
+    },
+    {
+      "id": "role_120",
+      "title": "Epidemiologist",
+      "category": "Science",
+      "aliases": [
+        "disease detective",
+        "public health analyst",
+        "infectious disease epidemiologist"
+      ],
+      "expertise_areas": [
+        "disease surveillance",
+        "outbreak investigation",
+        "statistical modeling",
+        "public health interventions",
+        "study design"
+      ],
+      "typical_intents": [
+        "research",
+        "analyze",
+        "explain",
+        "create",
+        "plan"
+      ],
+      "common_domains": [
+        "epidemiology",
+        "public health",
+        "infectious disease",
+        "biostatistics"
+      ],
+      "prompt_style": "scientific",
+      "keywords": [
+        "incidence",
+        "prevalence",
+        "outbreak",
+        "vector",
+        "surveillance",
+        "cohort",
+        "case-control"
+      ]
+    }
+  ]
+}

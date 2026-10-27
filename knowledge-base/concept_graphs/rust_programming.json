@@ -1,0 +1,63 @@
+{
+  "subject": "Rust",
+  "aliases": [
+    "rust",
+    "rustlang",
+    "rust programming",
+    "rust memory safety"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "rust_ownership",
+      "title": "Ownership, Move Semantics & Copy Trait",
+      "objective": "Understand single-owner semantics, stack vs heap allocation, and value movement without garbage collection.",
+      "example": "let s1 = String::from('hello'); let s2 = s1; // s1 moved",
+      "exercise": "Write a function that accepts ownership of a vector, modifies it, and returns the modified vector.",
+      "prerequisites": []
+    },
+    {
+      "id": "rust_borrowing",
+      "title": "Borrowing & References",
+      "objective": "Enforce mutable and immutable borrowing rules at compile time.",
+      "example": "fn calculate_len(s: &String) -> usize { s.len() }",
+      "exercise": "Implement an in-place string trimmer that borrows an input slice and returns a trimmed sub-slice.",
+      "prerequisites": [
+        "rust_ownership"
+      ]
+    },
+    {
+      "id": "rust_lifetimes",
+      "title": "Lifetimes & Borrow Checker Annotations",
+      "objective": "Annotate generic lifetime parameters to prevent dangling pointer references.",
+      "example": "fn longest<'a>(x: &'a str, y: &'a str) -> &'a str",
+      "exercise": "Create a struct holding string slices with explicit lifetime annotations and implement an accessor method.",
+      "prerequisites": [
+        "rust_borrowing"
+      ]
+    },
+    {
+      "id": "rust_error_handling",
+      "title": "Result and Option Enums with Question Mark Operator",
+      "objective": "Master idiomatic zero-cost error propagation using Result<T, E> and Option<T>.",
+      "example": "let f = File::open('log.txt')?;",
+      "exercise": "Build a config parser that reads key-value pairs from a file and returns Result<HashMap<String, String>, ConfigError>.",
+      "prerequisites": [
+        "rust_ownership"
+      ]
+    },
+    {
+      "id": "rust_concurrency",
+      "title": "Fearless Concurrency with Arc and Mutex",
+      "objective": "Share mutable state safely across threads using Atomic Reference Counting and Mutual Exclusion locks.",
+      "example": "let counter = Arc::new(Mutex::new(0));",
+      "exercise": "Implement a parallel word counter using 4 worker threads sharing an Arc<Mutex<HashMap<String, usize>>>.",
+      "prerequisites": [
+        "rust_borrowing",
+        "rust_lifetimes"
+      ]
+    }
+  ]
+}

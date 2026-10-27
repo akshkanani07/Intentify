@@ -1,0 +1,13 @@
+{
+  "subject": "C",
+  "standards": [
+    {
+      "name": "ISO/IEC 9899:2018 (C18)",
+      "description": "Standard C language specification."
+    },
+    {
+      "name": "MISRA C:2012",
+      "description": "Guidelines for the use of the C language in critical systems."
+    }
+  ]
+}

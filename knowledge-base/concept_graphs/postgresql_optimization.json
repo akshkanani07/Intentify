@@ -1,0 +1,62 @@
+{
+  "subject": "PostgreSQL",
+  "aliases": [
+    "postgresql",
+    "postgres",
+    "sql optimization",
+    "database indexing"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "pg_explain_analyze",
+      "title": "EXPLAIN (ANALYZE, BUFFERS) & Query Execution Plans",
+      "objective": "Diagnose query bottlenecks by identifying sequential scans, nested loops, and disk memory spillages.",
+      "example": "EXPLAIN (ANALYZE, BUFFERS, VERBOSE) SELECT * FROM orders WHERE user_id = 42;",
+      "exercise": "Profile an unindexed join query and identify the exact cost and buffer cache hit ratio.",
+      "prerequisites": []
+    },
+    {
+      "id": "pg_index_types",
+      "title": "B-Tree, GIN, GiST & Partial Covering Indexes",
+      "objective": "Select appropriate index strategies for text search, JSONB queries, and high-frequency filtered subsets.",
+      "example": "CREATE INDEX idx_orders_pending ON orders (user_id) WHERE status = 'PENDING';",
+      "exercise": "Construct a GIN index on a JSONB metadata column and benchmark search execution speedup.",
+      "prerequisites": [
+        "pg_explain_analyze"
+      ]
+    },
+    {
+      "id": "pg_partitioning",
+      "title": "Declarative Table Partitioning (Range & Hash)",
+      "objective": "Partition billion-row tables by date ranges to enable partition pruning and instant archival drops.",
+      "example": "CREATE TABLE logs (created_at timestamptz) PARTITION BY RANGE (created_at);",
+      "exercise": "Partition an event telemetry table into monthly sub-tables and verify partition pruning in EXPLAIN plans.",
+      "prerequisites": [
+        "pg_index_types"
+      ]
+    },
+    {
+      "id": "pg_vacuum_mvcc",
+      "title": "MVCC, Autovacuum Tuning & Table Bloat Mitigation",
+      "objective": "Configure autovacuum cost limits and freeze thresholds to prevent write amplification and dead tuple bloat.",
+      "example": "ALTER TABLE orders SET (autovacuum_vacuum_scale_factor = 0.05);",
+      "exercise": "Inspect table dead tuple bloat using pg_stat_user_tables and configure per-table autovacuum thresholds.",
+      "prerequisites": [
+        "pg_explain_analyze"
+      ]
+    },
+    {
+      "id": "pg_connection_pooling",
+      "title": "Connection Pooling with PgBouncer & High Availability",
+      "objective": "Scale backend concurrency without exhausting PostgreSQL backend worker process memory.",
+      "example": "pool_mode = transaction; max_client_conn = 10000; default_pool_size = 50;",
+      "exercise": "Configure PgBouncer in transaction pooling mode and benchmark throughput under 2,000 concurrent clients.",
+      "prerequisites": [
+        "pg_explain_analyze"
+      ]
+    }
+  ]
+}

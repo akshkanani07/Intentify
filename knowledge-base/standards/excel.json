@@ -1,0 +1,9 @@
+{
+  "subject": "Excel",
+  "standards": [
+    {
+      "name": "FAST Modeling Standard",
+      "description": "Flexible, Appropriate, Structured, Transparent financial spreadsheet standard."
+    }
+  ]
+}

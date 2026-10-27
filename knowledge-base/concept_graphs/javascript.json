@@ -1,0 +1,61 @@
+{
+  "subject": "JavaScript",
+  "aliases": [
+    "javascript",
+    "js",
+    "vanilla js",
+    "ecmascript"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "js_basics",
+      "title": "Variables (let/const), Types & Scopes",
+      "objective": "Understand block scope, type coercion, template literals, and truthy/falsy evaluations.",
+      "example": "const message = `Welcome, ${user.name}`;",
+      "exercise": "Write an interactive temperature converter that validates numerical input.",
+      "prerequisites": []
+    },
+    {
+      "id": "js_functions",
+      "title": "Arrow Functions, Higher-Order Methods & Closures",
+      "objective": "Master Array.map, filter, reduce, and lexical this binding.",
+      "example": "const activeUsers = users.filter(u => u.isActive).map(u => u.email);",
+      "exercise": "Implement a functional shopping cart totalizer calculating discounts and sales tax.",
+      "prerequisites": [
+        "js_basics"
+      ]
+    },
+    {
+      "id": "js_dom",
+      "title": "DOM Manipulation, Event Delegation & Web APIs",
+      "objective": "Query and mutate DOM nodes and attach decoupled event listeners to container elements.",
+      "example": "document.querySelector(\"#btn\").addEventListener(\"click\", (e) => handleClick(e));",
+      "exercise": "Build an interactive to-do list with real-time task adding, toggling, and removal.",
+      "prerequisites": [
+        "js_functions"
+      ]
+    },
+    {
+      "id": "js_async",
+      "title": "Asynchronous Programming (Promises & async/await)",
+      "objective": "Manage asynchronous operations, handle HTTP fetch calls, and isolate error handling.",
+      "example": "async function loadData() { const res = await fetch(url); return await res.json(); }",
+      "exercise": "Create an asynchronous weather forecast widget consuming a public REST endpoint.",
+      "prerequisites": [
+        "js_dom"
+      ]
+    },
+    {
+      "id": "js_modules",
+      "title": "ES Modules & Modern State Patterns",
+      "objective": "Decompose application logic using import/export and manage component state in memory.",
+      "example": "export function calculateTotal(items) { return items.reduce((a, b) => a + b, 0); }",
+      "exercise": "Architect a modular client-side state store with subscribe and dispatch capabilities.",
+      "prerequisites": [
+        "js_async"
+      ]
+    }
+  ]
+}

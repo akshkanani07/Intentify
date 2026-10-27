@@ -1,0 +1,63 @@
+{
+  "subject": "Space Debris & Orbital Conjunction",
+  "aliases": [
+    "space debris",
+    "space debris collision avoidance",
+    "orbital conjunction analysis",
+    "space situational awareness",
+    "orbital debris tracking"
+  ],
+  "domain": "Aerospace & Defense",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "orbital_tle_propagation",
+      "title": "Two-Line Element (TLE) Sets & SGP4 Orbital Propagation",
+      "objective": "Propagate satellite and trackable debris state vectors forward in time using SGP4 perturbation models.",
+      "example": "position, velocity = sgp4.propagate(tle_line1, tle_line2, target_epoch)",
+      "exercise": "Compute the Cartesian state vector (r, v) in TEME frame for a cataloged debris object at a 24-hour lookahead epoch.",
+      "prerequisites": []
+    },
+    {
+      "id": "conjunction_cdm_ingestion",
+      "title": "Conjunction Data Message (CDM) Parsing & Covariance Ellipsoids",
+      "objective": "Ingest CCSDS standard Conjunction Data Messages and reconstruct positional covariance matrices at Time of Closest Approach (TCA).",
+      "example": "miss_distance = linalg.norm(r_primary - r_secondary)",
+      "exercise": "Extract the combined 3x3 position covariance matrix and calculate 3-sigma positional uncertainty ellipsoids at TCA.",
+      "prerequisites": [
+        "orbital_tle_propagation"
+      ]
+    },
+    {
+      "id": "collision_probability_calculation",
+      "title": "Foster-1992 & Alfriend Probability of Collision (Pc)",
+      "objective": "Project primary and secondary covariance onto the collision plane (B-plane) to calculate 2D collision probability.",
+      "example": "Pc = integral_circle(exp(-0.5 * x.T * inv(C) * x) / (2 * pi * sqrt(det(C))))",
+      "exercise": "Implement a numeric collision probability calculator flagging conjunctions where Pc exceeds the 1e-4 maneuver threshold.",
+      "prerequisites": [
+        "conjunction_cdm_ingestion"
+      ]
+    },
+    {
+      "id": "maneuver_tradeoff_optimization",
+      "title": "Delta-V Collision Avoidance Maneuver (CAM) Optimization",
+      "objective": "Design optimal along-track and radial thruster burns that reduce collision probability while minimizing fuel consumption.",
+      "example": "delta_v = calculate_hohmann_offset(target_miss_distance=5000) # meters",
+      "exercise": "Optimize a 0.2 m/s prograde burn 12 hours prior to TCA and verify that secondary conjunction risks remain below threshold.",
+      "prerequisites": [
+        "collision_probability_calculation"
+      ]
+    },
+    {
+      "id": "space_traffic_protocols",
+      "title": "Space Traffic Coordination & Automated Inter-Operator Alerts",
+      "objective": "Formulate automated coordination workflows with commercial operators and international space tracking registries.",
+      "example": "dispatch_operator_notice(satellite_id, tca_utc, delta_v_plan)",
+      "exercise": "Write an automated dispatch pipeline alerting orbital operators and logging maneuver telemetry into compliance archives.",
+      "prerequisites": [
+        "maneuver_tradeoff_optimization"
+      ]
+    }
+  ]
+}

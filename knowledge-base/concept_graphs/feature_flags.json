@@ -1,0 +1,62 @@
+{
+  "subject": "Feature Flags",
+  "aliases": [
+    "feature flags",
+    "feature toggle",
+    "rollout engine",
+    "dark launch"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "ff_evaluation_engine",
+      "title": "In-Memory Flag Evaluation & Rule Trees",
+      "objective": "Evaluate Boolean and multivariate feature toggles in sub-millisecond in-memory pipelines.",
+      "example": "isEnabled = flagEngine.evaluate('new_checkout', userContext);",
+      "exercise": "Build an in-memory rule evaluator supporting Boolean flags and default fallbacks.",
+      "prerequisites": []
+    },
+    {
+      "id": "ff_targeting_rules",
+      "title": "Contextual User Targeting & Cohorts",
+      "objective": "Target feature releases to specific user cohorts based on attributes (country, beta_tester, tier).",
+      "example": "if (context.country === 'US' && context.isBeta) { return true; }",
+      "exercise": "Write an attribute evaluation rule matcher supporting string, numeric, and regex comparisons.",
+      "prerequisites": [
+        "ff_evaluation_engine"
+      ]
+    },
+    {
+      "id": "ff_percentage_rollouts",
+      "title": "Deterministic Percentage Rollouts (MurmurHash3)",
+      "objective": "Distribute traffic gradually across percentage buckets deterministically without storing per-user state.",
+      "example": "bucket = murmur3(userId + flagKey) % 100; return bucket < rolloutPercent;",
+      "exercise": "Implement a deterministic percentage rollout function and test uniform distribution across 10,000 keys.",
+      "prerequisites": [
+        "ff_targeting_rules"
+      ]
+    },
+    {
+      "id": "ff_circuit_breakers",
+      "title": "Operational Kill Switches & Automated Rollback",
+      "objective": "Halt problematic code paths instantly when telemetry error thresholds are breached.",
+      "example": "if (errorRate > 0.05) { killSwitch.trip('new_payment_gateway'); }",
+      "exercise": "Connect flag evaluation to an error monitor that automatically disables a feature flag on sustained 5xx spikes.",
+      "prerequisites": [
+        "ff_evaluation_engine"
+      ]
+    },
+    {
+      "id": "ff_hygiene_lifecycle",
+      "title": "Technical Debt Cleanup & Flag Lifecycle Governance",
+      "objective": "Audit, sunset, and remove stale feature flags from codebases safely.",
+      "example": "FLAG_DEPRECATION_DATE: 2026-12-01 // Alert on un-removed flags older than 60 days",
+      "exercise": "Write an automated AST lint script that flags any toggle references with expiration dates in the past.",
+      "prerequisites": [
+        "ff_circuit_breakers"
+      ]
+    }
+  ]
+}

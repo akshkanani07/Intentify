@@ -1,0 +1,63 @@
+{
+  "subject": "Clinical EHR",
+  "aliases": [
+    "clinical ehr",
+    "ehr",
+    "emr",
+    "electronic health records",
+    "fhir"
+  ],
+  "domain": "Healthcare",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "ehr_fhir_resources",
+      "title": "HL7 FHIR Core Resources (Patient, Observation, Condition)",
+      "objective": "Model clinical patient data using interoperable, standardized FHIR JSON schemas and coding systems.",
+      "example": "resourceType: 'Observation', code: { coding: [{ system: 'http://loinc.org', code: '8867-4' }] }",
+      "exercise": "Construct a valid FHIR Observation payload recording a patient blood pressure reading with LOINC codes.",
+      "prerequisites": []
+    },
+    {
+      "id": "ehr_drug_interactions",
+      "title": "Clinical Decision Support & Drug-Drug Interaction Engines",
+      "objective": "Audit proposed medication orders against patient allergy lists and contraindication knowledge graphs.",
+      "example": "checkInteractions(newDrug, activeMedications, knownAllergies) -> AlertLevel.HIGH",
+      "exercise": "Build an interaction checking rule engine alerting clinicians when prescribing Warfarin with NSAIDs.",
+      "prerequisites": [
+        "ehr_fhir_resources"
+      ]
+    },
+    {
+      "id": "ehr_lab_integration",
+      "title": "Laboratory Information System (LIS) Interface & HL7 v2 Feeds",
+      "objective": "Ingest automated diagnostic laboratory test results and update patient charts seamlessly.",
+      "example": "MSH|^~\\&|LAB|HOSPITAL|||20261027||ORU^R01|MSG001|P|2.5",
+      "exercise": "Parse an incoming HL7 v2 ORU^R01 message and map numeric lab values into structured patient chart records.",
+      "prerequisites": [
+        "ehr_fhir_resources"
+      ]
+    },
+    {
+      "id": "ehr_access_control",
+      "title": "SMART on FHIR & OAuth2 Scoped Healthcare Access",
+      "objective": "Authorize external healthcare apps using clinician-scoped and patient-scoped OAuth2 tokens.",
+      "example": "scope: 'patient/Observation.read user/Patient.read launch'",
+      "exercise": "Implement a SMART on FHIR authorization server granting read-only access to lab results.",
+      "prerequisites": [
+        "ehr_fhir_resources"
+      ]
+    },
+    {
+      "id": "ehr_audit_immutable",
+      "title": "Immutable Medical Record Versioning & Tamper Evident Logging",
+      "objective": "Preserve complete clinical chart revision histories with tamper-evident cryptographic hash chains.",
+      "example": "RecordVersion: { version: 3, previous_hash: '0xabc...', clinician: 'Dr. Smith' }",
+      "exercise": "Implement an append-only medical record versioning manager preventing retroactive note alteration.",
+      "prerequisites": [
+        "ehr_access_control"
+      ]
+    }
+  ]
+}

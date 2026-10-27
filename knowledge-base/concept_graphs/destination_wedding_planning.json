@@ -1,0 +1,62 @@
+{
+  "subject": "Destination Wedding Planning",
+  "aliases": [
+    "destination wedding",
+    "wedding planning",
+    "destination wedding planning",
+    "udaipur wedding"
+  ],
+  "domain": "Event Planning",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "wed_venue_scouting",
+      "title": "Heritage Venue Sourcing, Capacity Audits & Permitting",
+      "objective": "Evaluate destination palace/resort inventory, heritage heritage acoustics, and local municipality noise permits.",
+      "example": "VenueScorecard: { guest_capacity: 400, heritage_status: 'Grade I', curfew_hour: '22:00', rooms_blocked: 120 }",
+      "exercise": "Construct a multi-venue comparative evaluation matrix scoring lakeside palaces on guest logistics and sound curfews.",
+      "prerequisites": []
+    },
+    {
+      "id": "wed_guest_hospitality",
+      "title": "Guest Travel Logistics, Room Blocking & Arrival Concierge",
+      "objective": "Coordinate chartered flight manifests, airport transit fleets, and tiered luxury accommodation room blocks.",
+      "example": "ArrivalManifest: { flight_num: '6E-442', arrival: '14:20', guests: 24, assigned_fleet: 'Volvo Coach 2' }",
+      "exercise": "Build an arrival schedule dashboard tracking real-time flight delays and automated bus fleet dispatch.",
+      "prerequisites": [
+        "wed_venue_scouting"
+      ]
+    },
+    {
+      "id": "wed_multiday_itinerary",
+      "title": "Multi-Day Cultural Itinerary & Themed Event Production",
+      "objective": "Schedule sequential ceremonial events (Mehendi, Sangeet, Pheras, Reception) with zero vendor overlap.",
+      "example": "Day 1: Welcome High Tea (Poolside) -> Day 2: Sangeet (Courtyard) -> Day 3: Royal Pheras (Lakeside)",
+      "exercise": "Draft a minute-by-minute run-sheet for a 500-guest Royal Sangeet night including artist soundchecks and stage transitions.",
+      "prerequisites": [
+        "wed_venue_scouting"
+      ]
+    },
+    {
+      "id": "wed_vendor_culinary",
+      "title": "Catering Curation, Floral Décor & Audio-Visual Rigging",
+      "objective": "Manage regional culinary stations, temperature-sensitive floral supply chains, and outdoor truss rigging safety.",
+      "example": "MenuArchitecture: Traditional Gujarati Thali lunch + Live Mediterranean mezze counters for Sangeet.",
+      "exercise": "Design a cold-chain transit schedule for imported floral installations arriving 48 hours prior to the main ceremony.",
+      "prerequisites": [
+        "wed_multiday_itinerary"
+      ]
+    },
+    {
+      "id": "wed_weather_contingency",
+      "title": "Emergency Weather Contingencies & Plan-B Relocation",
+      "objective": "Establish rapid weather diversion plans for outdoor lakefront ceremonies with covered hall relocations.",
+      "example": "if (rainForecast > 0.40) { initiatePlanB('Banquet Hall Relocation', leadTimeHours: 6); }",
+      "exercise": "Author an operational Plan-B relocation protocol transitioning an outdoor lakeside setup indoors within 4 hours.",
+      "prerequisites": [
+        "wed_multiday_itinerary"
+      ]
+    }
+  ]
+}

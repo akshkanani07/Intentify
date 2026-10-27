@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "general_defaults": [
+    "Target environment represents a modern production standard with security best practices.",
+    "Target audience possesses foundational familiarity with standard industry terminology.",
+    "Primary language is English unless regional script is explicitly detected.",
+    "All software components must follow modular clean architecture with zero hardcoded credentials.",
+    "Deliverables must prioritize deterministic verification and measurable success metrics."
+  ],
+  "domain_assumptions": {
+    "Software Development": [
+      "Target architecture adheres to clean code, SOLID principles, and modular components.",
+      "All dependencies and packages are modern Long-Term Support (LTS) releases.",
+      "Automated unit and integration test coverage is expected."
+    ],
+    "Cybersecurity": [
+      "Follow Principle of Least Privilege (PoLP) and Zero Trust architecture.",
+      "Ensure compliance with OWASP Top 10, NIST, and SOC2 security frameworks."
+    ],
+    "Healthcare": [
+      "All recommendations prioritize patient safety, HIPAA/GDPR compliance, and clinical evidence.",
+      "AI output is for clinical decision support, requiring licensed physician review."
+    ],
+    "Legal": [
+      "Output represents analytical drafting templates requiring qualified jurisdictional attorney review.",
+      "Ensure strict statutory compliance with relevant federal and state precedents."
+    ],
+    "Finance": [
+      "Strict auditability, idempotent transaction guarantees, and double-entry bookkeeping apply.",
+      "Comply with SEC, FINRA, and international fiscal reporting standards."
+    ],
+    "Hospitality & Events": [
+      "Budgets include 15-20% contingency allocation for unforeseen vendor and venue variances.",
+      "Timelines must incorporate buffer windows for vendor load-in and guest arrival dynamics."
+    ],
+    "Education": [
+      "Pedagogical approaches align with Bloom's Taxonomy and universal design for learning.",
+      "Learning activities prioritize active problem solving over passive absorption."
+    ],
+    "Marketing": [
+      "Campaign metrics are oriented toward quantifiable ROI, CAC, LTV, and conversion rate.",
+      "Messaging respects consumer privacy laws including CAN-SPAM and GDPR consent."
+    ],
+    "Engineering": [
+      "Designs include safety factor margins of at least 1.5x to 2.0x operational tolerances.",
+      "Adhere to relevant IEEE, ASME, or ISO manufacturing and structural specifications."
+    ],
+    "Agriculture": [
+      "Recommendations emphasize sustainable soil stewardship, water conservation, and integrated pest management.",
+      "Calculations account for local climate zone variability and seasonal rainfall trends."
+    ]
+  },
+  "intent_assumptions": {
+    "create": [
+      "Build for maintainability, documentation completeness, and ease of automated testing."
+    ],
+    "debug": [
+      "Isolate root cause before recommending surgical, minimally invasive fixes.",
+      "Include regression test assertions to ensure the bug cannot silently recur."
+    ],
+    "plan": [
+      "Break milestones into 2-week execution sprints with concrete acceptance criteria."
+    ],
+    "compare": [
+      "Maintain complete objectivity with calibrated scoring across all evaluation dimensions."
+    ],
+    "decide": [
+      "Provide an unambiguous final recommendation with explicit risk mitigations."
+    ]
+  }
+}

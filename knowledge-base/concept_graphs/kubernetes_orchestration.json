@@ -1,0 +1,63 @@
+{
+  "subject": "Kubernetes",
+  "aliases": [
+    "kubernetes",
+    "k8s",
+    "k8s orchestration",
+    "kube",
+    "k8s cluster"
+  ],
+  "domain": "Cloud Computing & DevOps",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "k8s_pods_deployments",
+      "title": "Pods, ReplicaSets & Declarative Deployments",
+      "objective": "Define immutable pod specifications, replica controllers, and rolling update strategies.",
+      "example": "spec: replicas: 3 strategy: type: RollingUpdate",
+      "exercise": "Author a declarative Kubernetes Deployment YAML for a stateless web application with liveness and readiness probes.",
+      "prerequisites": []
+    },
+    {
+      "id": "k8s_networking_services",
+      "title": "Service Abstraction, ClusterIP & Ingress Controllers",
+      "objective": "Route internal cluster traffic with ClusterIP and external ingress with TLS termination.",
+      "example": "apiVersion: v1 kind: Service metadata: name: backend-svc",
+      "exercise": "Configure an Ingress resource with path-based routing pointing to two distinct backend microservices.",
+      "prerequisites": [
+        "k8s_pods_deployments"
+      ]
+    },
+    {
+      "id": "k8s_config_secrets",
+      "title": "ConfigMaps, Secrets & Environment Injection",
+      "objective": "Externalize configuration parameters and sensitive credentials securely.",
+      "example": "envFrom: - configMapRef: name: app-config",
+      "exercise": "Create an encrypted Secret YAML for database credentials and mount it as a read-only volume in a container.",
+      "prerequisites": [
+        "k8s_pods_deployments"
+      ]
+    },
+    {
+      "id": "k8s_storage_pv",
+      "title": "PersistentVolumes (PV) & PersistentVolumeClaims (PVC)",
+      "objective": "Provision stateful durable storage across cluster pod restarts.",
+      "example": "kind: PersistentVolumeClaim spec: accessModes: [ReadWriteOnce]",
+      "exercise": "Deploy a PostgreSQL stateful instance attached to an automated StorageClass PVC with 10Gi allocation.",
+      "prerequisites": [
+        "k8s_pods_deployments"
+      ]
+    },
+    {
+      "id": "k8s_rbac_security",
+      "title": "RBAC Roles, RoleBindings & NetworkPolicies",
+      "objective": "Isolate tenant workloads with namespace boundaries and restrict inter-pod egress/ingress network flows.",
+      "example": "kind: NetworkPolicy spec: podSelector: matchLabels: role: db",
+      "exercise": "Write a NetworkPolicy that only allows ingress traffic on port 5432 from pods with the label role: backend.",
+      "prerequisites": [
+        "k8s_networking_services"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "subject": "Digital Marketing",
+  "aliases": [
+    "digital marketing",
+    "seo",
+    "online marketing",
+    "marketing strategy"
+  ],
+  "domain": "Marketing & Business",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "mkt_funnel",
+      "title": "The Digital Marketing Funnel (AIDA: Awareness, Interest, Desire, Action)",
+      "objective": "Map consumer touchpoints and choose targeted marketing channels for each funnel stage.",
+      "example": "Top of Funnel: Informational blog; Bottom of Funnel: Search intent ad with free trial CTA",
+      "exercise": "Map out a complete multi-channel customer acquisition funnel for a subscription SaaS product.",
+      "prerequisites": []
+    },
+    {
+      "id": "mkt_seo",
+      "title": "Search Engine Optimization (On-Page, Technical & Keyword Research)",
+      "objective": "Identify high-intent search keywords, structure semantic headers, and optimize meta descriptions.",
+      "example": "Target primary keyword in H1, first 100 words, URL slug, and title tag (< 60 chars).",
+      "exercise": "Conduct keyword research for an eco-friendly apparel brand and optimize an e-commerce product page.",
+      "prerequisites": [
+        "mkt_funnel"
+      ]
+    },
+    {
+      "id": "mkt_content",
+      "title": "Content Marketing & Lead Magnets",
+      "objective": "Produce high-value educational assets (whitepapers, templates, checklists) that capture qualified emails.",
+      "example": "Landing page conversion rate = (leads captured / visitors) * 100",
+      "exercise": "Design an authoritative lead magnet concept and write high-converting landing page copy.",
+      "prerequisites": [
+        "mkt_seo"
+      ]
+    },
+    {
+      "id": "mkt_paid",
+      "title": "Paid Performance Advertising (PPC, CAC, LTV & ROAS)",
+      "objective": "Structure search and social ad campaigns, manage bidding strategies, and calculate Customer Acquisition Cost.",
+      "example": "ROAS = Revenue from Ad Campaign / Ad Spend; target ROAS > 3.0",
+      "exercise": "Draft an ad campaign budget plan estimating CPC, CTR, conversion rate, and target ROAS.",
+      "prerequisites": [
+        "mkt_content"
+      ]
+    },
+    {
+      "id": "mkt_analytics",
+      "title": "Web Analytics, Attribution & A/B Testing",
+      "objective": "Track user events, establish multi-touch attribution, and evaluate split-test statistical significance.",
+      "example": "Control vs Variant: Measure conversion rate lift with 95% statistical confidence.",
+      "exercise": "Design an A/B test hypothesis for a checkout page CTA and outline the measurement metrics.",
+      "prerequisites": [
+        "mkt_paid"
+      ]
+    }
+  ]
+}

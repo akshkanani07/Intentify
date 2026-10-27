@@ -1,0 +1,13 @@
+{
+  "subject": "C++",
+  "standards": [
+    {
+      "name": "ISO/IEC 14882:2020 (C++20)",
+      "description": "Standard C++ specification."
+    },
+    {
+      "name": "C++ Core Guidelines",
+      "description": "Bjarne Stroustrup and Herb Sutter modern C++ guidelines."
+    }
+  ]
+}

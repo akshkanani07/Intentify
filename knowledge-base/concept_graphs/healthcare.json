@@ -1,0 +1,60 @@
+{
+  "domain": "Healthcare Software",
+  "nodes": [
+    {
+      "id": "health_compliance",
+      "name": "HIPAA / HITECH Compliance & Consent Rules",
+      "prerequisites": []
+    },
+    {
+      "id": "health_data_model",
+      "name": "EHR / EMR Data Modeling & FHIR/HL7 Standards",
+      "prerequisites": [
+        "health_compliance"
+      ]
+    },
+    {
+      "id": "health_security",
+      "name": "End-to-End Encryption & Field-Level PHI Masking",
+      "prerequisites": [
+        "health_data_model"
+      ]
+    },
+    {
+      "id": "health_clinical_rbac",
+      "name": "Clinical Role-Based Access Control",
+      "prerequisites": [
+        "health_security"
+      ]
+    },
+    {
+      "id": "health_triage",
+      "name": "Patient Triage & Appointment Scheduling Engine",
+      "prerequisites": [
+        "health_clinical_rbac"
+      ]
+    },
+    {
+      "id": "health_telemed",
+      "name": "Secure WebRTC Telemedicine Streaming",
+      "prerequisites": [
+        "health_triage"
+      ]
+    },
+    {
+      "id": "health_audit",
+      "name": "Immutable Tamper-Evident Audit Logging",
+      "prerequisites": [
+        "health_telemed"
+      ]
+    },
+    {
+      "id": "health_prescription",
+      "name": "e-Prescription & Pharmacy Inventory Sync",
+      "prerequisites": [
+        "health_audit"
+      ]
+    }
+  ],
+  "reviewed": false
+}

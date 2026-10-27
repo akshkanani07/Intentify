@@ -1,0 +1,61 @@
+{
+  "subject": "Excel",
+  "aliases": [
+    "excel",
+    "spreadsheet",
+    "ms excel",
+    "microsoft excel"
+  ],
+  "domain": "Business & Analytics",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "xl_basics",
+      "title": "Workbook Navigation, Cell Referencing ($A$1) & Basic Formulas",
+      "objective": "Understand relative, absolute, and mixed cell references and basic arithmetic functions (SUM, AVERAGE).",
+      "example": "=SUM($B$2:$B$20) / $C$1",
+      "exercise": "Build an automated monthly budget spreadsheet with fixed cell references for tax rates.",
+      "prerequisites": []
+    },
+    {
+      "id": "xl_logic",
+      "title": "Logical Functions (IF, AND, OR, IFS) & Error Handling",
+      "objective": "Construct nested conditional evaluations and guard against #N/A and #DIV/0! using IFERROR.",
+      "example": "=IFERROR(IF(B2 >= 90, \"A\", IF(B2 >= 80, \"B\", \"C\")), \"Invalid Input\")",
+      "exercise": "Create an automated employee bonus calculation table using nested IF and AND functions.",
+      "prerequisites": [
+        "xl_basics"
+      ]
+    },
+    {
+      "id": "xl_lookups",
+      "title": "Data Lookup (XLOOKUP, VLOOKUP, INDEX/MATCH)",
+      "objective": "Perform exact and approximate lookups across tables and return matching records safely.",
+      "example": "=XLOOKUP(D2, Products[ID], Products[Price], \"Not Found\")",
+      "exercise": "Construct an invoice generator that dynamically populates product descriptions and unit prices.",
+      "prerequisites": [
+        "xl_logic"
+      ]
+    },
+    {
+      "id": "xl_pivots",
+      "title": "Pivot Tables, Slicers & Summary Aggregations",
+      "objective": "Group multi-row transactional datasets into multidimensional summary reports and interactive slicers.",
+      "example": "Rows: Region; Columns: Quarter; Values: SUM(Revenue)",
+      "exercise": "Generate an executive sales report summarizing quarterly performance by region and sales rep.",
+      "prerequisites": [
+        "xl_lookups"
+      ]
+    },
+    {
+      "id": "xl_modeling",
+      "title": "What-If Analysis, Data Validation & Visualization Charts",
+      "objective": "Implement dropdown data validation rules, Goal Seek projections, and dynamic chart dashboards.",
+      "example": "Data Validation: Allow List from =Categories!$A$1:$A$10",
+      "exercise": "Build an executive dashboard with interactive dropdowns and dynamic waterfall charts.",
+      "prerequisites": [
+        "xl_pivots"
+      ]
+    }
+  ]
+}

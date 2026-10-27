@@ -1,0 +1,46 @@
+{
+  "domain": "Financial Modeling & Investment Analysis",
+  "nodes": [
+    {
+      "id": "fin_accounting",
+      "name": "Three-Statement Financial Modeling (P&L, Balance, Cash)",
+      "prerequisites": []
+    },
+    {
+      "id": "fin_dcf",
+      "name": "Discounted Cash Flow (DCF) & Valuation Multiples",
+      "prerequisites": [
+        "fin_accounting"
+      ]
+    },
+    {
+      "id": "fin_unit_econ",
+      "name": "Unit Economics, Contribution Margin & Break-Even",
+      "prerequisites": [
+        "fin_dcf"
+      ]
+    },
+    {
+      "id": "fin_sensitivity",
+      "name": "Monte Carlo Simulation & Scenario Stress Testing",
+      "prerequisites": [
+        "fin_unit_econ"
+      ]
+    },
+    {
+      "id": "fin_compliance",
+      "name": "Regulatory Compliance (GAAP/IFRS) & Audit Readiness",
+      "prerequisites": [
+        "fin_sensitivity"
+      ]
+    },
+    {
+      "id": "fin_risk",
+      "name": "Capital Allocation & Treasury Risk Hedging",
+      "prerequisites": [
+        "fin_compliance"
+      ]
+    }
+  ],
+  "reviewed": false
+}

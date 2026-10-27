@@ -1,0 +1,62 @@
+{
+  "subject": "UI Design Basics",
+  "aliases": [
+    "ui design basics",
+    "ui design",
+    "ux ui",
+    "user interface design",
+    "wireframing"
+  ],
+  "domain": "Design & Creative",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "ui_hierarchy",
+      "title": "Visual Hierarchy, Typography Scales & Spacing Systems (8pt Grid)",
+      "objective": "Establish clear scannability using contrasting font weights, modular size scales, and consistent 8pt spacing.",
+      "example": "Header: 32px/40px bold; Subhead: 20px/28px medium; Body: 16px/24px regular; Spacing multiples of 8px.",
+      "exercise": "Design a content card layout establishing prominent visual hierarchy using an 8pt spatial grid.",
+      "prerequisites": []
+    },
+    {
+      "id": "ui_color",
+      "title": "Color Theory, Contrast Ratios & Semantic Palette Design",
+      "objective": "Construct accessible color palettes (Primary, Secondary, Neutral, Danger, Success) meeting WCAG AA contrast (4.5:1).",
+      "example": "Primary Button: White text (#FFFFFF) on Deep Blue (#1E40AF) gives 8.6:1 contrast ratio.",
+      "exercise": "Create a semantic design system color palette and verify that all text combinations meet 4.5:1 contrast.",
+      "prerequisites": [
+        "ui_hierarchy"
+      ]
+    },
+    {
+      "id": "ui_components",
+      "title": "Component Design: Buttons, Inputs, Cards & States (Default, Hover, Active, Disabled)",
+      "objective": "Design reusable interactive UI components with explicit visual feedback for all interactive states.",
+      "example": "Button states: default, hover (brightness -10%), focus (2px outline), active (scale 0.98), disabled (opacity 50%).",
+      "exercise": "Design a comprehensive form component kit including text fields, dropdowns, and checkboxes across all states.",
+      "prerequisites": [
+        "ui_color"
+      ]
+    },
+    {
+      "id": "ui_wireframing",
+      "title": "Low-Fidelity Wireframing & User Flow Mapping",
+      "objective": "Translate user requirements into low-fidelity structural wireframes focused on content prioritization.",
+      "example": "Wireframe screen flow: Search -> Results List -> Item Detail -> Checkout Confirmation",
+      "exercise": "Sketch a 4-screen mobile wireframe user flow for an appointment booking mobile app.",
+      "prerequisites": [
+        "ui_components"
+      ]
+    },
+    {
+      "id": "ui_heuristics",
+      "title": "Usability Heuristics & Interface Feedback Systems",
+      "objective": "Apply Jakob Nielsen's 10 usability heuristics, including visibility of system status and error prevention.",
+      "example": "Visibility of status: Display progress bar and estimated completion time during file upload.",
+      "exercise": "Conduct a heuristic evaluation of a checkout flow and redesign error feedback states to prevent slips.",
+      "prerequisites": [
+        "ui_wireframing"
+      ]
+    }
+  ]
+}

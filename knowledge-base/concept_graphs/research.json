@@ -1,0 +1,46 @@
+{
+  "domain": "Scientific & Academic Research",
+  "nodes": [
+    {
+      "id": "res_hypo",
+      "name": "Research Question & Literature Review",
+      "prerequisites": []
+    },
+    {
+      "id": "res_method",
+      "name": "Methodological Design & Experimental Protocols",
+      "prerequisites": [
+        "res_hypo"
+      ]
+    },
+    {
+      "id": "res_data",
+      "name": "Data Collection, Sampling & Integrity Checks",
+      "prerequisites": [
+        "res_method"
+      ]
+    },
+    {
+      "id": "res_analysis",
+      "name": "Quantitative & Qualitative Statistical Analysis",
+      "prerequisites": [
+        "res_data"
+      ]
+    },
+    {
+      "id": "res_findings",
+      "name": "Synthesis of Findings, Novel Insights & Validation",
+      "prerequisites": [
+        "res_analysis"
+      ]
+    },
+    {
+      "id": "res_ethics",
+      "name": "Peer-Review Preparation, Ethics & Limitations",
+      "prerequisites": [
+        "res_findings"
+      ]
+    }
+  ],
+  "reviewed": false
+}

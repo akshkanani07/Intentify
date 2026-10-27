@@ -1,0 +1,13 @@
+{
+  "subject": "Gujarati Typing",
+  "standards": [
+    {
+      "name": "Unicode Standard for Gujarati (U+0A80 to U+0AFF)",
+      "description": "Official ISO/IEC 10646 character encoding for Gujarati."
+    },
+    {
+      "name": "Indic InScript Keyboard Standard",
+      "description": "Department of Electronics standardized Indian script keyboard layout."
+    }
+  ]
+}

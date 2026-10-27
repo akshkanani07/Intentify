@@ -1,0 +1,82 @@
+[
+  {
+    "id": "LIVE-01",
+    "input": "want to learn html",
+    "contract": "learn",
+    "expected_subject": "HTML",
+    "expected_proficiency": "Novice / Beginner",
+    "forbidden_phrases": ["want to learn", "i am want", "TODO", "mock"],
+    "forbidden_headings": ["System Architecture & Component Topology"]
+  },
+  {
+    "id": "LIVE-02",
+    "input": "want to learn c++",
+    "contract": "learn",
+    "expected_subject": "C++",
+    "expected_proficiency": "Novice / Beginner",
+    "forbidden_phrases": ["want to learn", "i am want", "TODO", "mock"],
+    "forbidden_headings": ["System Architecture & Component Topology"]
+  },
+  {
+    "id": "LIVE-03",
+    "input": "i want to make project management tool, which name is \"taskflow\"",
+    "contract": "build_app",
+    "expected_subject": "Project Management Tool",
+    "expected_product_name": "taskflow",
+    "forbidden_phrases": ["which name is", "i want to make", "TODO", "mock"],
+    "must_not_contain_in_subject": "taskflow"
+  },
+  {
+    "id": "LIVE-04",
+    "input": "મારે Java શીખવું છે",
+    "contract": "learn",
+    "expected_subject": "Java",
+    "expected_language": "Gujarati",
+    "expected_proficiency": "Novice / Beginner",
+    "forbidden_phrases": ["મારે Java શીખવું છે", "mare java shikhvu", "TODO", "mock"]
+  },
+  {
+    "id": "LIVE-05",
+    "input": "Build a scheduling website with calendar sync",
+    "contract": "build_app",
+    "expected_subject": "Scheduling Website",
+    "forbidden_phrases": ["Build a scheduling website with calendar sync", "TODO", "mock"]
+  },
+  {
+    "id": "LIVE-06",
+    "input": "fix this NullPointerException",
+    "contract": "debug",
+    "expected_subject": "NullPointerException",
+    "forbidden_phrases": ["fix this NullPointerException", "TODO", "mock"]
+  },
+  {
+    "id": "LIVE-07",
+    "input": "kuch banao",
+    "contract": "build_app",
+    "expected_proficiency": "Novice / Beginner",
+    "forbidden_phrases": ["kuch banao", "TODO", "mock"]
+  },
+  {
+    "id": "LIVE-08",
+    "input": "I want to make a todo app",
+    "contract": "build_app",
+    "expected_subject": "Todo App",
+    "forbidden_phrases": ["I want to make a todo app", "TODO", "mock"]
+  },
+  {
+    "id": "LIVE-09",
+    "input": "help me learn python",
+    "contract": "learn",
+    "expected_subject": "Python",
+    "expected_proficiency": "Novice / Beginner",
+    "forbidden_phrases": ["help me learn python", "TODO", "mock"],
+    "forbidden_headings": ["System Architecture & Component Topology"]
+  },
+  {
+    "id": "LIVE-10",
+    "input": "organic farming app",
+    "contract": "build_app",
+    "expected_subject": "Organic Farming App",
+    "forbidden_phrases": ["a want to", "i am want", "TODO", "mock"]
+  }
+]

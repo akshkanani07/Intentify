@@ -1,0 +1,9 @@
+{
+  "subject": "SQL",
+  "standards": [
+    {
+      "name": "ISO/IEC 9075:2016 (ANSI SQL)",
+      "description": "International standard for relational database query language."
+    }
+  ]
+}

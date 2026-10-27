@@ -1,0 +1,62 @@
+{
+  "subject": "Account-Based Marketing",
+  "aliases": [
+    "abm",
+    "account-based marketing",
+    "b2b marketing",
+    "enterprise lead generation"
+  ],
+  "domain": "Marketing",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "abm_icp_identification",
+      "title": "Ideal Customer Profile (ICP) & Target Account Tiering",
+      "objective": "Segment high-value enterprise accounts based on firmographics, technographics, and revenue thresholds.",
+      "example": "Tier 1: 50 Named Accounts (> $100M ARR); Tier 2: 250 Industry Verticals ($20M - $100M ARR)",
+      "exercise": "Develop an ICP scorecard evaluating prospective accounts across technical stack and employee headcount.",
+      "prerequisites": []
+    },
+    {
+      "id": "abm_intent_data",
+      "title": "Third-Party Intent Data & Surge Signal Detection",
+      "objective": "Detect active buying cycles by monitoring intent surges (Bombora, G2, 6sense) on target topics.",
+      "example": "IntentSurge: Account 'Acme Corp' researching 'Kubernetes Security' with score 88/100",
+      "exercise": "Build an automated alert triggering SDR outreach when a Tier 1 account shows 3 concurrent intent spikes.",
+      "prerequisites": [
+        "abm_icp_identification"
+      ]
+    },
+    {
+      "id": "abm_hyper_personalization",
+      "title": "Hyper-Personalized Content Assets & Executive Landing Pages",
+      "objective": "Craft bespoke executive briefs, ROI calculators, and personalized landing experiences per account.",
+      "example": "Custom Brief: 'Accelerating Digital Transformation for [TargetCompany]'s Engineering Team'",
+      "exercise": "Design a personalized landing page template dynamically injecting target company branding and industry metrics.",
+      "prerequisites": [
+        "abm_icp_identification"
+      ]
+    },
+    {
+      "id": "abm_multi_channel_orchestration",
+      "title": "Multi-Channel Orchestration: LinkedIn Ads, Direct Mail & SDR cadences",
+      "objective": "Coordinate touchpoints across paid social, executive gift mailers, and personalized sales sequences.",
+      "example": "Cadence: Day 1: LinkedIn Ad Impression -> Day 3: Custom Whitepaper Mailer -> Day 7: Exec SDR Email",
+      "exercise": "Design a 30-day multi-touch campaign cadence engaging key buying committee stakeholders (CTO, VP Eng).",
+      "prerequisites": [
+        "abm_hyper_personalization"
+      ]
+    },
+    {
+      "id": "abm_attribution_pipeline",
+      "title": "Account-Level Engagement Scoring & Multi-Touch Attribution",
+      "objective": "Measure pipeline velocity, committee coverage, and influenced ARR using W-shaped attribution models.",
+      "example": "AccountEngagementScore = (PageViews * 1) + (ContentDownloads * 5) + (WebinarAttendance * 15)",
+      "exercise": "Construct an account health dashboard tracking engagement scores and pipeline conversion rates.",
+      "prerequisites": [
+        "abm_multi_channel_orchestration"
+      ]
+    }
+  ]
+}

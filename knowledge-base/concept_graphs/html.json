@@ -1,0 +1,61 @@
+{
+  "subject": "HTML",
+  "aliases": [
+    "html",
+    "html5",
+    "hypertext markup language",
+    "semantic html"
+  ],
+  "domain": "Web Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "html_doc",
+      "title": "HTML5 Document Structure & Metadata",
+      "objective": "Understand the DOCTYPE declaration, html/head/body hierarchy, viewport meta tags, and character sets.",
+      "example": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Title</title>\n</head>",
+      "exercise": "Create a valid, standards-compliant HTML5 boilerplate page with complete SEO and social meta tags.",
+      "prerequisites": []
+    },
+    {
+      "id": "html_semantic",
+      "title": "Semantic Layout Elements (header, nav, main, article, section, footer)",
+      "objective": "Structure web documents using semantic landmark tags to enhance accessibility and screen reader navigation.",
+      "example": "<header><nav>...</nav></header>\n<main><article>...</article></main>\n<footer>...</footer>",
+      "exercise": "Convert a div-heavy landing page layout into semantic HTML5 landmark tags.",
+      "prerequisites": [
+        "html_doc"
+      ]
+    },
+    {
+      "id": "html_text_media",
+      "title": "Typography, Hyperlinks & Responsive Media (img, picture, audio, video)",
+      "objective": "Incorporate accessible hyperlinks, responsive srcset image tags, and embedded multimedia.",
+      "example": "<img src=\"hero.webp\" alt=\"Modern workspace\" loading=\"lazy\" width=\"800\" height=\"400\">",
+      "exercise": "Build an accessible media gallery with descriptive alt text and lazy loading attributes.",
+      "prerequisites": [
+        "html_semantic"
+      ]
+    },
+    {
+      "id": "html_forms",
+      "title": "Accessible Forms, Inputs & Client-Side Validation",
+      "objective": "Construct accessible user input forms with explicit label association, fieldsets, and HTML5 validation attributes.",
+      "example": "<label for=\"email\">Email Address</label>\n<input id=\"email\" type=\"email\" required>",
+      "exercise": "Design a registration form with name, email, password strength, and terms checkbox.",
+      "prerequisites": [
+        "html_text_media"
+      ]
+    },
+    {
+      "id": "html_a11y",
+      "title": "Web Accessibility (WCAG 2.1 & WAI-ARIA Landmarks)",
+      "objective": "Apply ARIA roles, states, keyboard focus management, and color contrast principles.",
+      "example": "<button aria-expanded=\"false\" aria-controls=\"menu\">Open Menu</button>",
+      "exercise": "Audit an existing HTML form and eliminate all accessibility violations identified by WCAG 2.1 AA.",
+      "prerequisites": [
+        "html_forms"
+      ]
+    }
+  ]
+}

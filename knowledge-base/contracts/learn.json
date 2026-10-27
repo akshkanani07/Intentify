@@ -1,0 +1,48 @@
+{
+  "contract": "learn",
+  "name": "Pedagogical Learning Curriculum Contract",
+  "description": "Master prompt structure for pedagogical mentoring, structured roadmaps, and hands-on skill acquisition.",
+  "required_sections": [
+    {
+      "heading": "Role & Pedagogical Persona",
+      "min_items": 3,
+      "description": "Supportive mentor persona with intuitive pacing and zero condescension."
+    },
+    {
+      "heading": "Learning Objectives & Skill Outcomes",
+      "min_items": 2,
+      "description": "Core competencies, target subject, and learning scope."
+    },
+    {
+      "heading": "Prerequisite Knowledge & Concept Tree",
+      "min_items": 2,
+      "description": "Foundational concepts and cognitive prerequisite graph."
+    },
+    {
+      "heading": "Structured Curriculum & Hands-On Milestones",
+      "min_items": 5,
+      "description": "At least 5 ordered topics, each with one objective and one hands-on exercise (D1 invariant)."
+    },
+    {
+      "heading": "Verifiable Acceptance Criteria",
+      "min_items": 3,
+      "description": "Competency assessment criteria and mastery verification."
+    },
+    {
+      "heading": "Output Format Specification",
+      "min_items": 2,
+      "description": "Clear step-by-step markdown formatting instructions."
+    },
+    {
+      "heading": "Pedagogical Guardrails & Negative Constraints",
+      "min_items": 3,
+      "description": "Prohibits advanced jargon without definition, hand-wavy explanations, and incomplete code."
+    },
+    {
+      "heading": "Documented Learning Assumptions",
+      "min_items": 2,
+      "description": "Baseline learner proficiency assumptions and time commitment."
+    }
+  ],
+  "optional_sections": []
+}

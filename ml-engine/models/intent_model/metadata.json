@@ -1,0 +1,24 @@
+{
+  "model_type": "IntentClassifierModel",
+  "epochs": 8,
+  "final_loss": 0.0,
+  "train_accuracy": 1.0,
+  "num_classes": 13,
+  "num_samples": 5200,
+  "training_time_sec": 12.88,
+  "classes": [
+    "analyze",
+    "compare",
+    "create",
+    "debug",
+    "decide",
+    "design",
+    "explain",
+    "generate",
+    "improve",
+    "plan",
+    "research",
+    "translate",
+    "write"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "subject": "Python",
+  "standards": [
+    {
+      "name": "PEP 8",
+      "description": "Style Guide for Python Code."
+    },
+    {
+      "name": "PEP 257",
+      "description": "Docstring Conventions."
+    },
+    {
+      "name": "PEP 484",
+      "description": "Type Hints Specification."
+    }
+  ]
+}

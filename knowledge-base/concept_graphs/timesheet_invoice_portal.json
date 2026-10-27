@@ -1,0 +1,62 @@
+{
+  "subject": "Timesheet Invoice Portal",
+  "aliases": [
+    "timesheet portal",
+    "contractor billing",
+    "timesheet invoicing",
+    "timesheet invoice portal"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "ts_time_tracking",
+      "title": "Granular Time Logging & Project Task Allocation",
+      "objective": "Record billable hours across client projects, billable vs non-billable codes, and time approval gates.",
+      "example": "TimeEntry: { consultant_id: 'C-42', project_id: 'P-99', hours: 7.5, billable: true }",
+      "exercise": "Build a timesheet submission form validating weekly hour totals and preventing overlapping time entries.",
+      "prerequisites": []
+    },
+    {
+      "id": "ts_manager_approvals",
+      "title": "Hierarchical Approval Workflows & Notification Loops",
+      "objective": "Route submitted timesheets to department managers with bulk approval and rejection change requests.",
+      "example": "ApprovalState: DRAFT -> SUBMITTED -> APPROVED -> BILLED",
+      "exercise": "Implement an approval state machine sending automated email reminders for pending Friday timesheet signoffs.",
+      "prerequisites": [
+        "ts_time_tracking"
+      ]
+    },
+    {
+      "id": "ts_automated_invoicing",
+      "title": "Automated Invoice Generation & Rate Card Calculations",
+      "objective": "Aggregate approved monthly hours and calculate tiered consultant billing rates with sales tax rules.",
+      "example": "InvoiceTotal = sum(hours * hourly_rate) * (1 + tax_rate)",
+      "exercise": "Write an invoice generation service aggregating hours into clean itemized PDF client invoices.",
+      "prerequisites": [
+        "ts_manager_approvals"
+      ]
+    },
+    {
+      "id": "ts_payment_gateways",
+      "title": "Payment Gateway Integration (Stripe / ACH / Wire)",
+      "objective": "Enable direct client online invoice settlement via ACH bank debit and corporate credit card rails.",
+      "example": "stripe.invoices.pay(invoiceId, { payment_method: 'pm_ach_debit' })",
+      "exercise": "Integrate Stripe Invoicing webhooks marking timesheets as Settled upon invoice.payment_succeeded event.",
+      "prerequisites": [
+        "ts_automated_invoicing"
+      ]
+    },
+    {
+      "id": "ts_audit_compliance",
+      "title": "Billing Audit Trails & Contractor Tax Reporting (1099/GST)",
+      "objective": "Maintain immutable audit trails for dispute resolution and export quarterly contractor tax summaries.",
+      "example": "AuditTrail: { action: 'HOURS_MODIFIED', before: 8.0, after: 7.5, modified_by: 'Mgr. Smith' }",
+      "exercise": "Generate automated year-end contractor earnings reports compliant with 1099 and GST reporting requirements.",
+      "prerequisites": [
+        "ts_payment_gateways"
+      ]
+    }
+  ]
+}

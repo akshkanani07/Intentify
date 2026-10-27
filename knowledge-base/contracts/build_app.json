@@ -1,0 +1,86 @@
+{
+  "contract": "build_app",
+  "name": "Full-Stack Application & SaaS Contract",
+  "description": "Master prompt structure for building full-stack applications, SaaS platforms, portals, and web services.",
+  "required_sections": [
+    {
+      "heading": "Role & Technical Persona",
+      "min_items": 3,
+      "description": "Defines authoritative expert persona aligned with application stack and domain."
+    },
+    {
+      "heading": "Core Objective & System Scope",
+      "min_items": 2,
+      "description": "Specifies deliverable, subject, product name, and measurable business scope."
+    },
+    {
+      "heading": "System Architecture & Component Topology",
+      "min_items": 4,
+      "description": "Subsystem topology, service boundaries, and data flow patterns."
+    },
+    {
+      "heading": "Verifiable Acceptance Criteria",
+      "min_items": 3,
+      "description": "Functional criteria, schema contracts, and boundary constraints."
+    },
+    {
+      "heading": "Output Format Specification",
+      "min_items": 2,
+      "description": "Explicit output structure and schema definitions."
+    },
+    {
+      "heading": "Self-Verification Quality Checklist",
+      "min_items": 3,
+      "description": "Self-audit criteria ensuring completeness and zero mock placeholders."
+    },
+    {
+      "heading": "Operational Guardrails & Negative Constraints",
+      "min_items": 3,
+      "description": "Negative guardrails preventing antipatterns and unauthorized shortcuts."
+    },
+    {
+      "heading": "Documented Assumptions & Context",
+      "min_items": 2,
+      "description": "Explicitly documented technical baseline and assumed configurations."
+    }
+  ],
+  "optional_sections": [
+    {
+      "heading": "Production Deployment & CI/CD Pipeline",
+      "trigger_keywords": [
+        "ci/cd",
+        "deployment",
+        "kubernetes",
+        "docker",
+        "pipeline",
+        "release"
+      ],
+      "out_of_scope_message": "Production CI/CD deployment pipelines are out of scope unless explicitly requested."
+    },
+    {
+      "heading": "High Availability, Scaling & Disaster Recovery",
+      "trigger_keywords": [
+        "scaling",
+        "high availability",
+        "disaster recovery",
+        "failover",
+        "multi-region",
+        "sla"
+      ],
+      "out_of_scope_message": "Multi-region high availability and disaster recovery runbooks are out of scope unless explicitly requested."
+    },
+    {
+      "heading": "Telemetry, Monitoring & Observability",
+      "trigger_keywords": [
+        "telemetry",
+        "prometheus",
+        "grafana",
+        "tracing",
+        "datadog",
+        "observability",
+        "metrics"
+      ],
+      "out_of_scope_message": "Advanced distributed tracing and APM telemetry are out of scope unless explicitly requested."
+    }
+  ]
+}

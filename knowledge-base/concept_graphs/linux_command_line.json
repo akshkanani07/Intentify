@@ -1,0 +1,63 @@
+{
+  "subject": "Linux Command Line",
+  "aliases": [
+    "linux",
+    "bash",
+    "shell",
+    "linux command line",
+    "cli",
+    "unix"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "linux_nav",
+      "title": "Filesystem Hierarchy & File Navigation (pwd, ls, cd, cat, less)",
+      "objective": "Navigate the Unix FHS, understand absolute vs relative paths, and inspect file contents.",
+      "example": "cd /var/log && ls -la && tail -n 50 syslog",
+      "exercise": "Navigate system directories, create a nested directory tree, and inspect hidden configuration files.",
+      "prerequisites": []
+    },
+    {
+      "id": "linux_ops",
+      "title": "File Operations & Manipulation (cp, mv, rm, mkdir, touch)",
+      "objective": "Safely create, copy, move, and remove files and directories with confirmation flags.",
+      "example": "mkdir -p project/{src,bin,docs} && cp src/main.c bin/",
+      "exercise": "Organize an unorganized downloads directory into categorized folders using wildcard matching.",
+      "prerequisites": [
+        "linux_nav"
+      ]
+    },
+    {
+      "id": "linux_perms",
+      "title": "Users, Groups & File Permissions (chmod, chown, sudo)",
+      "objective": "Understand read, write, and execute bits in octal (755, 644) and symbolic notation.",
+      "example": "chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa",
+      "exercise": "Secure a script file so only the owner can read and execute it while denying all group access.",
+      "prerequisites": [
+        "linux_ops"
+      ]
+    },
+    {
+      "id": "linux_pipes",
+      "title": "Standard Streams, Pipes & Redirection (|, >, >>, grep, cut, sort)",
+      "objective": "Chain command outputs through pipelines to filter, transform, and aggregate text data.",
+      "example": "cat access.log | grep \" 404 \" | cut -d' ' -f7 | sort | uniq -c",
+      "exercise": "Extract the top 5 most frequently failing IP addresses from a sample server log file.",
+      "prerequisites": [
+        "linux_perms"
+      ]
+    },
+    {
+      "id": "linux_processes",
+      "title": "Process Management & System Monitoring (ps, top, kill, systemctl)",
+      "objective": "Inspect running system processes, manage background jobs with & and fg, and control systemd units.",
+      "example": "ps aux | grep node && kill -15 <PID>",
+      "exercise": "Launch a background script, monitor its memory consumption, and terminate it cleanly.",
+      "prerequisites": [
+        "linux_pipes"
+      ]
+    }
+  ]
+}

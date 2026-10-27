@@ -1,0 +1,63 @@
+{
+  "subject": "Solidity",
+  "aliases": [
+    "solidity",
+    "smart contracts",
+    "ethereum",
+    "web3",
+    "evm"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "sol_types_state",
+      "title": "EVM Types, State Variables & Visibilities",
+      "objective": "Structure gas-efficient contract storage variables, mappings, and visibility qualifiers.",
+      "example": "mapping(address => uint256) public balances;",
+      "exercise": "Write an ERC-20 compliant balance ledger tracking token transfers between addresses.",
+      "prerequisites": []
+    },
+    {
+      "id": "sol_modifiers_access",
+      "title": "Function Modifiers & Role-Based Access Control",
+      "objective": "Enforce invariant execution guards using custom function modifiers and Ownable patterns.",
+      "example": "modifier onlyOwner() { require(msg.sender == owner); _; }",
+      "exercise": "Implement a Pausable modifier that halts token transfers during emergency maintenance windows.",
+      "prerequisites": [
+        "sol_types_state"
+      ]
+    },
+    {
+      "id": "sol_reentrancy_defense",
+      "title": "Reentrancy Attacks & Checks-Effects-Interactions Pattern",
+      "objective": "Protect smart contracts against external contract callback vulnerabilities.",
+      "example": "balances[msg.sender] = 0; (bool s, ) = msg.sender.call{value: amount}('');",
+      "exercise": "Refactor a vulnerable withdrawal function into the Checks-Effects-Interactions pattern with a nonReentrant mutex.",
+      "prerequisites": [
+        "sol_modifiers_access"
+      ]
+    },
+    {
+      "id": "sol_events_indexing",
+      "title": "EVM Events, Logs & Off-Chain Indexing",
+      "objective": "Emit indexed transaction logs for performant sub-graph indexing and frontend state sync.",
+      "example": "event Transfer(address indexed from, address indexed to, uint256 value);",
+      "exercise": "Emit Transfer and Approval events in an ERC-20 contract and query logs via ethers.js filters.",
+      "prerequisites": [
+        "sol_types_state"
+      ]
+    },
+    {
+      "id": "sol_upgradeability_proxies",
+      "title": "Transparent & UUPS Upgradeable Proxy Patterns",
+      "objective": "Decouple contract state storage from implementation logic using EVM delegatecalls.",
+      "example": "assembly { delegatecall(gas(), impl, 0, calldatasize(), 0, 0) }",
+      "exercise": "Deploy an ERC-1967 compliant UUPS upgradeable contract with an initialization function in place of a constructor.",
+      "prerequisites": [
+        "sol_reentrancy_defense"
+      ]
+    }
+  ]
+}

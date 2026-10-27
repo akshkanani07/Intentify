@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intentify UI - LIVE-04</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0b0f19; color: #f3f4f6; margin: 0; padding: 24px; }
+        .container { max-width: 960px; margin: 0 auto; background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 32px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1f2937; padding-bottom: 16px; margin-bottom: 24px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+        .badge-final { background: #065f46; color: #34d399; border: 1px solid #059669; }
+        .badge-contract { background: #1e3a8a; color: #93c5fd; border: 1px solid #2563eb; }
+        .score { font-size: 32px; font-weight: 700; color: #10b981; }
+        .input-box { background: #1f2937; border-left: 4px solid #3b82f6; padding: 12px 16px; margin-bottom: 24px; border-radius: 4px; font-style: italic; color: #9ca3af; }
+        .meta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+        .meta-card { background: #1e293b; padding: 12px; border-radius: 8px; border: 1px solid #334155; }
+        .meta-card span { display: block; font-size: 11px; text-transform: uppercase; color: #64748b; font-weight: 600; }
+        .meta-card strong { font-size: 14px; color: #e2e8f0; }
+        pre { background: #0f172a; padding: 20px; border-radius: 8px; border: 1px solid #1e293b; overflow-x: auto; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; line-height: 1.6; color: #cbd5e1; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1 style="margin: 0; font-size: 22px; color: #38bdf8;">Intentify Universal Prompt Compiler</h1>
+                <p style="margin: 4px 0 0 0; font-size: 13px; color: #94a3b8;">Live Validation Sample LIVE-04</p>
+            </div>
+            <div style="text-align: right;">
+                <span class="badge badge-final">final</span>
+                <span class="badge badge-contract">learn</span>
+                <div class="score">100.0<span style="font-size: 14px; color: #6b7280;">/100</span></div>
+            </div>
+        </div>
+
+        <div class="input-box">
+            User Input: "મારે Java શીખવું છે"
+        </div>
+
+        <div class="meta-grid">
+            <div class="meta-card"><span>Subject</span><strong>Java</strong></div>
+            <div class="meta-card"><span>Product Name</span><strong>None</strong></div>
+            <div class="meta-card"><span>Proficiency</span><strong>Novice / Beginner</strong></div>
+            <div class="meta-card"><span>Audience</span><strong>Students & Learners</strong></div>
+        </div>
+
+        <h3 style="color: #f1f5f9; font-size: 16px; margin-top: 24px;">Compiled Master Prompt Output</h3>
+        <pre>## સૂચના: આ પ્રોમ્પ્ટ મુજબ નિષ્ણાત માર્ગદર્શન, સંપૂર્ણ વિગત અને ચોક્કસ ઉકેલ આપો.
+
+### ૧. ભૂમિકા અને શિક્ષણશાસ્ત્રીય પર્સના (Role & Pedagogical Persona)
+- Java Instructor & Curriculum Mentor તરીકે વિશ્વસનીય ભૂમિકા સ્વીકારો, અને Novice / Beginner શીખનાર માટે સ્પષ્ટ, પગલાંવાર માર્ગદર્શન આપો.
+- ભાષા, દ્રષ્ટાંતો અને ગતિ સંપૂર્ણપણે Novice / Beginner વિદ્યાર્થી માટે સરળ અને વ્યવહારુ રાખો.
+- વિભાવનાઓ પાયાના સિદ્ધાંતોથી સમજાવો અને પ્રથમ ઉપયોગ વખતે દરેક ટેકનિકલ પરિભાષા સ્પષ્ટ કરો.
+- સમગ્ર શિક્ષણ દરમિયાન પ્રોત્સાહક, સહાયક અને વ્યવસ્થિત શિક્ષણશાસ્ત્રીય વલણ જાળવો.
+
+### ૨. શિક્ષણના મુખ્ય ઉદ્દેશ્યો અને વ્યાપ (Learning Objectives & Scope)
+- ઉદ્દેશ્ય: Java શરૂઆતથી શીખવું: પાયાના ખ્યાલોથી વ્યવહારુ નિપુણતા સુધી સંપૂર્ણ માર્ગદર્શન.
+- Target Audience: Students & Learners (Novice / Beginner).
+- Deliverable: Step-by-Step Curriculum with Actionable Code Walkthroughs and Practical Exercises.
+
+### ૩. વિગતવાર અભ્યાસક્રમ અને સ્ટેપ-બાય-સ્ટેપ વિષયો (Curated Topic Plan & Curriculum)
+- Curriculum Outline (Concept Graph - Prerequisite Ordered):
+Topic 1: JVM Architecture, Class Structure & Primitive Types
+- - Objective: Understand bytecode execution, class declarations, main method, and type casting.
+- - Exercise: Write a command line application that validates user input and computes tax calculations.
+- - Concept Syntax: `public class App { public static void main(String[] args) { System.out.println("Java"); } }`
+Topic 2: Encapsulation, Inheritance & Polymorphic Interfaces
+- - Objective: Design reusable class hierarchies using abstract classes, interfaces, and override annotations.
+- - Exercise: Model a company payroll system with Employee base class and Salaried/Hourly implementations.
+- - Concept Syntax: `public interface Payable { double calculatePay(); }`
+Topic 3: Java Collections Framework & Generics
+- - Objective: Master ArrayList, HashMap, HashSet, and iterator traversal patterns.
+- - Exercise: Implement an in-memory phonebook directory with duplicate name detection.
+- - Concept Syntax: `Map<String, Integer> freq = new HashMap<>(); freq.put("key", 1);`
+Topic 4: Exception Handling & Resource Management (try-with-resources)
+- - Objective: Handle checked and unchecked exceptions gracefully and auto-close AutoCloseable resources.
+- - Exercise: Build a resilient file parser that catches IO and parsing exceptions with informative error logging.
+- - Concept Syntax: `try (BufferedReader reader = new BufferedReader(new FileReader(p))) { ... }`
+Topic 5: Lambda Expressions & Stream API
+- - Objective: Write functional data transformations using map, filter, reduce, and collectors.
+- - Exercise: Transform and aggregate a dataset of order transactions into regional sales totals.
+- - Concept Syntax: `List<String> names = list.stream().filter(s -> !s.isEmpty()).collect(Collectors.toList());`
+
+### ૪. ટેકનિકલ ધોરણો અને ઉત્તમ પ્રથાઓ (Technical Standards & Best Practices)
+- Strictly adhere to official Java industry standards and best practices:
+- - **Java SE 17 / 21 LTS Specifications**: Oracle official language specification.
+- - **Google Java Style Guide**: Idiomatic formatting and naming conventions.
+
+### ૫. સ્વીકૃતિ માપદંડ (Verifiable Acceptance Criteria)
+- વિદ્યાર્થી તમામ અભ્યાસક્રમ વિષયોને આવરી લેતા કાર્યરત કોડ ઉદાહરણો બનાવી શકે.
+- સ્વતંત્ર વ્યવહારુ કાર્યો દ્વારા પાયાની કાર્યપદ્ધતિમાં ચકાસાયેલ યોગ્યતા દર્શાવો.
+- બાહ્ય સહાય વિના મધ્યવર્તી અમલીકરણ પડકારોને સફળતાપૂર્વક ઉકેલો.
+- સંપૂર્ણ અંતિમ પ્રોજેક્ટ પૂર્ણ કરીને શીખેલા તમામ ખ્યાલોને સંકલિત કરો.
+- અપૂર્ણ પ્લેસહોલ્ડર્સ અથવા કાલ્પનિક દાવાઓથી સંપૂર્ણપણે મુક્ત રહેવું.
+- નિર્ધારિત તમામ ઓપરેશનલ બાઉન્ડ્રી અને પ્રતિબંધોનું સંપૂર્ણ પાલન કરો.
+
+### ૬. આઉટપુટ ફોર્મેટ વિશિષ્ટતાઓ (Output Format Specification)
+- સંપૂર્ણ પ્રતિસાદ Pedagogical Markdown with Concept Explanations and Step-by-Step Exercises મુજબ સ્પષ્ટ Markdown ફોર્મેટમાં આપો.
+- Use clean GitHub-flavored markdown with syntax-highlighted code blocks.
+- Accompany every code example with line-by-line mechanical explanations.
+
+### ૭. ગુણવત્તા ચકાસણી ચેકલિસ્ટ (Self-Verification Quality Checklist)
+- તપાસો કે તમામ વિષયો સાહજિક માનસિક મોડેલ સાથે સ્પષ્ટ રીતે સમજાવાયેલ છે.
+- ખાતરી કરો કે દરેક વિષયમાં સ્પષ્ટ ઉદ્દેશ્ય અને વ્યવહારુ સ્વાધ્યાય બંને સામેલ છે.
+- ખાતરી કરો કે પ્રથમ પરિચય વખતે દરેક ટેકનિકલ પરિભાષા સ્પષ્ટ કરવામાં આવી છે.
+- ચકાસો કે પ્રતિસાદ કોઈપણ પ્લેસહોલ્ડર વિના ઉત્પાદન-સ્તરે પૂર્ણ છે.
+
+### ૮. ઓપરેશનલ બાઉન્ડ્રી અને પ્રતિબંધો (Operational Guardrails & Negative Constraints)
+- **Prohibition**: DO NOT write partial code snippets or leave incomplete stub implementations.
+- **Prohibition**: DO NOT assume prior knowledge of advanced technical terms without defining them first.
+- **Prohibition**: DO NOT deviate from the requested output structure or omit hands-on exercises.
+- **Strict Constraint**: Production-ready execution with verified schemas and complete implementations
+- **Strict Constraint**: Strict alignment with industry standards and best practices
+
+### ૯. ધારણાઓ અને વિશિષ્ટતાઓ (Documented Assumptions & Context)
+- **Assumption**: Target audience operates with the background knowledge expected of Novice / Beginner.
+- **Assumption**: All functional specifications require complete production-ready syntax and verified schema definitions.
+- **Context Assumption**: Weekly study commitment timeframe is assumed to follow standard production best practices.</pre>
+    </div>
+</body>
+</html>

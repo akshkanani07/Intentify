@@ -1,0 +1,61 @@
+{
+  "subject": "Microservices Architecture",
+  "aliases": [
+    "microservices",
+    "microservice architecture",
+    "distributed services"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "ms_bounded_contexts",
+      "title": "Domain-Driven Design (DDD) & Bounded Contexts",
+      "objective": "Decompose monolithic domain models into autonomous business capabilities with explicit boundaries.",
+      "example": "Order Context owns checkout flow; Billing Context owns invoices; Inventory Context owns stock levels.",
+      "exercise": "Map out domain events and bounded contexts for an e-commerce platform using Event Storming methodology.",
+      "prerequisites": []
+    },
+    {
+      "id": "ms_api_gateway_bff",
+      "title": "API Gateway & Backend-For-Frontend (BFF) Pattern",
+      "objective": "Shield internal microservices behind unified edge gateways providing rate limiting, auth, and protocol translation.",
+      "example": "Client -> API Gateway (TLS termination, Auth, Rate limit) -> Internal Services (gRPC)",
+      "exercise": "Design an API gateway configuration aggregating order, shipping, and product data into a single client response.",
+      "prerequisites": [
+        "ms_bounded_contexts"
+      ]
+    },
+    {
+      "id": "ms_saga_pattern",
+      "title": "Distributed Transactions: Choreographed & Orchestrated Sagas",
+      "objective": "Maintain data consistency across distributed databases without blocking 2-phase commit protocols.",
+      "example": "OrderSaga: CreateOrder -> ChargePayment (fails) -> CompensatingTx: CancelOrder",
+      "exercise": "Implement an orchestrated Saga coordinator with compensating transactions for failed inventory reservations.",
+      "prerequisites": [
+        "ms_bounded_contexts"
+      ]
+    },
+    {
+      "id": "ms_cqrs_event_sourcing",
+      "title": "CQRS & Event Sourcing Architecture",
+      "objective": "Separate write-heavy command pipelines from optimized read-only projections updated via event streams.",
+      "example": "Command -> Append to EventStore -> Project to Elasticsearch Read Model",
+      "exercise": "Build an event-sourced bank account ledger maintaining append-only transaction events and current balance projections.",
+      "prerequisites": [
+        "ms_saga_pattern"
+      ]
+    },
+    {
+      "id": "ms_observability_tracing",
+      "title": "Distributed Tracing (OpenTelemetry) & Service Mesh",
+      "objective": "Track inter-service request latencies and error propagation across microservices using W3C TraceContext.",
+      "example": "traceparent: 00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01",
+      "exercise": "Instrument a multi-service HTTP call chain with OpenTelemetry spans and visualize the trace waterfall in Jaeger.",
+      "prerequisites": [
+        "ms_api_gateway_bff"
+      ]
+    }
+  ]
+}

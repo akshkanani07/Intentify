@@ -1,0 +1,61 @@
+{
+  "subject": "C++",
+  "aliases": [
+    "c++",
+    "cpp",
+    "c plus plus",
+    "modern cpp"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "cpp_basics",
+      "title": "C++ Core Syntax, Namespaces & References",
+      "objective": "Understand standard streams, namespace qualification, and lvalue reference semantics.",
+      "example": "std::string name; std::cin >> name; const int& ref = val;",
+      "exercise": "Build a console calculator that performs arithmetic using pass-by-reference parameters.",
+      "prerequisites": []
+    },
+    {
+      "id": "cpp_raii",
+      "title": "Classes, Constructors & RAII Lifetime Management",
+      "objective": "Master resource acquisition is initialization, destructors, and encapsulated state.",
+      "example": "class Buffer { public: explicit Buffer(size_t sz); ~Buffer(); private: char* data_; };",
+      "exercise": "Create a custom FileHandle wrapper class that guarantees file closure via RAII.",
+      "prerequisites": [
+        "cpp_basics"
+      ]
+    },
+    {
+      "id": "cpp_stl",
+      "title": "Standard Template Library (STL Containers & Algorithms)",
+      "objective": "Utilize std::vector, std::unordered_map, iterators, and std::sort efficiently.",
+      "example": "std::vector<int> nums = {4, 1, 3}; std::sort(nums.begin(), nums.end());",
+      "exercise": "Implement a student grade analyzer using std::vector and std::transform.",
+      "prerequisites": [
+        "cpp_raii"
+      ]
+    },
+    {
+      "id": "cpp_templates",
+      "title": "Templates & Compile-Time Generic Programming",
+      "objective": "Design generic functions and class templates with type parameters.",
+      "example": "template <typename T> T find_max(const T& a, const T& b) { return a > b ? a : b; }",
+      "exercise": "Write a generic Stack<T> container class supporting push, pop, and top operations.",
+      "prerequisites": [
+        "cpp_stl"
+      ]
+    },
+    {
+      "id": "cpp_smart_ptrs",
+      "title": "Modern Smart Pointers & Move Semantics",
+      "objective": "Eliminate manual memory management using std::unique_ptr, std::shared_ptr, and std::move.",
+      "example": "auto ptr = std::make_unique<Widget>(); auto moved = std::move(ptr);",
+      "exercise": "Refactor a raw-pointer binary search tree into a memory-safe smart pointer implementation.",
+      "prerequisites": [
+        "cpp_templates"
+      ]
+    }
+  ]
+}

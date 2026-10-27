@@ -1,0 +1,60 @@
+{
+  "domain": "Luxury Event & Wedding Planning",
+  "nodes": [
+    {
+      "id": "wed_vision",
+      "name": "Client Vision, Aesthetic & Theme Definition",
+      "prerequisites": []
+    },
+    {
+      "id": "wed_budget",
+      "name": "Itemized Budget Allocation & Contingency Pool",
+      "prerequisites": [
+        "wed_vision"
+      ]
+    },
+    {
+      "id": "wed_venue",
+      "name": "Venue Scouting, Capacity & Contract Negotiation",
+      "prerequisites": [
+        "wed_budget"
+      ]
+    },
+    {
+      "id": "wed_itinerary",
+      "name": "Multi-Day Ceremony Timeline & Logistics Run-Sheet",
+      "prerequisites": [
+        "wed_venue"
+      ]
+    },
+    {
+      "id": "wed_vendors",
+      "name": "Catering (F&B), Decor & AV Vendor Coordination",
+      "prerequisites": [
+        "wed_itinerary"
+      ]
+    },
+    {
+      "id": "wed_hospitality",
+      "name": "Guest Logistics, Welcome Desk & Room Allocations",
+      "prerequisites": [
+        "wed_vendors"
+      ]
+    },
+    {
+      "id": "wed_risk",
+      "name": "Emergency Backup Protocols & Weather Contingencies",
+      "prerequisites": [
+        "wed_hospitality"
+      ]
+    },
+    {
+      "id": "wed_recap",
+      "name": "Post-Event Vendor Settlement & Final Reconciliation",
+      "prerequisites": [
+        "wed_risk"
+      ]
+    }
+  ],
+  "reviewed": false
+}

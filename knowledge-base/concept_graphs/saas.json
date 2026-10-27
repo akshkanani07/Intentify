@@ -1,0 +1,60 @@
+{
+  "domain": "SaaS Cloud Architecture",
+  "nodes": [
+    {
+      "id": "saas_tenancy",
+      "name": "Multi-Tenant Data Isolation Strategy",
+      "prerequisites": []
+    },
+    {
+      "id": "saas_auth",
+      "name": "Unified Identity & RBAC / ABAC Security",
+      "prerequisites": [
+        "saas_tenancy"
+      ]
+    },
+    {
+      "id": "saas_api",
+      "name": "REST/GraphQL API Gateway & Rate Limiting",
+      "prerequisites": [
+        "saas_auth"
+      ]
+    },
+    {
+      "id": "saas_billing",
+      "name": "Subscription Billing, Webhooks & Metering",
+      "prerequisites": [
+        "saas_api"
+      ]
+    },
+    {
+      "id": "saas_async",
+      "name": "Message Queues & Background Job Processing",
+      "prerequisites": [
+        "saas_billing"
+      ]
+    },
+    {
+      "id": "saas_caching",
+      "name": "Distributed Caching (Redis) & Session Stores",
+      "prerequisites": [
+        "saas_async"
+      ]
+    },
+    {
+      "id": "saas_observability",
+      "name": "Distributed Tracing, Metrics & APM Alerts",
+      "prerequisites": [
+        "saas_caching"
+      ]
+    },
+    {
+      "id": "saas_cicd",
+      "name": "Zero-Downtime CI/CD & Blue-Green Deployments",
+      "prerequisites": [
+        "saas_observability"
+      ]
+    }
+  ],
+  "reviewed": false
+}

@@ -1,0 +1,13 @@
+{
+  "subject": "Git",
+  "standards": [
+    {
+      "name": "Conventional Commits 1.0.0",
+      "description": "Specification for adding human and machine readable meaning to commit messages."
+    },
+    {
+      "name": "Semantic Versioning 2.0.0",
+      "description": "SemVer standard for release management."
+    }
+  ]
+}

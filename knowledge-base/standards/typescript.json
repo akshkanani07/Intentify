@@ -1,0 +1,13 @@
+{
+  "subject": "TypeScript",
+  "standards": [
+    {
+      "name": "TypeScript Language Specification",
+      "description": "Microsoft TypeScript compiler standard."
+    },
+    {
+      "name": "Strict tsconfig Guidelines",
+      "description": "Zero implicit any and strict null checks."
+    }
+  ]
+}

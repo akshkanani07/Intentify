@@ -1,0 +1,62 @@
+{
+  "subject": "Apache Kafka",
+  "aliases": [
+    "kafka",
+    "apache kafka",
+    "kafka streaming",
+    "kafka cluster"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "kafka_topics_partitions",
+      "title": "Topics, Partitions & Append-Only Log Mechanics",
+      "objective": "Understand distributed partition layouts, record offsets, and sequential disk I/O throughput.",
+      "example": "bin/kafka-topics.sh --create --topic telemetry --partitions 12 --replication-factor 3",
+      "exercise": "Configure a Kafka topic with 6 partitions and evaluate message distribution using Murmur2 key hashing.",
+      "prerequisites": []
+    },
+    {
+      "id": "kafka_producers_acks",
+      "title": "Producer Reliability: acks=all, Idempotence & Retries",
+      "objective": "Prevent message loss or duplicates during producer network timeouts using transactional sequence IDs.",
+      "example": "props.put('acks', 'all'); props.put('enable.idempotence', 'true');",
+      "exercise": "Implement an idempotent Kafka producer publishing orders with guaranteed exactly-once local semantics.",
+      "prerequisites": [
+        "kafka_topics_partitions"
+      ]
+    },
+    {
+      "id": "kafka_consumer_groups",
+      "title": "Consumer Groups, Partition Rebalancing & Offset Management",
+      "objective": "Scale message consumption linearly across worker pools and manage manual offset commits safely.",
+      "example": "consumer.commitSync(Collections.singletonMap(partition, new OffsetAndMetadata(offset)));",
+      "exercise": "Build a multi-threaded consumer worker group committing offsets only after database persistence succeeds.",
+      "prerequisites": [
+        "kafka_topics_partitions"
+      ]
+    },
+    {
+      "id": "kafka_schema_registry",
+      "title": "Schema Registry, Avro & Backward/Forward Evolution",
+      "objective": "Enforce strict serialization contracts and manage payload schema evolution without breaking downstream consumers.",
+      "example": "record OrderCreated { string order_id; double amount; [null, string] discount_code = null; }",
+      "exercise": "Evolve an Avro event schema by adding an optional field and verify backward compatibility via Schema Registry API.",
+      "prerequisites": [
+        "kafka_producers_acks"
+      ]
+    },
+    {
+      "id": "kafka_streams_stateful",
+      "title": "Kafka Streams: RocksDB State Stores & Windowed Aggregations",
+      "objective": "Compute real-time rolling metrics across streaming event data using tumbling and hopping windows.",
+      "example": "stream.groupByKey().windowedBy(TimeWindows.ofSizeWithNoGrace(Duration.ofMinutes(5))).count()",
+      "exercise": "Implement a fraud detection stream counting high-value transactions within 60-second sliding windows.",
+      "prerequisites": [
+        "kafka_consumer_groups"
+      ]
+    }
+  ]
+}

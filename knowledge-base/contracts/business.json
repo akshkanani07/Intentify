@@ -1,0 +1,48 @@
+{
+  "contract": "business",
+  "name": "Commercial Strategy & Financial Expansion Contract",
+  "description": "Master prompt structure for business expansion, market entry, valuation models, and franchising.",
+  "required_sections": [
+    {
+      "heading": "Role & Executive Strategy Persona",
+      "min_items": 3,
+      "description": "Commercial strategist / investment principal persona."
+    },
+    {
+      "heading": "Strategic Business Objective & Commercial Scope",
+      "min_items": 2,
+      "description": "Target revenue, unit economics, market segment, and deliverable."
+    },
+    {
+      "heading": "Operational Framework & Subsystem Topology",
+      "min_items": 4,
+      "description": "Supply chain, unit operations, distribution channels, and governance."
+    },
+    {
+      "heading": "Verifiable Acceptance Criteria",
+      "min_items": 3,
+      "description": "Key performance indicators, financial thresholds, and auditability."
+    },
+    {
+      "heading": "Output Format Specification",
+      "min_items": 2,
+      "description": "Structured executive memorandum with unit economic schedules."
+    },
+    {
+      "heading": "Commercial Self-Verification Checklist",
+      "min_items": 3,
+      "description": "Checks validating pricing logic, risk reserves, and compliance boundaries."
+    },
+    {
+      "heading": "Strategic Guardrails & Negative Constraints",
+      "min_items": 3,
+      "description": "Guardrails against unrealistic margin assumptions and legal exposure."
+    },
+    {
+      "heading": "Documented Commercial Assumptions",
+      "min_items": 2,
+      "description": "Cost of capital, local market rates, and customer acquisition benchmarks."
+    }
+  ],
+  "optional_sections": []
+}

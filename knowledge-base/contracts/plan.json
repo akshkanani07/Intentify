@@ -1,0 +1,48 @@
+{
+  "contract": "plan",
+  "name": "System Architecture & Roadmap Plan Contract",
+  "description": "Master prompt structure for architectural roadmaps, migrations, and phased technical initiatives.",
+  "required_sections": [
+    {
+      "heading": "Role & Strategic Technical Persona",
+      "min_items": 3,
+      "description": "Enterprise architect / technical roadmap lead persona."
+    },
+    {
+      "heading": "Strategic Initiative Objective & Phased Scope",
+      "min_items": 2,
+      "description": "Primary transformational outcomes and target state."
+    },
+    {
+      "heading": "Phase-by-Phase Execution Roadmap",
+      "min_items": 4,
+      "description": "Sequential phases with entry gates, work streams, and deliverables."
+    },
+    {
+      "heading": "Verifiable Milestone Acceptance Criteria",
+      "min_items": 3,
+      "description": "Quantitative exit criteria for each roadmap phase."
+    },
+    {
+      "heading": "Output Format Specification",
+      "min_items": 2,
+      "description": "Phase tables, work breakdown structures, and milestones."
+    },
+    {
+      "heading": "Self-Verification Quality Checklist",
+      "min_items": 3,
+      "description": "Verification of dependencies, rollback contingencies, and critical path."
+    },
+    {
+      "heading": "Planning Guardrails & Negative Constraints",
+      "min_items": 3,
+      "description": "Prohibits undefined resource dependencies and unversioned targets."
+    },
+    {
+      "heading": "Documented Planning Assumptions & Baseline",
+      "min_items": 2,
+      "description": "Assumed organizational velocity, tooling, and team structure."
+    }
+  ],
+  "optional_sections": []
+}

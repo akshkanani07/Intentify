@@ -1,0 +1,62 @@
+{
+  "subject": "Cold-Chain Logistics",
+  "aliases": [
+    "cold-chain",
+    "cold-chain logistics",
+    "cold-chain distribution",
+    "cold storage"
+  ],
+  "domain": "Business & Strategy",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "cold_temp_zones",
+      "title": "Perishable Temperature Zones & HACCP Safety Standards",
+      "objective": "Segment supply chains into distinct cold corridors: Deep Frozen (-25°C), Chilled (0°C to 4°C), and Cool (10°C to 15°C).",
+      "example": "ZonePolicy: { dairy: [1.0, 4.0], frozen_produce: [-25.0, -18.0] }",
+      "exercise": "Define an environmental policy matrix mapping food products to mandated transit temperature corridors.",
+      "prerequisites": []
+    },
+    {
+      "id": "cold_iot_telemetry",
+      "title": "IoT Temperature & Humidity Telemetry Gateways",
+      "objective": "Stream refrigerated fleet sensor telemetry with automated geo-fenced excursion detection.",
+      "example": "TruckTelemetry: { vehicle_id: 'GJ-01-992', temp_c: 3.4, gps: [23.02, 72.57], door_open: false }",
+      "exercise": "Build a telemetry ingestion handler detecting refrigeration compressor failure within 5 minutes of onset.",
+      "prerequisites": [
+        "cold_temp_zones"
+      ]
+    },
+    {
+      "id": "cold_route_optimization",
+      "title": "Thermal-Aware Dynamic Route Planning",
+      "objective": "Plan delivery routes minimizing vehicle door-opening thermal degradation and ambient traffic delays.",
+      "example": "RouteOptimizer.plan(deliveryStops, ambientWeatherForecast, vehicleThermalCapacity)",
+      "exercise": "Optimize a dairy delivery route schedule prioritizing high-volume drops during cooler morning hours.",
+      "prerequisites": [
+        "cold_iot_telemetry"
+      ]
+    },
+    {
+      "id": "cold_warehouse_handling",
+      "title": "Refrigerated Cross-Docking & Pre-Cooling Operations",
+      "objective": "Streamline rapid warehouse loading docks without exposing perishable pallets to ambient heat.",
+      "example": "DockStage: Unload -> Verify Core Temperature -> Transfer to Chilled Cross-Dock in < 15 mins",
+      "exercise": "Create an automated dock receiving workflow rejecting milk tankers exceeding 4.5°C upon arrival.",
+      "prerequisites": [
+        "cold_temp_zones"
+      ]
+    },
+    {
+      "id": "cold_unit_economics",
+      "title": "Cold-Chain Unit Economics, Spoilage Rates & CAPEX Models",
+      "objective": "Model reefer fleet capital expenditures, diesel thermal unit operating costs, and spoilage reduction ROI.",
+      "example": "ROI = (Avoided Spoilage Loss - Reefer OPEX) / Reefer Fleet CAPEX",
+      "exercise": "Build a 3-year financial model comparing third-party reefer leasing vs direct cold-storage facility ownership.",
+      "prerequisites": [
+        "cold_route_optimization"
+      ]
+    }
+  ]
+}

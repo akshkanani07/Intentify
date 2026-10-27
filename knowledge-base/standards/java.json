@@ -1,0 +1,13 @@
+{
+  "subject": "Java",
+  "standards": [
+    {
+      "name": "Java SE 17 / 21 LTS Specifications",
+      "description": "Oracle official language specification."
+    },
+    {
+      "name": "Google Java Style Guide",
+      "description": "Idiomatic formatting and naming conventions."
+    }
+  ]
+}

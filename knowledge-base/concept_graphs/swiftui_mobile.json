@@ -1,0 +1,62 @@
+{
+  "subject": "SwiftUI",
+  "aliases": [
+    "swiftui",
+    "swift",
+    "ios development",
+    "apple mobile"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "swift_views_layout",
+      "title": "Declarative View Hierarchy & Stacks (VStack, HStack, ZStack)",
+      "objective": "Compose adaptive native iOS user interfaces declaratively using view modifiers and nested stacks.",
+      "example": "VStack(spacing: 12) { Text('Title'); Image(systemName: 'star.fill') }",
+      "exercise": "Build a responsive profile card layout with an avatar image, badges, and action buttons.",
+      "prerequisites": []
+    },
+    {
+      "id": "swift_state_binding",
+      "title": "@State, @Binding & Two-Way Data Flow",
+      "objective": "Manage local view state and propagate two-way data bindings to reusable child components.",
+      "example": "@State private var isEnabled: Bool = false; Toggle('Active', isOn: $isEnabled)",
+      "exercise": "Create a reusable toggle filter component that mutates state owned by a parent view.",
+      "prerequisites": [
+        "swift_views_layout"
+      ]
+    },
+    {
+      "id": "swift_observable_viewmodel",
+      "title": "@Observable and StateObject Architecture",
+      "objective": "Decouple business logic and network requests from presentation using observable view models.",
+      "example": "@Observable class UserViewModel { var users: [User] = [] }",
+      "exercise": "Implement an async view model that fetches paginated JSON items from an API and updates UI state.",
+      "prerequisites": [
+        "swift_state_binding"
+      ]
+    },
+    {
+      "id": "swift_navigation_stacks",
+      "title": "NavigationStack & Path-Based Routing",
+      "objective": "Architect deep-linkable native navigation paths with typed destinations and programmatic pop/push.",
+      "example": "NavigationStack(path: $navPath) { List(items) { NavigationLink(value: $0) } }",
+      "exercise": "Construct a master-detail e-commerce catalog with drill-down item views and cart checkout modals.",
+      "prerequisites": [
+        "swift_observable_viewmodel"
+      ]
+    },
+    {
+      "id": "swift_animation_transitions",
+      "title": "Implicit & Explicit Spring Animations",
+      "objective": "Polish mobile UX with interactive spring physics and matched geometry effect transitions.",
+      "example": "withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) { isExpanded.toggle() }",
+      "exercise": "Animate an expandable card view smoothly transitioning between summary and fullscreen detail modes.",
+      "prerequisites": [
+        "swift_views_layout"
+      ]
+    }
+  ]
+}

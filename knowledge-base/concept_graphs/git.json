@@ -1,0 +1,61 @@
+{
+  "subject": "Git",
+  "aliases": [
+    "git",
+    "version control",
+    "github",
+    "git cli"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "git_init",
+      "title": "Git Architecture: Working Tree, Index & Commit Graph",
+      "objective": "Understand repository initialization, staging files, committing snapshots, and viewing commit history.",
+      "example": "git init && git add . && git commit -m \"feat: initial commit\"",
+      "exercise": "Initialize a local repository, create tracking commits, and inspect git log and git status.",
+      "prerequisites": []
+    },
+    {
+      "id": "git_branches",
+      "title": "Branching & Fast-Forward Merging",
+      "objective": "Create, checkout, and merge isolated feature branches without disrupting mainline history.",
+      "example": "git checkout -b feature/login && git merge main",
+      "exercise": "Create two parallel branches, implement distinct features, and merge them into main.",
+      "prerequisites": [
+        "git_init"
+      ]
+    },
+    {
+      "id": "git_conflicts",
+      "title": "Merge Conflicts & 3-Way Diff Resolution",
+      "objective": "Identify conflict marker sections (<<<<<<<, =======, >>>>>>>) and resolve overlapping edits cleanly.",
+      "example": "git status # shows unmerged paths; git add resolved_file.txt",
+      "exercise": "Simulate a merge conflict across two branches and manually resolve the divergence.",
+      "prerequisites": [
+        "git_branches"
+      ]
+    },
+    {
+      "id": "git_remote",
+      "title": "Remotes, Fetching, Pulling & Upstream Tracking",
+      "objective": "Connect local repositories to remote forges (GitHub/GitLab) and synchronize branch pointers.",
+      "example": "git remote add origin <url> && git push -u origin main",
+      "exercise": "Configure an upstream remote repository and sync divergent commits using git pull --rebase.",
+      "prerequisites": [
+        "git_conflicts"
+      ]
+    },
+    {
+      "id": "git_history",
+      "title": "Interactive Rebase, Stashing & Commit Sanitization",
+      "objective": "Squash messy WIP commits, stash transient work in progress, and write Conventional Commit messages.",
+      "example": "git rebase -i HEAD~3 # pick, squash, reword",
+      "exercise": "Clean up a 5-commit exploratory feature branch into 2 atomic commits following Conventional Commits.",
+      "prerequisites": [
+        "git_remote"
+      ]
+    }
+  ]
+}

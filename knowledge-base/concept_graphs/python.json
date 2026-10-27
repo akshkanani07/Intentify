@@ -1,0 +1,61 @@
+{
+  "subject": "Python",
+  "aliases": [
+    "python",
+    "py",
+    "python3",
+    "python programming"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "py_basics",
+      "title": "Dynamic Typing, Control Flow & String Manipulation",
+      "objective": "Understand Python indentation semantics, f-strings, conditional blocks, and loop iterations.",
+      "example": "for idx, item in enumerate(items): print(f\"{idx}: {item}\")",
+      "exercise": "Build a word-count analysis script that processes text and outputs frequency tables.",
+      "prerequisites": []
+    },
+    {
+      "id": "py_data_structs",
+      "title": "Lists, Dictionaries, Sets & Comprehensions",
+      "objective": "Master idiomatic list and dictionary comprehensions and set membership operations.",
+      "example": "squares = [x**2 for x in range(10) if x % 2 == 0]",
+      "exercise": "Write a data deduplication and group-by utility for CSV records using dictionaries.",
+      "prerequisites": [
+        "py_basics"
+      ]
+    },
+    {
+      "id": "py_functions",
+      "title": "First-Class Functions, *args, **kwargs & Decorators",
+      "objective": "Design modular functions, closure scopes, and functional execution wrappers.",
+      "example": "def timer(func): def wrapper(*args, **kwargs): return func(*args, **kwargs); return wrapper",
+      "exercise": "Create a memoization decorator that caches expensive function returns in memory.",
+      "prerequisites": [
+        "py_data_structs"
+      ]
+    },
+    {
+      "id": "py_oop",
+      "title": "Object-Oriented Programming & Dunder Methods",
+      "objective": "Construct classes with __init__, __str__, __repr__, and property decorators.",
+      "example": "class Account: def __init__(self, balance: float): self._balance = balance",
+      "exercise": "Design an inventory management class hierarchy with stock update constraints.",
+      "prerequisites": [
+        "py_functions"
+      ]
+    },
+    {
+      "id": "py_modules",
+      "title": "Virtual Environments, Packaging & File I/O",
+      "objective": "Organize multi-file packages, manage pyproject.toml dependencies, and perform safe file operations.",
+      "example": "with open(\"data.json\", \"r\", encoding=\"utf-8\") as f: data = json.load(f)",
+      "exercise": "Build a modular CLI expense tracker that saves and loads transactions from JSON files.",
+      "prerequisites": [
+        "py_oop"
+      ]
+    }
+  ]
+}

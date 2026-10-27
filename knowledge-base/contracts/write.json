@@ -1,0 +1,48 @@
+{
+  "contract": "write",
+  "name": "Creative Writing & Narrative Composition Contract",
+  "description": "Master prompt structure for storytelling, chapter drafting, worldbuilding, and narrative design.",
+  "required_sections": [
+    {
+      "heading": "Role & Editorial Persona",
+      "min_items": 3,
+      "description": "Master author / narrative director persona."
+    },
+    {
+      "heading": "Narrative Objective & Thematic Scope",
+      "min_items": 2,
+      "description": "Story arc, genre parameters, target emotional resonance, and length."
+    },
+    {
+      "heading": "Narrative Framework & Editorial Topology",
+      "min_items": 4,
+      "description": "Scene progression, character dynamics, perspective, and pacing."
+    },
+    {
+      "heading": "Verifiable Acceptance Criteria",
+      "min_items": 3,
+      "description": "Sensory immersion, voice consistency, thematic resolution, and zero clichés."
+    },
+    {
+      "heading": "Output Format Specification",
+      "min_items": 2,
+      "description": "Prose layout, dialogue formatting, and scene breakdown conventions."
+    },
+    {
+      "heading": "Editorial Self-Verification Checklist",
+      "min_items": 3,
+      "description": "Audit for pacing stagnation, exposition dumps, and character agency."
+    },
+    {
+      "heading": "Stylistic Guardrails & Negative Constraints",
+      "min_items": 3,
+      "description": "Prohibits purple prose, sudden deus-ex-machina, and tell-not-show exposition."
+    },
+    {
+      "heading": "Documented Narrative Assumptions",
+      "min_items": 2,
+      "description": "Canonical world lore, existing character backstories, and reading audience level."
+    }
+  ],
+  "optional_sections": []
+}

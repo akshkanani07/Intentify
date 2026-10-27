@@ -1,0 +1,61 @@
+{
+  "subject": "Java",
+  "aliases": [
+    "java",
+    "core java",
+    "java se",
+    "java programming"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "java_syntax",
+      "title": "JVM Architecture, Class Structure & Primitive Types",
+      "objective": "Understand bytecode execution, class declarations, main method, and type casting.",
+      "example": "public class App { public static void main(String[] args) { System.out.println(\"Java\"); } }",
+      "exercise": "Write a command line application that validates user input and computes tax calculations.",
+      "prerequisites": []
+    },
+    {
+      "id": "java_oop",
+      "title": "Encapsulation, Inheritance & Polymorphic Interfaces",
+      "objective": "Design reusable class hierarchies using abstract classes, interfaces, and override annotations.",
+      "example": "public interface Payable { double calculatePay(); }",
+      "exercise": "Model a company payroll system with Employee base class and Salaried/Hourly implementations.",
+      "prerequisites": [
+        "java_syntax"
+      ]
+    },
+    {
+      "id": "java_collections",
+      "title": "Java Collections Framework & Generics",
+      "objective": "Master ArrayList, HashMap, HashSet, and iterator traversal patterns.",
+      "example": "Map<String, Integer> freq = new HashMap<>(); freq.put(\"key\", 1);",
+      "exercise": "Implement an in-memory phonebook directory with duplicate name detection.",
+      "prerequisites": [
+        "java_oop"
+      ]
+    },
+    {
+      "id": "java_exceptions",
+      "title": "Exception Handling & Resource Management (try-with-resources)",
+      "objective": "Handle checked and unchecked exceptions gracefully and auto-close AutoCloseable resources.",
+      "example": "try (BufferedReader reader = new BufferedReader(new FileReader(p))) { ... }",
+      "exercise": "Build a resilient file parser that catches IO and parsing exceptions with informative error logging.",
+      "prerequisites": [
+        "java_collections"
+      ]
+    },
+    {
+      "id": "java_streams",
+      "title": "Lambda Expressions & Stream API",
+      "objective": "Write functional data transformations using map, filter, reduce, and collectors.",
+      "example": "List<String> names = list.stream().filter(s -> !s.isEmpty()).collect(Collectors.toList());",
+      "exercise": "Transform and aggregate a dataset of order transactions into regional sales totals.",
+      "prerequisites": [
+        "java_exceptions"
+      ]
+    }
+  ]
+}

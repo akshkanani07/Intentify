@@ -1,0 +1,61 @@
+{
+  "subject": "Statistics",
+  "aliases": [
+    "statistics",
+    "stats",
+    "data statistics",
+    "probability and statistics"
+  ],
+  "domain": "Data & Mathematics",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "stat_descriptive",
+      "title": "Descriptive Statistics: Central Tendency & Dispersion",
+      "objective": "Calculate mean, median, mode, variance, standard deviation, and interquartile ranges.",
+      "example": "Variance: s^2 = sum((x - mean)^2) / (n - 1)",
+      "exercise": "Calculate the 5-number summary and standard deviation for a dataset with outliers.",
+      "prerequisites": []
+    },
+    {
+      "id": "stat_prob",
+      "title": "Probability Distributions (Normal, Binomial, Poisson)",
+      "objective": "Understand probability density functions, z-scores, and the Central Limit Theorem.",
+      "example": "Z = (X - mu) / sigma",
+      "exercise": "Compute the probability of an outcome occurring within 2 standard deviations under a normal curve.",
+      "prerequisites": [
+        "stat_descriptive"
+      ]
+    },
+    {
+      "id": "stat_hypothesis",
+      "title": "Hypothesis Testing & Null Hypothesis Significance",
+      "objective": "Formulate H0 and H1 hypotheses, select significance alpha levels, and calculate p-values.",
+      "example": "Reject H0 when p-value < 0.05",
+      "exercise": "Perform a two-sample t-test to determine if a website redesign significantly increased conversions.",
+      "prerequisites": [
+        "stat_prob"
+      ]
+    },
+    {
+      "id": "stat_confidence",
+      "title": "Confidence Intervals & Margin of Error",
+      "objective": "Construct and interpret 95% confidence intervals for population means and proportions.",
+      "example": "CI = mean +/- Z * (sigma / sqrt(n))",
+      "exercise": "Calculate a 95% confidence interval for customer satisfaction survey response averages.",
+      "prerequisites": [
+        "stat_hypothesis"
+      ]
+    },
+    {
+      "id": "stat_regression",
+      "title": "Linear Regression & Correlation Coefficients",
+      "objective": "Calculate Pearson r correlation and interpret slope, intercept, and R-squared variance.",
+      "example": "y = beta_0 + beta_1 * x + epsilon",
+      "exercise": "Fit a simple linear regression line to advertising spend and sales revenue data.",
+      "prerequisites": [
+        "stat_confidence"
+      ]
+    }
+  ]
+}

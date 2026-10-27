@@ -1,0 +1,61 @@
+{
+  "subject": "C",
+  "aliases": [
+    "c",
+    "c lang",
+    "c language",
+    "c programming"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "c_intro",
+      "title": "C Program Structure, Compilation & Primitive Types",
+      "objective": "Understand gcc compilation pipeline, main entry point, and primitive scalar data types.",
+      "example": "int main(void) { printf(\"Hello C\\n\"); return 0; }",
+      "exercise": "Write a CLI program to compute Fahrenheit to Celsius conversion with formatted output.",
+      "prerequisites": []
+    },
+    {
+      "id": "c_control",
+      "title": "Conditionals, Loops & Branching",
+      "objective": "Master deterministic iteration and Boolean branching logic without off-by-one errors.",
+      "example": "for (int i = 0; i < n; i++) { if (i % 2 == 0) continue; }",
+      "exercise": "Implement prime number factorization using nested loops and break/continue statements.",
+      "prerequisites": [
+        "c_intro"
+      ]
+    },
+    {
+      "id": "c_pointers",
+      "title": "Pointers, Memory Addresses & Dereferencing",
+      "objective": "Comprehend pointer arithmetic, stack addresses, pass-by-reference semantics, and NULL safety.",
+      "example": "int a = 10; int *p = &a; *p = 20;",
+      "exercise": "Implement a safe in-place string reversal function using pointer traversal.",
+      "prerequisites": [
+        "c_control"
+      ]
+    },
+    {
+      "id": "c_heap",
+      "title": "Dynamic Memory Allocation (malloc, free, realloc)",
+      "objective": "Manage heap memory life cycles, prevent memory leaks, and guard against dangling pointers.",
+      "example": "int *arr = malloc(n * sizeof(int)); if (!arr) return -1; free(arr);",
+      "exercise": "Construct a dynamically resizing integer vector with push and pop operations.",
+      "prerequisites": [
+        "c_pointers"
+      ]
+    },
+    {
+      "id": "c_structs",
+      "title": "Structs, Typedefs & Linked Data Structures",
+      "objective": "Encapsulate compound data using structures and build pointer-linked nodes.",
+      "example": "typedef struct Node { int val; struct Node *next; } Node;",
+      "exercise": "Implement a singly linked list with insertion, deletion, and memory deallocation.",
+      "prerequisites": [
+        "c_heap"
+      ]
+    }
+  ]
+}

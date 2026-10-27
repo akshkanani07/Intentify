@@ -1,0 +1,377 @@
+{
+  "version": "1.0.0",
+  "total_formats": 25,
+  "formats": [
+    {
+      "id": "format_detailed_technical",
+      "name": "Detailed Technical Response",
+      "description": "Exhaustive enterprise technical documentation with executive overview, implementation, and verification.",
+      "structure": "## Executive Summary\n{summary}\n\n## Architecture & Implementation\n{implementation}\n\n## Verification & Edge Cases\n{verification}\n\n## Next Steps\n{next_steps}",
+      "suitable_intents": [
+        "create",
+        "plan",
+        "analyze",
+        "debug",
+        "improve"
+      ],
+      "suitable_domains": [
+        "Technology",
+        "Engineering",
+        "Cybersecurity",
+        "Data Science"
+      ]
+    },
+    {
+      "id": "format_step_by_step_guide",
+      "name": "Step-by-Step Implementation Guide",
+      "description": "Chronological numbered instructions with clear prerequisites, code blocks, and validation gates.",
+      "structure": "### Prerequisites\n{prerequisites}\n\n### Step 1: Initialization\n{step_1}\n\n### Step 2: Implementation\n{step_2}\n\n### Step 3: Verification\n{step_3}",
+      "suitable_intents": [
+        "create",
+        "plan",
+        "improve",
+        "debug",
+        "explain"
+      ],
+      "suitable_domains": [
+        "all"
+      ]
+    },
+    {
+      "id": "format_comparison_matrix",
+      "name": "Comparison Matrix Table",
+      "description": "Multi-dimensional side-by-side comparison table evaluating options across criteria with scoring.",
+      "structure": "| Dimension | Option A | Option B | Option C | Recommendation |\n|---|---|---|---|---|\n| Architecture | ... | ... | ... | ... |\n| Scalability | ... | ... | ... | ... |\n| Cost | ... | ... | ... | ... |",
+      "suitable_intents": [
+        "compare",
+        "analyze",
+        "decide"
+      ],
+      "suitable_domains": [
+        "all"
+      ]
+    },
+    {
+      "id": "format_json_schema",
+      "name": "Strict JSON Schema & Payload",
+      "description": "Machine-readable JSON object adhering to defined types and schema specifications.",
+      "structure": "```json\n{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"type\": \"object\",\n  \"properties\": {}\n}\n```",
+      "suitable_intents": [
+        "generate",
+        "create"
+      ],
+      "suitable_domains": [
+        "Technology",
+        "Finance",
+        "Healthcare"
+      ]
+    },
+    {
+      "id": "format_executive_brief",
+      "name": "Executive Brief",
+      "description": "High-level strategic briefing designed for C-level leadership and board decisions.",
+      "structure": "# Executive Brief: {title}\n\n## The Strategic Problem\n{problem}\n\n## Recommended Solution\n{solution}\n\n## Financial & Risk Impact\n{impact}\n\n## Immediate Decision Required\n{verdict}",
+      "suitable_intents": [
+        "decide",
+        "plan",
+        "analyze"
+      ],
+      "suitable_domains": [
+        "Business",
+        "Finance",
+        "Legal",
+        "Executive"
+      ]
+    },
+    {
+      "id": "format_adr",
+      "name": "Architectural Decision Record (ADR)",
+      "description": "Standardized architecture record capturing context, decision, consequences, and alternatives.",
+      "structure": "# ADR: {title}\n\n## Status\nProposed / Accepted\n\n## Context\n{context}\n\n## Decision\n{decision}\n\n## Consequences\n### Positive\n{positive}\n### Negative / Trade-offs\n{negative}",
+      "suitable_intents": [
+        "decide",
+        "design",
+        "create"
+      ],
+      "suitable_domains": [
+        "Technology",
+        "Engineering"
+      ]
+    },
+    {
+      "id": "format_rca_report",
+      "name": "Root Cause Analysis (RCA) Report",
+      "description": "Comprehensive post-mortem report isolating failure modes, timeline, root causes, and preventive actions.",
+      "structure": "# Incident RCA: {incident_title}\n\n## Incident Summary\n{summary}\n\n## Timeline of Events\n{timeline}\n\n## Root Cause (5 Whys Analysis)\n{root_cause}\n\n## Action Items & Preventative Measures\n{actions}",
+      "suitable_intents": [
+        "debug",
+        "analyze"
+      ],
+      "suitable_domains": [
+        "Technology",
+        "Cybersecurity",
+        "Engineering",
+        "Operations"
+      ]
+    },
+    {
+      "id": "format_checklist_protocol",
+      "name": "Quality & Verification Protocol Checklist",
+      "description": "Actionable, checkbox-driven audit protocol ensuring operational compliance.",
+      "structure": "### Pre-Flight Verification\n- [ ] {item_1}\n- [ ] {item_2}\n\n### Execution Checks\n- [ ] {item_3}\n\n### Post-Flight Acceptance\n- [ ] {item_4}",
+      "suitable_intents": [
+        "plan",
+        "create",
+        "improve",
+        "debug"
+      ],
+      "suitable_domains": [
+        "all"
+      ]
+    },
+    {
+      "id": "format_annotated_code",
+      "name": "Production Code with Inline Architectural Annotations",
+      "description": "Clean, typed code with inline comments explaining design patterns, complexity, and safety guards.",
+      "structure": "```python\n# Architectural Overview: ...\n# Time Complexity: O(...), Space Complexity: O(...)\n\ndef solution():\n    pass\n```",
+      "suitable_intents": [
+        "create",
+        "debug",
+        "improve"
+      ],
+      "suitable_domains": [
+        "Technology",
+        "Data Science"
+      ]
+    },
+    {
+      "id": "format_business_proposal",
+      "name": "Commercial Business Proposal",
+      "description": "Client-facing commercial and technical proposal with scope, timeline, and pricing.",
+      "structure": "## Executive Summary\n{summary}\n\n## Proposed Scope of Work\n{scope}\n\n## Delivery Milestones & Timeline\n{timeline}\n\n## Investment & Commercial Terms\n{commercials}",
+      "suitable_intents": [
+        "write",
+        "plan"
+      ],
+      "suitable_domains": [
+        "Business",
+        "Marketing",
+        "Consulting"
+      ]
+    },
+    {
+      "id": "format_tutorial_walkthrough",
+      "name": "Tutorial & Educational Walkthrough",
+      "description": "Beginner-to-advanced learning module with explanations, interactive checks, and summaries.",
+      "structure": "# Lesson: {title}\n\n## What You Will Learn\n{outcomes}\n\n## Core Concept: Intuition\n{intuition}\n\n## Hands-on Exercise\n{exercise}\n\n## Key Takeaways\n{takeaways}",
+      "suitable_intents": [
+        "explain",
+        "write"
+      ],
+      "suitable_domains": [
+        "Education",
+        "Technology"
+      ]
+    },
+    {
+      "id": "format_sop",
+      "name": "Standard Operating Procedure (SOP)",
+      "description": "Institutional operational procedure detailing roles, inputs, workflow, and compliance.",
+      "structure": "# SOP-{id}: {title}\n\n## Purpose & Scope\n{scope}\n\n## Responsibilities\n{responsibilities}\n\n## Procedure Steps\n{procedure}\n\n## Documentation & Audit Records\n{records}",
+      "suitable_intents": [
+        "plan",
+        "create"
+      ],
+      "suitable_domains": [
+        "Healthcare",
+        "Manufacturing",
+        "Operations",
+        "Legal"
+      ]
+    },
+    {
+      "id": "format_faq_guide",
+      "name": "FAQ & Troubleshooting Reference",
+      "description": "Direct question-and-answer pairs addressing frequent pain points and edge cases.",
+      "structure": "### Q: {question_1}?\n**A:** {answer_1}\n\n### Q: {question_2}?\n**A:** {answer_2}",
+      "suitable_intents": [
+        "explain",
+        "debug"
+      ],
+      "suitable_domains": [
+        "all"
+      ]
+    },
+    {
+      "id": "format_strategy_roadmap",
+      "name": "Phased Strategic Roadmap",
+      "description": "Timeline-oriented strategic plan broken into quarters or milestones with deliverable gates.",
+      "structure": "## Phase 1: Foundation (Months 1-2)\n- Deliverables: {deliv_1}\n- Success Metrics: {kpi_1}\n\n## Phase 2: Scaling (Months 3-4)\n- Deliverables: {deliv_2}\n\n## Phase 3: Optimization (Months 5-6)\n- Deliverables: {deliv_3}",
+      "suitable_intents": [
+        "plan",
+        "decide"
+      ],
+      "suitable_domains": [
+        "Business",
+        "Technology",
+        "Marketing"
+      ]
+    },
+    {
+      "id": "format_executive_email",
+      "name": "Executive Email & Stakeholder Communication",
+      "description": "Concise, persuasive email tailored for busy stakeholders.",
+      "structure": "**Subject:** {subject}\n\nHi {name},\n\n**TL;DR:** {tldr}\n\n**Key Updates:**\n- {update_1}\n- {update_2}\n\n**Action Required:** {action}\n\nBest,\n{sender}",
+      "suitable_intents": [
+        "write"
+      ],
+      "suitable_domains": [
+        "all"
+      ]
+    },
+    {
+      "id": "format_policy_document",
+      "name": "Institutional Policy & Compliance Standard",
+      "description": "Formal governance policy specifying acceptable use, enforcement, and exceptions.",
+      "structure": "## Policy Title: {title}\n\n## 1. Policy Statement\n{statement}\n\n## 2. Applicability\n{applicability}\n\n## 3. Mandatory Requirements\n{requirements}\n\n## 4. Enforcement & Penalties\n{enforcement}",
+      "suitable_intents": [
+        "create",
+        "write"
+      ],
+      "suitable_domains": [
+        "Legal",
+        "Cybersecurity",
+        "Corporate"
+      ]
+    },
+    {
+      "id": "format_pitch_deck",
+      "name": "Pitch Deck Slide-by-Slide Narrative",
+      "description": "Compelling 10-slide narrative for startup investor pitches.",
+      "structure": "### Slide 1: Problem\n{problem}\n\n### Slide 2: Solution\n{solution}\n\n### Slide 3: Market Size (TAM/SAM/SOM)\n{market}\n\n### Slide 4: Business Model\n{model}\n\n### Slide 5: The Ask\n{ask}",
+      "suitable_intents": [
+        "write",
+        "plan"
+      ],
+      "suitable_domains": [
+        "Business",
+        "Venture Capital"
+      ]
+    },
+    {
+      "id": "format_test_plan",
+      "name": "Test Plan & QA Verification Matrix",
+      "description": "Systematic QA matrix detailing test cases, preconditions, steps, and assertions.",
+      "structure": "| Test ID | Component | Precondition | Input / Action | Expected Result | Priority |\n|---|---|---|---|---|---|\n| TC-01 | Auth | User exists | Valid login | 200 OK + JWT | P0 |\n| TC-02 | Auth | Invalid pass | Failed login | 401 Unauthorized | P0 |",
+      "suitable_intents": [
+        "plan",
+        "create",
+        "debug"
+      ],
+      "suitable_domains": [
+        "Technology",
+        "Engineering"
+      ]
+    },
+    {
+      "id": "format_whitepaper_digest",
+      "name": "Scientific Whitepaper Digest",
+      "description": "Structured academic review summarizing background, experimental methodology, and implications.",
+      "structure": "# Scientific Digest: {title}\n\n## Abstract\n{abstract}\n\n## Theoretical Framework\n{theory}\n\n## Empirical Findings\n{findings}\n\n## Industrial Implications\n{implications}",
+      "suitable_intents": [
+        "research",
+        "analyze"
+      ],
+      "suitable_domains": [
+        "Science",
+        "Healthcare",
+        "Technology"
+      ]
+    },
+    {
+      "id": "format_bullet_summary",
+      "name": "Concise Bulleted Summary",
+      "description": "Rapid actionable takeaways highlighting core decisions and numbers.",
+      "structure": "### Key Takeaways\n- {takeaway_1}\n- {takeaway_2}\n- {takeaway_3}\n\n### Operational Next Steps\n- {step_1}",
+      "suitable_intents": [
+        "analyze",
+        "explain",
+        "write"
+      ],
+      "suitable_domains": [
+        "all"
+      ]
+    },
+    {
+      "id": "format_event_master_plan",
+      "name": "Event Master Coordination Plan",
+      "description": "Multi-phase event coordination roadmap covering budgeting, vendor schedules, run-of-show, and logistics.",
+      "structure": "# Event Master Plan: {event_name}\n\n## 1. Event Vision & Key Milestones\n{vision}\n\n## 2. Budget Allocation & Vendor Matrix\n{budget_matrix}\n\n## 3. Run of Show (Minute-by-Minute Timeline)\n{timeline}\n\n## 4. Contingency & Crisis Protocols\n{contingency}",
+      "suitable_intents": [
+        "plan",
+        "create"
+      ],
+      "suitable_domains": [
+        "Hospitality",
+        "Event Planning"
+      ]
+    },
+    {
+      "id": "format_contract_clause",
+      "name": "Legal Contract Clause & Drafting Memo",
+      "description": "Formal legal covenant with definition of terms, obligations, and risk allocation notes.",
+      "structure": "### SECTION {num}: {clause_title}\n\n**1. Operative Provision:**\n{provision}\n\n**2. Commentary & Legal Rationale:**\n{commentary}\n\n**3. Negotiation Trade-offs:**\n{tradeoffs}",
+      "suitable_intents": [
+        "write",
+        "create"
+      ],
+      "suitable_domains": [
+        "Legal",
+        "Compliance"
+      ]
+    },
+    {
+      "id": "format_clinical_case_study",
+      "name": "Clinical Case Study & Care Protocol",
+      "description": "Evidence-based clinical protocol detailing patient presentation, diagnostics, and treatment.",
+      "structure": "## Patient Profile & Presentation\n{presentation}\n\n## Diagnostic Findings\n{diagnostics}\n\n## Treatment & Intervention Protocol\n{treatment}\n\n## Clinical Prognosis & Monitoring\n{monitoring}",
+      "suitable_intents": [
+        "analyze",
+        "plan"
+      ],
+      "suitable_domains": [
+        "Healthcare",
+        "Medicine"
+      ]
+    },
+    {
+      "id": "format_marketing_campaign_brief",
+      "name": "Integrated Marketing Campaign Brief",
+      "description": "Comprehensive marketing launch brief with audience personas, creative angles, and channel KPIs.",
+      "structure": "# Campaign Brief: {campaign_name}\n\n## Target Audience Persona\n{persona}\n\n## Core Value Proposition & Hooks\n{hooks}\n\n## Channel Distribution Strategy\n{channels}\n\n## Attribution & Conversion KPIs\n{kpis}",
+      "suitable_intents": [
+        "plan",
+        "write",
+        "create"
+      ],
+      "suitable_domains": [
+        "Marketing",
+        "E-commerce"
+      ]
+    },
+    {
+      "id": "format_data_pipeline_spec",
+      "name": "Data Pipeline & ETL Specification",
+      "description": "Technical specification for data ingestion, schema validation, transformation, and storage.",
+      "structure": "## Pipeline Architecture\n{architecture}\n\n## Source Ingestion & Schemas\n{schemas}\n\n## Transformation Logic & Deduplication\n{transformations}\n\n## SLA, Backfill & Dead-Letter Queue\n{sla}",
+      "suitable_intents": [
+        "create",
+        "design"
+      ],
+      "suitable_domains": [
+        "Technology",
+        "Data Engineering"
+      ]
+    }
+  ]
+}

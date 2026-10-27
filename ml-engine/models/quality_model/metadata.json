@@ -1,0 +1,9 @@
+{
+  "model_type": "QualityScorerModel",
+  "epochs": 8,
+  "final_loss_mse": 0.00042,
+  "train_mae": 0.0098,
+  "num_outputs": 6,
+  "num_samples": 5000,
+  "training_time_sec": 30.33
+}

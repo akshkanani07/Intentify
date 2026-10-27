@@ -1,0 +1,61 @@
+{
+  "subject": "English Grammar",
+  "aliases": [
+    "english grammar",
+    "grammar",
+    "english writing",
+    "english"
+  ],
+  "domain": "Language & Writing",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "eng_parts",
+      "title": "Parts of Speech (Nouns, Verbs, Adjectives, Adverbs, Prepositions)",
+      "objective": "Identify grammatical roles and ensure syntactic agreement between words in a clause.",
+      "example": "The agile engineer (noun) efficiently (adverb) refactored (verb) the codebase (noun).",
+      "exercise": "Parse a paragraph into constituent parts of speech and correct misclassified word forms.",
+      "prerequisites": []
+    },
+    {
+      "id": "eng_tenses",
+      "title": "Verb Tenses, Aspects & Subject-Verb Agreement",
+      "objective": "Master simple, continuous, perfect, and perfect continuous tenses across singular/plural subjects.",
+      "example": "Neither the manager nor the engineers were present.",
+      "exercise": "Rewrite a narrative moving consistently between past narrative and present commentary.",
+      "prerequisites": [
+        "eng_parts"
+      ]
+    },
+    {
+      "id": "eng_clauses",
+      "title": "Sentence Structure: Independent & Dependent Clauses",
+      "objective": "Construct compound and complex sentences while eliminating comma splices and run-on sentences.",
+      "example": "Although the deadline was tight, the team delivered on schedule; every feature passed verification.",
+      "exercise": "Correct a series of comma splices and sentence fragments in a draft technical memo.",
+      "prerequisites": [
+        "eng_tenses"
+      ]
+    },
+    {
+      "id": "eng_voice",
+      "title": "Active vs. Passive Voice & Modifiers",
+      "objective": "Write direct, punchy sentences in active voice and eliminate dangling and misplaced modifiers.",
+      "example": "Active: The compiler detected the error. Passive: The error was detected by the compiler.",
+      "exercise": "Transform a passive, bloated executive summary into concise active-voice prose.",
+      "prerequisites": [
+        "eng_clauses"
+      ]
+    },
+    {
+      "id": "eng_punctuation",
+      "title": "Punctuation Precision (Semicolons, Colons, Dashes & Oxford Commas)",
+      "objective": "Use semicolons to link independent thoughts, colons for direct exemplification, and em-dashes for emphasis.",
+      "example": "The system has three pillars: latency, throughput, and fault tolerance.",
+      "exercise": "Punctuate an unpunctuated 300-word paragraph according to Chicago Manual of Style guidelines.",
+      "prerequisites": [
+        "eng_voice"
+      ]
+    }
+  ]
+}

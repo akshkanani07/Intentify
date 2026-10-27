@@ -1,0 +1,784 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.15.1, pytest-9.1.1, pluggy-1.7.0
+rootdir: C:\intentify
+configfile: pytest.ini
+plugins: anyio-4.15.1, asyncio-1.4.1
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collected 423 items
+
+tests\test_architecture.py ...........                                   [  2%]
+tests\test_cognitive_compiler_engine.py ............F                    [  5%]
+tests\test_domain_classifier.py ....................                     [ 10%]
+tests\test_embedding_engine.py ..........                                [ 12%]
+tests\test_engine_memory_gate.py ..                                      [ 13%]
+tests\test_engine_normalizer.py ......                                   [ 14%]
+tests\test_engine_spec_extractor.py ..F..                                [ 15%]
+tests\test_fastapi_backend.py ..FFF......                                [ 18%]
+tests\test_golden_cases.py ...FF.....F.FFFF.F.FFFFF.FF.F...F...........F [ 29%]
+....FFFFF.F..FF....................F.FF..F..FFF.F.F..................... [ 46%]
+..FF.....................................FF............................. [ 63%]
+........FF......                                                         [ 66%]
+tests\test_intent_classifier.py ...........                              [ 69%]
+tests\test_knowledge_base.py .......                                     [ 71%]
+tests\test_language_intelligence.py ........................             [ 76%]
+tests\test_model_training_pipeline.py ...............                    [ 80%]
+tests\test_prompt_compiler.py ......                                     [ 81%]
+tests\test_quality_evaluator.py ....F                                    [ 82%]
+tests\test_requirement_extraction.py .......                             [ 84%]
+tests\test_role_extraction.py ................                           [ 88%]
+tests\test_role_intelligence_upgrade.py ..........FF.                    [ 91%]
+tests\test_v4_self_learning_engine.py .................................. [ 99%]
+.F                                                                       [100%]
+
+================================== FAILURES ===================================
+E   AssertionError: assert 'Create' == 'create'
+      
+      - create
+      ? ^
+      + Create
+      ? ^
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:29 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:29 | INFO     | intentify.learning.memory | Loaded 500 learning memories across 50 domains
+2026-10-27 12:35:29 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:29 | INFO     | intentify.knowledge.adaptive_graph | AdaptiveKnowledgeGraph learned 8 entities for domain 'Scheduling SaaS Platform'
+2026-10-27 12:35:29 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+2026-10-27 12:35:29 | INFO     | intentify.learning.memory | LearningMemory recorded success for 'Scheduling SaaS Platform' (score=100.0)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.learning.memory:learning_memory.py:209 Loaded 500 learning memories across 50 domains
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.knowledge.adaptive_graph:adaptive_knowledge_graph.py:262 AdaptiveKnowledgeGraph learned 8 entities for domain 'Scheduling SaaS Platform'
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+INFO     intentify.learning.memory:learning_memory.py:107 LearningMemory recorded success for 'Scheduling SaaS Platform' (score=100.0)
+C:\intentify\tests\test_cognitive_compiler_engine.py:194: AssertionError: assert 'Create' == 'create'
+E   AssertionError: assert 'Finance' != 'Finance'
+     +  where 'Finance' = PromptSpec(action='Plan', object_subject='α¬«α¬╛α¬░α¬╛ α¬▓α¬ùα½ìα¬¿ α¬«α¬╛α¬ƒα½ç α¬ëα¬ªα¬»α¬¬α½üα¬░α¬«α¬╛α¬é 50 lakh budget', domain='Finance', sub_domains=['Co...nfidence': 0.92}], missing_fields=[], confidence=0.95, engine_mode='derived', content_source='derived', reviewed=False).domain
+---------------------------- Captured stdout setup ----------------------------
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+----------------------------- Captured log setup ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+C:\intentify\tests\test_engine_spec_extractor.py:35: AssertionError: assert 'Finance' != 'Finance'
+E   AssertionError: Missing section '1. Role & Persona' in master prompt
+    assert '1. Role & Persona' in '### 1. Role & Technical Persona\n- Assume the persona of an authoritative Wedding Planner specializing in Finance.\n-...**Assumption**: All functional specifications require complete production-ready syntax and zero placeholder mock data.'
+     +  where '### 1. Role & Technical Persona\n- Assume the persona of an authoritative Wedding Planner specializing in Finance.\n-...**Assumption**: All functional specifications require complete production-ready syntax and zero placeholder mock data.' = PromptGenerationResponse(master_prompt="### 1. Role & Technical Persona\n- Assume the persona of an authoritative Wedd...rity=20.0, specificity=20.0, context=15.0, constraints=15.0, output_format=15.0, ambiguity_handling=15.0, total=100.0)).master_prompt
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:30 | INFO     | intentify.learning.memory | Loaded 89 learning memories across 50 domains
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.adaptive_graph | AdaptiveKnowledgeGraph learned 10 entities for domain 'Finance'
+2026-10-27 12:35:30 | INFO     | intentify.compiler.blueprint_learning | BlueprintLearningEngine synthesized novel blueprint 'Finance Master Execution Blueprint'
+2026-10-27 12:35:30 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+2026-10-27 12:35:30 | INFO     | intentify.learning.memory | LearningMemory recorded success for 'Finance' (score=100.0)
+2026-10-27 12:35:30 | INFO     | intentify.api.prompt | Prompt generated
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.learning.memory:learning_memory.py:209 Loaded 89 learning memories across 50 domains
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.knowledge.adaptive_graph:adaptive_knowledge_graph.py:262 AdaptiveKnowledgeGraph learned 10 entities for domain 'Finance'
+INFO     intentify.compiler.blueprint_learning:blueprint_learning_engine.py:157 BlueprintLearningEngine synthesized novel blueprint 'Finance Master Execution Blueprint'
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+INFO     intentify.learning.memory:learning_memory.py:107 LearningMemory recorded success for 'Finance' (score=100.0)
+INFO     intentify.api.prompt:prompt.py:58 Prompt generated
+C:\intentify\tests\test_fastapi_backend.py:76: AssertionError: Missing section '1. Role & Persona' in master prompt
+E   assert 'Role & Persona' in '## α¬╕α½éα¬Üα¬¿α¬╛: α¬å α¬¬α½ìα¬░α½ïα¬«α½ìα¬¬α½ìα¬ƒ α¬«α½üα¬£α¬¼ α¬¿α¬┐α¬╖α½ìα¬úα¬╛α¬ñ α¬«α¬╛α¬░α½ìα¬ùα¬ªα¬░α½ìα¬╢α¬¿, α¬╕α¬éα¬¬α½éα¬░α½ìα¬ú α¬╡α¬┐α¬ùα¬ñ α¬àα¬¿α½ç α¬Üα½ïα¬òα½ìα¬òα¬╕ α¬ëα¬òα½çα¬▓ α¬åα¬¬α½ï.\n\n### α½º. α¬¡α½éα¬«α¬┐α¬òα¬╛ α¬àα¬¿α½ç α¬ƒα½çα¬òα¬¿α¬┐α¬òα¬▓ α¬¬α¬░α½ìα¬╕α¬¿α¬╛ ...**Assumption**: All functional specifications require complete production-ready syntax and zero placeholder mock data.'
+     +  where '## α¬╕α½éα¬Üα¬¿α¬╛: α¬å α¬¬α½ìα¬░α½ïα¬«α½ìα¬¬α½ìα¬ƒ α¬«α½üα¬£α¬¼ α¬¿α¬┐α¬╖α½ìα¬úα¬╛α¬ñ α¬«α¬╛α¬░α½ìα¬ùα¬ªα¬░α½ìα¬╢α¬¿, α¬╕α¬éα¬¬α½éα¬░α½ìα¬ú α¬╡α¬┐α¬ùα¬ñ α¬àα¬¿α½ç α¬Üα½ïα¬òα½ìα¬òα¬╕ α¬ëα¬òα½çα¬▓ α¬åα¬¬α½ï.\n\n### α½º. α¬¡α½éα¬«α¬┐α¬òα¬╛ α¬àα¬¿α½ç α¬ƒα½çα¬òα¬¿α¬┐α¬òα¬▓ α¬¬α¬░α½ìα¬╕α¬¿α¬╛ ...**Assumption**: All functional specifications require complete production-ready syntax and zero placeholder mock data.' = PromptGenerationResponse(master_prompt="## α¬╕α½éα¬Üα¬¿α¬╛: α¬å α¬¬α½ìα¬░α½ïα¬«α½ìα¬¬α½ìα¬ƒ α¬«α½üα¬£α¬¼ α¬¿α¬┐α¬╖α½ìα¬úα¬╛α¬ñ α¬«α¬╛α¬░α½ìα¬ùα¬ªα¬░α½ìα¬╢α¬¿, α¬╕α¬éα¬¬α½éα¬░α½ìα¬ú α¬╡α¬┐α¬ùα¬ñ α¬àα¬¿α½ç α¬Üα½ïα¬òα½ìα¬òα¬╕ α¬ëα¬òα½çα¬▓ α¬åα¬¬...arity=10.0, specificity=20.0, context=15.0, constraints=15.0, output_format=15.0, ambiguity_handling=15.0, total=90.0)).master_prompt
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:30 | INFO     | intentify.learning.memory | Loaded 90 learning memories across 50 domains
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0089)
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.adaptive_graph | AdaptiveKnowledgeGraph learned 0 entities for domain 'Specialized Technical Domain'
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_playbooks | Synthesizing dynamic Temporary Playbook for novel domain: 'Specialized Technical Domain'
+2026-10-27 12:35:30 | INFO     | intentify.compiler.blueprint_learning | BlueprintLearningEngine synthesized novel blueprint 'Specialized Technical Domain Master Execution Blueprint'
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0089)
+2026-10-27 12:35:30 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 90.0/100 (hard_check_failed=False)
+2026-10-27 12:35:30 | INFO     | intentify.learning.memory | LearningMemory recorded success for 'Specialized Technical Domain' (score=90.0)
+2026-10-27 12:35:30 | INFO     | intentify.api.prompt | Prompt generated
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.learning.memory:learning_memory.py:209 Loaded 90 learning memories across 50 domains
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0089)
+INFO     intentify.knowledge.adaptive_graph:adaptive_knowledge_graph.py:262 AdaptiveKnowledgeGraph learned 0 entities for domain 'Specialized Technical Domain'
+INFO     intentify.knowledge.domain_playbooks:domain_playbooks.py:292 Synthesizing dynamic Temporary Playbook for novel domain: 'Specialized Technical Domain'
+INFO     intentify.compiler.blueprint_learning:blueprint_learning_engine.py:157 BlueprintLearningEngine synthesized novel blueprint 'Specialized Technical Domain Master Execution Blueprint'
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0089)
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 90.0/100 (hard_check_failed=False)
+INFO     intentify.learning.memory:learning_memory.py:107 LearningMemory recorded success for 'Specialized Technical Domain' (score=90.0)
+INFO     intentify.api.prompt:prompt.py:58 Prompt generated
+C:\intentify\tests\test_fastapi_backend.py:88: assert 'Role & Persona' in '## α¬╕α½éα¬Üα¬¿α¬╛: α¬å α¬¬α½ìα¬░α½ïα¬«α½ìα¬¬α½ìα¬ƒ α¬«α½üα¬£α¬¼ α¬¿α¬┐α¬╖α½ìα¬úα¬╛α¬ñ α¬«α¬╛α¬░α½ìα¬ùα¬ªα¬░α½ìα¬╢α¬¿, α¬╕α¬éα¬¬α½éα¬░α½ìα¬ú α¬╡α¬┐α¬ùα¬ñ α¬àα¬¿α½ç α¬Üα½ïα¬òα½ìα¬òα¬╕ α¬ëα¬òα½çα¬▓ α¬åα¬¬α½ï.\n\n### α½º. α¬¡α½éα¬«α¬┐α¬òα¬╛ α¬àα¬¿α½ç α¬ƒα½çα¬òα¬¿α¬┐α¬òα¬▓ α¬¬α¬░α½ìα¬╕α¬¿α¬╛ ...**Assumption**: All functional specifications require complete production-ready syntax and zero placeholder mock data.'
+E   assert 'Step-by-Step Execution Instructions' in '### 1. Role & Diagnostic Persona\n- Assume the persona of a Principal Software Debugging Engineer specializing in sys...**Assumption**: All functional specifications require complete production-ready syntax and zero placeholder mock data.'
+     +  where '### 1. Role & Diagnostic Persona\n- Assume the persona of a Principal Software Debugging Engineer specializing in sys...**Assumption**: All functional specifications require complete production-ready syntax and zero placeholder mock data.' = PromptGenerationResponse(master_prompt="### 1. Role & Diagnostic Persona\n- Assume the persona of a Principal Software...rity=20.0, specificity=20.0, context=15.0, constraints=15.0, output_format=15.0, ambiguity_handling=15.0, total=100.0)).master_prompt
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:30 | INFO     | intentify.learning.memory | Loaded 91 learning memories across 50 domains
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Debug Field' (ID: dynamic_domain_0089)
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.adaptive_graph | AdaptiveKnowledgeGraph learned 0 entities for domain 'Debug Field'
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_playbooks | Synthesizing dynamic Temporary Playbook for novel domain: 'Debug Field'
+2026-10-27 12:35:30 | INFO     | intentify.compiler.blueprint_learning | BlueprintLearningEngine synthesized novel blueprint 'Debug Field Master Execution Blueprint'
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Debug Field' (ID: dynamic_domain_0089)
+2026-10-27 12:35:30 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+2026-10-27 12:35:30 | INFO     | intentify.learning.memory | LearningMemory recorded success for 'Debug Field' (score=100.0)
+2026-10-27 12:35:30 | INFO     | intentify.api.prompt | Prompt generated
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.learning.memory:learning_memory.py:209 Loaded 91 learning memories across 50 domains
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Debug Field' (ID: dynamic_domain_0089)
+INFO     intentify.knowledge.adaptive_graph:adaptive_knowledge_graph.py:262 AdaptiveKnowledgeGraph learned 0 entities for domain 'Debug Field'
+INFO     intentify.knowledge.domain_playbooks:domain_playbooks.py:292 Synthesizing dynamic Temporary Playbook for novel domain: 'Debug Field'
+INFO     intentify.compiler.blueprint_learning:blueprint_learning_engine.py:157 BlueprintLearningEngine synthesized novel blueprint 'Debug Field Master Execution Blueprint'
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Debug Field' (ID: dynamic_domain_0089)
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+INFO     intentify.learning.memory:learning_memory.py:107 LearningMemory recorded success for 'Debug Field' (score=100.0)
+INFO     intentify.api.prompt:prompt.py:58 Prompt generated
+C:\intentify\tests\test_fastapi_backend.py:103: assert 'Step-by-Step Execution Instructions' in '### 1. Role & Diagnostic Persona\n- Assume the persona of a Principal Software Debugging Engineer specializing in sys...**Assumption**: All functional specifications require complete production-ready syntax and zero placeholder mock data.'
+E   AssertionError: Expected keyword 'Algorithms' missing from prompt/spec for case_04_edu_dsa
+    assert ('algorithms' in '### 1. role & pedagogical persona\n- assume the persona of a world-class data structures instructor & curriculum ment...\n- **context assumption**: weekly study commitment timeframe is assumed to follow standard production best practices.' or 'algorithms' in 'data structures' or 'algorithms' in 'software development')
+     +  where 'algorithms' = <built-in method lower of str object at 0x000002C8FF9965F0>()
+     +    where <built-in method lower of str object at 0x000002C8FF9965F0> = 'Algorithms'.lower
+     +  and   'algorithms' = <built-in method lower of str object at 0x000002C8FF9965F0>()
+     +    where <built-in method lower of str object at 0x000002C8FF9965F0> = 'Algorithms'.lower
+     +  and   'data structures' = <built-in method lower of str object at 0x000002C8FFCE7730>()
+     +    where <built-in method lower of str object at 0x000002C8FFCE7730> = 'Data Structures'.lower
+     +      where 'Data Structures' = PromptSpec(action='Learn', object_subject='Data Structures', domain='Software Development', sub_domains=['Core Data St...y commitment timeframe'], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).object_subject
+     +  and   'algorithms' = <built-in method lower of str object at 0x000002C8FF9965F0>()
+     +    where <built-in method lower of str object at 0x000002C8FF9965F0> = 'Algorithms'.lower
+     +  and   'software development' = <built-in method lower of str object at 0x000002C8FFCE77B0>()
+     +    where <built-in method lower of str object at 0x000002C8FFCE77B0> = 'Software Development'.lower
+     +      where 'Software Development' = PromptSpec(action='Learn', object_subject='Data Structures', domain='Software Development', sub_domains=['Core Data St...y commitment timeframe'], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:30 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Data Structures' (ID: dynamic_domain_0090)
+2026-10-27 12:35:30 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Data Structures' (ID: dynamic_domain_0090)
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'Algorithms' missing from prompt/spec for case_04_edu_dsa
+E   AssertionError: Expected keyword 'Machine Learning' missing from prompt/spec for case_05_edu_ml_basics
+    assert ('machine learning' in '### 1. role & technical persona\n- assume the persona of an authoritative python instructor specializing in software ...**assumption**: all functional specifications require complete production-ready syntax and zero placeholder mock data.' or 'machine learning' in 'python' or 'machine learning' in 'software development')
+     +  where 'machine learning' = <built-in method lower of str object at 0x000002C8FF9968F0>()
+     +    where <built-in method lower of str object at 0x000002C8FF9968F0> = 'Machine Learning'.lower
+     +  and   'machine learning' = <built-in method lower of str object at 0x000002C8FF9968F0>()
+     +    where <built-in method lower of str object at 0x000002C8FF9968F0> = 'Machine Learning'.lower
+     +  and   'python' = <built-in method lower of str object at 0x000002C8FFA1C660>()
+     +    where <built-in method lower of str object at 0x000002C8FFA1C660> = 'Python'.lower
+     +      where 'Python' = PromptSpec(action='Explain', object_subject='Python', domain='Software Development', sub_domains=['Frontend', 'Backend....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).object_subject
+     +  and   'machine learning' = <built-in method lower of str object at 0x000002C8FF9968F0>()
+     +    where <built-in method lower of str object at 0x000002C8FF9968F0> = 'Machine Learning'.lower
+     +  and   'software development' = <built-in method lower of str object at 0x000002C8FFCFCEF0>()
+     +    where <built-in method lower of str object at 0x000002C8FFCFCEF0> = 'Software Development'.lower
+     +      where 'Software Development' = PromptSpec(action='Explain', object_subject='Python', domain='Software Development', sub_domains=['Frontend', 'Backend....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:30 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'Machine Learning' missing from prompt/spec for case_05_edu_ml_basics
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: Forbidden phrase 'SEC' detected in prompt for case_15_event_udaipur_wedding
+    assert 'sec' not in '## α¬╕α½éα¬Üα¬¿α¬╛: α¬å...r mock data.'
+      
+      'sec' is contained here:
+        system 4: security, reliability & fault isolation for wedding planner mate prompt joiye destination wedding in udaipur with budget 50 lakh, 3 days multi-cultural ceremonies and 250 guests
+      ?           +++
+        - - design objective: enforce defensive boundary protections, rate limits, and fallback strategies in wedding planner mate prompt joiye destination wedding in udaipur with budget 50 lakh, 3 days multi-cultural ceremonies and 250 guests.
+        - - implementation requirement: configure failure recovery protocols and audit access controls.
+        subsystem 5: deployment topology, ...
+      
+      ...Full output truncated (30 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:126: AssertionError: Forbidden phrase 'SEC' detected in prompt for case_15_event_udaipur_wedding
+E   AssertionError: Forbidden phrase 'SEC' detected in prompt for case_16_event_corporate_summit
+    assert 'sec' not in '### 1. role...r mock data.'
+      
+      'sec' is contained here:
+        system 4: security, reliability & fault isolation for 2-day national technology summit in bangalore for 1000 attendees with keynote sessions and breakout tracks
+      ?           +++
+        - - design objective: enforce defensive boundary protections, rate limits, and fallback strategies in 2-day national technology summit in bangalore for 1000 attendees with keynote sessions and breakout tracks.
+        - - implementation requirement: configure failure recovery protocols and audit access controls.
+        subsystem 5: deployment topology, verification & telemetry for 2-day national technology...
+      
+      ...Full output truncated (30 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Plan National' (ID: dynamic_domain_0092)
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Plan National' (ID: dynamic_domain_0092)
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:126: AssertionError: Forbidden phrase 'SEC' detected in prompt for case_16_event_corporate_summit
+E   AssertionError: Forbidden phrase 'SEC' detected in prompt for case_18_event_wedding_guj
+    assert 'sec' not in '## α¬╕α½éα¬Üα¬¿α¬╛: α¬å...r mock data.'
+      
+      'sec' is contained here:
+        system 4: security, reliability & fault isolation for α¬«α¬╛α¬░α¬╛ α¬▓α¬ùα½ìα¬¿ α¬«α¬╛α¬ƒα½ç α¬ëα¬ªα¬»α¬¬α½üα¬░α¬«α¬╛α¬é 50 lakh budget α¬«α¬╛α¬é 3 α¬ªα¬┐α¬╡α¬╕α¬¿α½üα¬é α¬íα½çα¬╕α½ìα¬ƒα¬┐α¬¿α½çα¬╢α¬¿ α¬╡α½çα¬íα¬┐α¬éα¬ù α¬¬α½ìα¬▓α¬╛α¬¿α¬┐α¬éα¬ù α¬òα¬░α¬╡α½üα¬é α¬¢α½ç
+      ?           +++
+        - - design objective: enforce defensive boundary protections, rate limits, and fallback strategies in α¬«α¬╛α¬░α¬╛ α¬▓α¬ùα½ìα¬¿ α¬«α¬╛α¬ƒα½ç α¬ëα¬ªα¬»α¬¬α½üα¬░α¬«α¬╛α¬é 50 lakh budget α¬«α¬╛α¬é 3 α¬ªα¬┐α¬╡α¬╕α¬¿α½üα¬é α¬íα½çα¬╕α½ìα¬ƒα¬┐α¬¿α½çα¬╢α¬¿ α¬╡α½çα¬íα¬┐α¬éα¬ù α¬¬α½ìα¬▓α¬╛α¬¿α¬┐α¬éα¬ù α¬òα¬░α¬╡α½üα¬é α¬¢α½ç.
+        - - implementation requirement: configure failure recovery protocols and audit access controls.
+        subsystem 5: deployment topology, verification & telemetry for α¬«α¬╛α¬░α¬╛ α¬▓α¬ùα½ìα¬¿ α¬«α¬╛α¬ƒα½ç α¬ëα¬ªα¬»α¬¬α½üα¬░α¬«α¬╛α¬é 50 lakh budget α¬«α¬╛α¬é 3 α¬ªα¬┐α¬╡α¬╕α¬¿α½üα¬é α¬íα½çα¬╕α½ìα¬ƒα¬┐α¬¿α½çα¬╢α¬¿ α¬╡α½çα¬íα¬┐α¬éα¬ù α¬¬α½ìα¬▓α¬╛α¬¿α¬┐α¬éα¬ù α¬òα¬░α¬╡α½üα¬é α¬¢α½ç...
+      
+      ...Full output truncated (29 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:126: AssertionError: Forbidden phrase 'SEC' detected in prompt for case_18_event_wedding_guj
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Troubleshoot Segmentation' (ID: dynamic_domain_0094)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Troubleshoot Segmentation' (ID: dynamic_domain_0094)
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: Expected keyword 'memory leak' missing from prompt/spec for case_22_debug_memory_leak
+    assert ('memory leak' in '### 1. role & diagnostic persona\n- assume the persona of a principal software development specialist specializing in...**assumption**: all functional specifications require complete production-ready syntax and zero placeholder mock data.' or 'memory leak' in 'javascript' or 'memory leak' in 'software development')
+     +  where 'memory leak' = <built-in method lower of str object at 0x000002C8FFB32BB0>()
+     +    where <built-in method lower of str object at 0x000002C8FFB32BB0> = 'memory leak'.lower
+     +  and   'memory leak' = <built-in method lower of str object at 0x000002C8FFB32BB0>()
+     +    where <built-in method lower of str object at 0x000002C8FFB32BB0> = 'memory leak'.lower
+     +  and   'javascript' = <built-in method lower of str object at 0x000002C8FFCFC3F0>()
+     +    where <built-in method lower of str object at 0x000002C8FFCFC3F0> = 'JavaScript'.lower
+     +      where 'JavaScript' = PromptSpec(action='Debug', object_subject='JavaScript', domain='Software Development', sub_domains=['iOS', 'Android', ....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).object_subject
+     +  and   'memory leak' = <built-in method lower of str object at 0x000002C8FFB32BB0>()
+     +    where <built-in method lower of str object at 0x000002C8FFB32BB0> = 'memory leak'.lower
+     +  and   'software development' = <built-in method lower of str object at 0x000002C8FFCFC530>()
+     +    where <built-in method lower of str object at 0x000002C8FFCFC530> = 'Software Development'.lower
+     +      where 'Software Development' = PromptSpec(action='Debug', object_subject='JavaScript', domain='Software Development', sub_domains=['iOS', 'Android', ....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'memory leak' missing from prompt/spec for case_22_debug_memory_leak
+E   AssertionError: Forbidden phrase 'Specialized Technical Domain Specialist' detected in prompt for case_23_biz_gujarati_thali
+    assert 'specialized...n specialist' not in '## α¬╕α½éα¬Üα¬¿α¬╛: α¬å...r mock data.'
+      
+      'specialized technical domain specialist' is contained here:
+        principal specialized technical domain specialist α¬ñα¬░α½Çα¬òα½ç α¬╡α¬┐α¬╢α½ìα¬╡α¬╕α¬¿α½Çα¬» α¬¡α½éα¬«α¬┐α¬òα¬╛ α¬╕α½ìα¬╡α½Çα¬òα¬╛α¬░α½ï, α¬àα¬¿α½ç intermediate / practitioner α¬╢α½Çα¬ûα¬¿α¬╛α¬░ α¬«α¬╛α¬ƒα½ç α¬╕α½ìα¬¬α¬╖α½ìα¬ƒ, α¬¬α¬ùα¬▓α¬╛α¬éα¬╡α¬╛α¬░ α¬«α¬╛α¬░α½ìα¬ùα¬ªα¬░α½ìα¬╢α¬¿ α¬åα¬¬α½ï.
+      ?           +++++++++++++++++++++++++++++++++++++++
+        - emphasize deterministic execution, clean architectural separation of concerns, and system reliability.
+        - tailor all technical specifications for general stakeholders & practitioners (intermediate / practitioner).
+        ...
+      
+      ...Full output truncated (50 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0095)
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 90.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0095)
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 90.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:126: AssertionError: Forbidden phrase 'Specialized Technical Domain Specialist' detected in prompt for case_23_biz_gujarati_thali
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: Forbidden phrase 'SEC' detected in prompt for case_26_unknown_farming_app
+    assert 'sec' not in '### 1. role...r mock data.'
+      
+      'sec' is contained here:
+        system 4: security, reliability & fault isolation for automated organic vertical farming nutrient delivery system using hydroponics and sensor telemetry
+      ?           +++
+        - - design objective: enforce defensive boundary protections, rate limits, and fallback strategies in automated organic vertical farming nutrient delivery system using hydroponics and sensor telemetry.
+        - - implementation requirement: configure failure recovery protocols and audit access controls.
+        subsystem 5: deployment topology, verification & telemetry for automated organic vertical farming nutrient delivery system using hydroponics and sensor telemetry...
+      
+      ...Full output truncated (29 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:126: AssertionError: Forbidden phrase 'SEC' detected in prompt for case_26_unknown_farming_app
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Formulate Orbital' (ID: dynamic_domain_0096)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Formulate Orbital' (ID: dynamic_domain_0096)
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: Forbidden phrase 'SEC' detected in prompt for case_33_hindi_wedding
+    assert 'sec' not in '## αñ¿αñ┐αñ░αÑìαñªαÑçαñ╢:...r mock data.'
+      
+      'sec' is contained here:
+        system 4: security, reliability & fault isolation for αñëαñªαñ»αñ¬αÑüαñ░ αñ«αÑçαñé 50 αñ▓αñ╛αñû αñòαÑç αñ¼αñ£αñƒ αñ«αÑçαñé 3 αñªαñ┐αñ¿ αñòαÑÇ αñíαÑçαñ╕αÑìαñƒαñ┐αñ¿αÑçαñ╢αñ¿ αñ╡αÑçαñíαñ┐αñéαñù αñòαÑÇ αñ»αÑïαñ£αñ¿αñ╛ αñ¼αñ¿αñ╛αñ¿αÑÇ αñ╣αÑê
+      ?           +++
+        - - design objective: enforce defensive boundary protections, rate limits, and fallback strategies in αñëαñªαñ»αñ¬αÑüαñ░ αñ«αÑçαñé 50 αñ▓αñ╛αñû αñòαÑç αñ¼αñ£αñƒ αñ«αÑçαñé 3 αñªαñ┐αñ¿ αñòαÑÇ αñíαÑçαñ╕αÑìαñƒαñ┐αñ¿αÑçαñ╢αñ¿ αñ╡αÑçαñíαñ┐αñéαñù αñòαÑÇ αñ»αÑïαñ£αñ¿αñ╛ αñ¼αñ¿αñ╛αñ¿αÑÇ αñ╣αÑê.
+        - - implementation requirement: configure failure recovery protocols and audit access controls.
+        subsystem 5: deployment topology, verification & telemetry for αñëαñªαñ»αñ¬αÑüαñ░ αñ«αÑçαñé 50 αñ▓αñ╛αñû αñòαÑç αñ¼αñ£αñƒ αñ«αÑçαñé 3 αñªαñ┐αñ¿ αñòαÑÇ αñíαÑçαñ╕αÑìαñƒαñ┐αñ¿αÑçαñ╢αñ¿ αñ╡αÑçαñíαñ┐αñéαñù αñòαÑÇ αñ»αÑïαñ£αñ¿αñ╛ αñ¼αñ¿αñ╛αñ¿αÑÇ αñ╣αÑê...
+      
+      ...Full output truncated (29 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0100)
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 90.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0100)
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 90.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:126: AssertionError: Forbidden phrase 'SEC' detected in prompt for case_33_hindi_wedding
+E   AssertionError: Forbidden phrase 'patient' detected in prompt for case_45_edu_sql_opt
+    assert 'patient' not in '### 1. role...t practices.'
+      
+      'patient' is contained here:
+         clarity, patient step-by-step instruction, and empathetic mentoring.
+      ?           +++++++
+        - tailor language, analogies, and pacing strictly for a novice / beginner learner.
+        - explain concepts from first principles using intuitive mental models, and define every technical term on first use.
+        - maintain a patient, encouraging, and structured pedagogical tone throughout....
+      
+      ...Full output truncated (57 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Teach Postgresql' (ID: dynamic_domain_0106)
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Teach Postgresql' (ID: dynamic_domain_0106)
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:126: AssertionError: Forbidden phrase 'patient' detected in prompt for case_45_edu_sql_opt
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: Forbidden phrase 'SEC' detected in prompt for case_51_event_ahmedabad
+    assert 'sec' not in '### 1. role...r mock data.'
+      
+      'sec' is contained here:
+        system 4: security, reliability & fault isolation for luxury gujarati wedding in ahmedabad for 800 guests with 4-day traditional ceremonies and budget 75 lakh
+      ?           +++
+        - - design objective: enforce defensive boundary protections, rate limits, and fallback strategies in luxury gujarati wedding in ahmedabad for 800 guests with 4-day traditional ceremonies and budget 75 lakh.
+        - - implementation requirement: configure failure recovery protocols and audit access controls.
+        subsystem 5: deployment topology, verification & telemetry for luxury gujarati wedding in ah...
+      
+      ...Full output truncated (30 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:126: AssertionError: Forbidden phrase 'SEC' detected in prompt for case_51_event_ahmedabad
+E   AssertionError: Forbidden phrase 'SEC' detected in prompt for case_52_event_sangeet
+    assert 'sec' not in '### 1. role...r mock data.'
+      
+      'sec' is contained here:
+        system 4: security, reliability & fault isolation for organize sangeet choreography schedule, stage lighting, sound engineering, and celebrity artist logistics
+      ?           +++
+        - - design objective: enforce defensive boundary protections, rate limits, and fallback strategies in organize sangeet choreography schedule, stage lighting, sound engineering, and celebrity artist logistics.
+        - - implementation requirement: configure failure recovery protocols and audit access controls.
+        subsystem 5: deployment topology, verification & telemetry for organize sangeet choreograp...
+      
+      ...Full output truncated (30 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:126: AssertionError: Forbidden phrase 'SEC' detected in prompt for case_52_event_sangeet
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Error Recurring' (ID: dynamic_domain_0107)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Error Recurring' (ID: dynamic_domain_0107)
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Troubleshoot Out-Of-Memory' (ID: dynamic_domain_0108)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Troubleshoot Out-Of-Memory' (ID: dynamic_domain_0108)
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: Forbidden phrase 'SEC' detected in prompt for case_59_novel_marine
+    assert 'sec' not in '### 1. role...r mock data.'
+      
+      'sec' is contained here:
+        system 4: security, reliability & fault isolation for implement underwater acoustic sensor monitoring for sustainable deep-sea aquaculture telemetry
+      ?           +++
+        - - design objective: enforce defensive boundary protections, rate limits, and fallback strategies in implement underwater acoustic sensor monitoring for sustainable deep-sea aquaculture telemetry.
+        - - implementation requirement: configure failure recovery protocols and audit access controls.
+        subsystem 5: deployment topology, verification & telemetry for implement underwater acoustic sensor monitoring for sustainable deep-sea aquaculture telemetry...
+      
+      ...Full output truncated (28 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:126: AssertionError: Forbidden phrase 'SEC' detected in prompt for case_59_novel_marine
+E   AssertionError: Forbidden phrase 'SEC' detected in prompt for case_60_guj_business
+    assert 'sec' not in '## α¬╕α½éα¬Üα¬¿α¬╛: α¬å...r mock data.'
+      
+      'sec' is contained here:
+        system 4: security, reliability & fault isolation for α¬àα¬«α¬ªα¬╛α¬╡α¬╛α¬ªα¬«α¬╛α¬é α¬¿α¬╡α½Ç α¬ôα¬░α½ìα¬ùα½çα¬¿α¬┐α¬ò α¬òα¬╛α¬½α½ç α¬Üα½çα¬çα¬¿ α¬╢α¬░α½é α¬òα¬░α¬╡α¬╛ α¬«α¬╛α¬ƒα½ç α¬¼α¬┐α¬¥α¬¿α½çα¬╕ α¬¬α½ìα¬▓α¬╛α¬¿ α¬àα¬¿α½ç α¬»α½üα¬¿α¬┐α¬ƒ α¬çα¬òα½ïα¬¿α½ïα¬«α¬┐α¬òα½ìα¬╕ α¬ñα½êα¬»α¬╛α¬░
+      ?           +++
+        - - design objective: enforce defensive boundary protections, rate limits, and fallback strategies in α¬àα¬«α¬ªα¬╛α¬╡α¬╛α¬ªα¬«α¬╛α¬é α¬¿α¬╡α½Ç α¬ôα¬░α½ìα¬ùα½çα¬¿α¬┐α¬ò α¬òα¬╛α¬½α½ç α¬Üα½çα¬çα¬¿ α¬╢α¬░α½é α¬òα¬░α¬╡α¬╛ α¬«α¬╛α¬ƒα½ç α¬¼α¬┐α¬¥α¬¿α½çα¬╕ α¬¬α½ìα¬▓α¬╛α¬¿ α¬àα¬¿α½ç α¬»α½üα¬¿α¬┐α¬ƒ α¬çα¬òα½ïα¬¿α½ïα¬«α¬┐α¬òα½ìα¬╕ α¬ñα½êα¬»α¬╛α¬░.
+        - - implementation requirement: configure failure recovery protocols and audit access controls.
+        subsystem 5: deployment topology, verification & telemetry for α¬àα¬«α¬ªα¬╛α¬╡α¬╛α¬ªα¬«α¬╛α¬é α¬¿α¬╡α½Ç α¬ôα¬░α½ìα¬ùα½çα¬¿α¬┐α¬ò α¬òα¬╛α¬½α½ç α¬Üα½çα¬çα¬¿ α¬╢α¬░α½é α¬òα¬░α¬╡α¬╛ α¬«α¬╛α¬ƒα½ç α¬¼α¬┐α¬¥α¬¿α½çα¬╕ α¬¬α½ìα¬▓α¬╛α¬¿ α¬àα¬¿α½ç α¬»α½üα¬¿α¬┐α¬ƒ α¬çα¬òα½ïα¬¿α½ïα¬«α¬┐α¬òα½ìα¬╕ α¬ñα½êα¬»α¬╛α¬░...
+      
+      ...Full output truncated (29 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:31 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0109)
+2026-10-27 12:35:31 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0109)
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:126: AssertionError: Forbidden phrase 'SEC' detected in prompt for case_60_guj_business
+E   AssertionError: Forbidden heading 'System Architecture & Component Topology' found in prompt for case_81_lang_cpp_raii
+    assert 'system arch...ent topology' not in '### 1. role...r mock data.'
+      
+      'system architecture & component topology' is contained here:
+        .
+        
+        ### 3. system architecture & component topology
+        - system topology & architectural subsystems (concept graph):
+        subsystem 1: c++ core syntax, namespaces & references...
+      
+      ...Full output truncated (46 lines hidden), use '-vv' to show
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:32 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Explain Raii' (ID: dynamic_domain_0113)
+2026-10-27 12:35:32 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Explain Raii' (ID: dynamic_domain_0113)
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:132: AssertionError: Forbidden heading 'System Architecture & Component Topology' found in prompt for case_81_lang_cpp_raii
+E   AssertionError: Expected keyword 'FastAPI' missing from prompt/spec for case_83_lang_python_fastapi
+    assert ('fastapi' in '### 1. role & technical persona\n- assume the persona of an authoritative principal backend architect specializing in...**assumption**: all functional specifications require complete production-ready syntax and zero placeholder mock data.' or 'fastapi' in 'python' or 'fastapi' in 'software development')
+     +  where 'fastapi' = <built-in method lower of str object at 0x000002C8FF933660>()
+     +    where <built-in method lower of str object at 0x000002C8FF933660> = 'FastAPI'.lower
+     +  and   'fastapi' = <built-in method lower of str object at 0x000002C8FF933660>()
+     +    where <built-in method lower of str object at 0x000002C8FF933660> = 'FastAPI'.lower
+     +  and   'python' = <built-in method lower of str object at 0x000002C8FFA1C660>()
+     +    where <built-in method lower of str object at 0x000002C8FFA1C660> = 'Python'.lower
+     +      where 'Python' = PromptSpec(action='Design', object_subject='Python', domain='Software Development', sub_domains=['Frontend', 'Backend'....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).object_subject
+     +  and   'fastapi' = <built-in method lower of str object at 0x000002C8FF933660>()
+     +    where <built-in method lower of str object at 0x000002C8FF933660> = 'FastAPI'.lower
+     +  and   'software development' = <built-in method lower of str object at 0x000002C8FFCFCEF0>()
+     +    where <built-in method lower of str object at 0x000002C8FFCFCEF0> = 'Software Development'.lower
+     +      where 'Software Development' = PromptSpec(action='Design', object_subject='Python', domain='Software Development', sub_domains=['Frontend', 'Backend'....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:32 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'FastAPI' missing from prompt/spec for case_83_lang_python_fastapi
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:32 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0116)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0116)
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:32 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0118)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0118)
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:32 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0119)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0119)
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: Expected keyword 'C++' missing from prompt/spec for case_92_hi_learn_cpp
+    assert ('c++' in '## αñ¿αñ┐αñ░αÑìαñªαÑçαñ╢: αñçαñ╕ αñ¬αÑìαñ░αÑëαñ«αÑìαñ¬αÑìαñƒ αñòαÑç αñàαñ¿αÑüαñ╕αñ╛αñ░ αñ╡αñ┐αñ╢αÑçαñ╖αñ£αÑìαñ₧ αñ«αñ╛αñ░αÑìαñùαñªαñ░αÑìαñ╢αñ¿, αñ¬αÑéαñ░αÑìαñú αñ╡αñ┐αñ╡αñ░αñú αñöαñ░ αñ╕αñƒαÑÇαñò αñ╕αñ«αñ╛αñºαñ╛αñ¿ αñ¬αÑìαñ░αñªαñ╛αñ¿ αñòαñ░αÑçαñéαÑñ\n\n### 1. αñ¡αÑéαñ«αñ┐αñòαñ╛ αñöαñ░ αñ╢...\n- **context assumption**: weekly study commitment timeframe is assumed to follow standard production best practices.' or 'c++' in 'c' or 'c++' in 'software development')
+     +  where 'c++' = <built-in method lower of str object at 0x000002C8FF930330>()
+     +    where <built-in method lower of str object at 0x000002C8FF930330> = 'C++'.lower
+     +  and   'c++' = <built-in method lower of str object at 0x000002C8FF930330>()
+     +    where <built-in method lower of str object at 0x000002C8FF930330> = 'C++'.lower
+     +  and   'c' = <built-in method lower of str object at 0x00007FFC607A76D8>()
+     +    where <built-in method lower of str object at 0x00007FFC607A76D8> = 'C'.lower
+     +      where 'C' = PromptSpec(action='Learn', object_subject='C', domain='Software Development', sub_domains=['Core Oops Field Frameworks...y commitment timeframe'], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).object_subject
+     +  and   'c++' = <built-in method lower of str object at 0x000002C8FF930330>()
+     +    where <built-in method lower of str object at 0x000002C8FF930330> = 'C++'.lower
+     +  and   'software development' = <built-in method lower of str object at 0x000002C8FFCE6FB0>()
+     +    where <built-in method lower of str object at 0x000002C8FFCE6FB0> = 'Software Development'.lower
+     +      where 'Software Development' = PromptSpec(action='Learn', object_subject='C', domain='Software Development', sub_domains=['Core Oops Field Frameworks...y commitment timeframe'], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:32 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Oops Field' (ID: dynamic_domain_0120)
+2026-10-27 12:35:32 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Oops Field' (ID: dynamic_domain_0120)
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'C++' missing from prompt/spec for case_92_hi_learn_cpp
+E   AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:32 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0121)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Specialized Technical Domain' (ID: dynamic_domain_0121)
+C:\intentify\tests\test_golden_cases.py:110: AssertionError: assert ('senior' in 'intermediate / practitioner' or 'principal' in 'intermediate / practitioner' or 'architect' in 'intermediate / practitioner' or 'advanced' in 'intermediate / practitioner')
+E   AssertionError: Expected keyword 'Python' missing from prompt/spec for case_96_typo_want_lern_pythn
+    assert ('python' in '### 1. role & pedagogical persona\n- assume the persona of a world-class wnt to lrn pythn from scrtch fast instructor...\n- **context assumption**: weekly study commitment timeframe is assumed to follow standard production best practices.' or 'python' in 'wnt to lrn pythn from scrtch fast' or 'python' in 'pythn scrtch')
+     +  where 'python' = <built-in method lower of str object at 0x000002C8FF9304E0>()
+     +    where <built-in method lower of str object at 0x000002C8FF9304E0> = 'Python'.lower
+     +  and   'python' = <built-in method lower of str object at 0x000002C8FF9304E0>()
+     +    where <built-in method lower of str object at 0x000002C8FF9304E0> = 'Python'.lower
+     +  and   'wnt to lrn pythn from scrtch fast' = <built-in method lower of str object at 0x000002C8FFE226F0>()
+     +    where <built-in method lower of str object at 0x000002C8FFE226F0> = 'wnt to lrn pythn from scrtch fast'.lower
+     +      where 'wnt to lrn pythn from scrtch fast' = PromptSpec(action='Learn', object_subject='wnt to lrn pythn from scrtch fast', domain='Pythn Scrtch', sub_domains=['Co...'Weekly study commitment timeframe'], confidence=0.95, engine_mode='derived', content_source='derived', reviewed=False).object_subject
+     +  and   'python' = <built-in method lower of str object at 0x000002C8FF9304E0>()
+     +    where <built-in method lower of str object at 0x000002C8FF9304E0> = 'Python'.lower
+     +  and   'pythn scrtch' = <built-in method lower of str object at 0x000002C8FFD72AF0>()
+     +    where <built-in method lower of str object at 0x000002C8FFD72AF0> = 'Pythn Scrtch'.lower
+     +      where 'Pythn Scrtch' = PromptSpec(action='Learn', object_subject='wnt to lrn pythn from scrtch fast', domain='Pythn Scrtch', sub_domains=['Co...'Weekly study commitment timeframe'], confidence=0.95, engine_mode='derived', content_source='derived', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:32 | INFO     | intentify.knowledge.domain_graph | Registered dynamic domain in knowledge graph: 'Pythn Scrtch' (ID: dynamic_domain_0123)
+2026-10-27 12:35:32 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:178 Registered dynamic domain in knowledge graph: 'Pythn Scrtch' (ID: dynamic_domain_0123)
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'Python' missing from prompt/spec for case_96_typo_want_lern_pythn
+E   AssertionError: Expected keyword 'Netty' missing from prompt/spec for case_120_debugging_14
+    assert ('netty' in '### 1. role & diagnostic persona\n- assume the persona of a senior lead specialist specializing in systems diagnostic...**assumption**: all functional specifications require complete production-ready syntax and zero placeholder mock data.' or 'netty' in 'java' or 'netty' in 'software development')
+     +  where 'netty' = <built-in method lower of str object at 0x000002C8FF931170>()
+     +    where <built-in method lower of str object at 0x000002C8FF931170> = 'Netty'.lower
+     +  and   'netty' = <built-in method lower of str object at 0x000002C8FF931170>()
+     +    where <built-in method lower of str object at 0x000002C8FF931170> = 'Netty'.lower
+     +  and   'java' = <built-in method lower of str object at 0x000002C8FFA1B990>()
+     +    where <built-in method lower of str object at 0x000002C8FFA1B990> = 'Java'.lower
+     +      where 'Java' = PromptSpec(action='Debug', object_subject='Java', domain='Software Development', sub_domains=['CI/CD', 'Infrastructure....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).object_subject
+     +  and   'netty' = <built-in method lower of str object at 0x000002C8FF931170>()
+     +    where <built-in method lower of str object at 0x000002C8FF931170> = 'Netty'.lower
+     +  and   'software development' = <built-in method lower of str object at 0x000002C8FFCEF870>()
+     +    where <built-in method lower of str object at 0x000002C8FFCEF870> = 'Software Development'.lower
+     +      where 'Software Development' = PromptSpec(action='Debug', object_subject='Java', domain='Software Development', sub_domains=['CI/CD', 'Infrastructure....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:33 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'Netty' missing from prompt/spec for case_120_debugging_14
+E   AssertionError: Expected keyword 'Node.js' missing from prompt/spec for case_121_debugging_15
+    assert ('node.js' in '### 1. role & technical persona\n- assume the persona of an authoritative senior lead specialist specializing in soft...**assumption**: all functional specifications require complete production-ready syntax and zero placeholder mock data.' or 'node.js' in 'javascript' or 'node.js' in 'software development')
+     +  where 'node.js' = <built-in method lower of str object at 0x000002C8FF931200>()
+     +    where <built-in method lower of str object at 0x000002C8FF931200> = 'Node.js'.lower
+     +  and   'node.js' = <built-in method lower of str object at 0x000002C8FF931200>()
+     +    where <built-in method lower of str object at 0x000002C8FF931200> = 'Node.js'.lower
+     +  and   'javascript' = <built-in method lower of str object at 0x000002C8FFCFC3F0>()
+     +    where <built-in method lower of str object at 0x000002C8FFCFC3F0> = 'JavaScript'.lower
+     +      where 'JavaScript' = PromptSpec(action='Analyze', object_subject='JavaScript', domain='Software Development', sub_domains=['Wedding Plannin....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).object_subject
+     +  and   'node.js' = <built-in method lower of str object at 0x000002C8FF931200>()
+     +    where <built-in method lower of str object at 0x000002C8FF931200> = 'Node.js'.lower
+     +  and   'software development' = <built-in method lower of str object at 0x000002C8FFCFC530>()
+     +    where <built-in method lower of str object at 0x000002C8FFCFC530> = 'Software Development'.lower
+     +      where 'Software Development' = PromptSpec(action='Analyze', object_subject='JavaScript', domain='Software Development', sub_domains=['Wedding Plannin....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:33 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'Node.js' missing from prompt/spec for case_121_debugging_15
+E   AssertionError: Expected keyword 'Netty' missing from prompt/spec for case_159_debugging_53
+    assert ('netty' in '### 1. role & diagnostic persona\n- assume the persona of a senior lead specialist specializing in systems diagnostic...**assumption**: all functional specifications require complete production-ready syntax and zero placeholder mock data.' or 'netty' in 'java' or 'netty' in 'software development')
+     +  where 'netty' = <built-in method lower of str object at 0x000002C8FF933DB0>()
+     +    where <built-in method lower of str object at 0x000002C8FF933DB0> = 'Netty'.lower
+     +  and   'netty' = <built-in method lower of str object at 0x000002C8FF933DB0>()
+     +    where <built-in method lower of str object at 0x000002C8FF933DB0> = 'Netty'.lower
+     +  and   'java' = <built-in method lower of str object at 0x000002C8FFA1B990>()
+     +    where <built-in method lower of str object at 0x000002C8FFA1B990> = 'Java'.lower
+     +      where 'Java' = PromptSpec(action='Debug', object_subject='Java', domain='Software Development', sub_domains=['CI/CD', 'Infrastructure....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).object_subject
+     +  and   'netty' = <built-in method lower of str object at 0x000002C8FF933DB0>()
+     +    where <built-in method lower of str object at 0x000002C8FF933DB0> = 'Netty'.lower
+     +  and   'software development' = <built-in method lower of str object at 0x000002C8FFCEF870>()
+     +    where <built-in method lower of str object at 0x000002C8FFCEF870> = 'Software Development'.lower
+     +      where 'Software Development' = PromptSpec(action='Debug', object_subject='Java', domain='Software Development', sub_domains=['CI/CD', 'Infrastructure....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:33 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'Netty' missing from prompt/spec for case_159_debugging_53
+E   AssertionError: Expected keyword 'Node.js' missing from prompt/spec for case_160_debugging_54
+    assert ('node.js' in '### 1. role & technical persona\n- assume the persona of an authoritative senior lead specialist specializing in soft...**assumption**: all functional specifications require complete production-ready syntax and zero placeholder mock data.' or 'node.js' in 'javascript' or 'node.js' in 'software development')
+     +  where 'node.js' = <built-in method lower of str object at 0x000002C8FF933E40>()
+     +    where <built-in method lower of str object at 0x000002C8FF933E40> = 'Node.js'.lower
+     +  and   'node.js' = <built-in method lower of str object at 0x000002C8FF933E40>()
+     +    where <built-in method lower of str object at 0x000002C8FF933E40> = 'Node.js'.lower
+     +  and   'javascript' = <built-in method lower of str object at 0x000002C8FFCFC3F0>()
+     +    where <built-in method lower of str object at 0x000002C8FFCFC3F0> = 'JavaScript'.lower
+     +      where 'JavaScript' = PromptSpec(action='Analyze', object_subject='JavaScript', domain='Software Development', sub_domains=['Wedding Plannin....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).object_subject
+     +  and   'node.js' = <built-in method lower of str object at 0x000002C8FF933E40>()
+     +    where <built-in method lower of str object at 0x000002C8FF933E40> = 'Node.js'.lower
+     +  and   'software development' = <built-in method lower of str object at 0x000002C8FFCFC530>()
+     +    where <built-in method lower of str object at 0x000002C8FFCFC530> = 'Software Development'.lower
+     +      where 'Software Development' = PromptSpec(action='Analyze', object_subject='JavaScript', domain='Software Development', sub_domains=['Wedding Plannin....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:33 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'Node.js' missing from prompt/spec for case_160_debugging_54
+E   AssertionError: Expected keyword 'Netty' missing from prompt/spec for case_198_debugging_92
+    assert ('netty' in '### 1. role & diagnostic persona\n- assume the persona of a senior lead specialist specializing in systems diagnostic...**assumption**: all functional specifications require complete production-ready syntax and zero placeholder mock data.' or 'netty' in 'java' or 'netty' in 'software development')
+     +  where 'netty' = <built-in method lower of str object at 0x000002C8FF975590>()
+     +    where <built-in method lower of str object at 0x000002C8FF975590> = 'Netty'.lower
+     +  and   'netty' = <built-in method lower of str object at 0x000002C8FF975590>()
+     +    where <built-in method lower of str object at 0x000002C8FF975590> = 'Netty'.lower
+     +  and   'java' = <built-in method lower of str object at 0x000002C8FFA1B990>()
+     +    where <built-in method lower of str object at 0x000002C8FFA1B990> = 'Java'.lower
+     +      where 'Java' = PromptSpec(action='Debug', object_subject='Java', domain='Software Development', sub_domains=['CI/CD', 'Infrastructure....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).object_subject
+     +  and   'netty' = <built-in method lower of str object at 0x000002C8FF975590>()
+     +    where <built-in method lower of str object at 0x000002C8FF975590> = 'Netty'.lower
+     +  and   'software development' = <built-in method lower of str object at 0x000002C8FFCEF870>()
+     +    where <built-in method lower of str object at 0x000002C8FFCEF870> = 'Software Development'.lower
+     +      where 'Software Development' = PromptSpec(action='Debug', object_subject='Java', domain='Software Development', sub_domains=['CI/CD', 'Infrastructure....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:34 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'Netty' missing from prompt/spec for case_198_debugging_92
+E   AssertionError: Expected keyword 'Node.js' missing from prompt/spec for case_199_debugging_93
+    assert ('node.js' in '### 1. role & technical persona\n- assume the persona of an authoritative senior lead specialist specializing in soft...**assumption**: all functional specifications require complete production-ready syntax and zero placeholder mock data.' or 'node.js' in 'javascript' or 'node.js' in 'software development')
+     +  where 'node.js' = <built-in method lower of str object at 0x000002C8FF975620>()
+     +    where <built-in method lower of str object at 0x000002C8FF975620> = 'Node.js'.lower
+     +  and   'node.js' = <built-in method lower of str object at 0x000002C8FF975620>()
+     +    where <built-in method lower of str object at 0x000002C8FF975620> = 'Node.js'.lower
+     +  and   'javascript' = <built-in method lower of str object at 0x000002C8FFCFC3F0>()
+     +    where <built-in method lower of str object at 0x000002C8FFCFC3F0> = 'JavaScript'.lower
+     +      where 'JavaScript' = PromptSpec(action='Analyze', object_subject='JavaScript', domain='Software Development', sub_domains=['Wedding Plannin....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).object_subject
+     +  and   'node.js' = <built-in method lower of str object at 0x000002C8FF975620>()
+     +    where <built-in method lower of str object at 0x000002C8FF975620> = 'Node.js'.lower
+     +  and   'software development' = <built-in method lower of str object at 0x000002C8FFCFC530>()
+     +    where <built-in method lower of str object at 0x000002C8FFCFC530> = 'Software Development'.lower
+     +      where 'Software Development' = PromptSpec(action='Analyze', object_subject='JavaScript', domain='Software Development', sub_domains=['Wedding Plannin....92}], missing_fields=[], confidence=0.95, engine_mode='concept_graph', content_source='concept_graph', reviewed=False).domain
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:34 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+C:\intentify\tests\test_golden_cases.py:138: AssertionError: Expected keyword 'Node.js' missing from prompt/spec for case_199_debugging_93
+E   assert '### 1. Role & Persona' in '## α¬╕α½éα¬Üα¬¿α¬╛: α¬å α¬¬α½ìα¬░α½ïα¬«α½ìα¬¬α½ìα¬ƒ α¬«α½üα¬£α¬¼ α¬¿α¬┐α¬╖α½ìα¬úα¬╛α¬ñ α¬«α¬╛α¬░α½ìα¬ùα¬ªα¬░α½ìα¬╢α¬¿, α¬╕α¬éα¬¬α½éα¬░α½ìα¬ú α¬╡α¬┐α¬ùα¬ñ α¬àα¬¿α½ç α¬Üα½ïα¬òα½ìα¬òα¬╕ α¬ëα¬òα½çα¬▓ α¬åα¬¬α½ï.\n\n### α½º. α¬¡α½éα¬«α¬┐α¬òα¬╛ α¬àα¬¿α½ç α¬ƒα½çα¬òα¬¿α¬┐α¬òα¬▓ α¬¬α¬░α½ìα¬╕α¬¿α¬╛ ...**Assumption**: All functional specifications require complete production-ready syntax and zero placeholder mock data.'
+     +  where '## α¬╕α½éα¬Üα¬¿α¬╛: α¬å α¬¬α½ìα¬░α½ïα¬«α½ìα¬¬α½ìα¬ƒ α¬«α½üα¬£α¬¼ α¬¿α¬┐α¬╖α½ìα¬úα¬╛α¬ñ α¬«α¬╛α¬░α½ìα¬ùα¬ªα¬░α½ìα¬╢α¬¿, α¬╕α¬éα¬¬α½éα¬░α½ìα¬ú α¬╡α¬┐α¬ùα¬ñ α¬àα¬¿α½ç α¬Üα½ïα¬òα½ìα¬òα¬╕ α¬ëα¬òα½çα¬▓ α¬åα¬¬α½ï.\n\n### α½º. α¬¡α½éα¬«α¬┐α¬òα¬╛ α¬àα¬¿α½ç α¬ƒα½çα¬òα¬¿α¬┐α¬òα¬▓ α¬¬α¬░α½ìα¬╕α¬¿α¬╛ ...**Assumption**: All functional specifications require complete production-ready syntax and zero placeholder mock data.' = PromptGenerationResponse(master_prompt="## α¬╕α½éα¬Üα¬¿α¬╛: α¬å α¬¬α½ìα¬░α½ïα¬«α½ìα¬¬α½ìα¬ƒ α¬«α½üα¬£α¬¼ α¬¿α¬┐α¬╖α½ìα¬úα¬╛α¬ñ α¬«α¬╛α¬░α½ìα¬ùα¬ªα¬░α½ìα¬╢α¬¿, α¬╕α¬éα¬¬α½éα¬░α½ìα¬ú α¬╡α¬┐α¬ùα¬ñ α¬àα¬¿α½ç α¬Üα½ïα¬òα½ìα¬òα¬╕ α¬ëα¬òα½çα¬▓ α¬åα¬¬...rity=20.0, specificity=20.0, context=15.0, constraints=15.0, output_format=15.0, ambiguity_handling=15.0, total=100.0)).master_prompt
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:38 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:38 | INFO     | intentify.learning.memory | Loaded 94 learning memories across 50 domains
+2026-10-27 12:35:38 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:38 | INFO     | intentify.knowledge.adaptive_graph | AdaptiveKnowledgeGraph learned 10 entities for domain 'Finance'
+2026-10-27 12:35:38 | INFO     | intentify.compiler.blueprint_learning | BlueprintLearningEngine synthesized novel blueprint 'Finance Master Execution Blueprint'
+2026-10-27 12:35:38 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+2026-10-27 12:35:38 | INFO     | intentify.learning.memory | LearningMemory recorded success for 'Finance' (score=100.0)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.learning.memory:learning_memory.py:209 Loaded 94 learning memories across 50 domains
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.knowledge.adaptive_graph:adaptive_knowledge_graph.py:262 AdaptiveKnowledgeGraph learned 10 entities for domain 'Finance'
+INFO     intentify.compiler.blueprint_learning:blueprint_learning_engine.py:157 BlueprintLearningEngine synthesized novel blueprint 'Finance Master Execution Blueprint'
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+INFO     intentify.learning.memory:learning_memory.py:107 LearningMemory recorded success for 'Finance' (score=100.0)
+C:\intentify\tests\test_quality_evaluator.py:130: assert '### 1. Role & Persona' in '## α¬╕α½éα¬Üα¬¿α¬╛: α¬å α¬¬α½ìα¬░α½ïα¬«α½ìα¬¬α½ìα¬ƒ α¬«α½üα¬£α¬¼ α¬¿α¬┐α¬╖α½ìα¬úα¬╛α¬ñ α¬«α¬╛α¬░α½ìα¬ùα¬ªα¬░α½ìα¬╢α¬¿, α¬╕α¬éα¬¬α½éα¬░α½ìα¬ú α¬╡α¬┐α¬ùα¬ñ α¬àα¬¿α½ç α¬Üα½ïα¬òα½ìα¬òα¬╕ α¬ëα¬òα½çα¬▓ α¬åα¬¬α½ï.\n\n### α½º. α¬¡α½éα¬«α¬┐α¬òα¬╛ α¬àα¬¿α½ç α¬ƒα½çα¬òα¬¿α¬┐α¬òα¬▓ α¬¬α¬░α½ìα¬╕α¬¿α¬╛ ...**Assumption**: All functional specifications require complete production-ready syntax and zero placeholder mock data.'
+E   AssertionError: assert 'Create' == 'create'
+      
+      - create
+      ? ^
+      + Create
+      ? ^
+---------------------------- Captured stdout setup ----------------------------
+2026-10-27 12:35:38 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:38 | INFO     | intentify.learning.memory | Loaded 95 learning memories across 50 domains
+2026-10-27 12:35:38 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+----------------------------- Captured log setup ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.learning.memory:learning_memory.py:209 Loaded 95 learning memories across 50 domains
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:38 | INFO     | intentify.knowledge.adaptive_graph | AdaptiveKnowledgeGraph learned 8 entities for domain 'Scheduling SaaS Platform'
+2026-10-27 12:35:38 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+2026-10-27 12:35:38 | INFO     | intentify.learning.memory | LearningMemory recorded success for 'Scheduling SaaS Platform' (score=100.0)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.adaptive_graph:adaptive_knowledge_graph.py:262 AdaptiveKnowledgeGraph learned 8 entities for domain 'Scheduling SaaS Platform'
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+INFO     intentify.learning.memory:learning_memory.py:107 LearningMemory recorded success for 'Scheduling SaaS Platform' (score=100.0)
+C:\intentify\tests\test_role_intelligence_upgrade.py:117: AssertionError: assert 'Create' == 'create'
+E   AssertionError: assert 'Learn' == 'learn'
+      
+      - learn
+      ? ^
+      + Learn
+      ? ^
+---------------------------- Captured stdout setup ----------------------------
+2026-10-27 12:35:39 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:39 | INFO     | intentify.learning.memory | Loaded 96 learning memories across 50 domains
+2026-10-27 12:35:39 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+----------------------------- Captured log setup ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.learning.memory:learning_memory.py:209 Loaded 96 learning memories across 50 domains
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:39 | INFO     | intentify.knowledge.adaptive_graph | AdaptiveKnowledgeGraph learned 9 entities for domain 'Programming Education'
+2026-10-27 12:35:39 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+2026-10-27 12:35:39 | INFO     | intentify.learning.memory | LearningMemory recorded success for 'Software Development' (score=100.0)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.adaptive_graph:adaptive_knowledge_graph.py:262 AdaptiveKnowledgeGraph learned 9 entities for domain 'Programming Education'
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+INFO     intentify.learning.memory:learning_memory.py:107 LearningMemory recorded success for 'Software Development' (score=100.0)
+C:\intentify\tests\test_role_intelligence_upgrade.py:149: AssertionError: assert 'Learn' == 'learn'
+E   AssertionError: assert '### 1. Role & Persona' in '### 1. Role & Technical Persona\n- Assume the persona of an authoritative Senior Full Stack SaaS Architect specializi...Assumption**: Authentication and security authorization model is assumed to follow standard production best practices.'
+---------------------------- Captured stdout call -----------------------------
+2026-10-27 12:35:39 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:39 | INFO     | intentify.learning.memory | Loaded 98 learning memories across 50 domains
+2026-10-27 12:35:39 | INFO     | intentify.knowledge.domain_graph | DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+2026-10-27 12:35:39 | INFO     | intentify.knowledge.adaptive_graph | AdaptiveKnowledgeGraph learned 8 entities for domain 'Scheduling SaaS Platform'
+2026-10-27 12:35:39 | INFO     | intentify.engine.reranker | Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+2026-10-27 12:35:39 | INFO     | intentify.learning.memory | LearningMemory recorded success for 'Scheduling SaaS Platform' (score=100.0)
+------------------------------ Captured log call ------------------------------
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.learning.memory:learning_memory.py:209 Loaded 98 learning memories across 50 domains
+INFO     intentify.knowledge.domain_graph:domain_graph.py:85 DomainKnowledgeGraph built with 88 domain nodes across 19 categories
+INFO     intentify.knowledge.adaptive_graph:adaptive_knowledge_graph.py:262 AdaptiveKnowledgeGraph learned 8 entities for domain 'Scheduling SaaS Platform'
+INFO     intentify.engine.reranker:reranker.py:95 Reranker selected 'standard' candidate with score 100.0/100 (hard_check_failed=False)
+INFO     intentify.learning.memory:learning_memory.py:107 LearningMemory recorded success for 'Scheduling SaaS Platform' (score=100.0)
+C:\intentify\tests\test_v4_self_learning_engine.py:318: AssertionError: assert '### 1. Role & Persona' in '### 1. Role & Technical Persona\n- Assume the persona of an authoritative Senior Full Stack SaaS Architect specializi...Assumption**: Authentication and security authorization model is assumed to follow standard production best practices.'
+============================== warnings summary ===============================
+..\Users\SUHANI\AppData\Roaming\Python\Python315\site-packages\fastapi\testclient.py:1
+  C:\Users\SUHANI\AppData\Roaming\Python\Python315\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+tests/test_fastapi_backend.py::TestPromptGenerationEndpoint::test_prompt_injection_security_violation
+  C:\intentify\tests\test_fastapi_backend.py:126: StarletteDeprecationWarning: 'HTTP_422_UNPROCESSABLE_ENTITY' is deprecated. Use 'HTTP_422_UNPROCESSABLE_CONTENT' instead.
+    generate_prompt(req)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_cognitive_compiler_engine.py::TestCognitiveQualityRubricAndEndToEndTelemetry::test_orchestrator_end_to_end_cognitive_telemetry
+FAILED tests/test_engine_spec_extractor.py::test_destination_wedding_udaipur_not_finance
+FAILED tests/test_fastapi_backend.py::TestPromptGenerationEndpoint::test_full_request_gujarati_wedding_scenario
+FAILED tests/test_fastapi_backend.py::TestPromptGenerationEndpoint::test_empty_role_automatic_synthesis
+FAILED tests/test_fastapi_backend.py::TestPromptGenerationEndpoint::test_single_word_input
+FAILED tests/test_golden_cases.py::test_golden_case[case_04_edu_dsa] - Assert...
+FAILED tests/test_golden_cases.py::test_golden_case[case_05_edu_ml_basics] - ...
+FAILED tests/test_golden_cases.py::test_golden_case[case_11_health_hospital_mgmt]
+FAILED tests/test_golden_cases.py::test_golden_case[case_13_health_telemedicine]
+FAILED tests/test_golden_cases.py::test_golden_case[case_14_health_triage] - ...
+FAILED tests/test_golden_cases.py::test_golden_case[case_15_event_udaipur_wedding]
+FAILED tests/test_golden_cases.py::test_golden_case[case_16_event_corporate_summit]
+FAILED tests/test_golden_cases.py::test_golden_case[case_18_event_wedding_guj]
+FAILED tests/test_golden_cases.py::test_golden_case[case_20_debug_segfault]
+FAILED tests/test_golden_cases.py::test_golden_case[case_21_debug_redis_timeout]
+FAILED tests/test_golden_cases.py::test_golden_case[case_22_debug_memory_leak]
+FAILED tests/test_golden_cases.py::test_golden_case[case_23_biz_gujarati_thali]
+FAILED tests/test_golden_cases.py::test_golden_case[case_24_biz_saas_gtm] - A...
+FAILED tests/test_golden_cases.py::test_golden_case[case_26_unknown_farming_app]
+FAILED tests/test_golden_cases.py::test_golden_case[case_27_unknown_space_debris]
+FAILED tests/test_golden_cases.py::test_golden_case[case_29_unknown_biochar]
+FAILED tests/test_golden_cases.py::test_golden_case[case_33_hindi_wedding] - ...
+FAILED tests/test_golden_cases.py::test_golden_case[case_45_edu_sql_opt] - As...
+FAILED tests/test_golden_cases.py::test_golden_case[case_50_health_audit] - A...
+FAILED tests/test_golden_cases.py::test_golden_case[case_51_event_ahmedabad]
+FAILED tests/test_golden_cases.py::test_golden_case[case_52_event_sangeet] - ...
+FAILED tests/test_golden_cases.py::test_golden_case[case_53_dbg_deadlock] - A...
+FAILED tests/test_golden_cases.py::test_golden_case[case_54_dbg_oom] - Assert...
+FAILED tests/test_golden_cases.py::test_golden_case[case_56_biz_ev_fleet] - A...
+FAILED tests/test_golden_cases.py::test_golden_case[case_59_novel_marine] - A...
+FAILED tests/test_golden_cases.py::test_golden_case[case_60_guj_business] - A...
+FAILED tests/test_golden_cases.py::test_golden_case[case_81_lang_cpp_raii] - ...
+FAILED tests/test_golden_cases.py::test_golden_case[case_83_lang_python_fastapi]
+FAILED tests/test_golden_cases.py::test_golden_case[case_84_lang_ts_nextjs]
+FAILED tests/test_golden_cases.py::test_golden_case[case_87_guj_dairy_supply]
+FAILED tests/test_golden_cases.py::test_golden_case[case_90_guj_textile_export]
+FAILED tests/test_golden_cases.py::test_golden_case[case_91_guj_solar_farm]
+FAILED tests/test_golden_cases.py::test_golden_case[case_92_hi_learn_cpp] - A...
+FAILED tests/test_golden_cases.py::test_golden_case[case_94_hi_restaurant_delhi]
+FAILED tests/test_golden_cases.py::test_golden_case[case_96_typo_want_lern_pythn]
+FAILED tests/test_golden_cases.py::test_golden_case[case_120_debugging_14] - ...
+FAILED tests/test_golden_cases.py::test_golden_case[case_121_debugging_15] - ...
+FAILED tests/test_golden_cases.py::test_golden_case[case_159_debugging_53] - ...
+FAILED tests/test_golden_cases.py::test_golden_case[case_160_debugging_54] - ...
+FAILED tests/test_golden_cases.py::test_golden_case[case_198_debugging_92] - ...
+FAILED tests/test_golden_cases.py::test_golden_case[case_199_debugging_93] - ...
+FAILED tests/test_quality_evaluator.py::TestQualityEvaluator::test_auto_improvement_loop_in_orchestrator
+FAILED tests/test_role_intelligence_upgrade.py::TestEndToEndPipelineVerification::test_verification_case_1_senior_cloud_architect_scheduling
+FAILED tests/test_role_intelligence_upgrade.py::TestEndToEndPipelineVerification::test_verification_case_2_teacher_learn_python
+FAILED tests/test_v4_self_learning_engine.py::TestOrchestratorV4EndToEnd::test_full_pipeline_v4_telemetry_and_sections
+================= 50 failed, 373 passed, 2 warnings in 10.40s =================

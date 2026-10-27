@@ -1,0 +1,62 @@
+{
+  "subject": "Data Structures & Algorithms",
+  "aliases": [
+    "data structures",
+    "dsa",
+    "data structures and algorithms",
+    "data structures & algorithms",
+    "algorithms"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "dsa_arrays",
+      "title": "Contiguous Memory, Arrays & Dynamic Arrays",
+      "objective": "Analyze Big-O time and space complexity for contiguous memory access, search, and amortized insertions.",
+      "example": "Array indexing: O(1); Search: O(n); Amortized append: O(1)",
+      "exercise": "Implement an amortized dynamic array that doubles capacity when full and halves when quarter full.",
+      "prerequisites": []
+    },
+    {
+      "id": "dsa_linked_lists",
+      "title": "Singly & Doubly Linked Lists",
+      "objective": "Manage node pointer updates, traversal, O(1) head insertion, and boundary pointer manipulation.",
+      "example": "node.next = head; head = node;",
+      "exercise": "Implement cycle detection in a linked list using Floyd's Tortoise and Hare algorithm.",
+      "prerequisites": [
+        "dsa_arrays"
+      ]
+    },
+    {
+      "id": "dsa_stacks_queues",
+      "title": "Stacks (LIFO) & Queues (FIFO)",
+      "objective": "Understand stack call frames, expression evaluation, and queue buffer scheduling.",
+      "example": "stack.push(x); val = stack.pop(); queue.enqueue(x); val = queue.dequeue();",
+      "exercise": "Solve the Valid Parentheses string problem using an explicit stack data structure.",
+      "prerequisites": [
+        "dsa_linked_lists"
+      ]
+    },
+    {
+      "id": "dsa_hash_tables",
+      "title": "Hash Tables & Collision Resolution",
+      "objective": "Master hashing functions, load factors, separate chaining, and open addressing.",
+      "example": "index = hash(key) % capacity;",
+      "exercise": "Build a hash map from scratch using separate chaining with linked list buckets.",
+      "prerequisites": [
+        "dsa_stacks_queues"
+      ]
+    },
+    {
+      "id": "dsa_trees",
+      "title": "Binary Search Trees & Depth/Breadth Traversals",
+      "objective": "Implement BST invariants, recursive pre/in/post-order traversals, and level-order BFS.",
+      "example": "if (val < node.val) node.left = insert(node.left, val);",
+      "exercise": "Construct a Binary Search Tree and implement breadth-first level order traversal.",
+      "prerequisites": [
+        "dsa_hash_tables"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "subject": "EV Fleet Charging",
+  "aliases": [
+    "ev fleet",
+    "ev fleet charging",
+    "ev charging",
+    "electric fleet",
+    "fleet charging"
+  ],
+  "domain": "Business & Strategy",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "ev_depot_sizing",
+      "title": "Depot Sizing, Power Grid Feasibility & Substation Capacity",
+      "objective": "Evaluate utility substation power availability and size MW depot connections for commercial fleets.",
+      "example": "TotalDemand = (Number of Buses * Charger kW) * DiversityFactor",
+      "exercise": "Calculate peak grid connection requirements for an urban delivery hub charging 80 electric vans simultaneously.",
+      "prerequisites": []
+    },
+    {
+      "id": "ev_smart_charging_vmt",
+      "title": "Smart Charging Optimization & Time-of-Use (TOU) Rates",
+      "objective": "Schedule charging cycles during overnight off-peak electricity tariffs to minimize operating costs.",
+      "example": "ChargeSchedule: Prioritize low-demand windows (00:00 - 05:00) with dynamic load throttling.",
+      "exercise": "Build an optimization algorithm shifting charging demand to minimize peak demand utility surcharges.",
+      "prerequisites": [
+        "ev_depot_sizing"
+      ]
+    },
+    {
+      "id": "ev_ocpp_protocol",
+      "title": "OCPP 2.0.1 Protocol & Charger Management Systems",
+      "objective": "Standardize charger telemetry, remote start/stop, and firmware management via Open Charge Point Protocol.",
+      "example": "OCPP message: BootNotification, Heartbeat, StatusNotification, MeterValues",
+      "exercise": "Implement an OCPP WebSocket handler receiving real-time charging status and kilowatt-hour consumption.",
+      "prerequisites": [
+        "ev_smart_charging_vmt"
+      ]
+    },
+    {
+      "id": "ev_battery_health",
+      "title": "Battery State of Health (SOH) & Degradation Modeling",
+      "objective": "Mitigate lithium battery degradation through automated charging rate limits and thermal management.",
+      "example": "MaxFastChargeRate = f(BatteryTemp, CurrentSOC, CycleCount)",
+      "exercise": "Create an automated policy throttling DC fast charging whenever battery core temperature exceeds 42°C.",
+      "prerequisites": [
+        "ev_smart_charging_vmt"
+      ]
+    },
+    {
+      "id": "ev_subscription_models",
+      "title": "Fleet Charging as a Service (CaaS) Subscription Models",
+      "objective": "Structure commercial multi-tenant subscription tiers, per-mile billing, and SLA uptime guarantees.",
+      "example": "MonthlyFee = (Fixed Base / Vehicle) + (kWh Consumed * Tariff Rate) + Uptime Guarantee",
+      "exercise": "Formulate a 3-year commercial subscription model with 99.5% charger availability SLAs for logistics operators.",
+      "prerequisites": [
+        "ev_depot_sizing",
+        "ev_smart_charging_vmt"
+      ]
+    }
+  ]
+}

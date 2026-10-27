@@ -1,0 +1,63 @@
+{
+  "subject": "Biochar Carbon Removal",
+  "aliases": [
+    "biochar carbon removal",
+    "biochar pyrolysis",
+    "carbon sequestration biochar",
+    "agricultural biochar"
+  ],
+  "domain": "Agriculture",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "biochar_biomass_feedstock",
+      "title": "Biomass Feedstock Selection & Moisture Characterization",
+      "objective": "Evaluate agricultural residues (crop stalks, wood chips, nutshells) for moisture content and lignin-to-cellulose ratios.",
+      "example": "moisture_content = ((wet_mass - dry_mass) / wet_mass) * 100",
+      "exercise": "Calculate net feedstock requirements to generate 10 tons of stable biochar given 25% biomass moisture content.",
+      "prerequisites": []
+    },
+    {
+      "id": "biochar_pyrolysis_kinetics",
+      "title": "Slow Pyrolysis Thermal Kinetics & Residence Time",
+      "objective": "Model thermochemical decomposition under oxygen-limited conditions between 450°C and 700°C.",
+      "example": "pyrolysis_yield = exp(-k * residence_time)",
+      "exercise": "Formulate kiln temperature ramping profiles optimizing carbon yield and minimizing volatile syngas fractions.",
+      "prerequisites": [
+        "biochar_biomass_feedstock"
+      ]
+    },
+    {
+      "id": "biochar_pore_structure",
+      "title": "Surface Area, Porosity & Cation Exchange Capacity (CEC)",
+      "objective": "Characterize micropore volume and functional carboxyl groups that enhance nutrient and water retention in degraded soils.",
+      "example": "BET_surface_area = (slope * (P0 - P)) / (intercept + slope)",
+      "exercise": "Design a lab protocol measuring ammonium and nitrate adsorption kinetics in biochar-amended loam soil.",
+      "prerequisites": [
+        "biochar_pyrolysis_kinetics"
+      ]
+    },
+    {
+      "id": "biochar_mrv_accounting",
+      "title": "Carbon Removal MRV (Measurement, Reporting, and Verification)",
+      "objective": "Quantify durable carbon sequestration according to Puro.earth and Verra carbon crediting methodologies.",
+      "example": "net_CO2e_sequestered = gross_carbon * (44 / 12) * permanence_factor - transport_emissions",
+      "exercise": "Build an MRV spreadsheet model calculating verified carbon units (VCUs) with cradle-to-gate lifecycle emissions.",
+      "prerequisites": [
+        "biochar_pyrolysis_kinetics"
+      ]
+    },
+    {
+      "id": "biochar_soil_application",
+      "title": "Soil Application Agronomics & Microbial Inoculation",
+      "objective": "Blend biochar with organic compost and mycorrhizal inoculants to charge mineral surfaces before field spreading.",
+      "example": "application_rate = 5.0 # metric tons per hectare",
+      "exercise": "Draft field trial specifications comparing crop root biomass between raw biochar and pre-inoculated biochar plots.",
+      "prerequisites": [
+        "biochar_pore_structure",
+        "biochar_mrv_accounting"
+      ]
+    }
+  ]
+}

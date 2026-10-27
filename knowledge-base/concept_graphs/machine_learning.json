@@ -1,0 +1,62 @@
+{
+  "subject": "Machine Learning",
+  "aliases": [
+    "machine learning",
+    "ml",
+    "machine learning basics",
+    "ml basics",
+    "applied machine learning"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "ml_foundations",
+      "title": "Foundations, Data Preprocessing & Feature Engineering",
+      "objective": "Understand supervised learning paradigms, train/test splitting, and feature scaling techniques.",
+      "exercise": "Preprocess a tabular dataset with standard scaling and one-hot encoding using NumPy.",
+      "example": "from sklearn.preprocessing import StandardScaler",
+      "prerequisites": []
+    },
+    {
+      "id": "ml_linear_regression",
+      "title": "Linear Regression & Cost Optimization",
+      "objective": "Derive gradient descent optimization and mean squared error (MSE) loss minimization.",
+      "exercise": "Implement batch gradient descent from scratch for univariate linear regression.",
+      "example": "loss = np.mean((y_pred - y_true) ** 2)",
+      "prerequisites": [
+        "ml_foundations"
+      ]
+    },
+    {
+      "id": "ml_classification",
+      "title": "Logistic Regression & Classification Metrics",
+      "objective": "Implement binary logistic regression with sigmoid activation and analyze precision, recall, and ROC-AUC.",
+      "exercise": "Build a binary classifier and calculate confusion matrix metrics.",
+      "example": "sigmoid = 1 / (1 + np.exp(-z))",
+      "prerequisites": [
+        "ml_linear_regression"
+      ]
+    },
+    {
+      "id": "ml_trees_ensembles",
+      "title": "Decision Trees & Ensemble Methods",
+      "objective": "Master information gain, entropy reduction, and random forest bagging mechanisms.",
+      "exercise": "Train a decision tree model and compute Gini impurity across splits.",
+      "example": "gini = 1 - sum(p**2 for p in class_probs)",
+      "prerequisites": [
+        "ml_classification"
+      ]
+    },
+    {
+      "id": "ml_evaluation_regularization",
+      "title": "Model Evaluation, Regularization (L1/L2) & Overfitting Prevention",
+      "objective": "Apply Ridge and Lasso regularization to mitigate overfitting and validate via k-fold cross-validation.",
+      "exercise": "Perform 5-fold cross-validation with L2 penalty tuning on a regression benchmark.",
+      "example": "reg_loss = mse_loss + alpha * np.sum(weights ** 2)",
+      "prerequisites": [
+        "ml_trees_ensembles"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "subject": "Gujarati Typing",
+  "aliases": [
+    "gujarati typing",
+    "gujarati keyboard",
+    "gujarati script",
+    "ગુજરાતી ટાઈપિંગ"
+  ],
+  "domain": "Language & Communication",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "guj_layout",
+      "title": "Gujarati Unicode Layout (Shruti / InScript Keyboard Overview)",
+      "objective": "Understand Unicode character maps, vowels (સ્વર), and consonants (વ્યંજન) positioning on standard keyboards.",
+      "example": "ક (k), ખ (K), ગ (g), ઘ (G), ચ (c), છ (C)",
+      "exercise": "Practice typing all Gujarati vowels and consonants in alphabetical sequence without errors.",
+      "prerequisites": []
+    },
+    {
+      "id": "guj_matras",
+      "title": "Vowel Signs & Diacritics (માત્રાઓ અને અનુસ્વાર)",
+      "objective": "Apply matras (કાનો, હ્રસ્વ/દીર્ઘ ઇ, હ્રસ્વ/દીર્ઘ ઉ, એક માત્રા, બે માત્રા, અનુસ્વાર) correctly to base characters.",
+      "example": "ક + ા = કા, ક + િ = કિ, ક + ી = કી, ક + ં = કં",
+      "exercise": "Type 20 common Gujarati words featuring varying vowel signs and nasal markers (અનુસ્વાર).",
+      "prerequisites": [
+        "guj_layout"
+      ]
+    },
+    {
+      "id": "guj_conjuncts",
+      "title": "Conjunct Consonants & Halant (જોડાક્ષરો અને હલંત)",
+      "objective": "Form half-letters and compound glyphs using the Virama/Halant (્) key mechanism.",
+      "example": "ક + ્ + ત = ક્ત, પ + ્ + ર = પ્ર, શ + ્ + ર = શ્ર",
+      "exercise": "Type words with complex conjuncts like પ્રશ્ન, ઉત્તર, વિદ્યા, અને ક્ષમતા accurately.",
+      "prerequisites": [
+        "guj_matras"
+      ]
+    },
+    {
+      "id": "guj_numbers",
+      "title": "Gujarati Numerals & Punctuation (ગુજરાતી અંકો ૧-૧૦ અને વિરામચિહ્નો)",
+      "objective": "Type native Gujarati numerals (૧, ૨, ૩, ૪, ૫, ૬, ૭, ૮, ૯, ૦) and formal punctuation marks.",
+      "example": "૧૦, ૫૦, ૧૦૦, ૨૦૨૬; પૂર્ણવિરામ (.), પ્રશ્નાર્થચિહ્ન (?)",
+      "exercise": "Type a financial invoice paragraph in Gujarati incorporating prices, dates, and numerals.",
+      "prerequisites": [
+        "guj_conjuncts"
+      ]
+    },
+    {
+      "id": "guj_speed",
+      "title": "Touch Typing Cadence, Accuracy Drills & Paragraph Formatting",
+      "objective": "Attain 25+ words-per-minute typing speed with greater than 95% character accuracy.",
+      "example": "સતત મહાવરો કરવાથી ટાઈપિંગની ગતિ અને ચોકસાઈ વધે છે.",
+      "exercise": "Type a 200-word Gujarati editorial without backspacing, measuring final WPM and error rate.",
+      "prerequisites": [
+        "guj_numbers"
+      ]
+    }
+  ]
+}

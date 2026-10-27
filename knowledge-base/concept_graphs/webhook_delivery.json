@@ -1,0 +1,62 @@
+{
+  "subject": "Webhooks",
+  "aliases": [
+    "webhook",
+    "webhooks",
+    "webhook delivery",
+    "idempotent webhook"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "wh_payload_signing",
+      "title": "Payload HMAC-SHA256 Signing & Verification",
+      "objective": "Sign outbound webhook payloads using secret HMAC keys to verify authenticity and integrity.",
+      "example": "signature = crypto.createHmac('sha256', secret).update(payload).digest('hex')",
+      "exercise": "Implement payload signing and a middleware verification function rejecting tampered requests.",
+      "prerequisites": []
+    },
+    {
+      "id": "wh_retry_backoff",
+      "title": "Exponential Backoff & Jittered Delivery Queues",
+      "objective": "Retry failed delivery attempts using exponential backoff with decorrelated jitter to avoid stampedes.",
+      "example": "delay = min(max_delay, base * (2 ** attempt)) + rand_jitter()",
+      "exercise": "Implement a retry worker schedule retrying up to 5 times over 24 hours with jitter.",
+      "prerequisites": [
+        "wh_payload_signing"
+      ]
+    },
+    {
+      "id": "wh_idempotency_keys",
+      "title": "Idempotency Keys & Deduplication Caches",
+      "objective": "Prevent duplicate payment or transaction processing on repeated webhook deliveries.",
+      "example": "if (redis.set(idempotencyKey, 'LOCKED', 'NX', 'EX', 86400) == null) { return 200; }",
+      "exercise": "Write an idempotent consumer checking an Redis lock before processing order events.",
+      "prerequisites": [
+        "wh_payload_signing"
+      ]
+    },
+    {
+      "id": "wh_dead_letter_queues",
+      "title": "Dead-Letter Queues (DLQ) & Failure Inspection",
+      "objective": "Capture permanently unroutable events for developer debugging and manual replay.",
+      "example": "dlq.publish({ endpoint, payload, attempts: 5, last_error: '504 Gateway Timeout' })",
+      "exercise": "Build an administrative dashboard endpoint to replay messages from a dead letter queue.",
+      "prerequisites": [
+        "wh_retry_backoff"
+      ]
+    },
+    {
+      "id": "wh_rate_limiting",
+      "title": "Per-Endpoint Rate Limiting & Circuit Breaking",
+      "objective": "Throttle outbound dispatch rates so that third-party customer servers are not overwhelmed.",
+      "example": "tokenBucket.consume(endpointId, 10, 'per_second')",
+      "exercise": "Construct a token bucket rate limiter restricting deliveries to a maximum of 50 requests/sec per customer URL.",
+      "prerequisites": [
+        "wh_retry_backoff"
+      ]
+    }
+  ]
+}

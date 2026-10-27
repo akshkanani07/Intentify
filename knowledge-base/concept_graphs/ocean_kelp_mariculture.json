@@ -1,0 +1,63 @@
+{
+  "subject": "Ocean Kelp Mariculture",
+  "aliases": [
+    "ocean kelp",
+    "sea kelp mariculture",
+    "seaweed aquaculture",
+    "macroalgae farming",
+    "ocean kelp carbon sequestration"
+  ],
+  "domain": "Agriculture",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "kelp_species_selection",
+      "title": "Macroalgae Hatchery & Sporophyte Seeding",
+      "objective": "Propagate juvenile Saccharina latissima (sugar kelp) gametophytes onto biodegradable grow ropes under controlled nursery conditions.",
+      "example": "light_cycle = '12h_light_12h_dark'; water_temp_c = 10.0",
+      "exercise": "Formulate a 40-day hatchery seeding protocol maintaining optimal nutrient broth and irradiance before ocean outplanting.",
+      "prerequisites": []
+    },
+    {
+      "id": "ocean_longline_engineering",
+      "title": "Subsurface Longline Mooring & Hydrodynamic Load Modeling",
+      "objective": "Design submerged catenary anchor systems and tensioned header lines capable of surviving 5-meter storm wave actions.",
+      "example": "tension_load = 0.5 * seawater_density * current_velocity**2 * drag_coefficient * surface_area",
+      "exercise": "Calculate anchor ballast and buoy flotation requirements for a 200-meter longline farm deployed in 25-meter water depths.",
+      "prerequisites": [
+        "kelp_species_selection"
+      ]
+    },
+    {
+      "id": "kelp_biomass_growth_telemetry",
+      "title": "Nutrient Flux (Nitrogen/Phosphorus) & Biomass Growth Modeling",
+      "objective": "Monitor oceanic nitrate absorption, water temperature, and sunlight penetration to predict wet biomass yield per meter.",
+      "example": "growth_rate_per_day = mu_max * (nitrate / (k_s + nitrate)) * (irradiance / (k_i + irradiance))",
+      "exercise": "Develop an in-situ sensor telemetry dashboard tracking seasonal ambient nitrate drawdown across the farm perimeter.",
+      "prerequisites": [
+        "ocean_longline_engineering"
+      ]
+    },
+    {
+      "id": "harvest_cold_chain_processing",
+      "title": "Spring Harvesting Logistics & Cold-Chain Dewatering",
+      "objective": "Coordinate vessel-based harvest cutting, blanching, mechanical dewatering, and preservation for hydrocolloid and food processing.",
+      "example": "dry_matter_recovery = (post_dewater_mass * dry_fraction) / harvest_fresh_mass",
+      "exercise": "Create a vessel turnaround schedule preserving bio-active fucoidan and alginate compounds within 6 hours of harvest cutting.",
+      "prerequisites": [
+        "kelp_biomass_growth_telemetry"
+      ]
+    },
+    {
+      "id": "kelp_ocean_carbon_sink",
+      "title": "Deep-Ocean Carbon Sinking & Bioremediation Verification",
+      "objective": "Quantify fast-sinking particulate organic carbon (POC) transported below the permanent pycnocline for durable sequestration.",
+      "example": "carbon_sink_tons = fresh_biomass * carbon_fraction * deep_sea_deposition_ratio",
+      "exercise": "Model sediment core carbon isotopes (delta-13C) to verify refractory kelp carbon burial over multi-decadal timescales.",
+      "prerequisites": [
+        "kelp_biomass_growth_telemetry"
+      ]
+    }
+  ]
+}

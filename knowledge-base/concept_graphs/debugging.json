@@ -1,0 +1,60 @@
+{
+  "domain": "Diagnostic Engineering & RCA",
+  "nodes": [
+    {
+      "id": "dbg_symptom",
+      "name": "Symptom Triage, Stack Trace & Error Signature Isolation",
+      "prerequisites": []
+    },
+    {
+      "id": "dbg_repro",
+      "name": "Minimal Deterministic Reproduction Environment",
+      "prerequisites": [
+        "dbg_symptom"
+      ]
+    },
+    {
+      "id": "dbg_telemetry",
+      "name": "Log Correlation, Metric Spikes & Trace Inspection",
+      "prerequisites": [
+        "dbg_repro"
+      ]
+    },
+    {
+      "id": "dbg_rca",
+      "name": "Hypothesis Testing & 5-Whys Root Cause Analysis",
+      "prerequisites": [
+        "dbg_telemetry"
+      ]
+    },
+    {
+      "id": "dbg_patch",
+      "name": "Defensive Patch Implementation & Code Fix",
+      "prerequisites": [
+        "dbg_rca"
+      ]
+    },
+    {
+      "id": "dbg_regression",
+      "name": "Regression Unit & Integration Tests",
+      "prerequisites": [
+        "dbg_patch"
+      ]
+    },
+    {
+      "id": "dbg_canary",
+      "name": "Canary Deployment & Production Monitoring",
+      "prerequisites": [
+        "dbg_regression"
+      ]
+    },
+    {
+      "id": "dbg_postmortem",
+      "name": "Blameless Post-Mortem & Preventative Architectural Guardrails",
+      "prerequisites": [
+        "dbg_canary"
+      ]
+    }
+  ],
+  "reviewed": false
+}

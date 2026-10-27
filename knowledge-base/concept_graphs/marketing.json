@@ -1,0 +1,53 @@
+{
+  "domain": "Marketing & Growth Strategy",
+  "nodes": [
+    {
+      "id": "mkt_persona",
+      "name": "Ideal Customer Profile (ICP) & Buyer Personas",
+      "prerequisites": []
+    },
+    {
+      "id": "mkt_positioning",
+      "name": "Value Proposition & Brand Positioning Narrative",
+      "prerequisites": [
+        "mkt_persona"
+      ]
+    },
+    {
+      "id": "mkt_funnel",
+      "name": "Full-Funnel Acquisition & Retention Architecture",
+      "prerequisites": [
+        "mkt_positioning"
+      ]
+    },
+    {
+      "id": "mkt_content",
+      "name": "Content Strategy, SEO & Organic Flywheel",
+      "prerequisites": [
+        "mkt_funnel"
+      ]
+    },
+    {
+      "id": "mkt_paid",
+      "name": "Paid Channels, Ad Creative & Campaign Budgeting",
+      "prerequisites": [
+        "mkt_content"
+      ]
+    },
+    {
+      "id": "mkt_cro",
+      "name": "Conversion Rate Optimization (CRO) & A/B Testing",
+      "prerequisites": [
+        "mkt_paid"
+      ]
+    },
+    {
+      "id": "mkt_attribution",
+      "name": "Multi-Touch Attribution & CAC/LTV Metrics",
+      "prerequisites": [
+        "mkt_cro"
+      ]
+    }
+  ],
+  "reviewed": false
+}

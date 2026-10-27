@@ -1,0 +1,62 @@
+{
+  "subject": "Lead Scoring CRM",
+  "aliases": [
+    "crm lead scoring",
+    "lead scoring",
+    "lead scoring crm",
+    "sales crm"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "crm_lead_ingestion",
+      "title": "Multi-Source Lead Ingestion & Deduplication",
+      "objective": "Ingest inbound leads from forms, webinars, and partner APIs with automated email deduplication.",
+      "example": "Lead: { email: 'cto@acme.com', company: 'Acme Corp', source: 'Webinar', enriched: false }",
+      "exercise": "Build an ingestion API deduplicating incoming contacts by corporate email domain.",
+      "prerequisites": []
+    },
+    {
+      "id": "crm_behavioral_scoring",
+      "title": "Behavioral & Demographic Lead Scoring Models",
+      "objective": "Assign real-time points based on buyer persona match and intent actions (pricing page visits, whitepaper downloads).",
+      "example": "Score = (Title == 'VP' ? 30 : 10) + (PricingPageVisits * 15) + (EmailOpened * 2)",
+      "exercise": "Implement a real-time lead scoring calculator promoting leads to MQL (Marketing Qualified) at 100 points.",
+      "prerequisites": [
+        "crm_lead_ingestion"
+      ]
+    },
+    {
+      "id": "crm_sales_assignment",
+      "title": "Round-Robin Sales Representative Routing",
+      "objective": "Distribute qualified leads fairly across regional sales representatives based on territory and availability.",
+      "example": "Router.assignLead(lead, territory='West', salesRepsPool)",
+      "exercise": "Create a round-robin assignment queue skipping representatives currently on leave or at max capacity.",
+      "prerequisites": [
+        "crm_behavioral_scoring"
+      ]
+    },
+    {
+      "id": "crm_pipeline_tracking",
+      "title": "Deal Pipeline Stages & Opportunity Forecasting",
+      "objective": "Track deal stages from Discovery to Closed-Won with weighted probability revenue forecasting.",
+      "example": "WeightedValue = DealAmount * StageProbability (e.g., Proposal = 70%)",
+      "exercise": "Build an opportunity forecasting view computing quarterly expected ARR across all active pipeline stages.",
+      "prerequisites": [
+        "crm_sales_assignment"
+      ]
+    },
+    {
+      "id": "crm_activity_telemetry",
+      "title": "Sales Activity Tracking & CRM Analytics",
+      "objective": "Measure SDR outreach velocity, call connects, email click rates, and sales cycle duration.",
+      "example": "RepMetrics: { calls_made: 45, meetings_booked: 3, avg_deal_cycle_days: 28 }",
+      "exercise": "Design a CRM executive dashboard visualising lead velocity rate and rep conversion performance.",
+      "prerequisites": [
+        "crm_pipeline_tracking"
+      ]
+    }
+  ]
+}

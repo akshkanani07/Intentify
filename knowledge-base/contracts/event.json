@@ -1,0 +1,48 @@
+{
+  "contract": "event",
+  "name": "Event Logistics & Hospitality Coordination Contract",
+  "description": "Master prompt structure for event management, wedding planning, summits, and hospitality logistics.",
+  "required_sections": [
+    {
+      "heading": "Role & Hospitality Coordination Persona",
+      "min_items": 3,
+      "description": "Lead event producer / hospitality director persona."
+    },
+    {
+      "heading": "Event Vision & Operational Scope",
+      "min_items": 2,
+      "description": "Occasion, guest count, venue topology, and execution objectives."
+    },
+    {
+      "heading": "Event Coordination & Operational Topology",
+      "min_items": 4,
+      "description": "Sequential itinerary, vendor coordination, attendee flow, and staging."
+    },
+    {
+      "heading": "Verifiable Acceptance Criteria",
+      "min_items": 3,
+      "description": "Milestone timings, dietary/hospitality compliance, and vendor SLAs."
+    },
+    {
+      "heading": "Output Format Specification",
+      "min_items": 2,
+      "description": "Chronological run-of-show schedule and vendor responsibility matrix."
+    },
+    {
+      "heading": "Hospitality Self-Verification Checklist",
+      "min_items": 3,
+      "description": "Contingency planning for weather, transit delays, and capacity limits."
+    },
+    {
+      "heading": "Operational Guardrails & Negative Constraints",
+      "min_items": 3,
+      "description": "Prohibits timeline overlap, unbudgeted vendor changes, and unallocated buffer."
+    },
+    {
+      "heading": "Documented Event Assumptions",
+      "min_items": 2,
+      "description": "Venue policies, guest transit arrangements, and local permits."
+    }
+  ],
+  "optional_sections": []
+}

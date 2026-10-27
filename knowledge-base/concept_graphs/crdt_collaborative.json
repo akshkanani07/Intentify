@@ -1,0 +1,62 @@
+{
+  "subject": "CRDTs",
+  "aliases": [
+    "crdt",
+    "crdts",
+    "conflict-free replicated data types",
+    "collaborative editing"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "crdt_math_foundations",
+      "title": "Mathematical Foundations: Semilattices, Commutativity & Idempotence",
+      "objective": "Understand partial orderings, joins, and monotonic state merge requirements for distributed consensus.",
+      "example": "merge(A, B) == merge(B, A) && merge(A, merge(B, C)) == merge(merge(A, B), C)",
+      "exercise": "Prove and implement a state-based Grow-Only Counter (G-Counter) satisfying semilattice axioms.",
+      "prerequisites": []
+    },
+    {
+      "id": "crdt_pn_counter_lww",
+      "title": "PN-Counters & Last-Write-Wins (LWW) Element Sets",
+      "objective": "Support additions, subtractions, and updates using vector clocks and Lamport timestamps.",
+      "example": "value = sum(positive_counters) - sum(negative_counters)",
+      "exercise": "Implement an LWW-Register with logical timestamps resolving concurrent property writes deterministically.",
+      "prerequisites": [
+        "crdt_math_foundations"
+      ]
+    },
+    {
+      "id": "crdt_sequence_text",
+      "title": "Sequence CRDTs (RGA, Logoot & Yjs Model)",
+      "objective": "Represent real-time collaborative text character insertions and deletions without position shifting anomalies.",
+      "example": "insertBetween(idLeft, idRight, char)",
+      "exercise": "Build a basic Replicated Growable Array (RGA) managing peer character insertions.",
+      "prerequisites": [
+        "crdt_pn_counter_lww"
+      ]
+    },
+    {
+      "id": "crdt_tombstone_compaction",
+      "title": "Garbage Collection & Tombstone Compaction",
+      "objective": "Compact deleted element records (tombstones) safely once all active replicas have synchronized.",
+      "example": "if (minAllPeerClocks > deletionTimestamp) { purgeTombstone(id); }",
+      "exercise": "Write a compaction routine purging deleted text nodes confirmed by all cluster vector clocks.",
+      "prerequisites": [
+        "crdt_sequence_text"
+      ]
+    },
+    {
+      "id": "crdt_p2p_sync",
+      "title": "Peer-to-Peer State Synchronization via WebRTC & WebSockets",
+      "objective": "Transmit delta state updates and binary encoded diffs across collaborative peers.",
+      "example": "channel.send(Y.encodeStateAsUpdate(doc, remoteVector))",
+      "exercise": "Implement a real-time collaborative notepad syncing character changes across two browser windows.",
+      "prerequisites": [
+        "crdt_sequence_text"
+      ]
+    }
+  ]
+}

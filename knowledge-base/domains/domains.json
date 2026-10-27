@@ -1,0 +1,2991 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-10-26",
+  "total_domains": 88,
+  "categories": [
+    "Technology",
+    "Healthcare",
+    "Finance",
+    "Education",
+    "Marketing",
+    "Legal",
+    "Engineering",
+    "Agriculture",
+    "Science",
+    "Arts",
+    "Real Estate",
+    "Sports",
+    "Travel",
+    "Retail",
+    "Government",
+    "Energy",
+    "Telecommunications"
+  ],
+  "domains": [
+    {
+      "id": "domain_001",
+      "name": "Software Development",
+      "category": "Technology",
+      "sub_domains": [
+        "Frontend",
+        "Backend",
+        "Mobile",
+        "DevOps",
+        "Testing",
+        "Full-Stack"
+      ],
+      "keywords": [
+        "code",
+        "programming",
+        "software",
+        "application",
+        "api",
+        "framework",
+        "library"
+      ],
+      "related_domains": [
+        "domain_002",
+        "domain_003",
+        "domain_004"
+      ],
+      "typical_roles": [
+        "role_001",
+        "role_006",
+        "role_007",
+        "role_010"
+      ],
+      "prompt_context_hints": [
+        "Include technology stack",
+        "Specify programming language",
+        "Define target platform"
+      ]
+    },
+    {
+      "id": "domain_002",
+      "name": "Artificial Intelligence / Machine Learning",
+      "category": "Technology",
+      "sub_domains": [
+        "Deep Learning",
+        "NLP",
+        "Computer Vision",
+        "Reinforcement Learning",
+        "MLOps",
+        "Generative AI"
+      ],
+      "keywords": [
+        "model",
+        "training",
+        "neural network",
+        "prediction",
+        "dataset",
+        "algorithm",
+        "inference"
+      ],
+      "related_domains": [
+        "domain_001",
+        "domain_003",
+        "domain_005"
+      ],
+      "typical_roles": [
+        "role_002",
+        "role_004"
+      ],
+      "prompt_context_hints": [
+        "Specify model architecture",
+        "Define evaluation metrics",
+        "Include dataset characteristics"
+      ]
+    },
+    {
+      "id": "domain_003",
+      "name": "Cloud Computing",
+      "category": "Technology",
+      "sub_domains": [
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "Serverless",
+        "Multi-Cloud",
+        "Edge Computing"
+      ],
+      "keywords": [
+        "cloud",
+        "AWS",
+        "Azure",
+        "GCP",
+        "serverless",
+        "container",
+        "scaling"
+      ],
+      "related_domains": [
+        "domain_001",
+        "domain_004",
+        "domain_005"
+      ],
+      "typical_roles": [
+        "role_003",
+        "role_008"
+      ],
+      "prompt_context_hints": [
+        "Specify cloud provider",
+        "Define scalability requirements",
+        "Include cost constraints"
+      ]
+    },
+    {
+      "id": "domain_004",
+      "name": "Cybersecurity",
+      "category": "Technology",
+      "sub_domains": [
+        "Network Security",
+        "Application Security",
+        "Cloud Security",
+        "Identity Management",
+        "Threat Intelligence",
+        "Incident Response"
+      ],
+      "keywords": [
+        "security",
+        "vulnerability",
+        "threat",
+        "encryption",
+        "firewall",
+        "compliance",
+        "audit"
+      ],
+      "related_domains": [
+        "domain_001",
+        "domain_003",
+        "domain_005"
+      ],
+      "typical_roles": [
+        "role_005",
+        "role_112"
+      ],
+      "prompt_context_hints": [
+        "Specify threat model",
+        "Define compliance requirements",
+        "Include risk tolerance"
+      ]
+    },
+    {
+      "id": "domain_005",
+      "name": "Data Engineering",
+      "category": "Technology",
+      "sub_domains": [
+        "ETL",
+        "Data Warehousing",
+        "Streaming",
+        "Data Lakes",
+        "Data Governance",
+        "Data Quality"
+      ],
+      "keywords": [
+        "pipeline",
+        "ETL",
+        "warehouse",
+        "streaming",
+        "batch",
+        "schema",
+        "ingestion"
+      ],
+      "related_domains": [
+        "domain_001",
+        "domain_002",
+        "domain_003"
+      ],
+      "typical_roles": [
+        "role_009",
+        "role_093"
+      ],
+      "prompt_context_hints": [
+        "Specify data volume",
+        "Define latency requirements",
+        "Include data sources"
+      ]
+    },
+    {
+      "id": "domain_006",
+      "name": "Web Development",
+      "category": "Technology",
+      "sub_domains": [
+        "Static Sites",
+        "Web Applications",
+        "Progressive Web Apps",
+        "JAMstack",
+        "CMS"
+      ],
+      "keywords": [
+        "website",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "responsive",
+        "browser",
+        "hosting"
+      ],
+      "related_domains": [
+        "domain_001",
+        "domain_007"
+      ],
+      "typical_roles": [
+        "role_006",
+        "role_007"
+      ],
+      "prompt_context_hints": [
+        "Specify frameworks",
+        "Define browser support",
+        "Include performance targets"
+      ]
+    },
+    {
+      "id": "domain_007",
+      "name": "Mobile Development",
+      "category": "Technology",
+      "sub_domains": [
+        "iOS",
+        "Android",
+        "Cross-Platform",
+        "React Native",
+        "Flutter",
+        "PWA"
+      ],
+      "keywords": [
+        "app",
+        "mobile",
+        "iOS",
+        "Android",
+        "native",
+        "cross-platform",
+        "responsive"
+      ],
+      "related_domains": [
+        "domain_001",
+        "domain_006"
+      ],
+      "typical_roles": [
+        "role_094"
+      ],
+      "prompt_context_hints": [
+        "Specify target platforms",
+        "Define minimum OS versions",
+        "Include offline requirements"
+      ]
+    },
+    {
+      "id": "domain_008",
+      "name": "Blockchain",
+      "category": "Technology",
+      "sub_domains": [
+        "DeFi",
+        "NFTs",
+        "Smart Contracts",
+        "Layer 2",
+        "DAOs",
+        "Tokenomics"
+      ],
+      "keywords": [
+        "blockchain",
+        "smart contract",
+        "token",
+        "decentralized",
+        "wallet",
+        "consensus",
+        "gas"
+      ],
+      "related_domains": [
+        "domain_001",
+        "domain_004"
+      ],
+      "typical_roles": [
+        "role_095"
+      ],
+      "prompt_context_hints": [
+        "Specify blockchain network",
+        "Define gas optimization needs",
+        "Include security audit scope"
+      ]
+    },
+    {
+      "id": "domain_009",
+      "name": "DevOps",
+      "category": "Technology",
+      "sub_domains": [
+        "CI/CD",
+        "Infrastructure as Code",
+        "Monitoring",
+        "Configuration Management",
+        "Container Orchestration"
+      ],
+      "keywords": [
+        "deployment",
+        "pipeline",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "monitoring",
+        "automation"
+      ],
+      "related_domains": [
+        "domain_001",
+        "domain_003"
+      ],
+      "typical_roles": [
+        "role_003"
+      ],
+      "prompt_context_hints": [
+        "Specify deployment target",
+        "Define SLA requirements",
+        "Include monitoring needs"
+      ]
+    },
+    {
+      "id": "domain_010",
+      "name": "Networking",
+      "category": "Technology",
+      "sub_domains": [
+        "LAN/WAN",
+        "SD-WAN",
+        "Network Security",
+        "Wireless",
+        "VPN",
+        "CDN"
+      ],
+      "keywords": [
+        "router",
+        "switch",
+        "protocol",
+        "bandwidth",
+        "latency",
+        "firewall",
+        "DNS"
+      ],
+      "related_domains": [
+        "domain_004",
+        "domain_003"
+      ],
+      "typical_roles": [
+        "role_096"
+      ],
+      "prompt_context_hints": [
+        "Specify network topology",
+        "Define throughput requirements",
+        "Include redundancy needs"
+      ]
+    },
+    {
+      "id": "domain_011",
+      "name": "Healthcare",
+      "category": "Healthcare",
+      "sub_domains": [
+        "Primary Care",
+        "Specialty Care",
+        "Preventive Medicine",
+        "Telemedicine",
+        "Public Health"
+      ],
+      "keywords": [
+        "patient",
+        "diagnosis",
+        "treatment",
+        "clinical",
+        "health",
+        "medical",
+        "care"
+      ],
+      "related_domains": [
+        "domain_012",
+        "domain_013",
+        "domain_014"
+      ],
+      "typical_roles": [
+        "role_031",
+        "role_033"
+      ],
+      "prompt_context_hints": [
+        "Specify patient population",
+        "Include evidence level",
+        "Define clinical setting"
+      ]
+    },
+    {
+      "id": "domain_012",
+      "name": "Medicine",
+      "category": "Healthcare",
+      "sub_domains": [
+        "Internal Medicine",
+        "Pediatrics",
+        "Geriatrics",
+        "Emergency Medicine",
+        "Family Medicine"
+      ],
+      "keywords": [
+        "diagnosis",
+        "prescription",
+        "symptoms",
+        "prognosis",
+        "therapy",
+        "pathology",
+        "clinical trial"
+      ],
+      "related_domains": [
+        "domain_011",
+        "domain_013"
+      ],
+      "typical_roles": [
+        "role_031",
+        "role_032"
+      ],
+      "prompt_context_hints": [
+        "Specify medical specialty",
+        "Include contraindications",
+        "Define patient demographics"
+      ]
+    },
+    {
+      "id": "domain_013",
+      "name": "Pharmacy",
+      "category": "Healthcare",
+      "sub_domains": [
+        "Clinical Pharmacy",
+        "Retail Pharmacy",
+        "Hospital Pharmacy",
+        "Compounding",
+        "Pharmacovigilance"
+      ],
+      "keywords": [
+        "drug",
+        "prescription",
+        "dosage",
+        "interaction",
+        "formulary",
+        "compounding",
+        "dispensing"
+      ],
+      "related_domains": [
+        "domain_011",
+        "domain_012"
+      ],
+      "typical_roles": [
+        "role_034"
+      ],
+      "prompt_context_hints": [
+        "Specify drug class",
+        "Include interaction checks",
+        "Define patient factors"
+      ]
+    },
+    {
+      "id": "domain_014",
+      "name": "Mental Health",
+      "category": "Healthcare",
+      "sub_domains": [
+        "Psychology",
+        "Psychiatry",
+        "Counseling",
+        "Substance Abuse",
+        "Child Psychology"
+      ],
+      "keywords": [
+        "therapy",
+        "counseling",
+        "mental",
+        "behavioral",
+        "cognitive",
+        "anxiety",
+        "depression"
+      ],
+      "related_domains": [
+        "domain_011",
+        "domain_012"
+      ],
+      "typical_roles": [
+        "role_035",
+        "role_105"
+      ],
+      "prompt_context_hints": [
+        "Specify therapeutic approach",
+        "Include assessment tools",
+        "Define treatment goals"
+      ]
+    },
+    {
+      "id": "domain_015",
+      "name": "Nursing",
+      "category": "Healthcare",
+      "sub_domains": [
+        "Critical Care",
+        "Pediatric Nursing",
+        "Oncology Nursing",
+        "Community Nursing",
+        "Surgical Nursing"
+      ],
+      "keywords": [
+        "patient care",
+        "vitals",
+        "medication",
+        "assessment",
+        "charting",
+        "triage",
+        "wound care"
+      ],
+      "related_domains": [
+        "domain_011",
+        "domain_012"
+      ],
+      "typical_roles": [
+        "role_033"
+      ],
+      "prompt_context_hints": [
+        "Specify care setting",
+        "Include patient acuity",
+        "Define nursing interventions"
+      ]
+    },
+    {
+      "id": "domain_016",
+      "name": "Dentistry",
+      "category": "Healthcare",
+      "sub_domains": [
+        "General Dentistry",
+        "Orthodontics",
+        "Periodontics",
+        "Endodontics",
+        "Oral Surgery"
+      ],
+      "keywords": [
+        "dental",
+        "oral health",
+        "cavity",
+        "crown",
+        "implant",
+        "extraction",
+        "hygiene"
+      ],
+      "related_domains": [
+        "domain_011"
+      ],
+      "typical_roles": [
+        "role_037"
+      ],
+      "prompt_context_hints": [
+        "Specify procedure type",
+        "Include patient dental history",
+        "Define treatment objectives"
+      ]
+    },
+    {
+      "id": "domain_017",
+      "name": "Finance",
+      "category": "Finance",
+      "sub_domains": [
+        "Corporate Finance",
+        "Personal Finance",
+        "Public Finance",
+        "Behavioral Finance"
+      ],
+      "keywords": [
+        "investment",
+        "portfolio",
+        "return",
+        "risk",
+        "capital",
+        "asset",
+        "valuation"
+      ],
+      "related_domains": [
+        "domain_018",
+        "domain_019",
+        "domain_020"
+      ],
+      "typical_roles": [
+        "role_052",
+        "role_054"
+      ],
+      "prompt_context_hints": [
+        "Specify financial instruments",
+        "Define risk tolerance",
+        "Include time horizon"
+      ]
+    },
+    {
+      "id": "domain_018",
+      "name": "Banking",
+      "category": "Finance",
+      "sub_domains": [
+        "Retail Banking",
+        "Commercial Banking",
+        "Investment Banking",
+        "Central Banking",
+        "Digital Banking"
+      ],
+      "keywords": [
+        "loan",
+        "deposit",
+        "interest",
+        "credit",
+        "banking",
+        "mortgage",
+        "account"
+      ],
+      "related_domains": [
+        "domain_017",
+        "domain_019"
+      ],
+      "typical_roles": [
+        "role_053"
+      ],
+      "prompt_context_hints": [
+        "Specify banking segment",
+        "Include regulatory requirements",
+        "Define product type"
+      ]
+    },
+    {
+      "id": "domain_019",
+      "name": "Investment",
+      "category": "Finance",
+      "sub_domains": [
+        "Equities",
+        "Fixed Income",
+        "Real Estate Investment",
+        "Private Equity",
+        "Venture Capital"
+      ],
+      "keywords": [
+        "stock",
+        "bond",
+        "fund",
+        "portfolio",
+        "dividend",
+        "hedge",
+        "return"
+      ],
+      "related_domains": [
+        "domain_017",
+        "domain_018"
+      ],
+      "typical_roles": [
+        "role_052",
+        "role_053"
+      ],
+      "prompt_context_hints": [
+        "Specify asset class",
+        "Define investment horizon",
+        "Include benchmark"
+      ]
+    },
+    {
+      "id": "domain_020",
+      "name": "Insurance",
+      "category": "Finance",
+      "sub_domains": [
+        "Life Insurance",
+        "Health Insurance",
+        "Property Insurance",
+        "Reinsurance",
+        "Insurtech"
+      ],
+      "keywords": [
+        "premium",
+        "coverage",
+        "claim",
+        "policy",
+        "underwriting",
+        "deductible",
+        "risk"
+      ],
+      "related_domains": [
+        "domain_017"
+      ],
+      "typical_roles": [
+        "role_107",
+        "role_108"
+      ],
+      "prompt_context_hints": [
+        "Specify insurance line",
+        "Include coverage parameters",
+        "Define risk profile"
+      ]
+    },
+    {
+      "id": "domain_021",
+      "name": "Cryptocurrency",
+      "category": "Finance",
+      "sub_domains": [
+        "Bitcoin",
+        "Altcoins",
+        "DeFi",
+        "NFTs",
+        "Stablecoins",
+        "Crypto Regulation"
+      ],
+      "keywords": [
+        "crypto",
+        "bitcoin",
+        "ethereum",
+        "token",
+        "exchange",
+        "wallet",
+        "mining"
+      ],
+      "related_domains": [
+        "domain_008",
+        "domain_017"
+      ],
+      "typical_roles": [
+        "role_095",
+        "role_052"
+      ],
+      "prompt_context_hints": [
+        "Specify blockchain network",
+        "Include market context",
+        "Define regulatory jurisdiction"
+      ]
+    },
+    {
+      "id": "domain_022",
+      "name": "Accounting",
+      "category": "Finance",
+      "sub_domains": [
+        "Financial Accounting",
+        "Management Accounting",
+        "Tax Accounting",
+        "Forensic Accounting",
+        "Government Accounting"
+      ],
+      "keywords": [
+        "ledger",
+        "audit",
+        "tax",
+        "balance sheet",
+        "GAAP",
+        "reconciliation",
+        "depreciation"
+      ],
+      "related_domains": [
+        "domain_017",
+        "domain_018"
+      ],
+      "typical_roles": [
+        "role_051",
+        "role_056"
+      ],
+      "prompt_context_hints": [
+        "Specify accounting standard",
+        "Include reporting period",
+        "Define entity type"
+      ]
+    },
+    {
+      "id": "domain_023",
+      "name": "Education",
+      "category": "Education",
+      "sub_domains": [
+        "K-12",
+        "Higher Education",
+        "Special Education",
+        "Adult Education",
+        "Vocational Training"
+      ],
+      "keywords": [
+        "learning",
+        "teaching",
+        "curriculum",
+        "student",
+        "assessment",
+        "classroom",
+        "pedagogy"
+      ],
+      "related_domains": [
+        "domain_024",
+        "domain_025"
+      ],
+      "typical_roles": [
+        "role_046",
+        "role_047",
+        "role_050"
+      ],
+      "prompt_context_hints": [
+        "Specify educational level",
+        "Define learning objectives",
+        "Include student demographics"
+      ]
+    },
+    {
+      "id": "domain_024",
+      "name": "E-Learning",
+      "category": "Education",
+      "sub_domains": [
+        "MOOCs",
+        "LMS",
+        "Virtual Classrooms",
+        "Microlearning",
+        "Gamified Learning"
+      ],
+      "keywords": [
+        "online",
+        "course",
+        "module",
+        "LMS",
+        "interactive",
+        "video",
+        "quiz"
+      ],
+      "related_domains": [
+        "domain_023",
+        "domain_025"
+      ],
+      "typical_roles": [
+        "role_049"
+      ],
+      "prompt_context_hints": [
+        "Specify LMS platform",
+        "Define interactivity level",
+        "Include accessibility requirements"
+      ]
+    },
+    {
+      "id": "domain_025",
+      "name": "Academic Research",
+      "category": "Education",
+      "sub_domains": [
+        "Qualitative Research",
+        "Quantitative Research",
+        "Mixed Methods",
+        "Literature Review",
+        "Meta-Analysis"
+      ],
+      "keywords": [
+        "research",
+        "study",
+        "hypothesis",
+        "methodology",
+        "publication",
+        "peer review",
+        "citation"
+      ],
+      "related_domains": [
+        "domain_023",
+        "domain_024"
+      ],
+      "typical_roles": [
+        "role_047",
+        "role_057"
+      ],
+      "prompt_context_hints": [
+        "Specify research methodology",
+        "Define research question",
+        "Include target journal"
+      ]
+    },
+    {
+      "id": "domain_026",
+      "name": "Marketing",
+      "category": "Marketing",
+      "sub_domains": [
+        "Brand Marketing",
+        "Product Marketing",
+        "Event Marketing",
+        "Guerrilla Marketing"
+      ],
+      "keywords": [
+        "campaign",
+        "brand",
+        "audience",
+        "conversion",
+        "awareness",
+        "positioning",
+        "market"
+      ],
+      "related_domains": [
+        "domain_027",
+        "domain_028",
+        "domain_029"
+      ],
+      "typical_roles": [
+        "role_063"
+      ],
+      "prompt_context_hints": [
+        "Specify target audience",
+        "Define marketing objectives",
+        "Include budget range"
+      ]
+    },
+    {
+      "id": "domain_027",
+      "name": "Digital Marketing",
+      "category": "Marketing",
+      "sub_domains": [
+        "Paid Media",
+        "Organic Social",
+        "Display Advertising",
+        "Affiliate Marketing",
+        "Programmatic"
+      ],
+      "keywords": [
+        "digital",
+        "online",
+        "click",
+        "impression",
+        "conversion",
+        "pixel",
+        "retargeting"
+      ],
+      "related_domains": [
+        "domain_026",
+        "domain_028",
+        "domain_029"
+      ],
+      "typical_roles": [
+        "role_067",
+        "role_065"
+      ],
+      "prompt_context_hints": [
+        "Specify channels",
+        "Define KPIs",
+        "Include attribution model"
+      ]
+    },
+    {
+      "id": "domain_028",
+      "name": "SEO",
+      "category": "Marketing",
+      "sub_domains": [
+        "On-Page SEO",
+        "Off-Page SEO",
+        "Technical SEO",
+        "Local SEO",
+        "International SEO"
+      ],
+      "keywords": [
+        "ranking",
+        "keyword",
+        "backlink",
+        "SERP",
+        "crawl",
+        "index",
+        "organic"
+      ],
+      "related_domains": [
+        "domain_026",
+        "domain_027",
+        "domain_029"
+      ],
+      "typical_roles": [
+        "role_064"
+      ],
+      "prompt_context_hints": [
+        "Specify target keywords",
+        "Define competitive landscape",
+        "Include technical constraints"
+      ]
+    },
+    {
+      "id": "domain_029",
+      "name": "Content Marketing",
+      "category": "Marketing",
+      "sub_domains": [
+        "Blog Marketing",
+        "Video Marketing",
+        "Podcast Marketing",
+        "Infographic Marketing",
+        "Thought Leadership"
+      ],
+      "keywords": [
+        "content",
+        "blog",
+        "article",
+        "video",
+        "infographic",
+        "engagement",
+        "distribution"
+      ],
+      "related_domains": [
+        "domain_026",
+        "domain_027",
+        "domain_028"
+      ],
+      "typical_roles": [
+        "role_022",
+        "role_068"
+      ],
+      "prompt_context_hints": [
+        "Specify content type",
+        "Define distribution channels",
+        "Include brand voice guidelines"
+      ]
+    },
+    {
+      "id": "domain_030",
+      "name": "Social Media",
+      "category": "Marketing",
+      "sub_domains": [
+        "Instagram",
+        "LinkedIn",
+        "TikTok",
+        "X/Twitter",
+        "YouTube",
+        "Facebook"
+      ],
+      "keywords": [
+        "post",
+        "follower",
+        "engagement",
+        "hashtag",
+        "story",
+        "reel",
+        "algorithm"
+      ],
+      "related_domains": [
+        "domain_026",
+        "domain_027"
+      ],
+      "typical_roles": [
+        "role_065"
+      ],
+      "prompt_context_hints": [
+        "Specify platform",
+        "Define content format",
+        "Include posting schedule"
+      ]
+    },
+    {
+      "id": "domain_031",
+      "name": "Email Marketing",
+      "category": "Marketing",
+      "sub_domains": [
+        "Newsletter",
+        "Drip Campaigns",
+        "Transactional Email",
+        "Re-engagement",
+        "Welcome Series"
+      ],
+      "keywords": [
+        "email",
+        "newsletter",
+        "open rate",
+        "subject line",
+        "segmentation",
+        "automation",
+        "unsubscribe"
+      ],
+      "related_domains": [
+        "domain_026",
+        "domain_027"
+      ],
+      "typical_roles": [
+        "role_066"
+      ],
+      "prompt_context_hints": [
+        "Specify audience segment",
+        "Define campaign goal",
+        "Include ESP platform"
+      ]
+    },
+    {
+      "id": "domain_032",
+      "name": "Public Relations",
+      "category": "Marketing",
+      "sub_domains": [
+        "Media Relations",
+        "Crisis Communications",
+        "Corporate Communications",
+        "Investor Relations"
+      ],
+      "keywords": [
+        "press",
+        "media",
+        "crisis",
+        "reputation",
+        "pitch",
+        "coverage",
+        "spokesperson"
+      ],
+      "related_domains": [
+        "domain_026"
+      ],
+      "typical_roles": [
+        "role_070"
+      ],
+      "prompt_context_hints": [
+        "Specify audience",
+        "Define key messages",
+        "Include media targets"
+      ]
+    },
+    {
+      "id": "domain_033",
+      "name": "Law",
+      "category": "Legal",
+      "sub_domains": [
+        "Criminal Law",
+        "Civil Law",
+        "Corporate Law",
+        "Family Law",
+        "Constitutional Law"
+      ],
+      "keywords": [
+        "statute",
+        "case",
+        "precedent",
+        "court",
+        "judgment",
+        "liability",
+        "jurisdiction"
+      ],
+      "related_domains": [
+        "domain_034",
+        "domain_035"
+      ],
+      "typical_roles": [
+        "role_041",
+        "role_042"
+      ],
+      "prompt_context_hints": [
+        "Specify jurisdiction",
+        "Define legal issue",
+        "Include relevant statutes"
+      ]
+    },
+    {
+      "id": "domain_034",
+      "name": "Compliance",
+      "category": "Legal",
+      "sub_domains": [
+        "Regulatory Compliance",
+        "Data Privacy",
+        "Financial Compliance",
+        "Environmental Compliance",
+        "Healthcare Compliance"
+      ],
+      "keywords": [
+        "regulation",
+        "compliance",
+        "GDPR",
+        "HIPAA",
+        "SOX",
+        "audit",
+        "policy"
+      ],
+      "related_domains": [
+        "domain_033",
+        "domain_035"
+      ],
+      "typical_roles": [
+        "role_044",
+        "role_109"
+      ],
+      "prompt_context_hints": [
+        "Specify regulatory framework",
+        "Define compliance scope",
+        "Include industry"
+      ]
+    },
+    {
+      "id": "domain_035",
+      "name": "Intellectual Property",
+      "category": "Legal",
+      "sub_domains": [
+        "Patents",
+        "Trademarks",
+        "Copyrights",
+        "Trade Secrets",
+        "Licensing"
+      ],
+      "keywords": [
+        "patent",
+        "trademark",
+        "copyright",
+        "license",
+        "infringement",
+        "IP",
+        "royalty"
+      ],
+      "related_domains": [
+        "domain_033",
+        "domain_034"
+      ],
+      "typical_roles": [
+        "role_045"
+      ],
+      "prompt_context_hints": [
+        "Specify IP type",
+        "Define protection scope",
+        "Include jurisdiction"
+      ]
+    },
+    {
+      "id": "domain_036",
+      "name": "Contract Law",
+      "category": "Legal",
+      "sub_domains": [
+        "Commercial Contracts",
+        "Employment Contracts",
+        "Real Estate Contracts",
+        "International Contracts"
+      ],
+      "keywords": [
+        "contract",
+        "clause",
+        "breach",
+        "indemnity",
+        "termination",
+        "force majeure",
+        "liability"
+      ],
+      "related_domains": [
+        "domain_033"
+      ],
+      "typical_roles": [
+        "role_041",
+        "role_044"
+      ],
+      "prompt_context_hints": [
+        "Specify contract type",
+        "Define parties involved",
+        "Include governing law"
+      ]
+    },
+    {
+      "id": "domain_037",
+      "name": "Civil Engineering",
+      "category": "Engineering",
+      "sub_domains": [
+        "Structural",
+        "Geotechnical",
+        "Transportation",
+        "Water Resources",
+        "Construction Management"
+      ],
+      "keywords": [
+        "structure",
+        "foundation",
+        "bridge",
+        "road",
+        "concrete",
+        "steel",
+        "load"
+      ],
+      "related_domains": [
+        "domain_038",
+        "domain_039"
+      ],
+      "typical_roles": [
+        "role_071"
+      ],
+      "prompt_context_hints": [
+        "Specify structure type",
+        "Include design codes",
+        "Define load conditions"
+      ]
+    },
+    {
+      "id": "domain_038",
+      "name": "Mechanical Engineering",
+      "category": "Engineering",
+      "sub_domains": [
+        "Thermal",
+        "Fluid Mechanics",
+        "Manufacturing",
+        "Automotive",
+        "HVAC"
+      ],
+      "keywords": [
+        "machine",
+        "torque",
+        "pressure",
+        "thermal",
+        "vibration",
+        "CAD",
+        "tolerance"
+      ],
+      "related_domains": [
+        "domain_037",
+        "domain_039"
+      ],
+      "typical_roles": [
+        "role_072"
+      ],
+      "prompt_context_hints": [
+        "Specify application",
+        "Include material constraints",
+        "Define operating conditions"
+      ]
+    },
+    {
+      "id": "domain_039",
+      "name": "Electrical Engineering",
+      "category": "Engineering",
+      "sub_domains": [
+        "Power Systems",
+        "Electronics",
+        "Control Systems",
+        "Signal Processing",
+        "Embedded Systems"
+      ],
+      "keywords": [
+        "circuit",
+        "voltage",
+        "current",
+        "power",
+        "signal",
+        "frequency",
+        "impedance"
+      ],
+      "related_domains": [
+        "domain_037",
+        "domain_038"
+      ],
+      "typical_roles": [
+        "role_073"
+      ],
+      "prompt_context_hints": [
+        "Specify voltage level",
+        "Include safety standards",
+        "Define operating frequency"
+      ]
+    },
+    {
+      "id": "domain_040",
+      "name": "Chemical Engineering",
+      "category": "Engineering",
+      "sub_domains": [
+        "Process Design",
+        "Petrochemical",
+        "Pharmaceutical Manufacturing",
+        "Environmental",
+        "Biochemical"
+      ],
+      "keywords": [
+        "reactor",
+        "process",
+        "distillation",
+        "catalyst",
+        "yield",
+        "separation",
+        "flow rate"
+      ],
+      "related_domains": [
+        "domain_038"
+      ],
+      "typical_roles": [
+        "role_074"
+      ],
+      "prompt_context_hints": [
+        "Specify process type",
+        "Include safety considerations",
+        "Define scale of operation"
+      ]
+    },
+    {
+      "id": "domain_041",
+      "name": "Aerospace Engineering",
+      "category": "Engineering",
+      "sub_domains": [
+        "Aerodynamics",
+        "Propulsion",
+        "Avionics",
+        "Structures",
+        "Space Systems"
+      ],
+      "keywords": [
+        "flight",
+        "aerodynamic",
+        "thrust",
+        "orbit",
+        "avionics",
+        "payload",
+        "composite"
+      ],
+      "related_domains": [
+        "domain_038",
+        "domain_039"
+      ],
+      "typical_roles": [
+        "role_076"
+      ],
+      "prompt_context_hints": [
+        "Specify vehicle type",
+        "Include flight regime",
+        "Define mission parameters"
+      ]
+    },
+    {
+      "id": "domain_042",
+      "name": "Biomedical Engineering",
+      "category": "Engineering",
+      "sub_domains": [
+        "Medical Devices",
+        "Biomechanics",
+        "Tissue Engineering",
+        "Neural Engineering",
+        "Bioinformatics"
+      ],
+      "keywords": [
+        "implant",
+        "device",
+        "biocompatible",
+        "tissue",
+        "prosthetic",
+        "sensor",
+        "FDA"
+      ],
+      "related_domains": [
+        "domain_011",
+        "domain_038"
+      ],
+      "typical_roles": [
+        "role_077"
+      ],
+      "prompt_context_hints": [
+        "Specify device classification",
+        "Include regulatory requirements",
+        "Define biocompatibility needs"
+      ]
+    },
+    {
+      "id": "domain_043",
+      "name": "Robotics",
+      "category": "Engineering",
+      "sub_domains": [
+        "Industrial Robotics",
+        "Service Robotics",
+        "Autonomous Vehicles",
+        "Drones",
+        "Surgical Robotics"
+      ],
+      "keywords": [
+        "robot",
+        "actuator",
+        "sensor",
+        "autonomy",
+        "control",
+        "navigation",
+        "manipulation"
+      ],
+      "related_domains": [
+        "domain_002",
+        "domain_039"
+      ],
+      "typical_roles": [
+        "role_079"
+      ],
+      "prompt_context_hints": [
+        "Specify robot type",
+        "Define degrees of freedom",
+        "Include environment constraints"
+      ]
+    },
+    {
+      "id": "domain_044",
+      "name": "Agriculture",
+      "category": "Agriculture",
+      "sub_domains": [
+        "Crop Production",
+        "Livestock",
+        "Horticulture",
+        "Aquaculture",
+        "Organic Farming"
+      ],
+      "keywords": [
+        "crop",
+        "soil",
+        "harvest",
+        "fertilizer",
+        "irrigation",
+        "yield",
+        "season"
+      ],
+      "related_domains": [
+        "domain_045",
+        "domain_046"
+      ],
+      "typical_roles": [
+        "role_081",
+        "role_082"
+      ],
+      "prompt_context_hints": [
+        "Specify crop or livestock type",
+        "Include climate zone",
+        "Define farming practice"
+      ]
+    },
+    {
+      "id": "domain_045",
+      "name": "Food Science",
+      "category": "Agriculture",
+      "sub_domains": [
+        "Food Processing",
+        "Food Safety",
+        "Food Chemistry",
+        "Nutrition Science",
+        "Sensory Science"
+      ],
+      "keywords": [
+        "processing",
+        "preservation",
+        "HACCP",
+        "nutrition",
+        "shelf life",
+        "quality",
+        "safety"
+      ],
+      "related_domains": [
+        "domain_044",
+        "domain_046"
+      ],
+      "typical_roles": [
+        "role_085"
+      ],
+      "prompt_context_hints": [
+        "Specify food category",
+        "Include regulatory standards",
+        "Define processing method"
+      ]
+    },
+    {
+      "id": "domain_046",
+      "name": "Environmental Science",
+      "category": "Agriculture",
+      "sub_domains": [
+        "Ecology",
+        "Conservation",
+        "Climate Science",
+        "Pollution Control",
+        "Sustainability"
+      ],
+      "keywords": [
+        "ecosystem",
+        "biodiversity",
+        "climate",
+        "pollution",
+        "conservation",
+        "carbon",
+        "sustainability"
+      ],
+      "related_domains": [
+        "domain_044",
+        "domain_045"
+      ],
+      "typical_roles": [
+        "role_061",
+        "role_078"
+      ],
+      "prompt_context_hints": [
+        "Specify ecosystem type",
+        "Include scale of analysis",
+        "Define sustainability metrics"
+      ]
+    },
+    {
+      "id": "domain_047",
+      "name": "Precision Agriculture",
+      "category": "Agriculture",
+      "sub_domains": [
+        "Remote Sensing",
+        "Variable Rate Technology",
+        "GPS Farming",
+        "IoT Sensors",
+        "Data-Driven Farming"
+      ],
+      "keywords": [
+        "drone",
+        "sensor",
+        "GPS",
+        "variable rate",
+        "mapping",
+        "data",
+        "precision"
+      ],
+      "related_domains": [
+        "domain_044",
+        "domain_002"
+      ],
+      "typical_roles": [
+        "role_084"
+      ],
+      "prompt_context_hints": [
+        "Specify technology platform",
+        "Include field size",
+        "Define data resolution"
+      ]
+    },
+    {
+      "id": "domain_048",
+      "name": "Music",
+      "category": "Arts",
+      "sub_domains": [
+        "Composition",
+        "Performance",
+        "Production",
+        "Music Theory",
+        "Music Business"
+      ],
+      "keywords": [
+        "melody",
+        "harmony",
+        "rhythm",
+        "production",
+        "mixing",
+        "performance",
+        "genre"
+      ],
+      "related_domains": [
+        "domain_049",
+        "domain_050"
+      ],
+      "typical_roles": [
+        "role_086",
+        "role_092"
+      ],
+      "prompt_context_hints": [
+        "Specify genre",
+        "Define instrumentation",
+        "Include technical requirements"
+      ]
+    },
+    {
+      "id": "domain_049",
+      "name": "Film",
+      "category": "Arts",
+      "sub_domains": [
+        "Narrative Film",
+        "Documentary",
+        "Animation",
+        "Short Film",
+        "Screenwriting"
+      ],
+      "keywords": [
+        "screenplay",
+        "cinematography",
+        "editing",
+        "directing",
+        "production",
+        "cast",
+        "scene"
+      ],
+      "related_domains": [
+        "domain_048",
+        "domain_050"
+      ],
+      "typical_roles": [
+        "role_024",
+        "role_088"
+      ],
+      "prompt_context_hints": [
+        "Specify genre",
+        "Define target audience",
+        "Include production scale"
+      ]
+    },
+    {
+      "id": "domain_050",
+      "name": "Photography",
+      "category": "Arts",
+      "sub_domains": [
+        "Portrait",
+        "Landscape",
+        "Commercial",
+        "Street Photography",
+        "Photojournalism"
+      ],
+      "keywords": [
+        "exposure",
+        "composition",
+        "lighting",
+        "lens",
+        "aperture",
+        "shutter",
+        "post-processing"
+      ],
+      "related_domains": [
+        "domain_048",
+        "domain_049"
+      ],
+      "typical_roles": [
+        "role_030"
+      ],
+      "prompt_context_hints": [
+        "Specify genre",
+        "Define equipment constraints",
+        "Include shooting conditions"
+      ]
+    },
+    {
+      "id": "domain_051",
+      "name": "Graphic Design",
+      "category": "Arts",
+      "sub_domains": [
+        "Brand Identity",
+        "Print Design",
+        "Web Design",
+        "Packaging",
+        "Typography"
+      ],
+      "keywords": [
+        "logo",
+        "brand",
+        "layout",
+        "typography",
+        "color",
+        "vector",
+        "print"
+      ],
+      "related_domains": [
+        "domain_052"
+      ],
+      "typical_roles": [
+        "role_021",
+        "role_025"
+      ],
+      "prompt_context_hints": [
+        "Specify deliverable type",
+        "Define brand guidelines",
+        "Include dimensions"
+      ]
+    },
+    {
+      "id": "domain_052",
+      "name": "Fine Arts",
+      "category": "Arts",
+      "sub_domains": [
+        "Painting",
+        "Sculpture",
+        "Installation",
+        "Mixed Media",
+        "Digital Art"
+      ],
+      "keywords": [
+        "canvas",
+        "sculpture",
+        "gallery",
+        "exhibition",
+        "medium",
+        "technique",
+        "expression"
+      ],
+      "related_domains": [
+        "domain_051"
+      ],
+      "typical_roles": [
+        "role_090",
+        "role_091"
+      ],
+      "prompt_context_hints": [
+        "Specify medium",
+        "Define artistic concept",
+        "Include exhibition context"
+      ]
+    },
+    {
+      "id": "domain_053",
+      "name": "Performing Arts",
+      "category": "Arts",
+      "sub_domains": [
+        "Theater",
+        "Dance",
+        "Opera",
+        "Stand-Up Comedy",
+        "Circus Arts"
+      ],
+      "keywords": [
+        "performance",
+        "stage",
+        "audience",
+        "rehearsal",
+        "choreography",
+        "script",
+        "act"
+      ],
+      "related_domains": [
+        "domain_048",
+        "domain_049"
+      ],
+      "typical_roles": [
+        "role_087",
+        "role_089"
+      ],
+      "prompt_context_hints": [
+        "Specify performance type",
+        "Define venue",
+        "Include audience demographics"
+      ]
+    },
+    {
+      "id": "domain_054",
+      "name": "Real Estate",
+      "category": "Real Estate",
+      "sub_domains": [
+        "Residential",
+        "Commercial",
+        "Industrial",
+        "Land Development",
+        "Property Management"
+      ],
+      "keywords": [
+        "property",
+        "listing",
+        "valuation",
+        "mortgage",
+        "lease",
+        "zoning",
+        "closing"
+      ],
+      "related_domains": [
+        "domain_055",
+        "domain_056"
+      ],
+      "typical_roles": [
+        "role_098"
+      ],
+      "prompt_context_hints": [
+        "Specify property type",
+        "Define market area",
+        "Include budget range"
+      ]
+    },
+    {
+      "id": "domain_055",
+      "name": "Construction",
+      "category": "Real Estate",
+      "sub_domains": [
+        "Residential Construction",
+        "Commercial Construction",
+        "Infrastructure",
+        "Renovation",
+        "Green Building"
+      ],
+      "keywords": [
+        "building",
+        "contractor",
+        "permit",
+        "foundation",
+        "inspection",
+        "material",
+        "schedule"
+      ],
+      "related_domains": [
+        "domain_054",
+        "domain_056"
+      ],
+      "typical_roles": [
+        "role_071",
+        "role_099"
+      ],
+      "prompt_context_hints": [
+        "Specify project type",
+        "Define building codes",
+        "Include timeline constraints"
+      ]
+    },
+    {
+      "id": "domain_056",
+      "name": "Architecture",
+      "category": "Real Estate",
+      "sub_domains": [
+        "Residential Architecture",
+        "Commercial Architecture",
+        "Landscape Architecture",
+        "Interior Architecture",
+        "Sustainable Design"
+      ],
+      "keywords": [
+        "design",
+        "blueprint",
+        "floor plan",
+        "elevation",
+        "facade",
+        "space",
+        "sustainable"
+      ],
+      "related_domains": [
+        "domain_054",
+        "domain_055"
+      ],
+      "typical_roles": [
+        "role_099"
+      ],
+      "prompt_context_hints": [
+        "Specify building type",
+        "Include site constraints",
+        "Define sustainability goals"
+      ]
+    },
+    {
+      "id": "domain_057",
+      "name": "Sports",
+      "category": "Sports",
+      "sub_domains": [
+        "Team Sports",
+        "Individual Sports",
+        "Extreme Sports",
+        "Esports",
+        "Olympic Sports"
+      ],
+      "keywords": [
+        "athlete",
+        "training",
+        "competition",
+        "performance",
+        "coaching",
+        "season",
+        "league"
+      ],
+      "related_domains": [
+        "domain_058",
+        "domain_059"
+      ],
+      "typical_roles": [
+        "role_102"
+      ],
+      "prompt_context_hints": [
+        "Specify sport",
+        "Define competition level",
+        "Include athlete profile"
+      ]
+    },
+    {
+      "id": "domain_058",
+      "name": "Fitness",
+      "category": "Sports",
+      "sub_domains": [
+        "Strength Training",
+        "Cardio",
+        "Yoga",
+        "CrossFit",
+        "Rehabilitation"
+      ],
+      "keywords": [
+        "exercise",
+        "workout",
+        "repetition",
+        "set",
+        "recovery",
+        "flexibility",
+        "endurance"
+      ],
+      "related_domains": [
+        "domain_057",
+        "domain_059"
+      ],
+      "typical_roles": [
+        "role_102",
+        "role_040"
+      ],
+      "prompt_context_hints": [
+        "Specify fitness goal",
+        "Define experience level",
+        "Include equipment availability"
+      ]
+    },
+    {
+      "id": "domain_059",
+      "name": "Nutrition",
+      "category": "Sports",
+      "sub_domains": [
+        "Sports Nutrition",
+        "Clinical Nutrition",
+        "Weight Management",
+        "Supplements",
+        "Meal Planning"
+      ],
+      "keywords": [
+        "calorie",
+        "macronutrient",
+        "diet",
+        "protein",
+        "supplement",
+        "meal plan",
+        "hydration"
+      ],
+      "related_domains": [
+        "domain_057",
+        "domain_058"
+      ],
+      "typical_roles": [
+        "role_101"
+      ],
+      "prompt_context_hints": [
+        "Specify dietary goals",
+        "Include allergies/restrictions",
+        "Define caloric needs"
+      ]
+    },
+    {
+      "id": "domain_060",
+      "name": "Travel",
+      "category": "Travel",
+      "sub_domains": [
+        "Adventure Travel",
+        "Business Travel",
+        "Luxury Travel",
+        "Budget Travel",
+        "Eco-Tourism"
+      ],
+      "keywords": [
+        "destination",
+        "itinerary",
+        "booking",
+        "visa",
+        "flight",
+        "accommodation",
+        "culture"
+      ],
+      "related_domains": [
+        "domain_061",
+        "domain_062"
+      ],
+      "typical_roles": [
+        "role_116"
+      ],
+      "prompt_context_hints": [
+        "Specify destination",
+        "Define travel dates",
+        "Include budget and preferences"
+      ]
+    },
+    {
+      "id": "domain_061",
+      "name": "Hospitality",
+      "category": "Travel",
+      "sub_domains": [
+        "Hotels",
+        "Restaurants",
+        "Resorts",
+        "Event Venues",
+        "Cruise Lines"
+      ],
+      "keywords": [
+        "guest",
+        "service",
+        "reservation",
+        "hospitality",
+        "concierge",
+        "amenity",
+        "rating"
+      ],
+      "related_domains": [
+        "domain_060",
+        "domain_062"
+      ],
+      "typical_roles": [
+        "role_116"
+      ],
+      "prompt_context_hints": [
+        "Specify property type",
+        "Define service level",
+        "Include guest demographics"
+      ]
+    },
+    {
+      "id": "domain_062",
+      "name": "Tourism",
+      "category": "Travel",
+      "sub_domains": [
+        "Cultural Tourism",
+        "Medical Tourism",
+        "Sports Tourism",
+        "Heritage Tourism",
+        "Sustainable Tourism"
+      ],
+      "keywords": [
+        "tourist",
+        "attraction",
+        "guide",
+        "heritage",
+        "experience",
+        "souvenir",
+        "local"
+      ],
+      "related_domains": [
+        "domain_060",
+        "domain_061"
+      ],
+      "typical_roles": [
+        "role_116"
+      ],
+      "prompt_context_hints": [
+        "Specify tourism type",
+        "Include cultural context",
+        "Define sustainability priorities"
+      ]
+    },
+    {
+      "id": "domain_063",
+      "name": "Retail",
+      "category": "Retail",
+      "sub_domains": [
+        "Fashion Retail",
+        "Grocery",
+        "Electronics",
+        "Luxury Retail",
+        "Discount Retail"
+      ],
+      "keywords": [
+        "store",
+        "merchandise",
+        "inventory",
+        "customer",
+        "POS",
+        "display",
+        "footfall"
+      ],
+      "related_domains": [
+        "domain_064",
+        "domain_065"
+      ],
+      "typical_roles": [
+        "role_097"
+      ],
+      "prompt_context_hints": [
+        "Specify retail segment",
+        "Define customer demographics",
+        "Include channel strategy"
+      ]
+    },
+    {
+      "id": "domain_064",
+      "name": "E-Commerce",
+      "category": "Retail",
+      "sub_domains": [
+        "B2C",
+        "B2B",
+        "D2C",
+        "Marketplace",
+        "Subscription Commerce"
+      ],
+      "keywords": [
+        "checkout",
+        "cart",
+        "conversion",
+        "product page",
+        "shipping",
+        "returns",
+        "marketplace"
+      ],
+      "related_domains": [
+        "domain_063",
+        "domain_065"
+      ],
+      "typical_roles": [
+        "role_006",
+        "role_063"
+      ],
+      "prompt_context_hints": [
+        "Specify platform",
+        "Define product category",
+        "Include conversion goals"
+      ]
+    },
+    {
+      "id": "domain_065",
+      "name": "Supply Chain",
+      "category": "Retail",
+      "sub_domains": [
+        "Procurement",
+        "Warehousing",
+        "Distribution",
+        "Demand Planning",
+        "Reverse Logistics"
+      ],
+      "keywords": [
+        "inventory",
+        "warehouse",
+        "logistics",
+        "procurement",
+        "supplier",
+        "demand",
+        "fulfillment"
+      ],
+      "related_domains": [
+        "domain_063",
+        "domain_064"
+      ],
+      "typical_roles": [
+        "role_097",
+        "role_115"
+      ],
+      "prompt_context_hints": [
+        "Specify supply chain stage",
+        "Define throughput requirements",
+        "Include geographic scope"
+      ]
+    },
+    {
+      "id": "domain_066",
+      "name": "Government",
+      "category": "Government",
+      "sub_domains": [
+        "Federal",
+        "State",
+        "Local",
+        "Military",
+        "Intelligence"
+      ],
+      "keywords": [
+        "policy",
+        "regulation",
+        "citizen",
+        "legislation",
+        "budget",
+        "public service",
+        "governance"
+      ],
+      "related_domains": [
+        "domain_067",
+        "domain_068"
+      ],
+      "typical_roles": [
+        "role_117"
+      ],
+      "prompt_context_hints": [
+        "Specify government level",
+        "Define policy area",
+        "Include stakeholder groups"
+      ]
+    },
+    {
+      "id": "domain_067",
+      "name": "Public Policy",
+      "category": "Government",
+      "sub_domains": [
+        "Social Policy",
+        "Economic Policy",
+        "Health Policy",
+        "Education Policy",
+        "Environmental Policy"
+      ],
+      "keywords": [
+        "policy",
+        "reform",
+        "advocacy",
+        "legislation",
+        "impact",
+        "stakeholder",
+        "regulation"
+      ],
+      "related_domains": [
+        "domain_066",
+        "domain_068"
+      ],
+      "typical_roles": [
+        "role_117"
+      ],
+      "prompt_context_hints": [
+        "Specify policy domain",
+        "Define target population",
+        "Include evidence base"
+      ]
+    },
+    {
+      "id": "domain_068",
+      "name": "International Relations",
+      "category": "Government",
+      "sub_domains": [
+        "Diplomacy",
+        "International Trade",
+        "Security Studies",
+        "Human Rights",
+        "International Law"
+      ],
+      "keywords": [
+        "diplomacy",
+        "treaty",
+        "sanctions",
+        "alliance",
+        "sovereignty",
+        "multilateral",
+        "foreign policy"
+      ],
+      "related_domains": [
+        "domain_066",
+        "domain_067"
+      ],
+      "typical_roles": [
+        "role_117"
+      ],
+      "prompt_context_hints": [
+        "Specify geopolitical context",
+        "Define actors involved",
+        "Include historical context"
+      ]
+    },
+    {
+      "id": "domain_069",
+      "name": "Energy",
+      "category": "Energy",
+      "sub_domains": [
+        "Power Generation",
+        "Energy Distribution",
+        "Energy Storage",
+        "Energy Trading",
+        "Smart Grid"
+      ],
+      "keywords": [
+        "power",
+        "grid",
+        "generation",
+        "transmission",
+        "distribution",
+        "load",
+        "efficiency"
+      ],
+      "related_domains": [
+        "domain_070",
+        "domain_071"
+      ],
+      "typical_roles": [
+        "role_073",
+        "role_119"
+      ],
+      "prompt_context_hints": [
+        "Specify energy source",
+        "Define capacity requirements",
+        "Include regulatory context"
+      ]
+    },
+    {
+      "id": "domain_070",
+      "name": "Renewable Energy",
+      "category": "Energy",
+      "sub_domains": [
+        "Solar",
+        "Wind",
+        "Hydro",
+        "Geothermal",
+        "Biomass"
+      ],
+      "keywords": [
+        "solar",
+        "wind",
+        "turbine",
+        "panel",
+        "renewable",
+        "clean",
+        "capacity factor"
+      ],
+      "related_domains": [
+        "domain_069",
+        "domain_071"
+      ],
+      "typical_roles": [
+        "role_119"
+      ],
+      "prompt_context_hints": [
+        "Specify renewable source",
+        "Define site characteristics",
+        "Include grid integration needs"
+      ]
+    },
+    {
+      "id": "domain_071",
+      "name": "Oil and Gas",
+      "category": "Energy",
+      "sub_domains": [
+        "Upstream",
+        "Midstream",
+        "Downstream",
+        "LNG",
+        "Petrochemicals"
+      ],
+      "keywords": [
+        "reservoir",
+        "drilling",
+        "refinery",
+        "pipeline",
+        "crude",
+        "natural gas",
+        "production"
+      ],
+      "related_domains": [
+        "domain_069",
+        "domain_070"
+      ],
+      "typical_roles": [
+        "role_118"
+      ],
+      "prompt_context_hints": [
+        "Specify segment",
+        "Define operational context",
+        "Include HSE requirements"
+      ]
+    },
+    {
+      "id": "domain_072",
+      "name": "Telecommunications",
+      "category": "Telecommunications",
+      "sub_domains": [
+        "Mobile Networks",
+        "Fiber Optics",
+        "5G",
+        "Satellite",
+        "VoIP"
+      ],
+      "keywords": [
+        "network",
+        "bandwidth",
+        "spectrum",
+        "tower",
+        "fiber",
+        "5G",
+        "signal"
+      ],
+      "related_domains": [
+        "domain_010",
+        "domain_073"
+      ],
+      "typical_roles": [
+        "role_096"
+      ],
+      "prompt_context_hints": [
+        "Specify technology generation",
+        "Define coverage requirements",
+        "Include capacity needs"
+      ]
+    },
+    {
+      "id": "domain_073",
+      "name": "Media",
+      "category": "Telecommunications",
+      "sub_domains": [
+        "Broadcast Media",
+        "Digital Media",
+        "Print Media",
+        "Streaming",
+        "Podcasting"
+      ],
+      "keywords": [
+        "broadcast",
+        "streaming",
+        "content",
+        "audience",
+        "platform",
+        "distribution",
+        "rating"
+      ],
+      "related_domains": [
+        "domain_072",
+        "domain_074"
+      ],
+      "typical_roles": [
+        "role_024",
+        "role_103"
+      ],
+      "prompt_context_hints": [
+        "Specify medium",
+        "Define target audience",
+        "Include distribution strategy"
+      ]
+    },
+    {
+      "id": "domain_074",
+      "name": "Publishing",
+      "category": "Telecommunications",
+      "sub_domains": [
+        "Book Publishing",
+        "Academic Publishing",
+        "Digital Publishing",
+        "Magazine Publishing",
+        "Self-Publishing"
+      ],
+      "keywords": [
+        "manuscript",
+        "editor",
+        "publication",
+        "ISBN",
+        "print run",
+        "royalty",
+        "distribution"
+      ],
+      "related_domains": [
+        "domain_073"
+      ],
+      "typical_roles": [
+        "role_022",
+        "role_029"
+      ],
+      "prompt_context_hints": [
+        "Specify publication type",
+        "Define target readership",
+        "Include format requirements"
+      ]
+    },
+    {
+      "id": "domain_075",
+      "name": "UX/UI Design",
+      "category": "Technology",
+      "sub_domains": [
+        "User Research",
+        "Interaction Design",
+        "Visual Design",
+        "Accessibility",
+        "Design Systems"
+      ],
+      "keywords": [
+        "wireframe",
+        "prototype",
+        "usability",
+        "accessibility",
+        "component",
+        "interaction",
+        "persona"
+      ],
+      "related_domains": [
+        "domain_006",
+        "domain_007",
+        "domain_051"
+      ],
+      "typical_roles": [
+        "role_023",
+        "role_025"
+      ],
+      "prompt_context_hints": [
+        "Specify platform",
+        "Define accessibility level",
+        "Include user research findings"
+      ]
+    },
+    {
+      "id": "domain_076",
+      "name": "Project Management",
+      "category": "Business",
+      "sub_domains": [
+        "Agile",
+        "Waterfall",
+        "Hybrid",
+        "Program Management",
+        "Portfolio Management"
+      ],
+      "keywords": [
+        "project",
+        "sprint",
+        "milestone",
+        "deliverable",
+        "risk",
+        "scope",
+        "timeline"
+      ],
+      "related_domains": [
+        "domain_001"
+      ],
+      "typical_roles": [
+        "role_013",
+        "role_113"
+      ],
+      "prompt_context_hints": [
+        "Specify methodology",
+        "Define project scope",
+        "Include team size"
+      ]
+    },
+    {
+      "id": "domain_077",
+      "name": "Human Resources",
+      "category": "Business",
+      "sub_domains": [
+        "Talent Acquisition",
+        "Compensation",
+        "Learning & Development",
+        "Employee Relations",
+        "HRIS"
+      ],
+      "keywords": [
+        "recruitment",
+        "onboarding",
+        "performance",
+        "compensation",
+        "benefits",
+        "retention",
+        "culture"
+      ],
+      "related_domains": [
+        "domain_076"
+      ],
+      "typical_roles": [
+        "role_018"
+      ],
+      "prompt_context_hints": [
+        "Specify HR function",
+        "Define organization size",
+        "Include industry context"
+      ]
+    },
+    {
+      "id": "domain_078",
+      "name": "Product Management",
+      "category": "Business",
+      "sub_domains": [
+        "Product Strategy",
+        "Product Discovery",
+        "Product Delivery",
+        "Product Analytics",
+        "Growth"
+      ],
+      "keywords": [
+        "roadmap",
+        "feature",
+        "user story",
+        "MVP",
+        "metrics",
+        "backlog",
+        "stakeholder"
+      ],
+      "related_domains": [
+        "domain_076",
+        "domain_075"
+      ],
+      "typical_roles": [
+        "role_012"
+      ],
+      "prompt_context_hints": [
+        "Specify product stage",
+        "Define success metrics",
+        "Include competitive landscape"
+      ]
+    },
+    {
+      "id": "domain_079",
+      "name": "Data Science",
+      "category": "Technology",
+      "sub_domains": [
+        "Predictive Analytics",
+        "Descriptive Analytics",
+        "Prescriptive Analytics",
+        "Data Visualization",
+        "Feature Engineering"
+      ],
+      "keywords": [
+        "model",
+        "feature",
+        "prediction",
+        "visualization",
+        "statistics",
+        "correlation",
+        "distribution"
+      ],
+      "related_domains": [
+        "domain_002",
+        "domain_005"
+      ],
+      "typical_roles": [
+        "role_002",
+        "role_059"
+      ],
+      "prompt_context_hints": [
+        "Specify analysis objective",
+        "Define data characteristics",
+        "Include success criteria"
+      ]
+    },
+    {
+      "id": "domain_080",
+      "name": "Quality Assurance",
+      "category": "Technology",
+      "sub_domains": [
+        "Manual Testing",
+        "Automated Testing",
+        "Performance Testing",
+        "Security Testing",
+        "Mobile Testing"
+      ],
+      "keywords": [
+        "test",
+        "bug",
+        "regression",
+        "automation",
+        "coverage",
+        "defect",
+        "acceptance"
+      ],
+      "related_domains": [
+        "domain_001",
+        "domain_009"
+      ],
+      "typical_roles": [
+        "role_010"
+      ],
+      "prompt_context_hints": [
+        "Specify testing type",
+        "Define quality criteria",
+        "Include test environment"
+      ]
+    },
+    {
+      "id": "domain_081",
+      "name": "Interior Design",
+      "category": "Arts",
+      "sub_domains": [
+        "Residential Design",
+        "Commercial Design",
+        "Hospitality Design",
+        "Retail Design",
+        "Office Design"
+      ],
+      "keywords": [
+        "space",
+        "furniture",
+        "lighting",
+        "color",
+        "texture",
+        "layout",
+        "material"
+      ],
+      "related_domains": [
+        "domain_056"
+      ],
+      "typical_roles": [
+        "role_100"
+      ],
+      "prompt_context_hints": [
+        "Specify space type",
+        "Define style preferences",
+        "Include budget constraints"
+      ]
+    },
+    {
+      "id": "domain_082",
+      "name": "Game Development",
+      "category": "Technology",
+      "sub_domains": [
+        "Game Design",
+        "Game Programming",
+        "Game Art",
+        "Level Design",
+        "Quality Assurance"
+      ],
+      "keywords": [
+        "game",
+        "engine",
+        "player",
+        "level",
+        "mechanic",
+        "shader",
+        "asset"
+      ],
+      "related_domains": [
+        "domain_001",
+        "domain_002"
+      ],
+      "typical_roles": [
+        "role_027"
+      ],
+      "prompt_context_hints": [
+        "Specify game genre",
+        "Define target platform",
+        "Include engine/framework"
+      ]
+    },
+    {
+      "id": "domain_083",
+      "name": "Veterinary Medicine",
+      "category": "Healthcare",
+      "sub_domains": [
+        "Small Animal",
+        "Large Animal",
+        "Exotic",
+        "Emergency",
+        "Preventive Care"
+      ],
+      "keywords": [
+        "animal",
+        "pet",
+        "vaccination",
+        "surgery",
+        "nutrition",
+        "breed",
+        "wellness"
+      ],
+      "related_domains": [
+        "domain_011"
+      ],
+      "typical_roles": [
+        "role_039"
+      ],
+      "prompt_context_hints": [
+        "Specify animal species",
+        "Define clinical concern",
+        "Include patient history"
+      ]
+    },
+    {
+      "id": "domain_084",
+      "name": "Physical Therapy",
+      "category": "Healthcare",
+      "sub_domains": [
+        "Orthopedic",
+        "Neurological",
+        "Pediatric",
+        "Sports",
+        "Geriatric"
+      ],
+      "keywords": [
+        "rehabilitation",
+        "exercise",
+        "mobility",
+        "strength",
+        "range of motion",
+        "modality",
+        "gait"
+      ],
+      "related_domains": [
+        "domain_011",
+        "domain_058"
+      ],
+      "typical_roles": [
+        "role_040"
+      ],
+      "prompt_context_hints": [
+        "Specify condition",
+        "Define treatment phase",
+        "Include functional goals"
+      ]
+    },
+    {
+      "id": "domain_085",
+      "name": "Urban Planning",
+      "category": "Engineering",
+      "sub_domains": [
+        "Land Use",
+        "Transportation",
+        "Housing",
+        "Environmental Planning",
+        "Economic Development"
+      ],
+      "keywords": [
+        "zoning",
+        "density",
+        "transit",
+        "infrastructure",
+        "corridor",
+        "comprehensive plan",
+        "community"
+      ],
+      "related_domains": [
+        "domain_037",
+        "domain_056"
+      ],
+      "typical_roles": [
+        "role_114"
+      ],
+      "prompt_context_hints": [
+        "Specify planning area",
+        "Define community needs",
+        "Include regulatory framework"
+      ]
+    },
+    {
+      "id": "domain_086",
+      "name": "Event Planning & Weddings",
+      "category": "Hospitality & Lifestyle",
+      "sub_domains": [
+        "Wedding Planning",
+        "Corporate Galas",
+        "Conferences",
+        "Private Receptions",
+        "Vendor Coordination",
+        "Budget Logistics"
+      ],
+      "keywords": [
+        "wedding",
+        "planner",
+        "event",
+        "ceremony",
+        "reception",
+        "venue",
+        "decor",
+        "catering",
+        "guest list",
+        "banquet",
+        "run of show",
+        "lagan"
+      ],
+      "related_domains": [
+        "domain_061",
+        "domain_055"
+      ],
+      "typical_roles": [
+        "role_wedding_01",
+        "role_116"
+      ],
+      "prompt_context_hints": [
+        "Specify guest count and venue type",
+        "Define cultural traditions and ceremony timeline",
+        "State budget allocation requirements"
+      ]
+    },
+    {
+      "id": "domain_087",
+      "name": "Natural & Physical Sciences",
+      "category": "Science",
+      "sub_domains": [
+        "Quantum Physics",
+        "Molecular Biology",
+        "Astrophysics",
+        "Organic Chemistry",
+        "Materials Science",
+        "Genetics"
+      ],
+      "keywords": [
+        "science",
+        "physics",
+        "quantum",
+        "biology",
+        "entanglement",
+        "molecular",
+        "chemistry",
+        "scientific",
+        "astrophysics",
+        "laboratory"
+      ],
+      "related_domains": [
+        "domain_021",
+        "domain_008"
+      ],
+      "typical_roles": [
+        "role_003"
+      ],
+      "prompt_context_hints": [
+        "Specify empirical methodology and experimental parameters",
+        "Reference theoretical frameworks and peer-reviewed literature",
+        "State physical constants, units, and boundary conditions"
+      ]
+    },
+    {
+      "id": "domain_088",
+      "name": "Creative Writing & Literature",
+      "category": "Arts",
+      "sub_domains": [
+        "Fiction",
+        "Worldbuilding",
+        "Character Development",
+        "Poetry",
+        "Screenwriting",
+        "Narrative Design"
+      ],
+      "keywords": [
+        "creative",
+        "fiction",
+        "novel",
+        "worldbuilding",
+        "character arcs",
+        "poetry",
+        "screenplay",
+        "storytelling",
+        "dialogue"
+      ],
+      "related_domains": [
+        "domain_056",
+        "domain_057"
+      ],
+      "typical_roles": [
+        "role_088"
+      ],
+      "prompt_context_hints": [
+        "Specify narrative perspective, tone, and character arcs",
+        "Define worldbuilding rules and sensory descriptive detail",
+        "State target literary genre and audience pacing"
+      ]
+    }
+  ]
+}

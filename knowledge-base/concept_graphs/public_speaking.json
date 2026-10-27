@@ -1,0 +1,61 @@
+{
+  "subject": "Public Speaking",
+  "aliases": [
+    "public speaking",
+    "presentation skills",
+    "oratory",
+    "speech delivery"
+  ],
+  "domain": "Communication & Leadership",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "spk_structure",
+      "title": "Speech Architecture: The Hook, Core Message & Memorable Call to Action",
+      "objective": "Structure presentations using the classic 3-act framework: provocative opening, 3 key points, and definitive closing.",
+      "example": "Structure: Hook (Story/Stat) -> Problem -> 3 Supporting Arguments -> Vision -> Call to Action",
+      "exercise": "Outline a 5-minute persuasive speech on a topic of choice following the 3-act structure.",
+      "prerequisites": []
+    },
+    {
+      "id": "spk_audience",
+      "title": "Audience Analysis & Empathetic Framing",
+      "objective": "Tailor language, tone, and examples to the specific knowledge level, priorities, and emotional state of the audience.",
+      "example": "Technical team: Focus on architecture trade-offs; Executive team: Focus on ROI and risk mitigation.",
+      "exercise": "Rewrite the same core proposal into two versions: one for technical peers and one for non-technical executives.",
+      "prerequisites": [
+        "spk_structure"
+      ]
+    },
+    {
+      "id": "spk_vocal",
+      "title": "Vocal Variety: Pace, Pitch, Pauses & Projection",
+      "objective": "Eliminate filler words (um, ah, like) using deliberate pauses and vary vocal cadence for dramatic emphasis.",
+      "example": "The Power of the Pause: Stop for 2 full seconds before and after delivering the core takeaway.",
+      "exercise": "Record a 2-minute speech delivery focusing on eliminating all filler words through intentional pauses.",
+      "prerequisites": [
+        "spk_audience"
+      ]
+    },
+    {
+      "id": "spk_body",
+      "title": "Non-Verbal Communication: Eye Contact, Posture & Purposeful Gestures",
+      "objective": "Maintain commanding open stage presence, triangular eye contact, and gestures that emphasize key metrics.",
+      "example": "Ground feet shoulder-width apart; hold eye contact with one individual for a complete sentence.",
+      "exercise": "Practice delivering a 3-minute speech while maintaining open posture and deliberate gesture timing.",
+      "prerequisites": [
+        "spk_vocal"
+      ]
+    },
+    {
+      "id": "spk_qa",
+      "title": "Handling Q&A Sessions, Objections & Stage Anxiety",
+      "objective": "Employ the Listen-Acknowledge-Answer framework for tough audience questions and manage adrenaline spikes.",
+      "example": "Tough Question Strategy: \"That is a critical point regarding scalability. Here is how we address that...\"",
+      "exercise": "Simulate an antagonistic Q&A session with 3 challenging audience objections and deliver composed responses.",
+      "prerequisites": [
+        "spk_body"
+      ]
+    }
+  ]
+}

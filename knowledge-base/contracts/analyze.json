@@ -1,0 +1,48 @@
+{
+  "contract": "analyze",
+  "name": "System Audit & Analytical Evaluation Contract",
+  "description": "Master prompt structure for architectural audits, security reviews, and technical assessments.",
+  "required_sections": [
+    {
+      "heading": "Role & Analytical Persona",
+      "min_items": 3,
+      "description": "Principal auditor / technical evaluation specialist persona."
+    },
+    {
+      "heading": "Audit Objective & Evaluation Scope",
+      "min_items": 2,
+      "description": "Target systems, standards benchmarks, and assessment goals."
+    },
+    {
+      "heading": "Evaluation Dimensions & Inspection Topology",
+      "min_items": 4,
+      "description": "Inspection criteria, threat vectors, telemetry audits, and data models."
+    },
+    {
+      "heading": "Verifiable Acceptance Criteria",
+      "min_items": 3,
+      "description": "Evidence requirements, vulnerability severity thresholds, and compliance checks."
+    },
+    {
+      "heading": "Output Format Specification",
+      "min_items": 2,
+      "description": "Structured findings matrix with risk severity ratings and mitigations."
+    },
+    {
+      "heading": "Analytical Self-Verification Checklist",
+      "min_items": 3,
+      "description": "Verification of false positive filtering and reproducible proofs."
+    },
+    {
+      "heading": "Evaluation Guardrails & Negative Constraints",
+      "min_items": 3,
+      "description": "Prohibits subjective speculation without observable evidence or metrics."
+    },
+    {
+      "heading": "Documented Audit Assumptions",
+      "min_items": 2,
+      "description": "Access boundaries, test environment conditions, and compliance frameworks."
+    }
+  ],
+  "optional_sections": []
+}

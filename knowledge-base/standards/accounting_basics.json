@@ -1,0 +1,13 @@
+{
+  "subject": "Accounting Basics",
+  "standards": [
+    {
+      "name": "GAAP (Generally Accepted Accounting Principles)",
+      "description": "Standard accounting rules issued by FASB."
+    },
+    {
+      "name": "IFRS (International Financial Reporting Standards)",
+      "description": "Global financial reporting standards."
+    }
+  ]
+}

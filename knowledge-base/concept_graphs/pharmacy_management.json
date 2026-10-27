@@ -1,0 +1,62 @@
+{
+  "subject": "Pharmacy Management",
+  "aliases": [
+    "pharmacy management",
+    "pharmacy dispensing",
+    "pharmacy erp",
+    "drug inventory"
+  ],
+  "domain": "Healthcare",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "pharm_inventory_batches",
+      "title": "Batch Tracking, Expiry Management & FEFO Principle",
+      "objective": "Manage pharmaceutical stock across batch numbers, enforcing First-Expiry-First-Out dispensing rules.",
+      "example": "SELECT * FROM inventory WHERE drug_id = 42 ORDER BY expiry_date ASC LIMIT 1;",
+      "exercise": "Write a stock picking algorithm prioritizing batches expiring within the next 60 days.",
+      "prerequisites": []
+    },
+    {
+      "id": "pharm_controlled_substances",
+      "title": "Controlled Substances Ledger & Prescription Verification",
+      "objective": "Enforce strict verification, perpetual inventory reconciliation, and dual-signoff on controlled narcotics.",
+      "example": "DispensaryLog: { drug: 'Morphine', qty: 2, rx_number: 'RX-884', pharmacist_id: 'P-12' }",
+      "exercise": "Implement a dual-verification workflow requiring two distinct licensed pharmacist signatures for Schedule II drugs.",
+      "prerequisites": [
+        "pharm_inventory_batches"
+      ]
+    },
+    {
+      "id": "pharm_barcode_scanning",
+      "title": "Barcoded Medication Administration (BCMA) Verification",
+      "objective": "Validate the 5 Rights of medication dispensing (Right Patient, Drug, Dose, Route, Time) via barcode scans.",
+      "example": "verifyScan(scannedBarcode, expectedDrugBarcode) -> Boolean",
+      "exercise": "Build an automated dispensing check preventing medication handover if the scanned NDC code differs from the prescription.",
+      "prerequisites": [
+        "pharm_inventory_batches"
+      ]
+    },
+    {
+      "id": "pharm_reorder_points",
+      "title": "Automated Reorder Point Calculation & Supplier POs",
+      "objective": "Calculate dynamic safety stocks based on average daily consumption and supplier lead times.",
+      "example": "reorder_point = (lead_time_days * avg_daily_usage) + safety_stock",
+      "exercise": "Create a daily cron job generating draft Purchase Orders for items breaching calculated reorder thresholds.",
+      "prerequisites": [
+        "pharm_inventory_batches"
+      ]
+    },
+    {
+      "id": "pharm_cold_chain_monitoring",
+      "title": "Vaccine & Biologics Temperature Telemetry",
+      "objective": "Monitor 2°C - 8°C cold-chain pharmaceutical refrigerators and trigger immediate breach alarms.",
+      "example": "if (sensor.temperature < 2.0 || sensor.temperature > 8.0) { triggerColdChainAlert(); }",
+      "exercise": "Write an alert listener invalidating vaccine batch validity when temperature excursions exceed 45 minutes.",
+      "prerequisites": [
+        "pharm_inventory_batches"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "subject": "Linux Command Line",
+  "standards": [
+    {
+      "name": "POSIX.1-2017 Standard",
+      "description": "Portable Operating System Interface standard for shells and utilities."
+    },
+    {
+      "name": "Filesystem Hierarchy Standard (FHS 3.0)",
+      "description": "Standard layout of Unix file systems."
+    }
+  ]
+}

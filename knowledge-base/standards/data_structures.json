@@ -1,0 +1,9 @@
+{
+  "subject": "Data Structures",
+  "standards": [
+    {
+      "name": "Big-O Asymptotic Complexity Standard",
+      "description": "Formal analysis standards for computational time and space complexity."
+    }
+  ]
+}

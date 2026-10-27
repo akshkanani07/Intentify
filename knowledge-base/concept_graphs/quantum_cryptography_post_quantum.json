@@ -1,0 +1,64 @@
+{
+  "subject": "Post-Quantum Cryptography",
+  "aliases": [
+    "post quantum cryptography",
+    "pqc lattice cryptography",
+    "ml-kem kyber",
+    "ml-dsa dilithium",
+    "quantum resistant encryption"
+  ],
+  "domain": "Cybersecurity",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "pqc_lattice_foundations",
+      "title": "Learning With Errors (LWE) & Module Lattice Foundations",
+      "objective": "Understand the hardness of the Shortest Vector Problem (SVP) and Ring/Module Learning With Errors (M-LWE).",
+      "example": "ciphertext_c = A * s + e (mod q)",
+      "exercise": "Formulate a toy polynomial ring quotient R_q = Z_q[X] / (X^n + 1) and demonstrate noise tolerance in message decryption.",
+      "prerequisites": []
+    },
+    {
+      "id": "ml_kem_key_encapsulation",
+      "title": "FIPS 203: ML-KEM (CRYSTALS-Kyber) Key Encapsulation",
+      "objective": "Implement public key generation, encapsulation, and decapsulation for post-quantum key establishment.",
+      "example": "(shared_secret, ciphertext) = ml_kem.encapsulate(public_key)",
+      "exercise": "Build an end-to-end TLS key exchange handshake embedding an ML-KEM-768 ciphertext alongside classic ECDH keys.",
+      "prerequisites": [
+        "pqc_lattice_foundations"
+      ]
+    },
+    {
+      "id": "ml_dsa_digital_signatures",
+      "title": "FIPS 204: ML-DSA (CRYSTALS-Dilithium) Digital Signatures",
+      "objective": "Analyze Fiat-Shamir with aborts signature schemes and verify rejection sampling bounds.",
+      "example": "signature = ml_dsa.sign(private_key, document_hash)",
+      "exercise": "Generate and verify an ML-DSA-65 X.509 certificate chain, measuring signature and public key byte overheads.",
+      "prerequisites": [
+        "pqc_lattice_foundations"
+      ]
+    },
+    {
+      "id": "side_channel_constant_time",
+      "title": "Constant-Time Polynomial Arithmetic & Side-Channel Mitigation",
+      "objective": "Prevent timing attacks and power analysis leakage in Number Theoretic Transform (NTT) multiplications.",
+      "example": "ct_val = ct_select(mask, a, b)",
+      "exercise": "Audit an NTT polynomial multiplication routine to ensure zero branch divergences on secret key coefficient values.",
+      "prerequisites": [
+        "ml_kem_key_encapsulation",
+        "ml_dsa_digital_signatures"
+      ]
+    },
+    {
+      "id": "hybrid_pqc_migration",
+      "title": "Hybrid Dual-Cert Cryptographic Migration Architecture",
+      "objective": "Architect enterprise migration roadmaps implementing hybrid classical-quantum cryptographic agility across PKI infrastructure.",
+      "example": "hybrid_secret = HKDF(classical_ecdh_secret || pqc_shared_secret)",
+      "exercise": "Draft an enterprise cryptographic agility policy supporting automated rollback if any PQC primitive discovers a cryptanalytic flaw.",
+      "prerequisites": [
+        "ml_kem_key_encapsulation"
+      ]
+    }
+  ]
+}

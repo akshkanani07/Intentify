@@ -1,0 +1,63 @@
+{
+  "subject": "Autonomous Hydroponics & Vertical Farming",
+  "aliases": [
+    "autonomous hydroponics",
+    "smart vertical farming",
+    "automated indoor farming",
+    "nutrient film technique automation"
+  ],
+  "domain": "Agriculture",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "nft_microfluidic_delivery",
+      "title": "Nutrient Film Technique (NFT) & Microfluidic Flow Control",
+      "objective": "Design laminar flow delivery channels maintaining optimal root zone oxygenation and nutrient film depths.",
+      "example": "flow_rate_lpm = 1.5 # liters per minute per gully",
+      "exercise": "Calculate pump head pressure and distribution manifold diameters ensuring uniform nutrient delivery across 20 tiers.",
+      "prerequisites": []
+    },
+    {
+      "id": "automated_ion_dosing",
+      "title": "Ion-Selective Electrode (ISE) Closed-Loop Dosing",
+      "objective": "Measure individual nitrate, potassium, and calcium ions in recirculating reservoir water for precision micro-dosing.",
+      "example": "dose_ml = k_ion * (target_ppm - current_ppm) * reservoir_liters",
+      "exercise": "Write a micro-controller dosing algorithm preventing nutrient lockup and calcium precipitate formation.",
+      "prerequisites": [
+        "nft_microfluidic_delivery"
+      ]
+    },
+    {
+      "id": "dynamic_led_spectrum",
+      "title": "Dynamic LED Photobiology & Blue/Far-Red Spectral Ratios",
+      "objective": "Modulate photosynthetic photon flux density (PPFD) and far-red wavelengths to steer plant morphogenesis and leaf expansion.",
+      "example": "spectral_recipe = {'blue_450nm': 0.20, 'red_660nm': 0.70, 'far_red_730nm': 0.10}",
+      "exercise": "Formulate a dynamic 16-hour diurnal light recipe shifting spectrum from vegetative growth to anthocyanin accumulation.",
+      "prerequisites": [
+        "nft_microfluidic_delivery"
+      ]
+    },
+    {
+      "id": "computer_vision_canopy_health",
+      "title": "Edge Computer Vision & Automated Canopy Stress Detection",
+      "objective": "Deploy high-resolution RGB and multispectral cameras to identify early tip-burn, chlorosis, and leaf transpiration stress.",
+      "example": "chlorosis_index = (green_intensity - red_intensity) / (green_intensity + red_intensity)",
+      "exercise": "Build an image classification pipeline running on edge hardware flagging leaf tip-burn prior to visual human detection.",
+      "prerequisites": [
+        "automated_ion_dosing",
+        "dynamic_led_spectrum"
+      ]
+    },
+    {
+      "id": "hvac_energy_optimization",
+      "title": "HVAC Dehumidification & Heat Recovery Integration",
+      "objective": "Balance latent heat loads from dense crop transpiration using high-efficiency desiccant dehumidifiers and water recycling.",
+      "example": "condensate_recovery_liters = total_plant_transpiration_rate * runtime_hours",
+      "exercise": "Design a closed-loop water recovery system recycling 95% of transpired moisture back into reverse osmosis tanks.",
+      "prerequisites": [
+        "computer_vision_canopy_health"
+      ]
+    }
+  ]
+}

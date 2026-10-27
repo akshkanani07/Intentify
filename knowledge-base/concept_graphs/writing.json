@@ -1,0 +1,46 @@
+{
+  "domain": "Content Strategy & Technical Writing",
+  "nodes": [
+    {
+      "id": "wri_audience",
+      "name": "Audience Framing, Tone of Voice & Thesis",
+      "prerequisites": []
+    },
+    {
+      "id": "wri_outline",
+      "name": "Structural Outline & Argumentation Flow",
+      "prerequisites": [
+        "wri_audience"
+      ]
+    },
+    {
+      "id": "wri_drafting",
+      "name": "First-Principles Draft Composition",
+      "prerequisites": [
+        "wri_outline"
+      ]
+    },
+    {
+      "id": "wri_citations",
+      "name": "Fact-Checking, Data Synthesis & Primary Citations",
+      "prerequisites": [
+        "wri_drafting"
+      ]
+    },
+    {
+      "id": "wri_editing",
+      "name": "Substantive Editing, Readability & Flow Polish",
+      "prerequisites": [
+        "wri_citations"
+      ]
+    },
+    {
+      "id": "wri_cta",
+      "name": "Headlines, Executive Summary & Call to Action",
+      "prerequisites": [
+        "wri_editing"
+      ]
+    }
+  ],
+  "reviewed": false
+}

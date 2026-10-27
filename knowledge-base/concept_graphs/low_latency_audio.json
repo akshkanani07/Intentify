@@ -1,0 +1,62 @@
+{
+  "subject": "Low-Latency Audio Streaming",
+  "aliases": [
+    "low-latency audio",
+    "audio streaming",
+    "real-time audio",
+    "webrtc audio"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "audio_opus_codec",
+      "title": "Opus Audio Codec & Frame Sizing",
+      "objective": "Configure Opus speech and music encoding with 10ms - 20ms frame sizes for optimal packet efficiency.",
+      "example": "opus_encoder_create(48000, 2, OPUS_APPLICATION_VOIP, &err);",
+      "exercise": "Encode raw 48kHz PCM audio into Opus frames and measure compression ratio and encoding latency.",
+      "prerequisites": []
+    },
+    {
+      "id": "audio_jitter_buffer",
+      "title": "Adaptive Jitter Buffering & Packet Loss Concealment (PLC)",
+      "objective": "Smooth network packet arrival variance without introducing excessive end-to-end audio lag.",
+      "example": "jitterBuffer.push(packet); frame = jitterBuffer.popAdaptive();",
+      "exercise": "Implement an adaptive jitter buffer adjusting buffer delay dynamically between 20ms and 80ms based on ping RTT.",
+      "prerequisites": [
+        "audio_opus_codec"
+      ]
+    },
+    {
+      "id": "audio_webrtc_sfu",
+      "title": "WebRTC Selective Forwarding Unit (SFU) Routing",
+      "objective": "Forward audio RTP packets across hundreds of concurrent listeners without expensive server-side transcode re-encoding.",
+      "example": "sfuRouter.pipeAudioTrack(producerTrack, subscriberConsumerList);",
+      "exercise": "Build a multi-participant audio stage where a speaker's audio stream is forwarded to 50 active subscribers.",
+      "prerequisites": [
+        "audio_jitter_buffer"
+      ]
+    },
+    {
+      "id": "audio_echo_cancellation",
+      "title": "Acoustic Echo Cancellation (AEC) & Noise Suppression",
+      "objective": "Filter speaker feedback and ambient background noise using WebRTC Audio Processing Module (APM).",
+      "example": "apm->echo_canceller()->Enable(true); apm->noise_suppression()->set_level(High);",
+      "exercise": "Configure an audio pre-processing pipeline eliminating acoustic speaker feedback during live calls.",
+      "prerequisites": [
+        "audio_opus_codec"
+      ]
+    },
+    {
+      "id": "audio_qos_telemetry",
+      "title": "Audio QoS Metrics: Packet Loss, RTT & MOS Scoring",
+      "objective": "Calculate Mean Opinion Score (MOS) in real time to monitor listener voice quality degradations.",
+      "example": "MOS = f(packet_loss_rate, round_trip_time_ms, jitter_ms)",
+      "exercise": "Write an audio telemetry collector logging MOS scores and automatically switching to lower bitrates on packet loss.",
+      "prerequisites": [
+        "audio_webrtc_sfu"
+      ]
+    }
+  ]
+}

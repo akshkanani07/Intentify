@@ -1,0 +1,61 @@
+{
+  "subject": "CSS",
+  "aliases": [
+    "css",
+    "css3",
+    "cascading style sheets",
+    "web styling"
+  ],
+  "domain": "Web Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "css_selectors",
+      "title": "The Cascade, Specificity & Box Model",
+      "objective": "Understand rule priority, specificity calculations, margins, borders, padding, and content dimensions.",
+      "example": "*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }",
+      "exercise": "Recreate a card component demonstrating precise padding, border, and margin spacing.",
+      "prerequisites": []
+    },
+    {
+      "id": "css_flexbox",
+      "title": "Flexbox One-Dimensional Layouts",
+      "objective": "Align and distribute items along main and cross axes using display: flex, justify-content, and align-items.",
+      "example": ".container { display: flex; justify-content: space-between; align-items: center; }",
+      "exercise": "Build a responsive navigation header and sticky footer using flexbox layout directives.",
+      "prerequisites": [
+        "css_selectors"
+      ]
+    },
+    {
+      "id": "css_grid",
+      "title": "CSS Grid Two-Dimensional Grid Systems",
+      "objective": "Construct complex multi-track layouts using grid-template-columns, fr units, and grid-template-areas.",
+      "example": ".grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }",
+      "exercise": "Implement a dynamic dashboard grid layout with sidebar, header, and multi-column widgets.",
+      "prerequisites": [
+        "css_flexbox"
+      ]
+    },
+    {
+      "id": "css_responsive",
+      "title": "Responsive Design & Mobile-First Media Queries",
+      "objective": "Adapt visual hierarchies across device widths using min-width media queries and fluid clamp() typography.",
+      "example": "@media (min-width: 768px) { .sidebar { display: block; } }",
+      "exercise": "Design a mobile-first product pricing table that smoothly reflows from 1 column to 3 columns.",
+      "prerequisites": [
+        "css_grid"
+      ]
+    },
+    {
+      "id": "css_modern",
+      "title": "CSS Custom Properties (Variables) & Animations",
+      "objective": "Implement reusable design token variables, transitions, and keyframe animations.",
+      "example": ":root { --primary: #0284c7; } .btn { background: var(--primary); transition: transform 0.2s; }",
+      "exercise": "Construct a complete light/dark theme switcher using CSS custom properties and smooth transitions.",
+      "prerequisites": [
+        "css_responsive"
+      ]
+    }
+  ]
+}

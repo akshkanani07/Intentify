@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intentify UI - LIVE-07</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0b0f19; color: #f3f4f6; margin: 0; padding: 24px; }
+        .container { max-width: 960px; margin: 0 auto; background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 32px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1f2937; padding-bottom: 16px; margin-bottom: 24px; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: 600; text-transform: uppercase; }
+        .badge-final { background: #065f46; color: #34d399; border: 1px solid #059669; }
+        .badge-contract { background: #1e3a8a; color: #93c5fd; border: 1px solid #2563eb; }
+        .score { font-size: 32px; font-weight: 700; color: #10b981; }
+        .input-box { background: #1f2937; border-left: 4px solid #3b82f6; padding: 12px 16px; margin-bottom: 24px; border-radius: 4px; font-style: italic; color: #9ca3af; }
+        .meta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+        .meta-card { background: #1e293b; padding: 12px; border-radius: 8px; border: 1px solid #334155; }
+        .meta-card span { display: block; font-size: 11px; text-transform: uppercase; color: #64748b; font-weight: 600; }
+        .meta-card strong { font-size: 14px; color: #e2e8f0; }
+        pre { background: #0f172a; padding: 20px; border-radius: 8px; border: 1px solid #1e293b; overflow-x: auto; font-family: 'JetBrains Mono', Consolas, monospace; font-size: 13px; line-height: 1.6; color: #cbd5e1; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1 style="margin: 0; font-size: 22px; color: #38bdf8;">Intentify Universal Prompt Compiler</h1>
+                <p style="margin: 4px 0 0 0; font-size: 13px; color: #94a3b8;">Live Validation Sample LIVE-07</p>
+            </div>
+            <div style="text-align: right;">
+                <span class="badge badge-final">final</span>
+                <span class="badge badge-contract">build_app</span>
+                <div class="score">100.0<span style="font-size: 14px; color: #6b7280;">/100</span></div>
+            </div>
+        </div>
+
+        <div class="input-box">
+            User Input: "kuch banao"
+        </div>
+
+        <div class="meta-grid">
+            <div class="meta-card"><span>Subject</span><strong>kuch build</strong></div>
+            <div class="meta-card"><span>Product Name</span><strong>None</strong></div>
+            <div class="meta-card"><span>Proficiency</span><strong>Novice / Beginner</strong></div>
+            <div class="meta-card"><span>Audience</span><strong>End Users & Platform Clients</strong></div>
+        </div>
+
+        <h3 style="color: #f1f5f9; font-size: 16px; margin-top: 24px;">Compiled Master Prompt Output</h3>
+        <pre>## निर्देश: इस प्रॉम्प्ट के अनुसार विशेषज्ञ मार्गदर्शन, पूर्ण विवरण और सटीक समाधान प्रदान करें।
+
+### 1. भूमिका और तकनीकी व्यक्तित्व (Role & Technical Persona)
+- Software Developer के रूप में प्रामाणिक भूमिका निभाएं, और Novice / Beginner शिक्षार्थी के लिए स्पष्ट मार्गदर्शन प्रदान करें।
+- Emphasize deterministic execution, clean architectural separation of concerns, and system reliability.
+- Tailor all technical specifications for End Users & Platform Clients (Novice / Beginner).
+
+### 2. सिस्टम का मुख्य उद्देश्य और कार्यक्षेत्र (Core Objective & System Scope)
+- उद्देश्य: kuch build बुनियादी स्तर से सीखना: मूलभूत सिद्धांतों से व्यावहारिक दक्षता तक पूर्ण मार्गदर्शन.
+- Primary Target Domain: Strategic Domain.
+- Deliverable Artifact: Production Architecture Specification for kuch build.
+
+### 3. Operational Framework & Subsystem Topology
+- Operational Subsystems & Topology (Derived):
+- Note: The structural outline is derived from domain entities and foundational architectural principles.
+Subsystem 1: Requirements Decomposition & Scoping for kuch build
+- - Design Objective: Define functional and non-functional system boundaries for kuch build.
+- - Implementation Requirement: Establish verifiable boundary constraints and stakeholder interfaces.
+Subsystem 2: Domain Modeling & Entity Relationships for kuch build
+- - Design Objective: Design high-cohesion domain models and data invariants for kuch build.
+- - Implementation Requirement: Construct domain schema models and relational contracts.
+Subsystem 3: Core Workflows & Processing Pipelines for kuch build
+- - Design Objective: Implement decoupled execution pipelines and transactional lifecycles in kuch build.
+- - Implementation Requirement: Draft end-to-end request/response workflow specifications.
+Subsystem 4: Security, Reliability & Fault Isolation for kuch build
+- - Design Objective: Enforce defensive boundary protections, rate limits, and fallback strategies in kuch build.
+- - Implementation Requirement: Configure failure recovery protocols and audit access controls.
+Subsystem 5: Deployment Topology, Verification & Telemetry for kuch build
+- - Design Objective: Establish automated test suites, health monitoring, and production deployment topology.
+- - Implementation Requirement: Formulate end-to-end integration test plans and operational metrics.
+
+### 5. सत्यापन योग्य स्वीकृति मानदंड (Verifiable Acceptance Criteria)
+- Deploys an end-to-end architecture fulfilling all subsystem design objectives and integration boundaries.
+- Enforces strict data integrity, fault isolation, and horizontal scalability across services.
+- अधूरे प्लेसहोल्डर्स अथवा काल्पनिक दावों से पूरी तरह मुक्त रहें।
+- All functional interfaces and data schemas validated with deterministic test scenarios.
+- निर्धारित सभी परिचालन सीमाओं और प्रतिबंधों का पूर्ण अनुपालन करें।
+
+### 6. आउटपुट प्रारूप विनिर्देश (Output Format Specification)
+- पूर्ण प्रतिक्रिया Structured Markdown Document with System Topology and Specifications के अनुसार स्पष्ट Markdown प्रारूप में प्रदान करें।
+- Use clean Markdown with architectural diagrams and schema definitions.
+
+### 7. स्व-सत्यापन गुणवत्ता चेकलिस्ट (Self-Verification Quality Checklist)
+- Verify all functional modules are fully specified without truncation
+- Confirm zero placeholder stubs or unverified claims in specifications
+- Validate explicit failure recovery protocols established for all critical flows
+
+### 8. परिचालन सीमाएं और निषेध (Operational Guardrails & Negative Constraints)
+- **Prohibition**: DO NOT write partial code snippets or leave incomplete stub implementations.
+- **Prohibition**: DO NOT assume prior knowledge of advanced technical terms without defining them first.
+- **Prohibition**: DO NOT deviate from the requested output structure or omit hands-on exercises.
+- **Strict Constraint**: Production-ready execution with verified schemas and complete implementations
+- **Strict Constraint**: Strict alignment with industry standards and best practices
+
+### 9. प्रलेखित धारणाएं और संदर्भ (Documented Assumptions & Context)
+- **Assumption**: Target audience operates with the background knowledge expected of Novice / Beginner.
+- **Assumption**: All functional specifications require complete production-ready syntax and verified schema definitions.</pre>
+    </div>
+</body>
+</html>

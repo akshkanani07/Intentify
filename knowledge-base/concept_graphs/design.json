@@ -1,0 +1,46 @@
+{
+  "domain": "UI/UX & Product Design",
+  "nodes": [
+    {
+      "id": "des_research",
+      "name": "User Research, Empathy Maps & Journey Flows",
+      "prerequisites": []
+    },
+    {
+      "id": "des_ia",
+      "name": "Information Architecture & Site Taxonomy",
+      "prerequisites": [
+        "des_research"
+      ]
+    },
+    {
+      "id": "des_wireframes",
+      "name": "Low-Fidelity Wireframes & Interaction Models",
+      "prerequisites": [
+        "des_ia"
+      ]
+    },
+    {
+      "id": "des_tokens",
+      "name": "Design Systems, Tokens & Component Libraries",
+      "prerequisites": [
+        "des_wireframes"
+      ]
+    },
+    {
+      "id": "des_prototype",
+      "name": "High-Fidelity Interactive Prototypes",
+      "prerequisites": [
+        "des_tokens"
+      ]
+    },
+    {
+      "id": "des_usability",
+      "name": "Usability Testing & Accessibility (WCAG 2.1 AA)",
+      "prerequisites": [
+        "des_prototype"
+      ]
+    }
+  ],
+  "reviewed": false
+}

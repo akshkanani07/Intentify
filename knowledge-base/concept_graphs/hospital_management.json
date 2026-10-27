@@ -1,0 +1,62 @@
+{
+  "subject": "Hospital Management",
+  "aliases": [
+    "hospital management",
+    "hospital erp",
+    "clinical workflow",
+    "patient admission"
+  ],
+  "domain": "Healthcare",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "hosp_patient_registration",
+      "title": "Patient Master Index & Demographic Registration",
+      "objective": "Establish unified medical record numbers (MRN) and manage patient identity without duplicate records.",
+      "example": "PatientRecord: { MRN: 'HOSP-2026-9921', demographics: { name, dob, blood_group } }",
+      "exercise": "Design an automated patient deduplication algorithm using probabilistic matching on national ID and DOB.",
+      "prerequisites": []
+    },
+    {
+      "id": "hosp_bed_management",
+      "title": "Real-Time Inpatient Bed Allocation & Ward Telemetry",
+      "objective": "Track bed occupancy across ICU, general, and emergency wards with automated cleaning and turnover workflows.",
+      "example": "BedStatus: { id: 'ICU-B04', state: 'OCCUPIED', expected_discharge: '2026-10-30' }",
+      "exercise": "Create a real-time bed management state machine handling admission, transfer, discharge, and sanitization cycles.",
+      "prerequisites": [
+        "hosp_patient_registration"
+      ]
+    },
+    {
+      "id": "hosp_opd_scheduling",
+      "title": "Outpatient (OPD) Clinic Scheduling & Queue Optimization",
+      "objective": "Schedule clinical consultations while dynamically adjusting queues based on urgent triage priorities.",
+      "example": "AppointmentQueue: PriorityQueue ordered by triage severity and arrival timestamp.",
+      "exercise": "Implement a clinic queue dispatch system that prioritizes emergency walk-ins ahead of routine checkups.",
+      "prerequisites": [
+        "hosp_patient_registration"
+      ]
+    },
+    {
+      "id": "hosp_pharmacy_billing",
+      "title": "Inpatient Pharmacy Dispensing & Charge Capture",
+      "objective": "Verify computerized physician order entry (CPOE) medications against real-time billing ledgers.",
+      "example": "OrderEvent: DrugDispensed -> ChargeCaptured -> InventoryDecremented",
+      "exercise": "Build a transaction pipeline ensuring medication charges are posted to the patient ledger upon barcode dispensation.",
+      "prerequisites": [
+        "hosp_bed_management"
+      ]
+    },
+    {
+      "id": "hosp_compliance_hipaa",
+      "title": "HIPAA Privacy, Audit Logs & Medical Access Governance",
+      "objective": "Restrict Electronic Protected Health Information (ePHI) access and record immutable audit logs.",
+      "example": "AuditLog: { timestamp, clinician_id, patient_mrn, action: 'VIEW_LAB_RESULTS' }",
+      "exercise": "Write an audit logging interceptor capturing every read operation on patient medical charts.",
+      "prerequisites": [
+        "hosp_patient_registration"
+      ]
+    }
+  ]
+}

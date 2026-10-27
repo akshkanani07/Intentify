@@ -1,0 +1,80 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: intentify-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=Intentify
+      - DEBUG=false
+      - DATABASE_URL=postgresql+asyncpg://intentify:intentify_secret@postgres:5432/intentify
+      - REDIS_URL=redis://redis:6379/0
+      - MODEL_DIR=/app/ml-engine/models
+      - KNOWLEDGE_BASE_DIR=/app/knowledge-base
+    volumes:
+      - ./ml-engine/models:/app/ml-engine/models
+      - ./knowledge-base:/app/knowledge-base
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: intentify-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8000
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: intentify-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=intentify
+      - POSTGRES_PASSWORD=intentify_secret
+      - POSTGRES_DB=intentify
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U intentify"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: intentify-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:

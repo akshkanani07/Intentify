@@ -1,0 +1,62 @@
+{
+  "subject": "Redis",
+  "aliases": [
+    "redis",
+    "in-memory cache",
+    "redis cluster",
+    "caching"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "redis_data_structures",
+      "title": "Strings, Hashes, Lists, Sets & Sorted Sets (ZSet)",
+      "objective": "Map application state to optimal Redis in-memory primitives for O(1) and O(log N) operations.",
+      "example": "ZADD leaderboard 1500 'user:42'; ZREVRANGE leaderboard 0 9 WITHSCORES;",
+      "exercise": "Build a real-time gaming leaderboard using Redis Sorted Sets with rank query support.",
+      "prerequisites": []
+    },
+    {
+      "id": "redis_eviction_ttl",
+      "title": "TTL Expirations & Memory Eviction Policies",
+      "objective": "Prevent out-of-memory errors by sizing caches with appropriate allkeys-lru or volatile-ttl policies.",
+      "example": "SETEX session:abc 3600 'token_data'; maxmemory-policy allkeys-lru;",
+      "exercise": "Configure a Redis test instance to verify LRU eviction under memory saturation.",
+      "prerequisites": [
+        "redis_data_structures"
+      ]
+    },
+    {
+      "id": "redis_distributed_locks",
+      "title": "Distributed Locking (Redlock Algorithm)",
+      "objective": "Coordinate shared resource access across multi-instance microservices without race conditions.",
+      "example": "SET resource_lock my_random_token NX PX 30000",
+      "exercise": "Implement a distributed lock manager with safe Lua script release verification.",
+      "prerequisites": [
+        "redis_data_structures"
+      ]
+    },
+    {
+      "id": "redis_pubsub_streams",
+      "title": "Pub/Sub Messaging & Redis Streams (XADD, XREADGROUP)",
+      "objective": "Process real-time event streams with persistent consumer groups and ack confirmations.",
+      "example": "XADD stream:orders * order_id 101 user 42; XREADGROUP GROUP mygroup ...",
+      "exercise": "Build an event worker pool consuming orders from a Redis Stream with consumer recovery on restart.",
+      "prerequisites": [
+        "redis_data_structures"
+      ]
+    },
+    {
+      "id": "redis_persistence_cluster",
+      "title": "Persistence (RDB/AOF), Sentinel & Cluster Sharding",
+      "objective": "Ensure durability and high availability across automated master failovers and 16,384 hash slots.",
+      "example": "appendonly yes; appendfsync everysec; cluster-enabled yes;",
+      "exercise": "Configure Redis Sentinel to execute automated master promotion during primary node failure simulation.",
+      "prerequisites": [
+        "redis_eviction_ttl"
+      ]
+    }
+  ]
+}

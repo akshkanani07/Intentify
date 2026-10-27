@@ -1,0 +1,63 @@
+{
+  "subject": "FastAPI",
+  "aliases": [
+    "fastapi",
+    "fastapi rest",
+    "python api",
+    "uvicorn",
+    "pydantic"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "fastapi_pydantic_schemas",
+      "title": "Path Operations, Request Bodies & Pydantic v2 Validation",
+      "objective": "Define type-annotated API endpoints with automated request validation and OpenAPI documentation.",
+      "example": "@app.post('/items') async def create_item(item: ItemCreate) -> ItemResponse:",
+      "exercise": "Build an endpoint validating user registration payloads with custom email and password complexity validators.",
+      "prerequisites": []
+    },
+    {
+      "id": "fastapi_dependency_injection",
+      "title": "Hierarchical Dependency Injection (Depends)",
+      "objective": "Encapsulate database sessions, authenticated user contexts, and configuration access with Depends.",
+      "example": "async def get_db() -> AsyncGenerator[AsyncSession, None]: yield session",
+      "exercise": "Create a reusable authentication dependency verifying JWT Bearer tokens and returning an active User model.",
+      "prerequisites": [
+        "fastapi_pydantic_schemas"
+      ]
+    },
+    {
+      "id": "fastapi_async_db",
+      "title": "Asynchronous Database Access with SQLAlchemy 2.0 & asyncpg",
+      "objective": "Prevent event loop blocking using non-blocking async database queries and transaction context managers.",
+      "example": "result = await session.execute(select(User).where(User.id == user_id))",
+      "exercise": "Write an async CRUD service handling concurrent order creation inside an atomic database transaction.",
+      "prerequisites": [
+        "fastapi_dependency_injection"
+      ]
+    },
+    {
+      "id": "fastapi_middleware_security",
+      "title": "CORS, Rate Limiting & Security Headers Middleware",
+      "objective": "Harden FastAPI applications against CSRF, CORS misconfigurations, and brute-force abuse.",
+      "example": "app.add_middleware(CORSMiddleware, allow_origins=['https://app.example.com'])",
+      "exercise": "Implement an IP-based sliding window rate limiter middleware returning 429 Too Many Requests.",
+      "prerequisites": [
+        "fastapi_pydantic_schemas"
+      ]
+    },
+    {
+      "id": "fastapi_background_tasks",
+      "title": "BackgroundTasks & WebSockets for Real-Time Events",
+      "objective": "Offload non-blocking post-request actions and stream bidirectional real-time messages.",
+      "example": "background_tasks.add_task(send_welcome_email, user.email)",
+      "exercise": "Create a WebSocket endpoint broadcasting live system telemetry updates to subscribed frontend clients.",
+      "prerequisites": [
+        "fastapi_dependency_injection"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "subject": "Docker",
+  "aliases": [
+    "docker",
+    "containerization",
+    "dockerfile",
+    "containers"
+  ],
+  "domain": "Cloud Computing & DevOps",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "dkr_dockerfile_multi_stage",
+      "title": "Multi-Stage Dockerfiles & Minimal Image Construction",
+      "objective": "Build secure, minimal production container images by separating compilation stages from runtime distroless layers.",
+      "example": "FROM golang:1.22 AS builder ... FROM gcr.io/distroless/static-debian12",
+      "exercise": "Author a multi-stage Dockerfile for a Python web app reducing image size below 80MB without root privileges.",
+      "prerequisites": []
+    },
+    {
+      "id": "dkr_layer_caching",
+      "title": "Layer Caching Strategies & Dependency Pinning",
+      "objective": "Speed up CI/CD build pipelines by ordering Dockerfile instructions from least to most frequently changing.",
+      "example": "COPY requirements.txt . ; RUN pip install -r requirements.txt ; COPY . .",
+      "exercise": "Restructure a build script to optimize Docker layer cache re-use during frequent code commits.",
+      "prerequisites": [
+        "dkr_dockerfile_multi_stage"
+      ]
+    },
+    {
+      "id": "dkr_networking_compose",
+      "title": "Container Networking & Multi-Service Docker Compose",
+      "objective": "Orchestrate local development environments with isolated bridge networks and persistent storage volumes.",
+      "example": "services: api: depends_on: [db] networks: [backend_net]",
+      "exercise": "Write a docker-compose.yml launching an API, PostgreSQL database, and Redis cache with healthchecks.",
+      "prerequisites": [
+        "dkr_layer_caching"
+      ]
+    },
+    {
+      "id": "dkr_security_hardening",
+      "title": "Container Hardening: Non-Root Users & Read-Only Rootfs",
+      "objective": "Eliminate container breakout vulnerabilities by dropping capabilities and running unprivileged user IDs.",
+      "example": "USER 10001:10001 ; read_only: true ; cap_drop: [ALL]",
+      "exercise": "Harden a production container manifest by dropping all Linux capabilities and mounting tmpfs for temporary files.",
+      "prerequisites": [
+        "dkr_dockerfile_multi_stage"
+      ]
+    },
+    {
+      "id": "dkr_registry_scanning",
+      "title": "Image Scanning, Vulnerability Patching & Registry Signing",
+      "objective": "Scan images for CVEs using Trivy/Clair and sign artifacts with Cosign before production deployment.",
+      "example": "trivy image --severity HIGH,CRITICAL my-app:latest",
+      "exercise": "Integrate an automated Trivy security vulnerability gate failing builds on unpatched Critical CVEs.",
+      "prerequisites": [
+        "dkr_security_hardening"
+      ]
+    }
+  ]
+}

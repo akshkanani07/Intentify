@@ -1,0 +1,1897 @@
+{
+  "version": "1.0.0",
+  "description": "Canonical 2-Tier Hierarchical Domain Taxonomy for Intentify Universal AI Prompt Compiler",
+  "parents": {
+    "Software Development": {
+      "triggers": [
+        "software",
+        "programming",
+        "code",
+        "backend",
+        "frontend",
+        "api",
+        "database",
+        "microservice",
+        "microservices",
+        "full stack",
+        "fullstack",
+        "websocket",
+        "timesheet",
+        "crdt",
+        "kafka",
+        "saga",
+        "graphql",
+        "rate limiter",
+        "idempotent",
+        "saas platform",
+        "web application",
+        "project management tool",
+        "pm tool"
+      ],
+      "children": {
+        "Webhook Delivery": {
+          "triggers": [
+            "webhook",
+            "idempotency",
+            "webhook delivery",
+            "idempotent webhook"
+          ]
+        },
+        "Feature Flag Engine": {
+          "triggers": [
+            "feature flag",
+            "rollout",
+            "rule evaluation",
+            "feature toggle"
+          ]
+        },
+        "GraphQL Federation": {
+          "triggers": [
+            "graphql",
+            "federation",
+            "supergraph",
+            "subgraph"
+          ]
+        },
+        "Audit Log Stream": {
+          "triggers": [
+            "audit log",
+            "audit stream",
+            "immutable log",
+            "parquet archive"
+          ]
+        },
+        "RBAC Authorization": {
+          "triggers": [
+            "rbac",
+            "role based access",
+            "rego",
+            "open policy agent",
+            "opa"
+          ]
+        },
+        "Multi-Tenant Database": {
+          "triggers": [
+            "multi-tenant",
+            "schema isolation",
+            "tenant-isolated",
+            "row-level security"
+          ]
+        },
+        "Collaborative CRDT": {
+          "triggers": [
+            "crdt",
+            "collaborative editor",
+            "conflict resolution",
+            "rich-text collaboration"
+          ]
+        },
+        "Distributed Rate Limiter": {
+          "triggers": [
+            "rate limiter",
+            "token bucket",
+            "redis lua",
+            "api rate limiting"
+          ]
+        },
+        "Time-Series Ingestion": {
+          "triggers": [
+            "time-series",
+            "metrics ingestion",
+            "telemetry rollups",
+            "sensor ingestion"
+          ]
+        },
+        "SSO Identity Federation": {
+          "triggers": [
+            "saml",
+            "sso",
+            "single sign-on",
+            "oidc",
+            "identity provider"
+          ]
+        },
+        "Search Indexing": {
+          "triggers": [
+            "elasticsearch",
+            "reindexing",
+            "index alias",
+            "catalog search"
+          ]
+        },
+        "Saga Workflow": {
+          "triggers": [
+            "saga",
+            "workflow orchestration",
+            "step compensation",
+            "saga pattern"
+          ]
+        },
+        "File Upload Service": {
+          "triggers": [
+            "presigned",
+            "file upload",
+            "multipart upload",
+            "chunked upload"
+          ]
+        },
+        "Envoy Service Mesh": {
+          "triggers": [
+            "envoy",
+            "service mesh",
+            "sidecar proxy",
+            "mtls traffic"
+          ]
+        },
+        "Low-Latency Audio": {
+          "triggers": [
+            "audio streaming",
+            "music streamer",
+            "low-latency audio",
+            "audio codec",
+            "music player"
+          ]
+        },
+        "Project Management": {
+          "triggers": [
+            "project management",
+            "pm tool",
+            "kanban",
+            "task management",
+            "sprint tracker"
+          ]
+        },
+        "Timesheet Microservice": {
+          "triggers": [
+            "timesheet",
+            "employee hours",
+            "shift logging",
+            "time tracking"
+          ]
+        },
+        "Websocket Gateway": {
+          "triggers": [
+            "websocket gateway",
+            "chat gateway",
+            "realtime socket",
+            "socket server"
+          ]
+        },
+        "Remote Freelancer": {
+          "triggers": [
+            "freelancer escrow",
+            "freelance platform",
+            "escrow contract"
+          ]
+        },
+        "E-Commerce Platform": {
+          "triggers": [
+            "ecommerce catalog",
+            "product catalog",
+            "shopping cart",
+            "multivendor",
+            "ecommerce platform",
+            "e-commerce platform",
+            "multi-vendor ecommerce",
+            "stripe payment gateway"
+          ]
+        }
+      }
+    },
+    "Cloud Computing & DevOps": {
+      "triggers": [
+        "cloud",
+        "devops",
+        "kubernetes",
+        "k8s",
+        "docker",
+        "ci/cd",
+        "infrastructure",
+        "terraform",
+        "ansible",
+        "istio",
+        "helm",
+        "argocd",
+        "aws",
+        "gcp",
+        "azure",
+        "observability",
+        "prometheus",
+        "grafana",
+        "linux administration"
+      ],
+      "children": {
+        "Infrastructure as Code": {
+          "triggers": [
+            "terraform",
+            "iac",
+            "cloudformation",
+            "pulumi"
+          ]
+        },
+        "Configuration Management": {
+          "triggers": [
+            "ansible",
+            "puppet",
+            "chef",
+            "playbook"
+          ]
+        },
+        "ArgoCD GitOps": {
+          "triggers": [
+            "argocd",
+            "gitops",
+            "helm sync",
+            "multi-cluster deployment"
+          ]
+        },
+        "AWS Landing Zone": {
+          "triggers": [
+            "landing zone",
+            "control tower",
+            "guardduty",
+            "transit gateway"
+          ]
+        },
+        "Prometheus Monitoring": {
+          "triggers": [
+            "prometheus",
+            "alertmanager",
+            "slo alert",
+            "pagerduty"
+          ]
+        },
+        "Hardened CI Pipeline": {
+          "triggers": [
+            "github actions",
+            "cosign",
+            "trivy",
+            "sbom",
+            "container signing"
+          ]
+        },
+        "OpenTelemetry Tracing": {
+          "triggers": [
+            "opentelemetry",
+            "otel",
+            "tempo",
+            "mimir",
+            "distributed tracing"
+          ]
+        },
+        "Istio Service Mesh": {
+          "triggers": [
+            "istio",
+            "strict mtls",
+            "service mesh authorization",
+            "peer authentication",
+            "configure zero-trust"
+          ]
+        },
+        "Vault Secret Management": {
+          "triggers": [
+            "vault",
+            "hashicorp vault",
+            "dynamic credentials",
+            "secret injection"
+          ]
+        },
+        "Chaos Engineering": {
+          "triggers": [
+            "chaos mesh",
+            "chaos engineering",
+            "fault injection",
+            "pod killing"
+          ]
+        },
+        "CloudFormation Drift": {
+          "triggers": [
+            "cloudformation drift",
+            "drift remediation",
+            "template drift"
+          ]
+        },
+        "ECS Blue/Green": {
+          "triggers": [
+            "ecs",
+            "blue green",
+            "fargate deployment",
+            "codedeploy"
+          ]
+        },
+        "Linux Administration": {
+          "triggers": [
+            "linux admin",
+            "bash scripting",
+            "system administration",
+            "sysadmin"
+          ]
+        }
+      }
+    },
+    "Programming Education": {
+      "triggers": [
+        "learn programming",
+        "coding curriculum",
+        "programming tutorial",
+        "computer science",
+        "coding exercises",
+        "syntax",
+        "શીખવું",
+        "પ્રોગ્રામિંગ",
+        "सीखना",
+        "प्रोग्रामिंग"
+      ],
+      "children": {
+        "Systems Programming": {
+          "triggers": [
+            "zig",
+            "systems programming",
+            "low-level programming",
+            "memory management"
+          ]
+        },
+        "Functional Programming": {
+          "triggers": [
+            "haskell",
+            "functional programming",
+            "monad",
+            "pure function"
+          ]
+        },
+        "Game Engine Development": {
+          "triggers": [
+            "unreal engine",
+            "unity",
+            "game engine",
+            "game dev"
+          ]
+        },
+        "Inter-Service Protocols": {
+          "triggers": [
+            "grpc",
+            "protobuf",
+            "rpc protocol",
+            "protocol buffers"
+          ]
+        },
+        "Frontend Frameworks": {
+          "triggers": [
+            "svelte",
+            "sveltekit",
+            "vue",
+            "vue 3",
+            "react",
+            "frontend framework"
+          ]
+        },
+        "Kernel Driver Development": {
+          "triggers": [
+            "linux kernel",
+            "kernel module",
+            "character driver",
+            "device driver"
+          ]
+        },
+        ".NET Web API": {
+          "triggers": [
+            "c#",
+            "dotnet",
+            ".net",
+            "csharp",
+            "asp.net"
+          ]
+        },
+        "Data Structures & Algorithms": {
+          "triggers": [
+            "dsa",
+            "data structures",
+            "algorithms",
+            "ડેટા સ્ટ્રક્ચર",
+            "અલ્ગોરિધમ"
+          ]
+        },
+        "React Native Development": {
+          "triggers": [
+            "react native",
+            "cross platform mobile",
+            "mobile app dev"
+          ]
+        },
+        "Python Programming Pedagogy": {
+          "triggers": [
+            "python",
+            "learn python",
+            "python basics",
+            "python curriculum"
+          ]
+        },
+        "Java Programming Pedagogy": {
+          "triggers": [
+            "java",
+            "learn java",
+            "jvm basics",
+            "java curriculum"
+          ]
+        },
+        "Pedagogical Rust": {
+          "triggers": [
+            "rust",
+            "learn rust",
+            "borrow checker",
+            "ownership model"
+          ]
+        }
+      }
+    },
+    "Education": {
+      "triggers": [
+        "education",
+        "pedagogy",
+        "curriculum",
+        "teaching",
+        "student",
+        "school",
+        "university",
+        "e-learning",
+        "academic",
+        "syllabus",
+        "શિક્ષણ",
+        "શાળા",
+        "વિદ્યાર્થી",
+        "शिक्षा",
+        "पढ़ाई"
+      ],
+      "children": {
+        "Home Tuition Booking App": {
+          "triggers": [
+            "home tuition",
+            "tutor booking",
+            "tuition teacher",
+            "private tutor"
+          ]
+        },
+        "Higher Education Curriculum": {
+          "triggers": [
+            "university curriculum",
+            "college syllabus",
+            "degree program"
+          ]
+        },
+        "Adaptive Testing": {
+          "triggers": [
+            "adaptive testing",
+            "formative assessment",
+            "quiz generation"
+          ]
+        },
+        "K-12 Lesson Planning": {
+          "triggers": [
+            "k-12",
+            "lesson plan",
+            "classroom activity",
+            "grade school"
+          ]
+        },
+        "Corporate Learning Management": {
+          "triggers": [
+            "lms",
+            "learning management system",
+            "employee training"
+          ]
+        }
+      }
+    },
+    "Healthcare": {
+      "triggers": [
+        "medical",
+        "medicine",
+        "doctor",
+        "clinical",
+        "hospital",
+        "patient",
+        "diagnosis",
+        "therapy",
+        "pharmacy",
+        "cardiology",
+        "oncology",
+        "ehr",
+        "emr",
+        "telemedicine",
+        "telehealth",
+        "hipaa",
+        "દવા",
+        "આરોગ્ય",
+        "હોસ્પિટલ",
+        "દર્દી",
+        "दवा",
+        "इलाज",
+        "अस्पताल"
+      ],
+      "children": {
+        "FHIR Translation": {
+          "triggers": [
+            "fhir",
+            "hl7",
+            "observational bundle",
+            "us core profile"
+          ]
+        },
+        "DICOM Imaging Archive": {
+          "triggers": [
+            "dicom",
+            "imaging archive",
+            "radiology p夠",
+            "pacs storage"
+          ]
+        },
+        "E-Prescribing Validation": {
+          "triggers": [
+            "e-prescribing",
+            "prescription validation",
+            "drug interaction",
+            "contraindication"
+          ]
+        },
+        "Telehealth Scheduling": {
+          "triggers": [
+            "telehealth",
+            "telemedicine",
+            "webrtc clinic",
+            "virtual consult"
+          ]
+        },
+        "Nursing Discharge Protocol": {
+          "triggers": [
+            "discharge protocol",
+            "clinical discharge",
+            "nursing checklist",
+            "medication reconciliation"
+          ]
+        },
+        "LIS Integration": {
+          "triggers": [
+            "lis",
+            "laboratory information system",
+            "lab results webhook"
+          ]
+        },
+        "PACS Radiology Dispatch": {
+          "triggers": [
+            "pacs",
+            "radiology worklist",
+            "emergency scan dispatch"
+          ]
+        },
+        "Clinical Trial Matching": {
+          "triggers": [
+            "clinical trial",
+            "trial eligibility",
+            "genomic biomarker"
+          ]
+        },
+        "Hospital Drug Inventory": {
+          "triggers": [
+            "hospital inventory",
+            "pharmacy stock",
+            "surgical supply"
+          ]
+        },
+        "WhatsApp Clinic Booking": {
+          "triggers": [
+            "whatsapp clinic",
+            "opd booking",
+            "clinic appointment"
+          ]
+        },
+        "Veterinary Scheduling": {
+          "triggers": [
+            "veterinary",
+            "pet boarding",
+            "animal clinic"
+          ]
+        },
+        "Wearable Biosensors": {
+          "triggers": [
+            "wearable biosensor",
+            "arrhythmia sensor",
+            "ecg wearable",
+            "wearable arrhythmia"
+          ]
+        }
+      }
+    },
+    "Event Planning": {
+      "triggers": [
+        "event",
+        "wedding",
+        "marriage",
+        "ceremony",
+        "reception",
+        "event planner",
+        "banquet",
+        "catering",
+        "mandap",
+        "sangeet",
+        "haldi",
+        "destination wedding",
+        "conference",
+        "convention",
+        "gala",
+        "summit",
+        "hackathon",
+        "લગ્ન",
+        "વિવાહ",
+        "પ્રસંગ",
+        "સંગીત",
+        "શાહી",
+        "शादी",
+        "विवाह",
+        "सम्मेलन"
+      ],
+      "children": {
+        "Destination Wedding": {
+          "triggers": [
+            "destination wedding",
+            "udaipur wedding",
+            "jaipur wedding",
+            "heritage wedding",
+            "royal wedding"
+          ]
+        },
+        "Beach Destination Wedding": {
+          "triggers": [
+            "mandvi beach",
+            "beach wedding",
+            "coastal wedding",
+            "goa wedding"
+          ]
+        },
+        "Delhi Destination Wedding": {
+          "triggers": [
+            "delhi wedding",
+            "farmhouse wedding",
+            "grand wedding"
+          ]
+        },
+        "Sangeet Ceremony Coordination": {
+          "triggers": [
+            "sangeet",
+            "choreographer",
+            "dance setup",
+            "sound setup"
+          ]
+        },
+        "Developer Hackathon": {
+          "triggers": [
+            "hackathon",
+            "hybrid hackathon",
+            "demo day",
+            "judging panel"
+          ]
+        },
+        "Corporate Sales Kickoff": {
+          "triggers": [
+            "sales kickoff",
+            "plenary keynote",
+            "annual corporate conference"
+          ]
+        },
+        "City Marathon Logistics": {
+          "triggers": [
+            "marathon",
+            "half-marathon",
+            "hydration station",
+            "street closure"
+          ]
+        },
+        "Art Gallery Opening": {
+          "triggers": [
+            "art gallery",
+            "vernissage",
+            "exhibition preview",
+            "vip art preview"
+          ]
+        },
+        "Music Festival Staging": {
+          "triggers": [
+            "music festival stage",
+            "artist changeover",
+            "cue sheet",
+            "decibel compliance"
+          ]
+        },
+        "Luxury Wedding Coordination": {
+          "triggers": [
+            "luxury wedding",
+            "50 lakh",
+            "80 lakh",
+            "palace wedding"
+          ]
+        }
+      }
+    },
+    "Hospitality & Lifestyle": {
+      "triggers": [
+        "hospitality",
+        "hotel",
+        "resort",
+        "cafe",
+        "restaurant",
+        "dining",
+        "culinary",
+        "wine",
+        "retreat",
+        "fitness",
+        "gym",
+        "wellness",
+        "થાલી",
+        "કાઠિયાવાડી",
+        "होटल",
+        "रेस्टोरेंट"
+      ],
+      "children": {
+        "Wine Tasting Festival": {
+          "triggers": [
+            "wine festival",
+            "artisanal winery",
+            "tasting festival"
+          ]
+        },
+        "Executive Retreat": {
+          "triggers": [
+            "executive retreat",
+            "wellness retreat",
+            "leadership retreat",
+            "mindfulness retreat"
+          ]
+        },
+        "Cafe Kitchen Inventory": {
+          "triggers": [
+            "cafe inventory",
+            "bakery wastage",
+            "rooftop cafe"
+          ]
+        },
+        "Workout & Nutrition Tracker": {
+          "triggers": [
+            "workout plan",
+            "nutrition tracker",
+            "fitness beginner"
+          ]
+        },
+        "Gym Member Management": {
+          "triggers": [
+            "gym management",
+            "gym software",
+            "fitness club fees"
+          ]
+        },
+        "Hotel Reservation System": {
+          "triggers": [
+            "hotel reservation",
+            "room booking",
+            "boutique hotel"
+          ]
+        },
+        "Kathiyawadi Restaurant SOP": {
+          "triggers": [
+            "kathiyawadi restaurant",
+            "kitchen sop",
+            "thali franchise"
+          ]
+        }
+      }
+    },
+    "Business & Strategy": {
+      "triggers": [
+        "business",
+        "strategy",
+        "expansion",
+        "franchise",
+        "gtm",
+        "market entry",
+        "pitch deck",
+        "fundraising",
+        "merger",
+        "acquisition",
+        "unit economics",
+        "supply chain",
+        "churn",
+        "વેપાર",
+        "ધંધો",
+        "બિઝનેસ",
+        "વ્યવસાય",
+        "વ્યૂહરચના",
+        "व्यापार",
+        "व्यवसाय",
+        "रणनीति"
+      ],
+      "children": {
+        "B2B SaaS Pricing": {
+          "triggers": [
+            "usage tier pricing",
+            "saas pricing",
+            "enterprise discount matrix"
+          ]
+        },
+        "Fintech Market Expansion": {
+          "triggers": [
+            "market entry",
+            "fintech expansion",
+            "cross border upi",
+            "uae expansion"
+          ]
+        },
+        "Seed Fundraising Pitch": {
+          "triggers": [
+            "pitch deck",
+            "pre-seed pitch",
+            "fundraising outline",
+            "investor pitch"
+          ]
+        },
+        "Post-Merger Integration": {
+          "triggers": [
+            "post-merger",
+            "100-day integration",
+            "merger roadmap"
+          ]
+        },
+        "QSR Franchise SOP": {
+          "triggers": [
+            "qsr franchise",
+            "franchise operations manual",
+            "chai franchise"
+          ]
+        },
+        "Supply Chain Risk Analysis": {
+          "triggers": [
+            "supply chain risk",
+            "semiconductor sourcing",
+            "single point of failure"
+          ]
+        },
+        "Talent Retention Strategy": {
+          "triggers": [
+            "talent retention",
+            "equity vesting",
+            "engineer turnover"
+          ]
+        },
+        "DTC Churn Strategy": {
+          "triggers": [
+            "dtc churn",
+            "subscription churn",
+            "involuntary churn"
+          ]
+        },
+        "Rooftop Solar Business Plan": {
+          "triggers": [
+            "solar rooftop business",
+            "solar installation business",
+            "subsidy guide"
+          ]
+        },
+        "Textile Export Compliance": {
+          "triggers": [
+            "textile export",
+            "cotton garments export",
+            "garment export compliance"
+          ]
+        },
+        "Cloud Kitchen Business Plan": {
+          "triggers": [
+            "cloud kitchen",
+            "zomato swiggy kitchen",
+            "delivery-only restaurant"
+          ]
+        },
+        "Startup Ideation Blueprint": {
+          "triggers": [
+            "startup ideation",
+            "naveen idea",
+            "startup blueprint"
+          ]
+        },
+        "General Purpose Strategy": {
+          "triggers": [
+            "kuch banao",
+            "general strategy",
+            "kuch naya banao",
+            "kuch idea"
+          ]
+        },
+        "EV Fleet Expansion": {
+          "triggers": [
+            "ev fleet",
+            "electric bus charging",
+            "dynamic load management",
+            "ev fleet charging",
+            "fleet charging",
+            "commercial ev fleet",
+            "ev fleet charging subscription"
+          ]
+        },
+        "Cold-Chain Distribution": {
+          "triggers": [
+            "cold-chain",
+            "cold-chain distribution",
+            "cold chain",
+            "market entry and cold-chain",
+            "organic dairy products",
+            "market entry"
+          ]
+        }
+      }
+    },
+    "Marketing": {
+      "triggers": [
+        "marketing",
+        "seo",
+        "branding",
+        "campaign",
+        "social media",
+        "advertising",
+        "audience",
+        "growth hacking",
+        "funnel",
+        "conversion",
+        "leads",
+        "abm",
+        "outbound",
+        "જાહેરાત",
+        "માર્કેટિંગ",
+        "विपणन",
+        "मार्केटिंग"
+      ],
+      "children": {
+        "Lead Routing": {
+          "triggers": [
+            "lead routing",
+            "outbound pipeline",
+            "lead scoring",
+            "lead qualification"
+          ]
+        },
+        "B2B Account Based Marketing": {
+          "triggers": [
+            "abm",
+            "account based marketing",
+            "target account campaign"
+          ]
+        },
+        "SEO Optimization": {
+          "triggers": [
+            "seo",
+            "search engine optimization",
+            "organic traffic",
+            "serp rank"
+          ]
+        },
+        "Content Growth Loop": {
+          "triggers": [
+            "growth loop",
+            "viral loop",
+            "referral program"
+          ]
+        },
+        "Social Media Campaign": {
+          "triggers": [
+            "social media campaign",
+            "influencer outreach",
+            "brand engagement"
+          ]
+        }
+      }
+    },
+    "Design": {
+      "triggers": [
+        "design",
+        "dashboard",
+        "ui",
+        "ux",
+        "wireframe",
+        "prototype",
+        "figma",
+        "user interface",
+        "user experience",
+        "design system",
+        "mockup",
+        "interaction design",
+        "ડીઝાઇન",
+        "ડિઝાઇન",
+        "डिजाइन"
+      ],
+      "children": {
+        "Mobile Design Systems": {
+          "triggers": [
+            "mobile design system",
+            "app wireframing",
+            "mobile ui/ux"
+          ]
+        },
+        "Design System Tokens": {
+          "triggers": [
+            "design tokens",
+            "component library",
+            "typography tokens"
+          ]
+        },
+        "UX Wireframing": {
+          "triggers": [
+            "wireframe",
+            "lo-fi wireframe",
+            "user journey wireframe"
+          ]
+        },
+        "Dashboard Interaction Design": {
+          "triggers": [
+            "dashboard design",
+            "analytics interaction",
+            "data visualization ui"
+          ]
+        }
+      }
+    },
+    "Finance": {
+      "triggers": [
+        "finance",
+        "financial",
+        "banking",
+        "bank",
+        "investment",
+        "portfolio",
+        "stock",
+        "accounting",
+        "tax",
+        "audit",
+        "revenue",
+        "fiscal",
+        "capital",
+        "crypto",
+        "defi",
+        "ledger",
+        "loan",
+        "underwriting",
+        "aml",
+        "નાણાકીય",
+        "वित्त",
+        "निवेश"
+      ],
+      "children": {
+        "Invoice Billing": {
+          "triggers": [
+            "invoice",
+            "recurring billing",
+            "multi-currency invoice",
+            "invoicing"
+          ]
+        },
+        "Payment Reconciliation": {
+          "triggers": [
+            "reconciliation",
+            "bank ledger",
+            "stripe match",
+            "payment match"
+          ]
+        },
+        "Quantitative Risk Engine": {
+          "triggers": [
+            "quantitative risk",
+            "var",
+            "value-at-risk",
+            "stress test"
+          ]
+        },
+        "Credit Underwriting": {
+          "triggers": [
+            "credit underwriting",
+            "scorecard model",
+            "sme loan default"
+          ]
+        },
+        "AML Monitoring": {
+          "triggers": [
+            "aml",
+            "anti-money laundering",
+            "pep screening",
+            "suspicious structuring"
+          ]
+        },
+        "Double-Entry Core Banking": {
+          "triggers": [
+            "double-entry",
+            "core banking ledger",
+            "journal audit"
+          ]
+        },
+        "Robo-Advisor Allocation": {
+          "triggers": [
+            "robo-advisor",
+            "asset allocation",
+            "portfolio rebalancing"
+          ]
+        },
+        "Treasury Cash Forecasting": {
+          "triggers": [
+            "treasury",
+            "cash forecasting",
+            "fx hedging"
+          ]
+        },
+        "Loan Waterfall Structure": {
+          "triggers": [
+            "loan waterfall",
+            "syndicated loan",
+            "mezzanine debt"
+          ]
+        },
+        "MPC Digital Asset Custody": {
+          "triggers": [
+            "mpc custody",
+            "digital asset custody",
+            "key signing quorum"
+          ]
+        }
+      }
+    },
+    "Legal": {
+      "triggers": [
+        "legal",
+        "law",
+        "attorney",
+        "lawyer",
+        "court",
+        "compliance",
+        "litigation",
+        "contract",
+        "statute",
+        "patent",
+        "intellectual property",
+        "ip",
+        "nda",
+        "dpa",
+        "gdpr",
+        "કાયદો",
+        "અદાલત",
+        "કાનૂન",
+        "कानून",
+        "अदालत"
+      ],
+      "children": {
+        "Client Intake Portal": {
+          "triggers": [
+            "client intake",
+            "law firm intake",
+            "legal document portal"
+          ]
+        },
+        "GDPR Data Processing Addendum": {
+          "triggers": [
+            "dpa",
+            "gdpr",
+            "data processing addendum",
+            "standard contractual clauses"
+          ]
+        },
+        "Trademark Licensing Contract": {
+          "triggers": [
+            "trademark licensing",
+            "royalty distribution",
+            "brand licensing"
+          ]
+        },
+        "Fintech Terms of Service": {
+          "triggers": [
+            "terms of service",
+            "tos",
+            "eula",
+            "micro-lending agreement"
+          ]
+        },
+        "M&A Legal Due Diligence": {
+          "triggers": [
+            "m&a due diligence",
+            "legal due diligence",
+            "material contracts audit"
+          ]
+        },
+        "Mutual NDA Agreement": {
+          "triggers": [
+            "mutual nda",
+            "non-disclosure",
+            "confidentiality agreement"
+          ]
+        },
+        "AI IP Governance Policy": {
+          "triggers": [
+            "ai copyright",
+            "synthetic output ownership",
+            "ai ip governance"
+          ]
+        },
+        "Smart Contract Legal Audit": {
+          "triggers": [
+            "smart contract audit",
+            "solidity legal audit",
+            "crypto legal compliance"
+          ]
+        }
+      }
+    },
+    "Cybersecurity": {
+      "triggers": [
+        "security",
+        "cyber",
+        "cybersecurity",
+        "infosec",
+        "penetration testing",
+        "pentest",
+        "vulnerability",
+        "threat",
+        "ransomware",
+        "firewall",
+        "zero trust",
+        "siem",
+        "splunk",
+        "stride",
+        "phishing",
+        "iam",
+        "સાયબર",
+        "સિક્યુરિટી",
+        "सुरक्षा"
+      ],
+      "children": {
+        "Cloud IAM Security": {
+          "triggers": [
+            "cloud iam",
+            "iam policy",
+            "least privilege audit"
+          ]
+        },
+        "Ransomware Incident Response": {
+          "triggers": [
+            "ransomware",
+            "incident response",
+            "containment runbook",
+            "nist 800-61"
+          ]
+        },
+        "Penetration Testing Scope": {
+          "triggers": [
+            "penetration testing",
+            "pentest scope",
+            "rules of engagement",
+            "owasp"
+          ]
+        },
+        "Zero Trust Network Access": {
+          "triggers": [
+            "ztna",
+            "zero trust network",
+            "identity perimeter"
+          ]
+        },
+        "SIEM Detection Engineering": {
+          "triggers": [
+            "siem",
+            "splunk correlation",
+            "kerberoasting",
+            "privilege escalation"
+          ]
+        },
+        "IoT STRIDE Threat Model": {
+          "triggers": [
+            "stride",
+            "threat model",
+            "iot threat assessment",
+            "infusion pump"
+          ]
+        },
+        "Phishing Simulation Campaign": {
+          "triggers": [
+            "phishing simulation",
+            "security awareness",
+            "click-through metrics"
+          ]
+        },
+        "API Security Gateway": {
+          "triggers": [
+            "api security gateway",
+            "oauth mtls",
+            "schema validation"
+          ]
+        },
+        "CSPM Compliance Scanner": {
+          "triggers": [
+            "cspm",
+            "cloud security posture",
+            "cis benchmark"
+          ]
+        },
+        "UPI Fraud Awareness Guide": {
+          "triggers": [
+            "upi fraud",
+            "otp fraud",
+            "banking awareness guide"
+          ]
+        },
+        "Cybersecurity Basics": {
+          "triggers": [
+            "cyber basics",
+            "password protection",
+            "beginner security"
+          ]
+        },
+        "Post-Quantum Cryptography": {
+          "triggers": [
+            "post quantum",
+            "pqc",
+            "kyber",
+            "dilithium",
+            "lattice cryptography",
+            "quantum resistant"
+          ]
+        }
+      }
+    },
+    "Agriculture": {
+      "triggers": [
+        "agriculture",
+        "farming",
+        "crop",
+        "soil",
+        "harvest",
+        "fertilizer",
+        "irrigation",
+        "cultivation",
+        "greenhouse",
+        "organic",
+        "drip irrigation",
+        "aquaponics",
+        "dairy farm",
+        "silo",
+        "ખેતી",
+        "ખેડૂત",
+        "પાક",
+        "खेती",
+        "किसान",
+        "कृषि"
+      ],
+      "children": {
+        "Grain Silo Inventory": {
+          "triggers": [
+            "grain silo",
+            "silo inventory",
+            "grain tracking"
+          ]
+        },
+        "Precision Drip Irrigation": {
+          "triggers": [
+            "drip irrigation",
+            "soil moisture sensor",
+            "irrigation schedule"
+          ]
+        },
+        "Multispectral Crop Disease": {
+          "triggers": [
+            "multispectral",
+            "ndvi",
+            "crop disease",
+            "fungal blight"
+          ]
+        },
+        "Greenhouse Climate Control": {
+          "triggers": [
+            "greenhouse",
+            "commercial greenhouse",
+            "shade screens",
+            "climate control"
+          ]
+        },
+        "Organic Certification Audit": {
+          "triggers": [
+            "organic certification",
+            "usda organic",
+            "transitional farm"
+          ]
+        },
+        "Soil Carbon Sequestration": {
+          "triggers": [
+            "soil carbon",
+            "carbon sequestration",
+            "regenerative grazing"
+          ]
+        },
+        "Closed-Loop Aquaponics": {
+          "triggers": [
+            "aquaponics",
+            "tilapia stocking",
+            "nutrient film lettuce"
+          ]
+        },
+        "Gir Cow Organic Dairy": {
+          "triggers": [
+            "gir cow",
+            "a2 milk",
+            "desi ghee",
+            "organic dairy"
+          ]
+        },
+        "Milk Collection Logistics": {
+          "triggers": [
+            "milk collection",
+            "chilling plant",
+            "dairy logistics"
+          ]
+        },
+        "Autonomous Hydroponics": {
+          "triggers": [
+            "hydroponics",
+            "autonomous hydroponics",
+            "sea kelp",
+            "kelp farming"
+          ]
+        },
+        "Vertical Farming CO2": {
+          "triggers": [
+            "vertical farm",
+            "co2 injection",
+            "closed-loop injection",
+            "closed-loop vertical"
+          ]
+        },
+        "Biochar Carbon Removal": {
+          "triggers": [
+            "biochar",
+            "biochar carbon",
+            "pyrolysis biochar",
+            "carbon removal biochar",
+            "biochar kiln"
+          ]
+        },
+        "Ocean Kelp Mariculture": {
+          "triggers": [
+            "ocean kelp",
+            "kelp mariculture",
+            "sea kelp",
+            "seaweed farming",
+            "macroalgae mariculture",
+            "seaweed aquaculture"
+          ]
+        }
+      }
+    },
+    "Energy": {
+      "triggers": [
+        "energy",
+        "solar",
+        "wind",
+        "battery",
+        "grid",
+        "microgrid",
+        "power",
+        "electricity",
+        "ev charging",
+        "hvac",
+        "hydrogen",
+        "substation",
+        "scada",
+        "bms",
+        "lithium"
+      ],
+      "children": {
+        "Solar Microgrid EMS": {
+          "triggers": [
+            "microgrid",
+            "solar pv",
+            "bess",
+            "battery energy storage",
+            "islanding"
+          ]
+        },
+        "Wind Turbine Anomaly Detection": {
+          "triggers": [
+            "wind turbine",
+            "gearbox vibration",
+            "acoustic anomaly"
+          ]
+        },
+        "Building Energy Management": {
+          "triggers": [
+            "bms",
+            "building management",
+            "hvac optimization"
+          ]
+        },
+        "Green Hydrogen Electrolyzer": {
+          "triggers": [
+            "green hydrogen",
+            "electrolyzer",
+            "pem electrolyzer"
+          ]
+        },
+        "Substation SCADA Gateway": {
+          "triggers": [
+            "scada",
+            "substation",
+            "iec 61850",
+            "electrical distribution"
+          ]
+        },
+        "Lithium Phosphate Battery": {
+          "triggers": [
+            "lithium phosphate",
+            "battery bms",
+            "cell balancing",
+            "lithium bms"
+          ]
+        },
+        "Geothermal Energy Monitoring": {
+          "triggers": [
+            "geothermal",
+            "wellhead temperature",
+            "geothermal monitoring"
+          ]
+        }
+      }
+    },
+    "Aerospace & Defense": {
+      "triggers": [
+        "aerospace",
+        "defense",
+        "satellite",
+        "orbital",
+        "space",
+        "avionics",
+        "space debris",
+        "cubesat",
+        "propulsion"
+      ],
+      "children": {
+        "Micro Satellite Orbital": {
+          "triggers": [
+            "micro satellite",
+            "cubesat",
+            "orbital maneuver"
+          ]
+        },
+        "Space Debris Collision Avoidance": {
+          "triggers": [
+            "space debris",
+            "collision avoidance",
+            "conjunction assessment"
+          ]
+        },
+        "Avionics Telemetry": {
+          "triggers": [
+            "avionics",
+            "flight telemetry",
+            "arinc 429"
+          ]
+        }
+      }
+    },
+    "Diagnostic Engineering & RCA": {
+      "triggers": [
+        "debug",
+        "debugging",
+        "fix",
+        "troubleshoot",
+        "error",
+        "exception",
+        "crash",
+        "segfault",
+        "deadlock",
+        "memory leak",
+        "nullpointer",
+        "oom",
+        "oomkilled",
+        "root cause",
+        "rca",
+        "સુધારો",
+        "ડીબગ",
+        "ઠીક"
+      ],
+      "children": {
+        "Go Goroutine Leak RCA": {
+          "triggers": [
+            "goroutine",
+            "goroutine leak",
+            "unbuffered channel"
+          ]
+        },
+        "PostgreSQL Lock Contention": {
+          "triggers": [
+            "lock contention",
+            "row lock",
+            "postgresql lock"
+          ]
+        },
+        "Asyncio Loop Blocked RCA": {
+          "triggers": [
+            "asyncio event loop",
+            "blocking loop",
+            "event loop latency"
+          ]
+        },
+        "JWT Clock Skew Debugging": {
+          "triggers": [
+            "jwt clock skew",
+            "ntp drift",
+            "token clock drift"
+          ]
+        },
+        "Node Stream Buffer Leak": {
+          "triggers": [
+            "node buffer leak",
+            "stream handle leak",
+            "multipart buffer"
+          ]
+        },
+        "JVM Pod OOMKilled RCA": {
+          "triggers": [
+            "oomkilled",
+            "exit code 137",
+            "jvm heap spike"
+          ]
+        }
+      }
+    },
+    "Retail": {
+      "triggers": [
+        "retail",
+        "ecommerce",
+        "e-commerce",
+        "pos",
+        "store",
+        "shop",
+        "marketplace",
+        "inventory",
+        "merchandise",
+        "supermarket",
+        "grocery",
+        "billing",
+        "barcode",
+        "દુકાન",
+        "વેચાણ",
+        "दुकान"
+      ],
+      "children": {
+        "Warehouse RFID": {
+          "triggers": [
+            "warehouse rfid",
+            "rfid inventory",
+            "pallet tracking",
+            "warehouse inventory"
+          ]
+        },
+        "POS Terminal": {
+          "triggers": [
+            "pos terminal",
+            "barcode pos",
+            "offline pos",
+            "cash register"
+          ]
+        },
+        "QR Table Ordering": {
+          "triggers": [
+            "qr ordering",
+            "table ordering",
+            "digital menu",
+            "contactless ordering"
+          ]
+        },
+        "Retail GST Billing Software": {
+          "triggers": [
+            "gst billing",
+            "retail billing software",
+            "barcode billing dukaan"
+          ]
+        },
+        "Handicraft Ecommerce": {
+          "triggers": [
+            "handicraft",
+            "artisan marketplace",
+            "traditional craft ecommerce"
+          ]
+        },
+        "Diamond Inventory Tracking": {
+          "triggers": [
+            "diamond inventory",
+            "surat diamond",
+            "gemstone tracking"
+          ]
+        },
+        "Grocery Delivery Mobile App": {
+          "triggers": [
+            "grocery delivery",
+            "grocery app",
+            "supermarket delivery"
+          ]
+        }
+      }
+    },
+    "Real Estate": {
+      "triggers": [
+        "real estate",
+        "property",
+        "realtor",
+        "housing",
+        "land",
+        "apartment",
+        "coworking",
+        "tenant",
+        "lease",
+        "દલાલી"
+      ],
+      "children": {
+        "Luxury Property": {
+          "triggers": [
+            "luxury property",
+            "luxury real estate",
+            "penthouse",
+            "luxury villas"
+          ]
+        },
+        "Coworking Portal": {
+          "triggers": [
+            "coworking portal",
+            "desk booking",
+            "coworking space",
+            "shared desk"
+          ]
+        },
+        "Tenant Management": {
+          "triggers": [
+            "tenant management",
+            "rent collection",
+            "landlord portal"
+          ]
+        }
+      }
+    },
+    "Travel": {
+      "triggers": [
+        "travel",
+        "tourism",
+        "vacation",
+        "tour",
+        "itinerary",
+        "safari",
+        "flight booking",
+        "मुसाफिरी",
+        "પ્રવાસ",
+        "पर्यटन",
+        "यात्रा"
+      ],
+      "children": {
+        "Tour Package Booking Portal": {
+          "triggers": [
+            "tour package",
+            "package booking portal",
+            "custom itinerary"
+          ]
+        },
+        "Eco-Tourism Itinerary": {
+          "triggers": [
+            "eco-tourism",
+            "hiking itinerary",
+            "wildlife safari"
+          ]
+        },
+        "Flight Booking Engine": {
+          "triggers": [
+            "flight booking",
+            "airline reservation",
+            "gds integration"
+          ]
+        }
+      }
+    },
+    "Artificial Intelligence & Data Science": {
+      "triggers": [
+        "ai",
+        "machine learning",
+        "deep learning",
+        "neural network",
+        "data science",
+        "pytorch",
+        "spark",
+        "rag",
+        "embeddings",
+        "llm",
+        "मशीन लर्निंग"
+      ],
+      "children": {
+        "Deep Learning Frameworks": {
+          "triggers": [
+            "pytorch",
+            "tensorflow",
+            "neural network training"
+          ]
+        },
+        "Distributed Data Processing": {
+          "triggers": [
+            "apache spark",
+            "spark rdd",
+            "distributed dataframe"
+          ]
+        },
+        "Machine Learning Basics": {
+          "triggers": [
+            "ml basics",
+            "machine learning basics",
+            "intro to ml"
+          ]
+        },
+        "Vector Search RAG": {
+          "triggers": [
+            "vector search",
+            "retrieval augmented generation",
+            "embedding index"
+          ]
+        }
+      }
+    },
+    "Creative Writing & Literature": {
+      "triggers": [
+        "creative writing",
+        "fiction",
+        "novel",
+        "poetry",
+        "screenplay",
+        "worldbuilding",
+        "storytelling",
+        "સાહિત્ય",
+        "વાર્તા",
+        "कविता",
+        "कहानी"
+      ],
+      "children": {
+        "Novel Worldbuilding": {
+          "triggers": [
+            "worldbuilding",
+            "fantasy world",
+            "sci-fi setting"
+          ]
+        },
+        "Character Arc Development": {
+          "triggers": [
+            "character arc",
+            "protagonist motivation",
+            "character flaws"
+          ]
+        },
+        "Screenplay Adaptation": {
+          "triggers": [
+            "screenplay",
+            "scriptwriting",
+            "three-act structure"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "subject": "Warehouse RFID",
+  "aliases": [
+    "rfid",
+    "warehouse rfid",
+    "barcode tracker",
+    "inventory tracking rfid"
+  ],
+  "domain": "Retail",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "rfid_frequencies",
+      "title": "UHF RFID Frequencies, EPC Gen2 Protocols & Tag Selection",
+      "objective": "Select passive UHF tags (860-960 MHz) suited for metal, liquid, and cardboard inventory packaging.",
+      "example": "EPC Gen2 standard, ISO 18000-6C, On-Metal tag vs Standard Inlay tag.",
+      "exercise": "Select and specify tag inlay models for metal automotive parts vs plastic cosmetic bottles.",
+      "prerequisites": []
+    },
+    {
+      "id": "rfid_portal_readers",
+      "title": "Fixed Portal Readers & Dock Door Antennas",
+      "objective": "Position phased array portal antennas at loading docks to read full pallet inventories in under 2 seconds.",
+      "example": "ReaderConfig: 4 Circular Polarized Antennas at 30dBm power covering dock door 3.",
+      "exercise": "Design a portal antenna array configuration preventing stray reads from adjacent dock lanes.",
+      "prerequisites": [
+        "rfid_frequencies"
+      ]
+    },
+    {
+      "id": "rfid_middleware_filtering",
+      "title": "RFID Edge Middleware, De-Bouncing & LLRP Protocol",
+      "objective": "Filter duplicate tag read bursts using Low-Level Reader Protocol (LLRP) and time-window deduplication.",
+      "example": "LLRP RO_ACCESS_REPORT filtered: suppress duplicate EPC within 10-second sliding window.",
+      "exercise": "Write an edge filtering script collapsing 500 raw reads of 50 tags into a clean arrival inventory record.",
+      "prerequisites": [
+        "rfid_portal_readers"
+      ]
+    },
+    {
+      "id": "rfid_wms_integration",
+      "title": "WMS Inventory Integration & Discrepancy Audits",
+      "objective": "Reconcile real-time physical pallet reads against expected Purchase Order bills of lading automatically.",
+      "example": "PO_Reconciliation: Expected 100 units, Scanned 98 -> Flag Discrepancy: Missing Item SKU-442.",
+      "exercise": "Build an automated audit function alerting fork-truck drivers of misplaced items on wrong storage racks.",
+      "prerequisites": [
+        "rfid_middleware_filtering"
+      ]
+    },
+    {
+      "id": "rfid_handheld_cycle_counts",
+      "title": "Mobile RFID Handheld Scanners & Rapid Cycle Counting",
+      "objective": "Execute high-speed inventory cycle counts across warehouse aisles in minutes rather than hours.",
+      "example": "Handheld scan rate: 800 tags/second with Geiger-counter locating mode.",
+      "exercise": "Design a guided mobile cycle counting workflow verifying rack inventory accuracy above 99.8%.",
+      "prerequisites": [
+        "rfid_wms_integration"
+      ]
+    }
+  ]
+}

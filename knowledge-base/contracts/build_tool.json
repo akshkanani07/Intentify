@@ -1,0 +1,60 @@
+{
+  "contract": "build_tool",
+  "name": "Developer Tool, CLI & Utility Contract",
+  "description": "Master prompt structure for building CLI tools, libraries, microservices, SDKs, and scripts.",
+  "required_sections": [
+    {
+      "heading": "Role & Technical Persona",
+      "min_items": 3,
+      "description": "Expert systems / tooling engineer persona."
+    },
+    {
+      "heading": "Tool Objective & Operational Scope",
+      "min_items": 2,
+      "description": "Tool command surface, inputs, outputs, and performance requirements."
+    },
+    {
+      "heading": "Command Syntax, Interface & Subsystem Design",
+      "min_items": 3,
+      "description": "Flag parsing, I/O streams, exit codes, and core processing logic."
+    },
+    {
+      "heading": "Verifiable Acceptance Criteria",
+      "min_items": 3,
+      "description": "Functional test harness, edge case handling, and zero placeholder code."
+    },
+    {
+      "heading": "Output Format Specification",
+      "min_items": 2,
+      "description": "Deterministic command line contract, JSON schema, or SDK signature."
+    },
+    {
+      "heading": "Self-Verification Quality Checklist",
+      "min_items": 3,
+      "description": "Self-verification suite verifying error conditions and clean termination."
+    },
+    {
+      "heading": "Tool Execution Guardrails & Negative Constraints",
+      "min_items": 3,
+      "description": "Guardrails against unintended disk/network operations and unhandled exceptions."
+    },
+    {
+      "heading": "Documented Assumptions & Context",
+      "min_items": 2,
+      "description": "Runtime platform, shell requirements, and dependencies."
+    }
+  ],
+  "optional_sections": [
+    {
+      "heading": "Packaging & Package Manager Distribution",
+      "trigger_keywords": [
+        "brew",
+        "pypi",
+        "npm",
+        "distribution",
+        "binary release"
+      ],
+      "out_of_scope_message": "External package distribution is out of scope unless explicitly requested."
+    }
+  ]
+}

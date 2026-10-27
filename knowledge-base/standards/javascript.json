@@ -1,0 +1,13 @@
+{
+  "subject": "JavaScript",
+  "standards": [
+    {
+      "name": "ECMAScript 2022+ Specification",
+      "description": "Standard modern JavaScript specification."
+    },
+    {
+      "name": "MDN Web Docs Standard",
+      "description": "Standard web API guidelines."
+    }
+  ]
+}

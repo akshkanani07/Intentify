@@ -1,0 +1,61 @@
+{
+  "subject": "Accounting Basics",
+  "aliases": [
+    "accounting basics",
+    "accounting",
+    "bookkeeping",
+    "financial accounting"
+  ],
+  "domain": "Finance & Business",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "acc_equation",
+      "title": "The Fundamental Accounting Equation (Assets = Liabilities + Equity)",
+      "objective": "Understand the balance sheet equilibrium and how transactions affect economic resources and claims.",
+      "example": "Assets ($50,000) = Liabilities ($20,000) + Equity ($30,000)",
+      "exercise": "Record the balance sheet impact of 5 business transactions (capital contribution, loan, purchase).",
+      "prerequisites": []
+    },
+    {
+      "id": "acc_double_entry",
+      "title": "Double-Entry Bookkeeping: Debits & Credits",
+      "objective": "Master the rules of debits and credits across Asset, Expense, Liability, Equity, and Revenue accounts.",
+      "example": "Debit Cash $5,000; Credit Service Revenue $5,000",
+      "exercise": "Draft 10 journal entries for a startup service business covering sales, rent, and utility expenses.",
+      "prerequisites": [
+        "acc_equation"
+      ]
+    },
+    {
+      "id": "acc_general_ledger",
+      "title": "General Ledger Posting & Unadjusted Trial Balance",
+      "objective": "Post journal entries to T-accounts and compile a balanced trial balance verifying total debits equal total credits.",
+      "example": "Total Debits: $125,000 == Total Credits: $125,000",
+      "exercise": "Post a month of journal entries to ledger accounts and construct an unadjusted trial balance.",
+      "prerequisites": [
+        "acc_double_entry"
+      ]
+    },
+    {
+      "id": "acc_adjusting",
+      "title": "Accrual vs. Cash Accounting & Adjusting Entries",
+      "objective": "Record period-end adjustments for accrued revenue, accrued expenses, unearned revenue, and depreciation.",
+      "example": "Debit Depreciation Expense $500; Credit Accumulated Depreciation $500",
+      "exercise": "Prepare end-of-month adjusting entries for prepaid rent and accrued employee payroll.",
+      "prerequisites": [
+        "acc_general_ledger"
+      ]
+    },
+    {
+      "id": "acc_statements",
+      "title": "Financial Statements Preparation (Income Statement & Balance Sheet)",
+      "objective": "Synthesize adjusted trial balances into clean Income Statements and Classified Balance Sheets.",
+      "example": "Net Income = Revenues - Expenses; Ending Retained Earnings = Beginning + Net Income - Dividends",
+      "exercise": "Compile a complete Income Statement and Balance Sheet from an adjusted trial balance.",
+      "prerequisites": [
+        "acc_adjusting"
+      ]
+    }
+  ]
+}

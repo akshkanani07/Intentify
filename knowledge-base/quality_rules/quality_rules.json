@@ -1,0 +1,157 @@
+{
+  "version": "1.0.0",
+  "threshold": 85.0,
+  "max_score": 100.0,
+  "criteria": [
+    {
+      "id": "clarity",
+      "name": "Clarity & Persona Definition",
+      "max_score": 20.0,
+      "weight_percentage": 20,
+      "rules": [
+        {
+          "id": "clr_role",
+          "name": "Explicit Persona Definition",
+          "points": 5.0,
+          "description": "Defines an authoritative, domain-specialized professional role and persona."
+        },
+        {
+          "id": "clr_objective",
+          "name": "Clear Primary Objective",
+          "points": 5.0,
+          "description": "States an unambiguous, action-oriented primary deliverable or goal."
+        },
+        {
+          "id": "clr_depth",
+          "name": "Comprehensive Depth",
+          "points": 5.0,
+          "description": "Sufficient depth and technical rigor; avoids unhelpful brevity."
+        },
+        {
+          "id": "clr_markdown",
+          "name": "Structural Markdown Sectioning",
+          "points": 5.0,
+          "description": "Uses clean headers, logical sectioning, and structured markdown syntax."
+        }
+      ]
+    },
+    {
+      "id": "specificity",
+      "name": "Technical Specificity & Actionability",
+      "max_score": 20.0,
+      "weight_percentage": 20,
+      "rules": [
+        {
+          "id": "spc_bullets",
+          "name": "Granular Parameterization",
+          "points": 7.0,
+          "description": "Provides granular, numbered or bulleted items rather than vague prose."
+        },
+        {
+          "id": "spc_instructions",
+          "name": "Step-by-Step Execution Sequence",
+          "points": 7.0,
+          "description": "Provides chronological or phased execution steps."
+        },
+        {
+          "id": "spc_precision",
+          "name": "Deterministic Keywords",
+          "points": 6.0,
+          "description": "Uses exact technical standards, criteria, and determinative terms."
+        }
+      ]
+    },
+    {
+      "id": "context",
+      "name": "Domain Context & Scope",
+      "max_score": 15.0,
+      "weight_percentage": 15,
+      "rules": [
+        {
+          "id": "ctx_section",
+          "name": "Dedicated Context & Background",
+          "points": 8.0,
+          "description": "Contains an explicit contextual block explaining the environment and stakeholders."
+        },
+        {
+          "id": "ctx_depth",
+          "name": "Specialized Domain Scope",
+          "points": 7.0,
+          "description": "Incorporates specialized domain nuances, standards, and vocabulary."
+        }
+      ]
+    },
+    {
+      "id": "constraints",
+      "name": "Guardrails & Constraints",
+      "max_score": 15.0,
+      "weight_percentage": 15,
+      "rules": [
+        {
+          "id": "cst_section",
+          "name": "Dedicated Constraints Section",
+          "points": 8.0,
+          "description": "Explicitly details operational boundaries and requirements."
+        },
+        {
+          "id": "cst_negative",
+          "name": "Negative Guardrails",
+          "points": 7.0,
+          "description": "Specifies negative conditions (what the model must NOT do or avoid)."
+        }
+      ]
+    },
+    {
+      "id": "output_format",
+      "name": "Output Formatting Rules",
+      "max_score": 15.0,
+      "weight_percentage": 15,
+      "rules": [
+        {
+          "id": "fmt_section",
+          "name": "Explicit Output Format Section",
+          "points": 8.0,
+          "description": "Explicitly mandates the response layout, structure, and sections."
+        },
+        {
+          "id": "fmt_syntax",
+          "name": "Concrete Syntax Specifications",
+          "points": 7.0,
+          "description": "Defines exact formatting syntax such as Markdown, JSON, Tables, or Code."
+        }
+      ]
+    },
+    {
+      "id": "ambiguity_handling",
+      "name": "Ambiguity Resolution & Self-Verification",
+      "max_score": 15.0,
+      "weight_percentage": 15,
+      "rules": [
+        {
+          "id": "amb_assumptions",
+          "name": "Documented Proactive Assumptions",
+          "points": 8.0,
+          "description": "Articulates sensible default assumptions when human input is underspecified."
+        },
+        {
+          "id": "amb_checklist",
+          "name": "Quality Verification Checklist",
+          "points": 7.0,
+          "description": "Includes an actionable self-verification checklist for the executing model."
+        }
+      ]
+    }
+  ],
+  "auto_improvement": {
+    "trigger_threshold": 85.0,
+    "max_iterations": 3,
+    "priority_order": [
+      "constraints",
+      "output_format",
+      "ambiguity_handling",
+      "specificity",
+      "context",
+      "clarity"
+    ]
+  }
+}

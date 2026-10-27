@@ -1,0 +1,13 @@
+{
+  "subject": "CSS",
+  "standards": [
+    {
+      "name": "W3C CSS3 Specifications",
+      "description": "Official styling recommendations."
+    },
+    {
+      "name": "BEM Naming Convention",
+      "description": "Block Element Modifier methodology for maintainable CSS."
+    }
+  ]
+}

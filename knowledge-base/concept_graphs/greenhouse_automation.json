@@ -1,0 +1,63 @@
+{
+  "subject": "Greenhouse Automation",
+  "aliases": [
+    "greenhouse automation",
+    "smart greenhouse",
+    "hydroponics automation",
+    "climate control greenhouse"
+  ],
+  "domain": "Agriculture",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "gh_microclimate_sensors",
+      "title": "Vapor Pressure Deficit (VPD) & Microclimate Sensing",
+      "objective": "Calculate optimal plant transpiration rates by coupling air temperature, relative humidity, and leaf temperature.",
+      "example": "VPD = VPsat * (1 - (RH / 100)) where VPsat = 0.61078 * exp((17.27 * T) / (T + 237.3))",
+      "exercise": "Write a microclimate calculator alerting growers when greenhouse VPD drifts outside the 0.8 - 1.2 kPa corridor.",
+      "prerequisites": []
+    },
+    {
+      "id": "gh_automated_ventilation",
+      "title": "Automated Roof Vents, Evaporative Cooling & Shade Curtains",
+      "objective": "Regulate ambient temperature using PID controllers actuating ridge vents and wet pads.",
+      "example": "actuator.setRidgeVentOpening(pid.compute(targetTemp, currentTemp))",
+      "exercise": "Implement a control loop coordinating shade screen deployment and roof vent opening during high solar radiation.",
+      "prerequisites": [
+        "gh_microclimate_sensors"
+      ]
+    },
+    {
+      "id": "gh_fertigation_dosing",
+      "title": "Precision Hydroponic Dosing: EC & pH Telemetry",
+      "objective": "Automate nutrient delivery by continuously monitoring Electrical Conductivity (EC) and pH levels.",
+      "example": "if (ec < 1.8) { doseNutrientA(10); doseNutrientB(10); } if (pH > 6.2) { doseAcid(5); }",
+      "exercise": "Build a closed-loop fertigation controller maintaining nutrient solution between 1.8 - 2.2 mS/cm and pH 5.8 - 6.2.",
+      "prerequisites": [
+        "gh_microclimate_sensors"
+      ]
+    },
+    {
+      "id": "gh_supplemental_lighting",
+      "title": "Supplemental LED Lighting & Daily Light Integral (DLI)",
+      "objective": "Optimize photosynthetic active radiation (PAR) to meet target daily light integral (mol/m²/day).",
+      "example": "DLI = sum(PPFD_micromoles * 3600) / 1,000,000",
+      "exercise": "Create an automated LED lighting scheduler adjusting light intensity based on real-time solar pyranometer data.",
+      "prerequisites": [
+        "gh_microclimate_sensors"
+      ]
+    },
+    {
+      "id": "gh_fault_recovery",
+      "title": "Autonomous Emergency Override & Irrigation Failsafes",
+      "objective": "Protect crops from catastrophic loss with redundant power switching and pressure drop alarms.",
+      "example": "if (mainPumpPressure < threshold) { activateBackupPump(); sendEmergencySMS(); }",
+      "exercise": "Design a safety interlock system that switches to emergency battery backup and closes storm vents on sensor failure.",
+      "prerequisites": [
+        "gh_automated_ventilation",
+        "gh_fertigation_dosing"
+      ]
+    }
+  ]
+}

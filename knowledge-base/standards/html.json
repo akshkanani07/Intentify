@@ -1,0 +1,17 @@
+{
+  "subject": "HTML",
+  "standards": [
+    {
+      "name": "W3C HTML5 Recommendation",
+      "description": "World Wide Web Consortium HTML5 specification."
+    },
+    {
+      "name": "WHATWG HTML Living Standard",
+      "description": "Modern browser-compatible living markup standard."
+    },
+    {
+      "name": "WCAG 2.1 AA",
+      "description": "Web Content Accessibility Guidelines."
+    }
+  ]
+}

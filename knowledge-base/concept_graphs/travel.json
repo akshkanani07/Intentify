@@ -1,0 +1,46 @@
+{
+  "domain": "Travel Planning & Tourism Logistics",
+  "nodes": [
+    {
+      "id": "trv_destination",
+      "name": "Destination Profiling, Visa Rules & Entry Protocols",
+      "prerequisites": []
+    },
+    {
+      "id": "trv_itinerary",
+      "name": "Optimized Day-by-Day Geolocation Route Mapping",
+      "prerequisites": [
+        "trv_destination"
+      ]
+    },
+    {
+      "id": "trv_transit",
+      "name": "Intercity Transit, Flights & Local Commute Logistics",
+      "prerequisites": [
+        "trv_itinerary"
+      ]
+    },
+    {
+      "id": "trv_lodging",
+      "name": "Accommodation Curation & Neighborhood Vetting",
+      "prerequisites": [
+        "trv_transit"
+      ]
+    },
+    {
+      "id": "trv_budget",
+      "name": "Currency Management, Daily Per Diem & Reserve Pool",
+      "prerequisites": [
+        "trv_lodging"
+      ]
+    },
+    {
+      "id": "trv_emergency",
+      "name": "Health Insurance, Embassy Contacts & Safety Protocols",
+      "prerequisites": [
+        "trv_budget"
+      ]
+    }
+  ],
+  "reviewed": false
+}

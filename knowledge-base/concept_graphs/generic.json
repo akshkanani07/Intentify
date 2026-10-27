@@ -1,0 +1,46 @@
+{
+  "domain": "General Purpose Execution Framework",
+  "nodes": [
+    {
+      "id": "gen_decompose",
+      "name": "Problem Decomposition & Requirement Elicitation",
+      "prerequisites": []
+    },
+    {
+      "id": "gen_architecture",
+      "name": "Architecture Topology & System Boundaries",
+      "prerequisites": [
+        "gen_decompose"
+      ]
+    },
+    {
+      "id": "gen_milestones",
+      "name": "Phased Execution Milestones & Deliverables",
+      "prerequisites": [
+        "gen_architecture"
+      ]
+    },
+    {
+      "id": "gen_implementation",
+      "name": "High-Fidelity Implementation & Standards Compliance",
+      "prerequisites": [
+        "gen_milestones"
+      ]
+    },
+    {
+      "id": "gen_qa",
+      "name": "Verification, Testing & Quality Assurance",
+      "prerequisites": [
+        "gen_implementation"
+      ]
+    },
+    {
+      "id": "gen_deployment",
+      "name": "Operational Deployment, Monitoring & Runbooks",
+      "prerequisites": [
+        "gen_qa"
+      ]
+    }
+  ],
+  "reviewed": false
+}

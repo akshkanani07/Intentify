@@ -1,0 +1,48 @@
+{
+  "contract": "debug",
+  "name": "Root-Cause Diagnostic Analysis Contract",
+  "description": "Master prompt structure for isolating defects, analyzing stack traces, and formulating zero-regression patches.",
+  "required_sections": [
+    {
+      "heading": "Role & Diagnostic Persona",
+      "min_items": 3,
+      "description": "Forensic investigator / systems diagnostician persona."
+    },
+    {
+      "heading": "Incident Summary & Defect Objective",
+      "min_items": 2,
+      "description": "Fault signature, target subsystem, and remediation goal."
+    },
+    {
+      "heading": "Root-Cause Analysis (RCA) Methodology",
+      "min_items": 3,
+      "description": "Hypothesis generation, reproduction harness, and state trace inspection."
+    },
+    {
+      "heading": "Minimal Zero-Regression Resolution Patch",
+      "min_items": 3,
+      "description": "Precise code fix addressing the root mechanism with no side effects."
+    },
+    {
+      "heading": "Regression Verification Test Suite",
+      "min_items": 2,
+      "description": "Automated unit and integration assertions validating the fix."
+    },
+    {
+      "heading": "Output Format Specification",
+      "min_items": 2,
+      "description": "Structured forensic postmortem and diff format."
+    },
+    {
+      "heading": "Diagnostic Guardrails & Negative Constraints",
+      "min_items": 3,
+      "description": "Prohibits blind trial-and-error changes, broad catch-all exceptions, or masking symptoms."
+    },
+    {
+      "heading": "Documented Diagnostic Assumptions",
+      "min_items": 2,
+      "description": "Environment parameters, dependency versions, and concurrency conditions."
+    }
+  ],
+  "optional_sections": []
+}

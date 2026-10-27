@@ -1,0 +1,60 @@
+{
+  "domain": "Business Strategy & Expansion",
+  "nodes": [
+    {
+      "id": "biz_market",
+      "name": "Market Sizing, TAM/SAM/SOM & Competitive Landscape",
+      "prerequisites": []
+    },
+    {
+      "id": "biz_value_prop",
+      "name": "Unique Value Proposition & ICP Personas",
+      "prerequisites": [
+        "biz_market"
+      ]
+    },
+    {
+      "id": "biz_unit_econ",
+      "name": "Unit Economics, Margin Analysis & CAC/LTV Matrix",
+      "prerequisites": [
+        "biz_value_prop"
+      ]
+    },
+    {
+      "id": "biz_gtm",
+      "name": "Go-To-Market Channels & Customer Acquisition Strategy",
+      "prerequisites": [
+        "biz_unit_econ"
+      ]
+    },
+    {
+      "id": "biz_supply_chain",
+      "name": "Operations, Supply Chain & Vendor Quality Control",
+      "prerequisites": [
+        "biz_gtm"
+      ]
+    },
+    {
+      "id": "biz_financials",
+      "name": "3-Year Financial Model & Cash-Flow Projections",
+      "prerequisites": [
+        "biz_supply_chain"
+      ]
+    },
+    {
+      "id": "biz_franchise",
+      "name": "Franchise/Scaling Blueprint & Legal SOPs",
+      "prerequisites": [
+        "biz_financials"
+      ]
+    },
+    {
+      "id": "biz_kpis",
+      "name": "Executive OKRs & Operational Performance Dashboards",
+      "prerequisites": [
+        "biz_franchise"
+      ]
+    }
+  ],
+  "reviewed": false
+}

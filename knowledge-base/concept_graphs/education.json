@@ -1,0 +1,46 @@
+{
+  "domain": "Pedagogy & Curriculum Design",
+  "nodes": [
+    {
+      "id": "edu_needs",
+      "name": "Learner Profile & Prerequisite Diagnostic",
+      "prerequisites": []
+    },
+    {
+      "id": "edu_outcomes",
+      "name": "Bloom's Taxonomy Learning Outcomes",
+      "prerequisites": [
+        "edu_needs"
+      ]
+    },
+    {
+      "id": "edu_modules",
+      "name": "Scaffolded Modular Syllabus Breakdown",
+      "prerequisites": [
+        "edu_outcomes"
+      ]
+    },
+    {
+      "id": "edu_labs",
+      "name": "Hands-on Exercises & Active Learning Tasks",
+      "prerequisites": [
+        "edu_modules"
+      ]
+    },
+    {
+      "id": "edu_assess",
+      "name": "Formative Quizzes & Milestone Checkpoints",
+      "prerequisites": [
+        "edu_labs"
+      ]
+    },
+    {
+      "id": "edu_capstone",
+      "name": "Independent Capstone Synthesis Project",
+      "prerequisites": [
+        "edu_assess"
+      ]
+    }
+  ],
+  "reviewed": false
+}

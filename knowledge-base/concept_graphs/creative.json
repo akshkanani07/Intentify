@@ -1,0 +1,46 @@
+{
+  "domain": "Creative Media & Multimedia Production",
+  "nodes": [
+    {
+      "id": "cre_concept",
+      "name": "Creative Concept Brief & Core Visual Theme",
+      "prerequisites": []
+    },
+    {
+      "id": "cre_moodboard",
+      "name": "Art Direction, Palette & Aesthetic References",
+      "prerequisites": [
+        "cre_concept"
+      ]
+    },
+    {
+      "id": "cre_storyboard",
+      "name": "Scene-by-Scene Storyboarding & Narrative Pacing",
+      "prerequisites": [
+        "cre_moodboard"
+      ]
+    },
+    {
+      "id": "cre_production",
+      "name": "Asset Production Pipeline & Tooling Setup",
+      "prerequisites": [
+        "cre_storyboard"
+      ]
+    },
+    {
+      "id": "cre_review",
+      "name": "Editorial Review, Sound Design & Color Grading",
+      "prerequisites": [
+        "cre_production"
+      ]
+    },
+    {
+      "id": "cre_export",
+      "name": "Multi-Platform Export, Encoding & Quality Sign-Off",
+      "prerequisites": [
+        "cre_review"
+      ]
+    }
+  ],
+  "reviewed": false
+}

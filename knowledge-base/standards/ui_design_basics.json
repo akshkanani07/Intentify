@@ -1,0 +1,13 @@
+{
+  "subject": "UI Design Basics",
+  "standards": [
+    {
+      "name": "Nielsen Norman Group 10 Usability Heuristics",
+      "description": "Foundational user interface design heuristics."
+    },
+    {
+      "name": "WCAG 2.1 AA Contrast Ratios",
+      "description": "4.5:1 minimum contrast ratio for normal text."
+    }
+  ]
+}

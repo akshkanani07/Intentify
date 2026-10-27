@@ -1,0 +1,46 @@
+{
+  "domain": "Legal Strategy & Contract Analysis",
+  "nodes": [
+    {
+      "id": "leg_jurisdiction",
+      "name": "Jurisdiction, Governing Law & Regulatory Landscape",
+      "prerequisites": []
+    },
+    {
+      "id": "leg_clauses",
+      "name": "Core Contractual Clauses & Obligations Analysis",
+      "prerequisites": [
+        "leg_jurisdiction"
+      ]
+    },
+    {
+      "id": "leg_ip",
+      "name": "Intellectual Property Ownership & Assignment Terms",
+      "prerequisites": [
+        "leg_clauses"
+      ]
+    },
+    {
+      "id": "leg_indemnity",
+      "name": "Indemnification, Liability Caps & Risk Allocation",
+      "prerequisites": [
+        "leg_ip"
+      ]
+    },
+    {
+      "id": "leg_compliance",
+      "name": "Statutory Compliance Audit & Data Privacy (GDPR/CCPA)",
+      "prerequisites": [
+        "leg_indemnity"
+      ]
+    },
+    {
+      "id": "leg_dispute",
+      "name": "Dispute Resolution, Arbitration & Termination Protocols",
+      "prerequisites": [
+        "leg_compliance"
+      ]
+    }
+  ],
+  "reviewed": false
+}

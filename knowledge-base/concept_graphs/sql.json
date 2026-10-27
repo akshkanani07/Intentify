@@ -1,0 +1,62 @@
+{
+  "subject": "SQL",
+  "aliases": [
+    "sql",
+    "relational database",
+    "postgres",
+    "mysql",
+    "structured query language"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "sql_ddl",
+      "title": "Schema Definition (CREATE, ALTER, DROP) & Primary Keys",
+      "objective": "Define normalized relational schemas with primary keys, foreign keys, and unique constraints.",
+      "example": "CREATE TABLE users (id SERIAL PRIMARY KEY, email VARCHAR(255) UNIQUE NOT NULL);",
+      "exercise": "Design an e-commerce schema with users, orders, items, and foreign key relationships.",
+      "prerequisites": []
+    },
+    {
+      "id": "sql_dql",
+      "title": "Basic Querying (SELECT, WHERE, ORDER BY, LIMIT)",
+      "objective": "Retrieve filtered and ordered datasets using predicate operators and pagination limits.",
+      "example": "SELECT name, price FROM products WHERE price > 50.0 ORDER BY price DESC LIMIT 10;",
+      "exercise": "Write queries to find active customers registered in the last 30 days.",
+      "prerequisites": [
+        "sql_ddl"
+      ]
+    },
+    {
+      "id": "sql_joins",
+      "title": "Relational Joins (INNER, LEFT, RIGHT, FULL OUTER)",
+      "objective": "Combine normalized tables using foreign key relationships and handle null rows safely.",
+      "example": "SELECT o.id, u.email FROM orders o INNER JOIN users u ON o.user_id = u.id;",
+      "exercise": "Generate a customer order summary including customers who have never placed an order.",
+      "prerequisites": [
+        "sql_dql"
+      ]
+    },
+    {
+      "id": "sql_aggregations",
+      "title": "Aggregations & Grouping (GROUP BY, HAVING, Window Functions)",
+      "objective": "Compute summary statistics, grouped summaries, and row-level ranking analytics.",
+      "example": "SELECT department, AVG(salary) FROM employees GROUP BY department HAVING COUNT(*) > 5;",
+      "exercise": "Compute month-over-month revenue growth using window functions (SUM OVER and LAG).",
+      "prerequisites": [
+        "sql_joins"
+      ]
+    },
+    {
+      "id": "sql_indexing",
+      "title": "Indexing, EXPLAIN Query Planning & Performance Optimization",
+      "objective": "Analyze execution plans, identify sequential table scans, and create targeted B-Tree indexes.",
+      "example": "EXPLAIN ANALYZE SELECT * FROM logs WHERE created_at >= NOW() - INTERVAL '1 day';",
+      "exercise": "Optimize an underperforming query on a million-row table using composite indexing.",
+      "prerequisites": [
+        "sql_aggregations"
+      ]
+    }
+  ]
+}

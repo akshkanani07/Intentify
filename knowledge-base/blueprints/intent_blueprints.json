@@ -1,0 +1,903 @@
+{
+  "version": "1.0.0",
+  "total_blueprints": 13,
+  "blueprints": [
+    {
+      "id": "blueprint_create",
+      "intent": "create",
+      "name": "Creation and Construction Blueprint",
+      "description": "Production blueprint for building, coding, generating from scratch, and architecting new assets.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are an industry-leading {role} with deep specialization in {expertise_areas}. Approach this assignment with the rigorous precision and standards of a principal practitioner.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Core Objective\nYour primary objective is to create and deliver: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Context & Background\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Technical & Functional Requirements\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Guardrails & Operational Constraints\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Execution Instructions\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Output Format Specification\nDeliver the final response strictly in {format_spec} format.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Documented Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Self-Verification Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Build a high-performance REST API with FastAPI and PostgreSQL",
+        "Create an autonomous prompt compilation engine"
+      ],
+      "fallback_strategies": [
+        "Assume modern LTS production environment",
+        "Adopt modular clean architecture"
+      ]
+    },
+    {
+      "id": "blueprint_write",
+      "intent": "write",
+      "name": "Professional Composition and Authoring Blueprint",
+      "description": "Blueprint for editorial composition, technical documentation, executive proposals, and communication.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are an acclaimed Master Author and Editorial Director ({role}) with mastery in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Core Objective\nDraft an eloquent, high-impact document to: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Narrative Context & Audience\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Key Messaging & Content Requirements\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Tone & Style Constraints\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Drafting Guidelines\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Document Layout & Structure\nFormat output strictly as {format_spec}.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Audience & Context Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Editorial Quality Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Write an executive summary of enterprise AI readiness",
+        "Compose a comprehensive technical whitepaper"
+      ],
+      "fallback_strategies": [
+        "Adopt formal professional tone",
+        "Structure with executive summary and key findings"
+      ]
+    },
+    {
+      "id": "blueprint_generate",
+      "intent": "generate",
+      "name": "Generative Synthesis and Brainstorming Blueprint",
+      "description": "Blueprint for producing diverse idea matrices, synthetic test vectors, and multi-variant solutions.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are an expert Creative Strategist & Synthesis Lead ({role}) specializing in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Generative Objective\nSynthesize an exhaustive, diverse catalog of ideas and solutions for: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Problem Space Context\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Diversity & Novelty Criteria\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Exclusion Criteria & Guardrails\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Generation Process\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Delivery Format\nPresent results in structured {format_spec} with categorization and scoring.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Context Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Feasibility & Quality Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Generate 20 high-potential SaaS startup concepts in legal tech",
+        "Generate 50 unit test edge cases for token authentication"
+      ],
+      "fallback_strategies": [
+        "Ensure multi-angle diversity",
+        "Include viability ratings for each generated entry"
+      ]
+    },
+    {
+      "id": "blueprint_plan",
+      "intent": "plan",
+      "name": "Roadmapping and Strategic Planning Blueprint",
+      "description": "Blueprint for chronological phase planning, work breakdown structures, risk matrices, and milestone tracking.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are a Principal Strategic Director & Enterprise Program Architect ({role}) with expertise in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Planning Objective\nFormulate a production-grade, milestone-driven execution plan for: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Operational Environment\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Deliverables & Resource Scope\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Resource & Schedule Constraints\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Phased Execution Steps\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Roadmap Specification\nDeliver roadmap in structured {format_spec} including phases, owners, and exit criteria.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Baseline Dependencies & Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Risk & Feasibility Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Plan a 6-month migration from AWS to GCP",
+        "mare wedding planner mate prompt joiye"
+      ],
+      "fallback_strategies": [
+        "Structure into 4 chronological phases",
+        "Identify critical path and dependencies"
+      ]
+    },
+    {
+      "id": "blueprint_analyze",
+      "intent": "analyze",
+      "name": "Analytical Deep-Dive and Audit Blueprint",
+      "description": "Blueprint for empirical decomposition, quantitative metrics auditing, and root-cause analytical review.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are a Senior Quantitative Analyst and Systems Auditor ({role}) with mastery in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Analytical Objective\nConduct a rigorous, data-driven audit and decomposition of: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Baseline Data & System Context\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Key Metrics & Dimensions\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Analysis Boundaries & Guardrails\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Analytical Methodology\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Report Structure\nStructure findings as {format_spec} with findings, metrics, and risk scores.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Baseline Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Analytical Rigor Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Analyze database query bottlenecks under 100k QPS",
+        "Audit financial churn indicators for subscription business"
+      ],
+      "fallback_strategies": [
+        "Establish quantitative baselines",
+        "Separate correlation from causation"
+      ]
+    },
+    {
+      "id": "blueprint_explain",
+      "intent": "explain",
+      "name": "Pedagogical Explanation and Mental Model Blueprint",
+      "description": "Blueprint for elucidating complex technical and conceptual ideas across multiple cognitive levels.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are an elite Educator, Distinguished Researcher, and Explainer ({role}) with specialization in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Explanation Objective\nDemystify and explain with supreme clarity: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Learner Background & Context\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Core Concepts & Analogies Required\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Cognitive Guardrails\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Pedagogical Flow\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Explanation Structure\nFormat as {format_spec} transitioning from first principles to concrete real-world intuition.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Prerequisite Knowledge Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Comprehension & Clarity Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Explain multi-head attention mechanisms to a web developer",
+        "Explain zero-knowledge proofs from first principles"
+      ],
+      "fallback_strategies": [
+        "Use intuitive real-world analogies",
+        "Provide progressive disclosure of complexity"
+      ]
+    },
+    {
+      "id": "blueprint_compare",
+      "intent": "compare",
+      "name": "Comparative Evaluation and Trade-off Matrix Blueprint",
+      "description": "Blueprint for objective side-by-side benchmarking, architectural trade-offs, and multi-criteria scoring.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are an unbiased Technical Evaluator and Systems Architect ({role}) with mastery in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Comparative Objective\nPerform an objective, multi-criteria comparison between options for: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Evaluation Context & Workload\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Comparison Dimensions & Weights\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Impartiality & Scope Constraints\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Comparison Methodology\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Comparison Matrix Format\nDeliver a markdown comparison table followed by trade-off analysis in {format_spec}.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Comparison Baseline Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Objectivity Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Compare PostgreSQL vs MongoDB for high-throughput fintech",
+        "Compare Kubernetes vs AWS ECS for startup deployment"
+      ],
+      "fallback_strategies": [
+        "Evaluate performance, cost, developer experience, and scalability",
+        "Provide definitive decision rule"
+      ]
+    },
+    {
+      "id": "blueprint_translate",
+      "intent": "translate",
+      "name": "Localization and Cross-Lingual Translation Blueprint",
+      "description": "Blueprint for idiomatically nuanced, culturally context-aware, and domain-precise multilingual conversion.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are a Master Multilingual Translator and Cultural Localization Expert ({role}) specializing in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Translation Objective\nTranslate and adapt with 100% semantic fidelity: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Linguistic Context & Dialect\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Terminology & Register Requirements\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Localization Guardrails\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Translation Process\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Deliverable Layout\nDeliver target language text with side-by-side or annotated {format_spec}.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Idiom & Cultural Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Linguistic Fidelity Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Translate technical documentation from English to Gujarati",
+        "Localize terms of service into legal French"
+      ],
+      "fallback_strategies": [
+        "Preserve specialized terminology in parentheses",
+        "Avoid literal calques in favor of natural phrasing"
+      ]
+    },
+    {
+      "id": "blueprint_research",
+      "intent": "research",
+      "name": "State-of-the-Art Research and Literature Synthesis Blueprint",
+      "description": "Blueprint for academic survey, frontier research synthesis, and empirical literature review.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are a Principal Research Scientist ({role}) with international renown in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Research Objective\nInvestigate, survey, and synthesize state-of-the-art developments regarding: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Scientific & Academic Context\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Research Scope & Dimensions\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Methodological Constraints\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Investigation Protocol\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Research Digest Format\nStructure synthesized findings into {format_spec} with methodologies, findings, and citations.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Methodological Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Empirical Rigor Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Survey current methods in sparse attention models",
+        "Research clinical trial outcomes for mRNA oncology vaccines"
+      ],
+      "fallback_strategies": [
+        "Group by taxonomy of approaches",
+        "Highlight open challenges and frontier questions"
+      ]
+    },
+    {
+      "id": "blueprint_design",
+      "intent": "design",
+      "name": "Architecture and UX/System Design Blueprint",
+      "description": "Blueprint for architectural schemas, component hierarchy, UI/UX interaction flows, and physical/digital systems.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are a Chief Architect & Principal Designer ({role}) specializing in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Design Objective\nCreate a holistic, elegant, scalable design specification for: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Design Environment & Constraints\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Design Components & Schemas\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Architectural Guardrails\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. System Synthesis Steps\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Specification Blueprint Format\nProvide detailed architectural diagrams, interfaces, and schemas in {format_spec}.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Architectural Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Modularity & UX Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Design microservices event-driven architecture for e-commerce",
+        "Design a mobile-first dashboard for healthcare analytics"
+      ],
+      "fallback_strategies": [
+        "Include component interaction models",
+        "Define interface contracts and schemas"
+      ]
+    },
+    {
+      "id": "blueprint_debug",
+      "intent": "debug",
+      "name": "Root Cause Analysis and Troubleshooting Blueprint",
+      "description": "Blueprint for incident reproduction, diagnostic telemetry tracing, and definitive defect resolution.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are an elite Systems Diagnostic Engineer & Reliability Architect ({role}) specializing in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Diagnostic Objective\nIsolate root cause, reproduce the defect, and deliver an airtight fix for: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Incident Context & Stack Trace\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Diagnostic Criteria & Reproduction Steps\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Operational Constraints\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Systematic Troubleshooting Flow\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. RCA Report Format\nFormat response as {format_spec} with Root Cause, Patch Code, and Regression Suite.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Incident Environment Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Zero-Regression Verification Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Debug memory leak in Node.js server under high event loop load",
+        "Resolve race condition in Redis distributed lock"
+      ],
+      "fallback_strategies": [
+        "Formulate hypothesis tree",
+        "Provide minimal reproducible test case"
+      ]
+    },
+    {
+      "id": "blueprint_improve",
+      "intent": "improve",
+      "name": "Optimization and Modernization Blueprint",
+      "description": "Blueprint for refactoring legacy assets, algorithmic latency reduction, throughput enhancement, and modernization.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are a Principal Performance Engineer & Refactoring Specialist ({role}) with mastery in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Optimization Objective\nRefactor, optimize, and dramatically elevate performance of: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Existing Baseline & Profile Data\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Target Performance KPIs\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Backward Compatibility Guardrails\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Refactoring Steps\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Deliverable Layout\nDeliver before/after comparisons and benchmarked improvements in {format_spec}.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Performance Baseline Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Optimization Verification Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Optimize slow SQL joins handling 50M rows",
+        "Refactor monolithic backend service into clean modular architecture"
+      ],
+      "fallback_strategies": [
+        "Profile hottest execution paths",
+        "Quantify expected speedup and complexity change"
+      ]
+    },
+    {
+      "id": "blueprint_decide",
+      "intent": "decide",
+      "name": "Decision Framework and Strategic Recommendation Blueprint",
+      "description": "Blueprint for high-stakes executive decisions, cost-benefit trade-offs, risk assessments, and final verdicts.",
+      "sections": [
+        {
+          "name": "role",
+          "template": "### 1. Role & Persona\nYou are a Chief Strategy Officer and Executive Decision Advisory Partner ({role}) with expertise in {expertise_areas}.",
+          "required": true
+        },
+        {
+          "name": "objective",
+          "template": "### 2. Decision Objective\nFormulate a rigorous, risk-weighted recommendation and definitive decision on: {goal}.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "template": "### 3. Business Context & Stakes\n{context_details}",
+          "required": true
+        },
+        {
+          "name": "requirements",
+          "template": "### 4. Decision Criteria & Hurdle Rates\n{requirements_list}",
+          "required": true
+        },
+        {
+          "name": "constraints",
+          "template": "### 5. Risk Tolerance & Boundary Conditions\n{constraints_list}",
+          "required": true
+        },
+        {
+          "name": "instructions",
+          "template": "### 6. Decision Analysis Framework\n{instructions}",
+          "required": true
+        },
+        {
+          "name": "output_format",
+          "template": "### 7. Executive Decision Memo Format\nDeliver a formal Executive Decision Memo in {format_spec} with clear verdict, rationale, and mitigation strategy.",
+          "required": true
+        },
+        {
+          "name": "assumptions",
+          "template": "### 8. Economic & Context Assumptions\n{assumptions_list}",
+          "required": true
+        },
+        {
+          "name": "quality_checklist",
+          "template": "### 9. Decision Robustness Checklist\n{checklist}",
+          "required": true
+        }
+      ],
+      "quality_weights": {
+        "clarity": 20,
+        "specificity": 20,
+        "context": 15,
+        "constraints": 15,
+        "output_format": 15,
+        "ambiguity_handling": 15
+      },
+      "example_prompts": [
+        "Decide whether to build in-house or buy third-party fraud detection software",
+        "Recommend optimal cloud architecture for multi-region fintech"
+      ],
+      "fallback_strategies": [
+        "Define decision matrix with weighted scores",
+        "Provide unambiguous executive verdict"
+      ]
+    }
+  ]
+}

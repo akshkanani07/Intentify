@@ -1,0 +1,63 @@
+{
+  "subject": "Elixir",
+  "aliases": [
+    "elixir",
+    "erlang",
+    "beam",
+    "otp",
+    "phoenix"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "elx_pattern_matching",
+      "title": "Pattern Matching, Immutability & Pipe Operator",
+      "objective": "Deconstruct tuples, maps, and lists declaratively using the match operator and composable pipes.",
+      "example": "{:ok, data} = File.read('data.csv'); data |> String.trim() |> String.split('\n')",
+      "exercise": "Write a pipeline that reads, filters, and transforms a CSV dataset into structured maps using Enum and Stream.",
+      "prerequisites": []
+    },
+    {
+      "id": "elx_actors_processes",
+      "title": "BEAM Actor Model, Processes & Message Passing",
+      "objective": "Spawn lightweight isolated actor processes and exchange asynchronous messages with mailboxes.",
+      "example": "pid = spawn(fn -> receive do {:ping, sender} -> send(sender, :pong) end end)",
+      "exercise": "Implement a ping-pong process pair communicating via send and receive blocks with timeouts.",
+      "prerequisites": [
+        "elx_pattern_matching"
+      ]
+    },
+    {
+      "id": "elx_gen_server",
+      "title": "GenServer Behaviors for State Abstraction",
+      "objective": "Standardize stateful servers with init, handle_call, handle_cast, and handle_info callbacks.",
+      "example": "def handle_call({:get, key}, _from, state), do: {:reply, Map.get(state, key), state}",
+      "exercise": "Build an in-memory key-value cache GenServer with TTL expiration support.",
+      "prerequisites": [
+        "elx_actors_processes"
+      ]
+    },
+    {
+      "id": "elx_supervisors",
+      "title": "Supervisors & 'Let It Crash' Fault Tolerance",
+      "objective": "Design self-healing actor supervision trees using one_for_one and rest_for_one strategies.",
+      "example": "children = [{MyGenServer, []}]; Supervisor.start_link(children, strategy: :one_for_one)",
+      "exercise": "Construct a supervision tree that restarts a failed database connection worker without interrupting web requests.",
+      "prerequisites": [
+        "elx_gen_server"
+      ]
+    },
+    {
+      "id": "elx_registry_dynamic",
+      "title": "DynamicSupervisor & Distributed Registry",
+      "objective": "Scale dynamically spawned user session processes registered via unique pub/sub keys.",
+      "example": "DynamicSupervisor.start_child(MyDynamicSup, {UserSession, user_id})",
+      "exercise": "Create a multi-room chat session manager dynamically spawning and routing messages to room workers.",
+      "prerequisites": [
+        "elx_supervisors"
+      ]
+    }
+  ]
+}

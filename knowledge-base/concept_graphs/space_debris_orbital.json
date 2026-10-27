@@ -1,0 +1,63 @@
+{
+  "subject": "Space Debris & Orbital Mechanics",
+  "aliases": [
+    "space debris",
+    "orbital mechanics",
+    "satellite collision",
+    "conjunction assessment",
+    "space situational awareness"
+  ],
+  "domain": "Aerospace & Defense",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "orb_tle_propagation",
+      "title": "Two-Line Element (TLE) Sets & SGP4 Orbital Propagation",
+      "objective": "Predict satellite trajectories and positions in Low Earth Orbit (LEO) using Simplified General Perturbations (SGP4).",
+      "example": "satellite = sgp4.propagate(tle_line1, tle_line2, target_epoch)",
+      "exercise": "Propagate an active satellite orbit 72 hours forward and output state vectors in Earth-Centered Inertial (ECI) frame.",
+      "prerequisites": []
+    },
+    {
+      "id": "orb_conjunction_assessment",
+      "title": "Conjunction Data Messages (CDM) & Miss Distance Analysis",
+      "objective": "Parse Space Surveillance Network CDMs and compute closest approach geometry and radial separation.",
+      "example": "MissDistance = sqrt(dx^2 + dy^2 + dz^2); TCA = TimeOfClosestApproach;",
+      "exercise": "Write a parser extracting miss distance, relative velocity, and covariance matrices from NASA/Space-Track CDMs.",
+      "prerequisites": [
+        "orb_tle_propagation"
+      ]
+    },
+    {
+      "id": "orb_collision_probability",
+      "title": "Collision Probability Estimation (Foster-1992 Algorithm)",
+      "objective": "Integrate 2D encounter plane error covariances to compute the Probability of Collision (Pc).",
+      "example": "Pc = (1 / (2 * pi * sigma_x * sigma_y)) * exp(-0.5 * (x^2 / sigma_x^2 + y^2 / sigma_y^2)) * Area",
+      "exercise": "Implement a numerical integration routine computing collision probability for a 5-meter combined hard-body radius.",
+      "prerequisites": [
+        "orb_conjunction_assessment"
+      ]
+    },
+    {
+      "id": "orb_maneuver_optimization",
+      "title": "Delta-V Collision Avoidance Maneuver Planning",
+      "objective": "Calculate optimal thrust impulses that maximize radial/in-track separation while conserving onboard propellant.",
+      "example": "DeltaV = sqrt(mu / r) * (delta_r / (2 * r))",
+      "exercise": "Compute an in-track burn vector 1 orbit prior to TCA reducing collision probability below 1e-7 with minimal delta-v.",
+      "prerequisites": [
+        "orb_collision_probability"
+      ]
+    },
+    {
+      "id": "orb_deorbit_compliance",
+      "title": "Post-Mission Disposal & 5-Year Deorbit Regulatory Compliance",
+      "objective": "Plan controlled atmospheric re-entry or disposal graveyard orbits adhering to FCC and IADC guidelines.",
+      "example": "PerigeeAltitude < 150km for atmospheric drag decay within 5 years.",
+      "exercise": "Simulate orbital lifetime decay from 550km under varying solar flux and atmospheric drag coefficients.",
+      "prerequisites": [
+        "orb_maneuver_optimization"
+      ]
+    }
+  ]
+}

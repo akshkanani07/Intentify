@@ -1,0 +1,59 @@
+{
+  "subject": "TypeScript",
+  "aliases": [
+    "typescript",
+    "ts"
+  ],
+  "domain": "Software Development",
+  "reviewed": false,
+  "topics": [
+    {
+      "id": "ts_types",
+      "title": "Static Type Annotations & Type Inference",
+      "objective": "Understand primitive types, array annotations, function signatures, and return type contracts.",
+      "example": "function greet(name: string, count?: number): string { return name.repeat(count ?? 1); }",
+      "exercise": "Convert an untyped JavaScript utility library into strictly typed TypeScript functions.",
+      "prerequisites": []
+    },
+    {
+      "id": "ts_interfaces",
+      "title": "Interfaces, Type Aliases & Union Types",
+      "objective": "Model complex domain entities using interfaces, readonly attributes, and discriminated unions.",
+      "example": "type ResponseState = { status: \"success\"; data: string } | { status: \"error\"; error: Error };",
+      "exercise": "Design a strongly-typed API response state model that exhaustively handles error cases.",
+      "prerequisites": [
+        "ts_types"
+      ]
+    },
+    {
+      "id": "ts_generics",
+      "title": "Generics & Constraints",
+      "objective": "Implement reusable type-safe data structures using generic type parameters and keyof constraints.",
+      "example": "function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] { return obj[key]; }",
+      "exercise": "Create a generic in-memory Cache<K, V> container with expiration timestamps.",
+      "prerequisites": [
+        "ts_interfaces"
+      ]
+    },
+    {
+      "id": "ts_narrowing",
+      "title": "Type Narrowing & Custom Type Guards",
+      "objective": "Differentiate runtime types using typeof, instanceof, and user-defined type predicates.",
+      "example": "function isEmployee(person: Person): person is Employee { return \"employeeId\" in person; }",
+      "exercise": "Implement a polymorphic event dispatch system that safely narrows payload interfaces.",
+      "prerequisites": [
+        "ts_generics"
+      ]
+    },
+    {
+      "id": "ts_config",
+      "title": "tsconfig Strict Configuration & Modern Compilation",
+      "objective": "Configure strict null checks, noImplicitAny, and target modern ECMAScript output.",
+      "example": "{\n  \"compilerOptions\": { \"strict\": true, \"noImplicitAny\": true }\n}",
+      "exercise": "Configure a monorepo build setup with strict typing and incremental compilation.",
+      "prerequisites": [
+        "ts_narrowing"
+      ]
+    }
+  ]
+}

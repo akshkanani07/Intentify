@@ -1,0 +1,62 @@
+{
+  "subject": "Telemedicine Platform",
+  "aliases": [
+    "telemedicine",
+    "telehealth",
+    "virtual consultation",
+    "telemedicine platform"
+  ],
+  "domain": "Healthcare",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "tele_webrtc_video",
+      "title": "WebRTC Video/Audio Peer Connections & SFU Architecture",
+      "objective": "Establish low-latency, end-to-end encrypted clinical video calls using Selective Forwarding Units.",
+      "example": "peerConnection.createOffer({ offerToReceiveVideo: true, offerToReceiveAudio: true })",
+      "exercise": "Set up a WebRTC video consultation room with media stream quality adaptation under packet loss.",
+      "prerequisites": []
+    },
+    {
+      "id": "tele_virtual_waiting_room",
+      "title": "Virtual Waiting Rooms & Dynamic Clinician Routing",
+      "objective": "Manage patient digital queues and alert clinicians when scheduled patients check into the consultation session.",
+      "example": "RoomState: WAITING -> PRE_TRIAGE -> IN_CONSULTATION -> COMPLETED",
+      "exercise": "Build a WebSocket waiting room notifying doctors when a patient completes pre-call audio/video verification.",
+      "prerequisites": [
+        "tele_webrtc_video"
+      ]
+    },
+    {
+      "id": "tele_digital_prescriptions",
+      "title": "Cryptographically Signed e-Prescriptions",
+      "objective": "Generate tamper-evident, digitally signed medical prescriptions compliant with pharmacy dispensing standards.",
+      "example": "ePrescription.sign(clinicianPrivateKey); embedQRCodeVerification(prescriptionPdf);",
+      "exercise": "Implement an e-prescription PDF generator embedding a verifiable cryptographic signature and QR code.",
+      "prerequisites": [
+        "tele_virtual_waiting_room"
+      ]
+    },
+    {
+      "id": "tele_ehr_sync",
+      "title": "Clinical Charting & FHIR Protocol Synchronization",
+      "objective": "Export consultation encounter notes into hospital EHR systems via standard HL7/FHIR resources.",
+      "example": "POST /fhir/Encounter { status: 'finished', class: 'VR', subject: { reference: 'Patient/123' } }",
+      "exercise": "Map video call encounter notes to a FHIR Encounter resource and transmit it to an external EHR sandbox.",
+      "prerequisites": [
+        "tele_digital_prescriptions"
+      ]
+    },
+    {
+      "id": "tele_remote_monitoring",
+      "title": "Remote Patient Monitoring (RPM) Device Telemetry",
+      "objective": "Ingest live biometric data (blood pressure, pulse oximetry, glucose) and trigger clinical alerts.",
+      "example": "if (vitals.spO2 < 90) { alertOnCallClinician('Hypoxia alert for patient: ' + patientId); }",
+      "exercise": "Write an ingestion endpoint for Bluetooth pulse oximeter data triggering urgent clinician notifications on anomalies.",
+      "prerequisites": [
+        "tele_webrtc_video"
+      ]
+    }
+  ]
+}
