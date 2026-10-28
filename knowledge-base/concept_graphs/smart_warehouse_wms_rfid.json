@@ -1,0 +1,64 @@
+{
+  "subject": "Smart Warehouse Management & RFID Automation",
+  "aliases": [
+    "smart warehouse wms",
+    "rfid inventory tracking",
+    "automated guided vehicle agv",
+    "warehouse pallet management",
+    "slotting optimization"
+  ],
+  "domain": "Retail",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "rfid_pallet_dock_tagging",
+      "title": "RAIN RFID Dock-Door Portals & Bulk Tag Ingestion",
+      "objective": "Process multi-tag simultaneous reads of EPC Gen2 ultra-high frequency (UHF) tags during inbound pallet forklift transits.",
+      "example": "read_rate_epc = (tags_successfully_decoded / total_pallet_tags) * 100",
+      "exercise": "Design an RFID antenna gate configuration eliminating tag read collision when scanning 60 packaged cases per second.",
+      "prerequisites": []
+    },
+    {
+      "id": "warehouse_slotting_optimization",
+      "title": "Dynamic Velocity Slotting & Pick Path Optimization",
+      "objective": "Classify SKUs via ABC turnover velocity and allocate high-turnover fast movers to golden ergonomic pick zones.",
+      "example": "travel_time_reduction = baseline_picker_distance - optimized_tsp_routing_distance",
+      "exercise": "Formulate a traveling salesperson (TSP) pick-wave route optimization script minimizing warehouse picker travel distances.",
+      "prerequisites": [
+        "rfid_pallet_dock_tagging"
+      ]
+    },
+    {
+      "id": "agv_amr_fleet_dispatch",
+      "title": "Autonomous Mobile Robot (AMR) & AGV Fleet Coordination",
+      "objective": "Integrate fleet management software assigning pallet transport missions and automated charging cycles without congestion.",
+      "example": "dispatch_task(robot_id, source_aisle='A-12', dest_dock='D-04', priority=1)",
+      "exercise": "Build an event-driven dispatch coordinator rerouting AMRs dynamically when congestion is detected in high-density aisles.",
+      "prerequisites": [
+        "warehouse_slotting_optimization"
+      ]
+    },
+    {
+      "id": "cross_docking_wms_logic",
+      "title": "Automated Cross-Docking & Put-Away Elimination",
+      "objective": "Match inbound shipment receipts against backorders to bypass storage racks and route cargo straight to outbound staging bays.",
+      "example": "if (sku_id in backorder_queue) { assign_cross_dock(pallet_id, outbound_door); }",
+      "exercise": "Develop an automated cross-docking decision logic engine reducing average dock-to-departure turnaround times under 90 minutes.",
+      "prerequisites": [
+        "rfid_pallet_dock_tagging"
+      ]
+    },
+    {
+      "id": "cycle_counting_variance_rca",
+      "title": "Autonomous Drone Cycle Counting & Inventory Reconciliation",
+      "objective": "Deploy optical and barcode LiDAR scanning drones for automated inventory auditing and root cause analysis of shrinkage.",
+      "example": "inventory_variance_pct = abs(physical_count - system_record) / system_record * 100",
+      "exercise": "Draft an automated inventory reconciliation protocol flagging pallet discrepancies exceeding a 0.1% tolerance threshold.",
+      "prerequisites": [
+        "warehouse_slotting_optimization",
+        "cross_docking_wms_logic"
+      ]
+    }
+  ]
+}

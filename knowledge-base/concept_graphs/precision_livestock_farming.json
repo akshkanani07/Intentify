@@ -1,0 +1,65 @@
+{
+  "subject": "Precision Livestock Telemetry & Herd Health",
+  "aliases": [
+    "precision livestock farming",
+    "dairy cattle rumination telemetry",
+    "herd health automated monitoring",
+    "smart collar livestock",
+    "automated milking system ams"
+  ],
+  "domain": "Agriculture",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "rumination_collar_telemetry",
+      "title": "3-Axis Accelerometer Ear Tags & Rumination Monitoring",
+      "objective": "Track daily chewing minutes and head movements to detect sub-acute ruminal acidosis and early metabolic disorders.",
+      "example": "rumination_anomaly = current_daily_minutes < (rolling_7day_mean - 2 * standard_deviation)",
+      "exercise": "Write a signal processing script identifying cows whose rumination time drops by more than 15% within a 24-hour window.",
+      "prerequisites": []
+    },
+    {
+      "id": "estrus_detection_insemination",
+      "title": "Automated Estrus Detection & Timed Artificial Insemination",
+      "objective": "Monitor sudden spikes in walking activity and restlessness to calculate optimal insemination windows.",
+      "example": "optimal_insemination_window_hours = estrus_peak_time + 12",
+      "exercise": "Formulate an automated alert workflow notifying herd managers 12 hours after detected peak estrus activity.",
+      "prerequisites": [
+        "rumination_collar_telemetry"
+      ]
+    },
+    {
+      "id": "robotic_milking_quality_sensors",
+      "title": "Automated Milking Systems (AMS) & In-Line Milk Quality",
+      "objective": "Measure milk electrical conductivity, optical somatic cell count, and quarter-level temperature to diagnose mastitis.",
+      "example": "if (quarter_conductivity > baseline * 1.25 or blood_detected) { divert_to_waste_tank(); }",
+      "exercise": "Build an in-line decision pipeline diverting non-compliant milk automatically and scheduling teat disinfection sprays.",
+      "prerequisites": [
+        "rumination_collar_telemetry"
+      ]
+    },
+    {
+      "id": "bolus_reticular_ph_temperature",
+      "title": "Intra-Rumen Wireless Sensor Boluses",
+      "objective": "Analyze real-time reticulorumen temperature and pH measurements transmitted via UHF/LoRaWAN to cloud gateways.",
+      "example": "water_intake_event = detected_if(temp_drop > 2.0 and temp_recovery_minutes < 45)",
+      "exercise": "Develop an event detector parsing water drinking frequency and flagging prolonged rumen fever episodes.",
+      "prerequisites": [
+        "rumination_collar_telemetry",
+        "robotic_milking_quality_sensors"
+      ]
+    },
+    {
+      "id": "feed_intake_biometric_scale",
+      "title": "Individual Dry Matter Intake (DMI) & Biometric Walk-Over Scales",
+      "objective": "Track body weight trends and individual robotic feed dispenser intake to calculate herd feed conversion efficiency (FCE).",
+      "example": "fce = milk_yield_kg_fcm / dry_matter_intake_kg",
+      "exercise": "Create an automated feed allocation model adjusting concentrate rations based on days in milk (DIM) and daily milk yield.",
+      "prerequisites": [
+        "estrus_detection_insemination",
+        "robotic_milking_quality_sensors"
+      ]
+    }
+  ]
+}

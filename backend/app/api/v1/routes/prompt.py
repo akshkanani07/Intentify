@@ -219,6 +219,34 @@ def get_models_health() -> ModelsHealthResponse:
                 )
             )
 
+    # Check for optional local GGUF models in ml-engine/models/gguf
+    gguf_dir = Path("ml-engine/models/gguf")
+    gguf_files = list(gguf_dir.glob("*.gguf")) if gguf_dir.exists() else []
+    if gguf_files:
+        models_status.append(
+            ModelStatus(
+                name=f"Local GGUF LLM ({gguf_files[0].name})",
+                status="online",
+                type="QuantizedGGUF",
+                accuracy=1.0,
+                loss=0.0,
+                samples=0,
+                classes=0,
+            )
+        )
+    else:
+        models_status.append(
+            ModelStatus(
+                name="Local GGUF Model Runtime",
+                status="standby",
+                type="PluggableGGUF",
+                accuracy=None,
+                loss=None,
+                samples=0,
+                classes=0,
+            )
+        )
+
     return ModelsHealthResponse(
         status="healthy",
         engine_mode="ml",

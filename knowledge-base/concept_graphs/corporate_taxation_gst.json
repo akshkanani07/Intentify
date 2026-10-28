@@ -1,0 +1,64 @@
+{
+  "subject": "Corporate Taxation & GST Accounting",
+  "aliases": [
+    "corporate taxation gst",
+    "gst input tax credit",
+    "transfer pricing compliance",
+    "corporate tax filing",
+    "gst audit eway bill"
+  ],
+  "domain": "Finance",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "gst_input_tax_credit",
+      "title": "GST Input Tax Credit (ITC) & GSTR-2B Automated Reconciliation",
+      "objective": "Reconcile vendor purchase registers against auto-populated GSTR-2B data to detect ineligible and blocked credits under Section 17(5).",
+      "example": "eligible_itc = total_input_tax - blocked_credit_sec17_5 - non_business_apportionment",
+      "exercise": "Write an automated matching algorithm matching vendor invoice numbers, GSTIN, and taxable value within a 1-rupee tolerance.",
+      "prerequisites": []
+    },
+    {
+      "id": "eway_bill_einvoicing",
+      "title": "Real-time E-Invoicing & E-Way Bill Generation",
+      "objective": "Generate Invoice Reference Numbers (IRN) via government IRP portals and embed signed QR codes on B2B invoices.",
+      "example": "irn_hash = sha256(supplier_gstin + doc_type + doc_num + fin_year)",
+      "exercise": "Design an automated JSON payload generator and API dispatcher communicating with the GST e-invoice clearance portal.",
+      "prerequisites": [
+        "gst_input_tax_credit"
+      ]
+    },
+    {
+      "id": "transfer_pricing_benchmarking",
+      "title": "Transfer Pricing (TP) & Arm's Length Principle Documentation",
+      "objective": "Benchmark cross-border intercompany transactions using Comparable Uncontrolled Price (CUP) and Transactional Net Margin Method (TNMM).",
+      "example": "operating_margin = operating_profit / total_operating_revenue",
+      "exercise": "Compile a master file and local file transfer pricing audit documentation set establishing arm's length profit margins.",
+      "prerequisites": [
+        "gst_input_tax_credit"
+      ]
+    },
+    {
+      "id": "tds_tcs_statutory_deductions",
+      "title": "TDS / TCS Withholding Tax Assessment & Form 26AS Audit",
+      "objective": "Calculate withholding tax rates under sections 194C, 194J, and 194Q and verify timely statutory deposit by the 7th of each month.",
+      "example": "tds_amount = taxable_invoice_amount * tds_applicable_rate",
+      "exercise": "Build a withholding tax compliance schedule tracking quarterly Form 24Q/26Q filings and TRACES certificate issuances.",
+      "prerequisites": [
+        "gst_input_tax_credit"
+      ]
+    },
+    {
+      "id": "corporate_mat_calculation",
+      "title": "Corporate Tax Assessment & Minimum Alternate Tax (MAT)",
+      "objective": "Calculate standard corporate tax liability under Section 115BAA (22%) versus Section 115JB book profit Minimum Alternate Tax.",
+      "example": "tax_liability = min(regular_tax_on_income, mat_on_book_profit)",
+      "exercise": "Formulate a corporate tax computation worksheet adjusting book profit for statutory exempt incomes and depreciation differentials.",
+      "prerequisites": [
+        "tds_tcs_statutory_deductions",
+        "transfer_pricing_benchmarking"
+      ]
+    }
+  ]
+}

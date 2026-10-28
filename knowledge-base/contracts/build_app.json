@@ -82,5 +82,11 @@
       ],
       "out_of_scope_message": "Advanced distributed tracing and APM telemetry are out of scope unless explicitly requested."
     }
+  ],
+  "exemplars": [
+    {
+      "scenario": "Full-Stack Multi-Tenant SaaS with Payment Gateway",
+      "pattern": "Provide production database schemas, JWT authentication middleware, webhook idempotency keys, and explicit REST endpoints with zero mock stubs."
+    }
   ]
 }

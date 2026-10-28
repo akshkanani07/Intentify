@@ -27,6 +27,10 @@ import {
   Bot,
   X,
   Trash2,
+  ThumbsUp,
+  ThumbsDown,
+  MessageSquarePlus,
+  Lightbulb,
 } from "lucide-react";
 
 interface QualityBreakdown {
@@ -84,6 +88,7 @@ interface ProcessingMetadata {
   };
   cognitive_quality?: Record<string, number>;
   dynamic_headings?: string[];
+  clarifications?: string[];
 }
 
 interface PromptGenerationResponse {
@@ -91,6 +96,7 @@ interface PromptGenerationResponse {
   assumptions: string[];
   quality_score: number | string;
   improvements: string[];
+  clarifications?: string[];
   breakdown?: QualityBreakdown;
   metadata?: ProcessingMetadata;
 }
@@ -242,6 +248,11 @@ export default function IntentifyApp() {
   const [copied, setCopied] = useState(false);
   const [result, setResult] = useState<PromptGenerationResponse | null>(null);
 
+  // Feedback states
+  const [feedbackRating, setFeedbackRating] = useState<"up" | "down" | null>(null);
+  const [feedbackSubmitting, setFeedbackSubmitting] = useState(false);
+  const [feedbackToast, setFeedbackToast] = useState<string | null>(null);
+
   // Active section filter or tab
   const [activeTab, setActiveTab] = useState<"prompt" | "diff" | "cognitive" | "assumptions" | "quality">("prompt");
 
@@ -303,6 +314,8 @@ export default function IntentifyApp() {
 
     setLoading(true);
     setError(null);
+    setFeedbackRating(null);
+    setFeedbackToast(null);
 
     const stages = [
       "1/9 Language & Script Detection (NFC Normalization)...",
@@ -420,6 +433,48 @@ export default function IntentifyApp() {
     };
   }, [displayedPrompt]);
 
+  const handleFeedback = async (ratingType: "up" | "down") => {
+    if (!result || feedbackSubmitting) return;
+    setFeedbackSubmitting(true);
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+      const numericRating = ratingType === "up" ? 5 : 2;
+      const response = await fetch(`${apiUrl}/api/v1/feedback`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prompt_text: displayedPrompt || result.master_prompt,
+          goal: detail.trim(),
+          domain: result.metadata?.detected_domain || "",
+          rating: numericRating,
+          comments: ratingType === "up" ? "Helpful and accurate prompt" : "Needs improvement",
+        }),
+      });
+      if (response.ok) {
+        setFeedbackRating(ratingType);
+        setFeedbackToast(
+          ratingType === "up"
+            ? "Saved exemplar to offline learning memory!"
+            : "Feedback recorded for offline learning store."
+        );
+        setTimeout(() => setFeedbackToast(null), 4000);
+      }
+    } catch (err) {
+      console.error("Feedback submission failed:", err);
+    } finally {
+      setFeedbackSubmitting(false);
+    }
+  };
+
+  const handleApplyClarification = (clarificationText: string) => {
+    setDetail((prev) => {
+      const clean = prev.trim();
+      return `${clean}\n- Clarification: ${clarificationText}`;
+    });
+  };
+
   const handleCopy = () => {
     if (!displayedPrompt) return;
     navigator.clipboard.writeText(displayedPrompt);
@@ -449,6 +504,8 @@ export default function IntentifyApp() {
     setTargetLLM("universal");
     setResult(null);
     setError(null);
+    setFeedbackRating(null);
+    setFeedbackToast(null);
   };
 
   const promptScoreNumber =
@@ -903,6 +960,37 @@ export default function IntentifyApp() {
                     <Download className="w-3.5 h-3.5" />
                     <span>Download</span>
                   </button>
+
+                  {/* Feedback Loop Buttons */}
+                  <div className="flex items-center gap-1 border-l border-slate-700/80 pl-2 ml-1">
+                    <button
+                      onClick={() => handleFeedback("up")}
+                      disabled={feedbackSubmitting}
+                      className={`px-2.5 py-1.5 rounded-lg text-xs font-medium border transition-all flex items-center gap-1 cursor-pointer ${
+                        feedbackRating === "up"
+                          ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"
+                          : "bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-700"
+                      }`}
+                      title="Mark prompt as helpful (stores golden exemplar to learning memory)"
+                    >
+                      <ThumbsUp className="w-3.5 h-3.5 text-emerald-400" />
+                      <span className="hidden sm:inline">Helpful</span>
+                    </button>
+
+                    <button
+                      onClick={() => handleFeedback("down")}
+                      disabled={feedbackSubmitting}
+                      className={`px-2.5 py-1.5 rounded-lg text-xs font-medium border transition-all flex items-center gap-1 cursor-pointer ${
+                        feedbackRating === "down"
+                          ? "bg-rose-500/20 text-rose-300 border-rose-500/40"
+                          : "bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-700"
+                      }`}
+                      title="Mark prompt as needing improvement (records corrective memory)"
+                    >
+                      <ThumbsDown className="w-3.5 h-3.5 text-rose-400" />
+                      <span className="hidden sm:inline">Refine</span>
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -927,6 +1015,47 @@ export default function IntentifyApp() {
                     <span className="text-cyan-400">
                       {tokenTelemetry.contextFootprintPercent}% of 128k context
                     </span>
+                  </div>
+                </div>
+              )}
+
+              {/* Feedback Success Notification */}
+              {feedbackToast && (
+                <div className="mx-4 mt-3 px-3.5 py-2 rounded-xl bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-xs flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>{feedbackToast}</span>
+                </div>
+              )}
+
+              {/* Smart Clarification Prompts (Interactive Disambiguation) */}
+              {result.clarifications && result.clarifications.length > 0 && (
+                <div className="mx-4 my-3 p-3.5 rounded-xl bg-indigo-950/30 border border-indigo-500/30 flex flex-col gap-2">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Lightbulb className="w-4 h-4 text-amber-400 shrink-0" />
+                      <span className="text-xs font-semibold text-indigo-200">
+                        Smart Disambiguation & Clarification Suggestions
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-indigo-400/80 font-mono">
+                      Click any pill to append to input
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-slate-400">
+                    The compiler noticed your input is terse or broad. Click any suggestion below to refine parameters:
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {result.clarifications.map((q, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => handleApplyClarification(q)}
+                        className="text-left text-xs bg-slate-900/80 hover:bg-indigo-900/50 text-slate-300 hover:text-white px-3 py-1.5 rounded-lg border border-indigo-500/20 hover:border-indigo-400/50 transition-colors flex items-center gap-1.5 cursor-pointer group"
+                        title="Append to prompt input"
+                      >
+                        <MessageSquarePlus className="w-3.5 h-3.5 text-indigo-400 group-hover:text-indigo-300 shrink-0" />
+                        <span>{q}</span>
+                      </button>
+                    ))}
                   </div>
                 </div>
               )}

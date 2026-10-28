@@ -44,5 +44,11 @@
       "description": "Assumed organizational velocity, tooling, and team structure."
     }
   ],
-  "optional_sections": []
+  "optional_sections": [],
+  "exemplars": [
+    {
+      "scenario": "Phased Migration / Technical Implementation Roadmap",
+      "pattern": "Break down into ordered phases with hard exit criteria, dependency DAGs, rollback contingencies, and risk mitigation buffers."
+    }
+  ]
 }

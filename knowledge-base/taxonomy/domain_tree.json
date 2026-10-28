@@ -1153,6 +1153,17 @@
             "digital asset custody",
             "key signing quorum"
           ]
+        },
+        "Corporate Taxation & GST": {
+          "triggers": [
+            "gst",
+            "corporate tax",
+            "input tax credit",
+            "transfer pricing",
+            "mat tax",
+            "eway bill",
+            "tds tcs"
+          ]
         }
       }
     },
@@ -1480,6 +1491,16 @@
             "macroalgae mariculture",
             "seaweed aquaculture"
           ]
+        },
+        "Precision Livestock Telemetry": {
+          "triggers": [
+            "precision livestock",
+            "dairy cattle",
+            "rumination",
+            "herd health",
+            "automated milking",
+            "ams"
+          ]
         }
       }
     },
@@ -1554,6 +1575,16 @@
             "wellhead temperature",
             "geothermal monitoring"
           ]
+        },
+        "Renewable Solar Microgrid": {
+          "triggers": [
+            "solar microgrid",
+            "bess",
+            "battery storage",
+            "photovoltaic microgrid",
+            "islanded microgrid",
+            "solar pv"
+          ]
         }
       }
     },
@@ -1589,6 +1620,17 @@
             "avionics",
             "flight telemetry",
             "arinc 429"
+          ]
+        },
+        "Commercial Drone Photogrammetry": {
+          "triggers": [
+            "drone",
+            "commercial drone",
+            "uav",
+            "photogrammetry",
+            "flight corridor",
+            "aerial surveying",
+            "dgca"
           ]
         }
       }
@@ -1730,6 +1772,17 @@
             "grocery app",
             "supermarket delivery"
           ]
+        },
+        "Smart Warehouse WMS": {
+          "triggers": [
+            "smart warehouse",
+            "wms",
+            "rfid warehouse",
+            "pallet tracking",
+            "cross docking",
+            "slotting optimization",
+            "agv amr"
+          ]
         }
       }
     },
@@ -1768,6 +1821,16 @@
             "tenant management",
             "rent collection",
             "landlord portal"
+          ]
+        },
+        "RERA Compliance": {
+          "triggers": [
+            "rera",
+            "rera compliance",
+            "real estate regulatory",
+            "escrow account",
+            "carpet area",
+            "builder compliance"
           ]
         }
       }

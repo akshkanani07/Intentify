@@ -44,5 +44,11 @@
       "description": "Cost of capital, local market rates, and customer acquisition benchmarks."
     }
   ],
-  "optional_sections": []
+  "optional_sections": [],
+  "exemplars": [
+    {
+      "scenario": "Market Expansion & GTM Strategy for Tier-2 Cities",
+      "pattern": "Analyze unit economics (CAC, LTV, Payback), competitive moats, regulatory tailwinds, and milestone execution KPIs."
+    }
+  ]
 }

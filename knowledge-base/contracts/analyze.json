@@ -44,5 +44,11 @@
       "description": "Access boundaries, test environment conditions, and compliance frameworks."
     }
   ],
-  "optional_sections": []
+  "optional_sections": [],
+  "exemplars": [
+    {
+      "scenario": "Distributed System Benchmark & Bottleneck Analysis",
+      "pattern": "Establish quantitative baseline, benchmark P99 latencies under load, analyze flamegraphs, and formulate prioritized optimizations."
+    }
+  ]
 }

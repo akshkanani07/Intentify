@@ -39,6 +39,10 @@ declare module "lucide-react" {
   export const Bot: LucideIcon;
   export const X: LucideIcon;
   export const Trash2: LucideIcon;
+  export const ThumbsUp: LucideIcon;
+  export const ThumbsDown: LucideIcon;
+  export const MessageSquarePlus: LucideIcon;
+  export const Lightbulb: LucideIcon;
 
   const icons: { [key: string]: LucideIcon };
   export default icons;

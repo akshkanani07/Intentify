@@ -104,6 +104,7 @@ class ProcessingMetadata(BaseModel):
     status: str = Field(default="final", description="final | draft (draft if any hard check failed)")
     content_share: dict[str, float] = Field(default_factory=dict, description="Proportion of reviewed, unreviewed, and generated content")
     model_name: str | None = Field(default=None, description="Local inference model name")
+    clarifications: list[str] = Field(default_factory=list, description="Smart clarification questions when input is terse or ambiguous")
 
 
 class PromptGenerationResponse(BaseModel):
@@ -113,6 +114,7 @@ class PromptGenerationResponse(BaseModel):
     assumptions: list[str] = Field(default_factory=list)
     quality_score: float | str
     improvements: list[str] = Field(default_factory=list)
+    clarifications: list[str] = Field(default_factory=list, description="Smart clarifying questions for refinement")
     metadata: ProcessingMetadata | None = None
     breakdown: QualityBreakdown | None = None
 

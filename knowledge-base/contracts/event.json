@@ -44,5 +44,11 @@
       "description": "Venue policies, guest transit arrangements, and local permits."
     }
   ],
-  "optional_sections": []
+  "optional_sections": [],
+  "exemplars": [
+    {
+      "scenario": "Multi-Day Destination Hospitality / Summit Coordination",
+      "pattern": "Coordinate minute-by-minute ceremony runs, vendor SLAs, guest transport matrices, contingency weather protocols, and banquet budgets."
+    }
+  ]
 }

@@ -44,5 +44,11 @@
       "description": "Environment parameters, dependency versions, and concurrency conditions."
     }
   ],
-  "optional_sections": []
+  "optional_sections": [],
+  "exemplars": [
+    {
+      "scenario": "Root Cause Analysis & Fix for Concurrency / Memory Leaks",
+      "pattern": "Isolate reproduction steps, analyze thread contention or memory profiling dumps, and prescribe atomic fix code with verification tests."
+    }
+  ]
 }

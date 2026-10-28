@@ -374,7 +374,43 @@ class PromptOrchestrator:
 
             elapsed_ms = (time.perf_counter() - start) * 1000.0
 
+            # Calculate Smart Clarifications for ambiguous or terse queries
+            smart_clarifications: list[str] = []
+            word_count = len(sanitized_detail.strip().split())
+            if word_count <= 6 or intent_result.intent in ['vague', 'create', 'plan']:
+                if spec.contract == 'build_app':
+                    smart_clarifications = [
+                        f'Which tech stack or database do you prefer for {spec.subject} (e.g. Next.js, FastAPI, PostgreSQL)?',
+                        'Are there specific authentication or payment gateways required?',
+                        'What is your target deployment scale or infrastructure?',
+                    ]
+                elif spec.contract == 'learn':
+                    smart_clarifications = [
+                        f'What is your existing technical background with {spec.subject}?',
+                        'Do you prefer a hands-on project curriculum or conceptual theory?',
+                        'What is your target learning timeline or pace?',
+                    ]
+                elif spec.contract == 'debug':
+                    smart_clarifications = [
+                        f'What exact error message, stack trace, or behavior is observed in {spec.subject}?',
+                        'What OS, compiler, or library versions are active?',
+                        'What minimal steps reproduce this issue reliably?',
+                    ]
+                elif spec.contract == 'event':
+                    smart_clarifications = [
+                        f'What is your target guest count and budget for {spec.subject}?',
+                        'What location, venue style, or dates are planned?',
+                        'Are there special dietary, cultural, or vendor requirements?',
+                    ]
+                else:
+                    smart_clarifications = [
+                        f'Who is the primary end user or stakeholder for {spec.subject}?',
+                        'What are the top 3 must-have deliverables or outcomes?',
+                        'Are there critical deadlines, budgets, or operational constraints?',
+                    ]
+
             return PromptGenerationResponse(
+                clarifications=smart_clarifications,
                 master_prompt=winner.full_text,
                 assumptions=risk_result.smart_assumptions,
                 quality_score=round(current_score, 2),

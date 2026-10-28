@@ -44,5 +44,11 @@
       "description": "Baseline learner proficiency assumptions and time commitment."
     }
   ],
-  "optional_sections": []
+  "optional_sections": [],
+  "exemplars": [
+    {
+      "scenario": "Progressive Concept Curriculum for Beginner to Practitioner",
+      "pattern": "Structure into at least 5 ordered modules with one pedagogical objective and one hands-on coding exercise each, maintaining a supportive tone."
+    }
+  ]
 }

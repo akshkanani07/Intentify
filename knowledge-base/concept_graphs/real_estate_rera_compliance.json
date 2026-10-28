@@ -1,0 +1,64 @@
+{
+  "subject": "Real Estate RERA Compliance & Escrow Accounting",
+  "aliases": [
+    "rera compliance",
+    "real estate regulatory authority",
+    "rera escrow account",
+    "property title diligence",
+    "rera builder compliance"
+  ],
+  "domain": "Real Estate",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "rera_project_registration",
+      "title": "RERA Project Registration & Title Due Diligence",
+      "objective": "Verify 30-year search report, encumbrance certificates, approved sanction plans, and layout approvals prior to registration.",
+      "example": "rera_application = {'sanction_plan_num': 'SP-2026-99', 'title_clear_cert': True, 'carpet_area_sqm': 14200.5}",
+      "exercise": "Compile a statutory checklist for developer project registration verifying legal title and non-encumbrance records.",
+      "prerequisites": []
+    },
+    {
+      "id": "escrow_account_70_percent",
+      "title": "70% Escrow Account Rules & Milestone Withdrawals",
+      "objective": "Enforce section 4(2)(l)(D) statutory rules requiring 70% of buyer collections deposited into a separate dedicated project bank account.",
+      "example": "escrow_deposit = total_buyer_receipts * 0.70",
+      "exercise": "Draft an automated compliance validation rule verifying CA, Architect, and Engineer certificates before escrow withdrawals.",
+      "prerequisites": [
+        "rera_project_registration"
+      ]
+    },
+    {
+      "id": "standard_allotment_agreement",
+      "title": "Standard Agreement for Sale & Carpet Area Definitions",
+      "objective": "Standardize purchase agreements based on net usable carpet area, excluding common external walls, balconies, and shafts.",
+      "example": "carpet_area = usable_internal_floor_area + internal_partition_walls",
+      "exercise": "Write a clause audit script checking sales contracts for non-standard indemnity clauses violating model RERA templates.",
+      "prerequisites": [
+        "rera_project_registration"
+      ]
+    },
+    {
+      "id": "quarterly_progress_reports",
+      "title": "Quarterly Progress Report (QPR) Public Disclosures",
+      "objective": "Publish mandatory quarterly updates including photo logs, percentage of construction completed, and sold inventory status.",
+      "example": "qpr_payload = {'booked_units': 85, 'construction_pct': 64.2, 'funds_utilized_inr': 45000000}",
+      "exercise": "Build an automated quarterly reporting tracker flagging upcoming filing deadlines to prevent developer registration suspension.",
+      "prerequisites": [
+        "escrow_account_70_percent"
+      ]
+    },
+    {
+      "id": "defect_liability_handover",
+      "title": "5-Year Structural Defect Liability & Society Handover",
+      "objective": "Manage developer 5-year structural defect repair obligations and execution of conveyance deed to the registered cooperative society.",
+      "example": "structural_defect_warranty_days = 5 * 365",
+      "exercise": "Draft a handover workflow transferring occupancy certificates, building plans, and corpus funds to the resident association.",
+      "prerequisites": [
+        "standard_allotment_agreement",
+        "quarterly_progress_reports"
+      ]
+    }
+  ]
+}

@@ -44,5 +44,11 @@
       "description": "Canonical world lore, existing character backstories, and reading audience level."
     }
   ],
-  "optional_sections": []
+  "optional_sections": [],
+  "exemplars": [
+    {
+      "scenario": "Authoritative Technical Architecture Document / ADR",
+      "pattern": "Detail executive rationale, decision trade-offs, consequences, security guardrails, and compliance sign-offs."
+    }
+  ]
 }

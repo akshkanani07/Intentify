@@ -56,5 +56,11 @@
       ],
       "out_of_scope_message": "External package distribution is out of scope unless explicitly requested."
     }
+  ],
+  "exemplars": [
+    {
+      "scenario": "CLI Tool / SDK Library with Test Suite",
+      "pattern": "Define argument parser flags, error codes, programmatic API interfaces, and deterministic unit tests."
+    }
   ]
 }

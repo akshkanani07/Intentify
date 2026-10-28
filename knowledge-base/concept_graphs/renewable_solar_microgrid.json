@@ -1,0 +1,64 @@
+{
+  "subject": "Renewable Solar Microgrid & BESS",
+  "aliases": [
+    "solar microgrid",
+    "bess battery storage",
+    "renewable microgrid",
+    "photovoltaic microgrid",
+    "islanded microgrid"
+  ],
+  "domain": "Energy",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "solar_pv_array_sizing",
+      "title": "Solar PV String Inverter Sizing & MPPT Tracking",
+      "objective": "Calculate DC-to-AC oversizing ratios and maximum power point tracking (MPPT) voltage window matches.",
+      "example": "dc_ac_ratio = total_pv_dc_kw / inverter_ac_rating_kw",
+      "exercise": "Size a 500kW rooftop PV string configuration matching ambient temperature extremes and inverter MPPT limits.",
+      "prerequisites": []
+    },
+    {
+      "id": "bess_storage_capacity",
+      "title": "Battery Energy Storage System (BESS) Capacity & C-Rate Sizing",
+      "objective": "Size lithium iron phosphate (LFP) battery energy capacity to handle 4-hour peak demand shaving and islanded backup.",
+      "example": "bess_kwh = (peak_load_kw * backup_hours) / (depth_of_discharge * roundtrip_efficiency)",
+      "exercise": "Determine BESS container dimensions and inverter bidirectional power ratings for a 1MWh commercial storage plant.",
+      "prerequisites": [
+        "solar_pv_array_sizing"
+      ]
+    },
+    {
+      "id": "microgrid_controller_dispatch",
+      "title": "Microgrid Controller (MGEMS) & Islanding Synchronization",
+      "objective": "Implement IEEE 1547 and IEEE 2030.7 compliant automated islanding and black-start transfer logic.",
+      "example": "if (grid_voltage < 0.88 or grid_freq < 49.5) { trip_breaker_52g(); switch_to_isochronous(); }",
+      "exercise": "Draft an automated microgrid islanding control state machine transitioning from grid-following to grid-forming mode.",
+      "prerequisites": [
+        "bess_storage_capacity"
+      ]
+    },
+    {
+      "id": "power_quality_harmonics",
+      "title": "Active Power Quality & THD Harmonics Mitigation",
+      "objective": "Mitigate total harmonic distortion (THD) and maintain power factor between 0.95 leading/lagging using active front ends.",
+      "example": "thd_v = sqrt(sum(v_harmonics**2)) / v_fundamental * 100",
+      "exercise": "Design an LC/LCL passive filter topology ensuring inverter THD remains below 3% under nonlinear load conditions.",
+      "prerequisites": [
+        "microgrid_controller_dispatch"
+      ]
+    },
+    {
+      "id": "grid_tariff_arbitrage",
+      "title": "Time-of-Use (TOU) Tariff Arbitrage & Peak Demand Shaving",
+      "objective": "Formulate dynamic dispatch algorithms charging BESS during solar super-peak and discharging during peak evening tariff tiers.",
+      "example": "net_daily_savings = sum(discharge_kw * peak_tariff) - sum(charge_kw * offpeak_tariff)",
+      "exercise": "Write an optimization script scheduling battery dispatch against seasonal day-ahead electricity prices.",
+      "prerequisites": [
+        "bess_storage_capacity",
+        "microgrid_controller_dispatch"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "subject": "Commercial Drone Operations & Photogrammetry",
+  "aliases": [
+    "commercial drone operations",
+    "uav photogrammetry",
+    "drone flight planning",
+    "aerial surveying uav",
+    "dgca drone compliance"
+  ],
+  "domain": "Aerospace & Defense",
+  "reviewed": false,
+  "source": "drafted",
+  "topics": [
+    {
+      "id": "uav_flight_corridor_planning",
+      "title": "Autonomous Flight Corridor & Waypoint Mission Planning",
+      "objective": "Compute serpentine waypoint flight grids with 75% forward overlap and 65% sidelap for orthomosaic reconstruction.",
+      "example": "flight_altitude_m = (focal_length_mm * gsd_cm * 100) / sensor_pixel_size_um",
+      "exercise": "Calculate ground sampling distance (GSD) and flight mission duration for a 150-hectare industrial surveying grid.",
+      "prerequisites": []
+    },
+    {
+      "id": "dgca_airspace_geofencing",
+      "title": "Airspace Geofencing & Digital Sky (NPNT) Compliance",
+      "objective": "Verify green/yellow/red airspace authorizations and execute No Permission, No Takeoff (NPNT) digital signing tokens.",
+      "example": "if (airspace_zone == 'RED' or not npnt_token_valid) { disarm_motors(); trigger_buzzer(); }",
+      "exercise": "Draft an automated pre-flight clearance validator checking real-time NOTAMs and airspace boundaries.",
+      "prerequisites": [
+        "uav_flight_corridor_planning"
+      ]
+    },
+    {
+      "id": "rtk_ppk_gnss_surveying",
+      "title": "RTK / PPK Differential GNSS & Ground Control Points (GCPs)",
+      "objective": "Calibrate centimeter-accurate geotagging using real-time kinematic (RTK) base stations and surveyed ground targets.",
+      "example": "position_error_cm = sqrt(dx**2 + dy**2 + dz**2) <= 2.5",
+      "exercise": "Design a 10-point GCP distribution layout across varied topography ensuring horizontal accuracy within 3cm.",
+      "prerequisites": [
+        "uav_flight_corridor_planning"
+      ]
+    },
+    {
+      "id": "photogrammetry_dense_point_cloud",
+      "title": "Structure-from-Motion (SfM) & 3D Dense Mesh Reconstruction",
+      "objective": "Process high-resolution aerial imagery into dense point clouds, digital surface models (DSM), and textured 3D meshes.",
+      "example": "dense_cloud = sfm_pipeline.match_features(image_set, depth_filter='mild')",
+      "exercise": "Execute a point cloud generation pipeline calculating earthwork cut-and-fill volume estimates from DSM differentials.",
+      "prerequisites": [
+        "rtk_ppk_gnss_surveying"
+      ]
+    },
+    {
+      "id": "failsafe_rth_telemetry",
+      "title": "Emergency Failsafe, Geocaging & Return-to-Home (RTH)",
+      "objective": "Configure low-battery thresholds, link-loss failover behaviors, and automated obstacle avoidance return trajectories.",
+      "example": "if (battery_pct < 22 or rf_rssi_dbm < -95) { execute_failsafe(action='RTH_SAFE_ALTITUDE'); }",
+      "exercise": "Formulate a critical emergency response procedure handling dual-motor degradation and GNSS jamming incidents.",
+      "prerequisites": [
+        "uav_flight_corridor_planning",
+        "dgca_airspace_geofencing"
+      ]
+    }
+  ]
+}
